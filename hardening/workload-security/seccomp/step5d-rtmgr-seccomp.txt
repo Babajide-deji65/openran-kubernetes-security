@@ -1,0 +1,8 @@
+=== STEP 5D: RTMGR SECCOMP HARDENING ===
+Date: Tue Sep  1 13:58:59 BST 2026
+
+--- Security Context ---
+{"allowPrivilegeEscalation":false,"capabilities":{"drop":["NET_RAW"]},"seccompProfile":{"type":"RuntimeDefault"}}
+
+--- Pod Status ---
+deployment-ricplt-rtmgr-7d4d9c8c7-zqltb           1/1     Running   0               92s

@@ -1,0 +1,11 @@
+=== STEP 5B: VESPAMGR allowPrivilegeEscalation HARDENING ===
+Date: Sun Aug 30 15:20:54 BST 2026
+
+--- Deployment Security Context ---
+{"allowPrivilegeEscalation":false}
+
+--- Pod Status ---
+deployment-ricplt-vespamgr-5c8fcdd88d-nb22z       1/1     Running   0               2m21s
+
+--- Runtime User ---
+uid=0(root) gid=0(root) groups=0(root)

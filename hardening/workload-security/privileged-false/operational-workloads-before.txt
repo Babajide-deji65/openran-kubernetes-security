@@ -1,0 +1,13 @@
+NAME                                             READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/deployment-ricplt-a1mediator     1/1     1            1           92d
+deployment.apps/deployment-ricplt-alarmmanager   1/1     1            1           92d
+deployment.apps/deployment-ricplt-appmgr         1/1     1            1           92d
+deployment.apps/deployment-ricplt-e2mgr          1/1     1            1           92d
+deployment.apps/deployment-ricplt-e2term-alpha   1/1     1            1           92d
+deployment.apps/deployment-ricplt-o1mediator     1/1     1            1           92d
+deployment.apps/deployment-ricplt-rtmgr          1/1     1            1           92d
+deployment.apps/deployment-ricplt-submgr         1/1     1            1           92d
+deployment.apps/deployment-ricplt-vespamgr       1/1     1            1           92d
+
+NAME                                               READY   AGE
+statefulset.apps/statefulset-ricplt-dbaas-server   1/1     92d

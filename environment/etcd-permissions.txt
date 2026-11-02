@@ -1,0 +1,23 @@
+=== etcd data directory ===
+700 root:root
+total 12
+drwx------ 3 root root 4096 Jul 23 12:11 .
+drwxr-xr-x 7 root root 4096 Jun 22 17:19 ..
+drwx------ 4 root root 4096 Jul 23 12:11 member
+
+=== etcd certificates directory ===
+755 root:root
+total 40
+drwxr-xr-x 2 root root 4096 Jun 22 17:19 .
+drwxr-xr-x 3 root root 4096 Jun 22 17:19 ..
+-rw-r--r-- 1 root root 1094 Jun 22 17:19 ca.crt
+-rw------- 1 root root 1679 Jun 22 17:19 ca.key
+-rw-r--r-- 1 root root 1123 Jun 22 17:19 healthcheck-client.crt
+-rw------- 1 root root 1679 Jun 22 17:19 healthcheck-client.key
+-rw-r--r-- 1 root root 1196 Jun 22 17:19 peer.crt
+-rw------- 1 root root 1679 Jun 22 17:19 peer.key
+-rw-r--r-- 1 root root 1196 Jun 22 17:19 server.crt
+-rw------- 1 root root 1679 Jun 22 17:19 server.key
+
+=== API server audit config ===
+Audit config grep result: (empty = no audit configuration)

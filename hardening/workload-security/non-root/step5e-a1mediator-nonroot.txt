@@ -1,0 +1,11 @@
+=== STEP 5E: A1MEDIATOR NON-ROOT HARDENING ===
+Date: Tue Sep  1 23:04:21 BST 2026
+
+--- Security Context ---
+{"allowPrivilegeEscalation":false,"capabilities":{"drop":["NET_RAW"]},"runAsNonRoot":true,"runAsUser":1000,"seccompProfile":{"type":"RuntimeDefault"}}
+
+--- Runtime User ---
+uid=1000(a1user) gid=1000(a1user) groups=1000(a1user)
+
+--- Pod Status ---
+deployment-ricplt-a1mediator-56dd574db4-tht8l     1/1     Running   0               5m1s

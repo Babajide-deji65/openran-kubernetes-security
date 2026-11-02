@@ -1,0 +1,14 @@
+=== STEP 5C: SUBMGR CAP_NET_RAW HARDENING ===
+Date: Tue Sep  1 11:31:30 BST 2026
+
+--- Security Context ---
+{"allowPrivilegeEscalation":false,"capabilities":{"drop":["NET_RAW"]}}
+
+--- Pod Status ---
+deployment-ricplt-submgr-75c8d7f458-snb7t         1/1     Running   0             2m17s
+
+--- Effective Capabilities ---
+CapEff:	00000000a80405fb
+
+--- CAP_NET_RAW Verification ---
+deployment-ricplt-submgr-75c8d7f458-snb7t -> CAP_NET_RAW NOT PRESENT

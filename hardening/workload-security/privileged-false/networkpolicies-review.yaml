@@ -1,0 +1,140 @@
+apiVersion: v1
+items:
+- apiVersion: networking.k8s.io/v1
+  kind: NetworkPolicy
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"networking.k8s.io/v1","kind":"NetworkPolicy","metadata":{"annotations":{},"name":"allow-dbaas-approved-consumers","namespace":"ricplt"},"spec":{"ingress":[{"from":[{"podSelector":{"matchExpressions":[{"key":"app","operator":"In","values":["ricplt-a1mediator","ricplt-alarmmanager","ricplt-appmgr","ricplt-e2mgr","ricplt-o1mediator","ricplt-rtmgr","ricplt-submgr"]}]}}],"ports":[{"port":6379,"protocol":"TCP"}]}],"podSelector":{"matchLabels":{"app":"ricplt-dbaas"}},"policyTypes":["Ingress"]}}
+    creationTimestamp: "2026-09-09T18:44:56Z"
+    generation: 1
+    name: allow-dbaas-approved-consumers
+    namespace: ricplt
+    resourceVersion: "685704"
+    uid: bb57c8b7-bfa3-410b-9b14-6d2eee46a3ea
+  spec:
+    ingress:
+    - from:
+      - podSelector:
+          matchExpressions:
+          - key: app
+            operator: In
+            values:
+            - ricplt-a1mediator
+            - ricplt-alarmmanager
+            - ricplt-appmgr
+            - ricplt-e2mgr
+            - ricplt-o1mediator
+            - ricplt-rtmgr
+            - ricplt-submgr
+      ports:
+      - port: 6379
+        protocol: TCP
+    podSelector:
+      matchLabels:
+        app: ricplt-dbaas
+    policyTypes:
+    - Ingress
+- apiVersion: networking.k8s.io/v1
+  kind: NetworkPolicy
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"networking.k8s.io/v1","kind":"NetworkPolicy","metadata":{"annotations":{},"name":"restrict-appmgr-ingress","namespace":"ricplt"},"spec":{"ingress":[{"from":[{"podSelector":{"matchExpressions":[{"key":"app","operator":"In","values":["ricplt-vespamgr","ricplt-o1mediator","ricplt-rtmgr"]}]}}],"ports":[{"port":8080,"protocol":"TCP"}]}],"podSelector":{"matchLabels":{"app":"ricplt-appmgr"}},"policyTypes":["Ingress"]}}
+    creationTimestamp: "2026-09-09T22:11:05Z"
+    generation: 1
+    name: restrict-appmgr-ingress
+    namespace: ricplt
+    resourceVersion: "697435"
+    uid: 09656734-2da0-4041-8893-1e8628822ae0
+  spec:
+    ingress:
+    - from:
+      - podSelector:
+          matchExpressions:
+          - key: app
+            operator: In
+            values:
+            - ricplt-vespamgr
+            - ricplt-o1mediator
+            - ricplt-rtmgr
+      ports:
+      - port: 8080
+        protocol: TCP
+    podSelector:
+      matchLabels:
+        app: ricplt-appmgr
+    policyTypes:
+    - Ingress
+- apiVersion: networking.k8s.io/v1
+  kind: NetworkPolicy
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"networking.k8s.io/v1","kind":"NetworkPolicy","metadata":{"annotations":{},"name":"restrict-e2term-ingress","namespace":"ricplt"},"spec":{"ingress":[{"from":[{"podSelector":{"matchLabels":{"app":"ricplt-e2mgr"}}}],"ports":[{"port":38000,"protocol":"TCP"}]},{"from":[{"podSelector":{"matchLabels":{"app":"ricplt-rtmgr"}}}],"ports":[{"port":4561,"protocol":"TCP"}]},{"from":[{"namespaceSelector":{"matchLabels":{"kubernetes.io/metadata.name":"ricinfra"}},"podSelector":{"matchLabels":{"app.kubernetes.io/component":"server","app.kubernetes.io/name":"prometheus"}}}],"ports":[{"port":8088,"protocol":"TCP"}]},{"ports":[{"port":36422,"protocol":"SCTP"}]}],"podSelector":{"matchLabels":{"app":"ricplt-e2term-alpha"}},"policyTypes":["Ingress"]}}
+    creationTimestamp: "2026-09-09T19:28:32Z"
+    generation: 1
+    name: restrict-e2term-ingress
+    namespace: ricplt
+    resourceVersion: "688421"
+    uid: 00a34768-a629-440e-8305-a8eda64f3e8b
+  spec:
+    ingress:
+    - from:
+      - podSelector:
+          matchLabels:
+            app: ricplt-e2mgr
+      ports:
+      - port: 38000
+        protocol: TCP
+    - from:
+      - podSelector:
+          matchLabels:
+            app: ricplt-rtmgr
+      ports:
+      - port: 4561
+        protocol: TCP
+    - from:
+      - namespaceSelector:
+          matchLabels:
+            kubernetes.io/metadata.name: ricinfra
+        podSelector:
+          matchLabels:
+            app.kubernetes.io/component: server
+            app.kubernetes.io/name: prometheus
+      ports:
+      - port: 8088
+        protocol: TCP
+    - ports:
+      - port: 36422
+        protocol: SCTP
+    podSelector:
+      matchLabels:
+        app: ricplt-e2term-alpha
+    policyTypes:
+    - Ingress
+- apiVersion: networking.k8s.io/v1
+  kind: NetworkPolicy
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"networking.k8s.io/v1","kind":"NetworkPolicy","metadata":{"annotations":{},"name":"restrict-o1mediator-ingress","namespace":"ricplt"},"spec":{"ingress":[{"ports":[{"port":830,"protocol":"TCP"}]}],"podSelector":{"matchLabels":{"app":"ricplt-o1mediator"}},"policyTypes":["Ingress"]}}
+    creationTimestamp: "2026-09-09T21:09:57Z"
+    generation: 1
+    name: restrict-o1mediator-ingress
+    namespace: ricplt
+    resourceVersion: "693757"
+    uid: ba1b8a28-6a76-4c1f-a06f-7cb4f2bc3579
+  spec:
+    ingress:
+    - ports:
+      - port: 830
+        protocol: TCP
+    podSelector:
+      matchLabels:
+        app: ricplt-o1mediator
+    policyTypes:
+    - Ingress
+kind: List
+metadata:
+  resourceVersion: ""

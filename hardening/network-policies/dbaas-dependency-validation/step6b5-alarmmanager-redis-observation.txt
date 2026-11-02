@@ -1,0 +1,776 @@
+=== 2026-09-08 05:44:16 ===
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1606 idle=16 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1574 idle=7 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1589 idle=4 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1583 idle=4 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=674 addr=127.0.0.1:55878 fd=8 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:44:17 ===
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1607 idle=17 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1575 idle=8 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1590 idle=5 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1584 idle=5 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=675 addr=127.0.0.1:39890 fd=8 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:44:18 ===
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1609 idle=19 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1577 idle=10 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1592 idle=7 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1586 idle=7 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=676 addr=127.0.0.1:39900 fd=8 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:44:20 ===
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1610 idle=20 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1578 idle=1 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1593 idle=8 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1587 idle=8 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=679 addr=127.0.0.1:39932 fd=8 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:44:21 ===
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1611 idle=21 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1579 idle=2 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1594 idle=9 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1588 idle=9 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=680 addr=127.0.0.1:39934 fd=8 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:44:22 ===
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1613 idle=23 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1581 idle=4 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1596 idle=1 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1590 idle=1 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=681 addr=127.0.0.1:39948 fd=8 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:44:24 ===
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1614 idle=24 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1582 idle=5 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1597 idle=2 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1591 idle=2 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=682 addr=127.0.0.1:39950 fd=8 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:44:25 ===
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1616 idle=26 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1584 idle=7 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1599 idle=4 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1593 idle=4 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=685 addr=127.0.0.1:39974 fd=8 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:44:27 ===
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1617 idle=27 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1585 idle=8 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1600 idle=5 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1594 idle=5 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=686 addr=127.0.0.1:59444 fd=8 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:44:28 ===
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1618 idle=28 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1586 idle=9 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1601 idle=6 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1595 idle=6 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=687 addr=127.0.0.1:59458 fd=8 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:44:30 ===
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1620 idle=0 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1588 idle=1 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1603 idle=8 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1597 idle=8 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=690 addr=127.0.0.1:59482 fd=8 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:44:31 ===
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1621 idle=1 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1589 idle=2 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1604 idle=9 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1598 idle=9 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=691 addr=127.0.0.1:59496 fd=8 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:44:32 ===
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1623 idle=3 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1591 idle=4 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1606 idle=1 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1600 idle=1 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=692 addr=127.0.0.1:59504 fd=8 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:44:34 ===
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1624 idle=4 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1592 idle=5 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1607 idle=2 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1601 idle=2 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=693 addr=127.0.0.1:59508 fd=8 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:44:35 ===
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1625 idle=5 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1593 idle=6 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1608 idle=3 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1602 idle=3 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=696 addr=127.0.0.1:59540 fd=8 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:44:36 ===
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1627 idle=7 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1595 idle=8 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1610 idle=5 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1604 idle=5 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=697 addr=127.0.0.1:38760 fd=8 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:44:38 ===
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1628 idle=8 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1596 idle=9 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1611 idle=6 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1605 idle=6 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=698 addr=127.0.0.1:38774 fd=8 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:44:39 ===
+id=700 addr=10.244.1.10:57672 fd=9 name= age=1 idle=1 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1630 idle=10 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1598 idle=1 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1613 idle=8 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1607 idle=8 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=699 addr=10.244.1.10:57668 fd=8 name= age=1 idle=1 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=703 addr=127.0.0.1:38788 fd=10 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:44:41 ===
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1631 idle=11 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1599 idle=2 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1614 idle=9 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1608 idle=9 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=699 addr=10.244.1.10:57668 fd=8 name= age=2 idle=2 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=700 addr=10.244.1.10:57672 fd=9 name= age=2 idle=2 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=704 addr=127.0.0.1:38796 fd=10 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:44:42 ===
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1615 idle=10 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1609 idle=10 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=699 addr=10.244.1.10:57668 fd=8 name= age=3 idle=3 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=700 addr=10.244.1.10:57672 fd=9 name= age=3 idle=3 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1632 idle=12 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1600 idle=3 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=705 addr=127.0.0.1:38800 fd=10 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:44:43 ===
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1611 idle=2 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=699 addr=10.244.1.10:57668 fd=8 name= age=5 idle=5 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=700 addr=10.244.1.10:57672 fd=9 name= age=5 idle=5 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1634 idle=14 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1602 idle=5 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1617 idle=2 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=706 addr=127.0.0.1:38812 fd=10 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:44:45 ===
+id=699 addr=10.244.1.10:57668 fd=8 name= age=6 idle=6 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=700 addr=10.244.1.10:57672 fd=9 name= age=6 idle=6 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1635 idle=15 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1603 idle=6 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1618 idle=3 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1612 idle=3 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=709 addr=127.0.0.1:38832 fd=10 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:44:46 ===
+id=700 addr=10.244.1.10:57672 fd=9 name= age=7 idle=7 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1636 idle=16 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1604 idle=7 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1619 idle=4 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1613 idle=4 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=699 addr=10.244.1.10:57668 fd=8 name= age=7 idle=7 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=710 addr=127.0.0.1:36476 fd=10 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:44:47 ===
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1606 idle=9 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1621 idle=6 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1615 idle=6 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=699 addr=10.244.1.10:57668 fd=8 name= age=9 idle=9 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=700 addr=10.244.1.10:57672 fd=9 name= age=9 idle=9 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1638 idle=18 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=711 addr=127.0.0.1:36490 fd=10 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:44:49 ===
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1622 idle=7 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1616 idle=7 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=699 addr=10.244.1.10:57668 fd=8 name= age=10 idle=10 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=700 addr=10.244.1.10:57672 fd=9 name= age=10 idle=10 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1639 idle=19 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1607 idle=10 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=712 addr=127.0.0.1:36506 fd=10 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:44:50 ===
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1617 idle=8 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=699 addr=10.244.1.10:57668 fd=8 name= age=11 idle=11 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=700 addr=10.244.1.10:57672 fd=9 name= age=11 idle=11 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1640 idle=20 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1608 idle=1 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1623 idle=8 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=715 addr=127.0.0.1:36534 fd=10 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:44:51 ===
+id=700 addr=10.244.1.10:57672 fd=9 name= age=13 idle=13 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1642 idle=22 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1610 idle=3 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1625 idle=10 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1619 idle=10 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=699 addr=10.244.1.10:57668 fd=8 name= age=13 idle=13 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=716 addr=127.0.0.1:36546 fd=10 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:44:53 ===
+id=700 addr=10.244.1.10:57672 fd=9 name= age=14 idle=14 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1643 idle=23 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1611 idle=4 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1626 idle=1 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1620 idle=1 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=699 addr=10.244.1.10:57668 fd=8 name= age=14 idle=14 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=717 addr=127.0.0.1:36550 fd=10 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:44:54 ===
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1644 idle=24 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1612 idle=5 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1627 idle=2 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1621 idle=2 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=699 addr=10.244.1.10:57668 fd=8 name= age=15 idle=15 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=700 addr=10.244.1.10:57672 fd=9 name= age=15 idle=15 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=718 addr=127.0.0.1:36566 fd=10 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:44:55 ===
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1614 idle=7 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1629 idle=4 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1623 idle=4 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=699 addr=10.244.1.10:57668 fd=8 name= age=17 idle=17 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=700 addr=10.244.1.10:57672 fd=9 name= age=17 idle=17 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1646 idle=26 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=721 addr=127.0.0.1:36590 fd=10 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:44:57 ===
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1624 idle=5 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=699 addr=10.244.1.10:57668 fd=8 name= age=18 idle=18 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=700 addr=10.244.1.10:57672 fd=9 name= age=18 idle=18 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1647 idle=27 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1615 idle=8 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1630 idle=5 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=722 addr=127.0.0.1:58308 fd=10 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:44:58 ===
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1625 idle=6 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=699 addr=10.244.1.10:57668 fd=8 name= age=19 idle=19 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=700 addr=10.244.1.10:57672 fd=9 name= age=19 idle=19 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1648 idle=28 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1616 idle=9 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1631 idle=6 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=723 addr=127.0.0.1:58316 fd=10 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:44:59 ===
+id=699 addr=10.244.1.10:57668 fd=8 name= age=21 idle=21 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=700 addr=10.244.1.10:57672 fd=9 name= age=21 idle=21 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1650 idle=30 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1618 idle=1 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1633 idle=8 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1627 idle=8 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=726 addr=127.0.0.1:58340 fd=10 name= age=1 idle=1 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:45:01 ===
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1651 idle=1 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1619 idle=2 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1634 idle=9 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1628 idle=9 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=699 addr=10.244.1.10:57668 fd=8 name= age=22 idle=22 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=700 addr=10.244.1.10:57672 fd=9 name= age=22 idle=22 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=727 addr=127.0.0.1:58352 fd=10 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:45:02 ===
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1620 idle=3 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1635 idle=10 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1629 idle=10 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=699 addr=10.244.1.10:57668 fd=8 name= age=23 idle=23 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=700 addr=10.244.1.10:57672 fd=9 name= age=23 idle=23 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1652 idle=2 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=728 addr=127.0.0.1:58368 fd=10 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:45:03 ===
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1621 idle=4 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1636 idle=1 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1630 idle=1 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=699 addr=10.244.1.10:57668 fd=8 name= age=24 idle=24 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=700 addr=10.244.1.10:57672 fd=9 name= age=24 idle=24 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1653 idle=3 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=729 addr=127.0.0.1:58374 fd=10 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:45:04 ===
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1632 idle=3 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=699 addr=10.244.1.10:57668 fd=8 name= age=26 idle=26 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=700 addr=10.244.1.10:57672 fd=9 name= age=26 idle=26 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1655 idle=5 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1623 idle=6 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1638 idle=3 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=732 addr=127.0.0.1:58404 fd=10 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:45:06 ===
+id=699 addr=10.244.1.10:57668 fd=8 name= age=27 idle=27 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=700 addr=10.244.1.10:57672 fd=9 name= age=27 idle=27 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1656 idle=6 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1624 idle=7 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1639 idle=4 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1633 idle=4 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=733 addr=127.0.0.1:58412 fd=10 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:45:07 ===
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1626 idle=9 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1641 idle=6 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1635 idle=6 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=699 addr=10.244.1.10:57668 fd=8 name= age=29 idle=29 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=700 addr=10.244.1.10:57672 fd=9 name= age=29 idle=29 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1658 idle=8 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=734 addr=127.0.0.1:53438 fd=10 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:45:09 ===
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1636 idle=7 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=699 addr=10.244.1.10:57668 fd=8 name= age=30 idle=30 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=700 addr=10.244.1.10:57672 fd=9 name= age=30 idle=30 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1659 idle=9 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1627 idle=10 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1642 idle=7 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=735 addr=127.0.0.1:53444 fd=10 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:45:10 ===
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1661 idle=11 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1629 idle=2 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1644 idle=9 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1638 idle=9 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=699 addr=10.244.1.10:57668 fd=8 name= age=32 idle=32 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=700 addr=10.244.1.10:57672 fd=9 name= age=32 idle=32 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=738 addr=127.0.0.1:53474 fd=10 name= age=1 idle=1 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:45:12 ===
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1645 idle=10 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1639 idle=10 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=699 addr=10.244.1.10:57668 fd=8 name= age=33 idle=33 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=700 addr=10.244.1.10:57672 fd=9 name= age=33 idle=33 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1662 idle=12 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1630 idle=3 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=739 addr=127.0.0.1:53482 fd=10 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:45:13 ===
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1640 idle=1 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=699 addr=10.244.1.10:57668 fd=8 name= age=34 idle=34 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=700 addr=10.244.1.10:57672 fd=9 name= age=34 idle=34 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1663 idle=13 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1631 idle=4 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1646 idle=1 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=740 addr=127.0.0.1:53498 fd=10 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:45:14 ===
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1665 idle=15 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1633 idle=6 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1648 idle=3 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1642 idle=3 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=699 addr=10.244.1.10:57668 fd=8 name= age=36 idle=36 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=700 addr=10.244.1.10:57672 fd=9 name= age=36 idle=36 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=743 addr=127.0.0.1:53526 fd=10 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:45:16 ===
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1634 idle=7 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1649 idle=4 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1643 idle=4 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=699 addr=10.244.1.10:57668 fd=8 name= age=37 idle=37 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=700 addr=10.244.1.10:57672 fd=9 name= age=37 idle=37 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1666 idle=16 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=744 addr=127.0.0.1:53528 fd=10 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:45:17 ===
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1650 idle=5 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1644 idle=5 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=699 addr=10.244.1.10:57668 fd=8 name= age=38 idle=38 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=700 addr=10.244.1.10:57672 fd=9 name= age=38 idle=38 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1667 idle=17 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1635 idle=8 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=745 addr=127.0.0.1:54954 fd=10 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:45:18 ===
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1646 idle=7 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=699 addr=10.244.1.10:57668 fd=8 name= age=40 idle=40 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=700 addr=10.244.1.10:57672 fd=9 name= age=40 idle=40 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1669 idle=19 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1637 idle=10 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1652 idle=7 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=746 addr=127.0.0.1:54960 fd=10 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:45:20 ===
+id=699 addr=10.244.1.10:57668 fd=8 name= age=41 idle=41 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=700 addr=10.244.1.10:57672 fd=9 name= age=41 idle=41 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1670 idle=20 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1638 idle=1 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1653 idle=8 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1647 idle=8 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=749 addr=127.0.0.1:54986 fd=10 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:45:21 ===
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1671 idle=21 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1639 idle=2 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1654 idle=9 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1648 idle=9 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=699 addr=10.244.1.10:57668 fd=8 name= age=42 idle=42 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=700 addr=10.244.1.10:57672 fd=9 name= age=42 idle=42 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=750 addr=127.0.0.1:54994 fd=10 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:45:22 ===
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1641 idle=4 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1656 idle=1 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1650 idle=1 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=699 addr=10.244.1.10:57668 fd=8 name= age=44 idle=44 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=700 addr=10.244.1.10:57672 fd=9 name= age=44 idle=44 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1673 idle=23 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=751 addr=127.0.0.1:55002 fd=10 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:45:24 ===
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1651 idle=2 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=699 addr=10.244.1.10:57668 fd=8 name= age=45 idle=45 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=700 addr=10.244.1.10:57672 fd=9 name= age=45 idle=45 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1674 idle=24 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1642 idle=5 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1657 idle=2 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=752 addr=127.0.0.1:55008 fd=10 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:45:25 ===
+id=699 addr=10.244.1.10:57668 fd=8 name= age=46 idle=46 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=700 addr=10.244.1.10:57672 fd=9 name= age=46 idle=46 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1675 idle=25 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1643 idle=6 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1658 idle=3 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1652 idle=3 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=755 addr=127.0.0.1:55044 fd=10 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:45:26 ===
+id=699 addr=10.244.1.10:57668 fd=8 name= age=48 idle=48 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=700 addr=10.244.1.10:57672 fd=9 name= age=48 idle=48 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1677 idle=27 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1645 idle=8 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1660 idle=5 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1654 idle=5 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=756 addr=127.0.0.1:33112 fd=10 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:45:28 ===
+id=700 addr=10.244.1.10:57672 fd=9 name= age=49 idle=49 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1678 idle=28 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1646 idle=9 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1661 idle=6 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1655 idle=6 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=699 addr=10.244.1.10:57668 fd=8 name= age=49 idle=49 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=757 addr=127.0.0.1:33120 fd=10 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:45:29 ===
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1679 idle=29 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1647 idle=10 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1662 idle=7 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1656 idle=7 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=699 addr=10.244.1.10:57668 fd=8 name= age=50 idle=50 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=700 addr=10.244.1.10:57672 fd=9 name= age=50 idle=50 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=758 addr=127.0.0.1:33124 fd=10 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:45:30 ===
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1649 idle=2 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1664 idle=9 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1658 idle=9 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=699 addr=10.244.1.10:57668 fd=8 name= age=52 idle=52 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=700 addr=10.244.1.10:57672 fd=9 name= age=52 idle=52 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1681 idle=1 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=761 addr=127.0.0.1:33152 fd=10 name= age=1 idle=1 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:45:32 ===
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1665 idle=10 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1659 idle=10 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=699 addr=10.244.1.10:57668 fd=8 name= age=53 idle=53 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=700 addr=10.244.1.10:57672 fd=9 name= age=53 idle=53 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1682 idle=2 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1650 idle=3 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=762 addr=127.0.0.1:33154 fd=10 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:45:33 ===
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1660 idle=1 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=699 addr=10.244.1.10:57668 fd=8 name= age=54 idle=54 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=700 addr=10.244.1.10:57672 fd=9 name= age=54 idle=54 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1683 idle=3 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1651 idle=4 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1666 idle=1 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=763 addr=127.0.0.1:33160 fd=10 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:45:34 ===
+id=699 addr=10.244.1.10:57668 fd=8 name= age=55 idle=55 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=700 addr=10.244.1.10:57672 fd=9 name= age=55 idle=55 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1684 idle=4 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1652 idle=5 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1667 idle=2 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1661 idle=2 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=764 addr=127.0.0.1:33172 fd=10 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:45:35 ===
+id=700 addr=10.244.1.10:57672 fd=9 name= age=57 idle=57 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1686 idle=6 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1654 idle=7 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1669 idle=4 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1663 idle=4 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=699 addr=10.244.1.10:57668 fd=8 name= age=57 idle=57 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=767 addr=127.0.0.1:33194 fd=10 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:45:37 ===
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1655 idle=8 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1670 idle=5 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1664 idle=5 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=699 addr=10.244.1.10:57668 fd=8 name= age=58 idle=58 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=700 addr=10.244.1.10:57672 fd=9 name= age=58 idle=58 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1687 idle=7 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=768 addr=127.0.0.1:42502 fd=10 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:45:38 ===
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1671 idle=6 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1665 idle=6 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=699 addr=10.244.1.10:57668 fd=8 name= age=59 idle=59 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=700 addr=10.244.1.10:57672 fd=9 name= age=59 idle=59 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1688 idle=8 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1656 idle=9 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=769 addr=127.0.0.1:42518 fd=10 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:45:39 ===
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1667 idle=8 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=699 addr=10.244.1.10:57668 fd=8 name= age=61 idle=61 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=700 addr=10.244.1.10:57672 fd=9 name= age=61 idle=61 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1690 idle=10 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1658 idle=1 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1673 idle=8 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=772 addr=127.0.0.1:42548 fd=10 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:45:41 ===
+id=699 addr=10.244.1.10:57668 fd=8 name= age=62 idle=62 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=700 addr=10.244.1.10:57672 fd=9 name= age=62 idle=62 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1691 idle=11 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1659 idle=2 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1674 idle=9 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1668 idle=9 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=773 addr=127.0.0.1:42560 fd=10 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:45:42 ===
+id=700 addr=10.244.1.10:57672 fd=9 name= age=63 idle=63 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1692 idle=12 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1660 idle=3 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1675 idle=10 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1669 idle=10 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=699 addr=10.244.1.10:57668 fd=8 name= age=63 idle=63 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=774 addr=127.0.0.1:42562 fd=10 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:45:43 ===
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1694 idle=14 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1662 idle=5 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1677 idle=2 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1671 idle=2 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=699 addr=10.244.1.10:57668 fd=8 name= age=65 idle=65 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=700 addr=10.244.1.10:57672 fd=9 name= age=65 idle=65 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=775 addr=127.0.0.1:42564 fd=10 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:45:45 ===
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1672 idle=3 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=699 addr=10.244.1.10:57668 fd=8 name= age=66 idle=66 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=700 addr=10.244.1.10:57672 fd=9 name= age=66 idle=66 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1695 idle=15 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=778 addr=127.0.0.1:42592 fd=10 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1663 idle=6 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1678 idle=3 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+
+=== 2026-09-08 05:45:46 ===
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1673 idle=4 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=699 addr=10.244.1.10:57668 fd=8 name= age=67 idle=67 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=700 addr=10.244.1.10:57672 fd=9 name= age=67 idle=67 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1696 idle=16 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1664 idle=7 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1679 idle=4 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=779 addr=127.0.0.1:54586 fd=10 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:45:47 ===
+id=699 addr=10.244.1.10:57668 fd=8 name= age=69 idle=69 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=700 addr=10.244.1.10:57672 fd=9 name= age=69 idle=69 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1698 idle=18 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1666 idle=9 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1681 idle=6 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1675 idle=6 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=780 addr=127.0.0.1:54598 fd=10 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:45:49 ===
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1699 idle=19 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1667 idle=10 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1682 idle=1 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=mset
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1676 idle=1 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=mget
+id=699 addr=10.244.1.10:57668 fd=8 name= age=70 idle=70 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=700 addr=10.244.1.10:57672 fd=9 name= age=70 idle=70 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=781 addr=127.0.0.1:54610 fd=10 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:45:50 ===
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1677 idle=2 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=mget
+id=699 addr=10.244.1.10:57668 fd=8 name= age=71 idle=71 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=700 addr=10.244.1.10:57672 fd=9 name= age=71 idle=71 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1700 idle=20 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=784 addr=127.0.0.1:54636 fd=10 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1668 idle=1 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1683 idle=2 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=mset
+
+=== 2026-09-08 05:45:51 ===
+id=699 addr=10.244.1.10:57668 fd=8 name= age=73 idle=73 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=700 addr=10.244.1.10:57672 fd=9 name= age=73 idle=73 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1702 idle=22 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1670 idle=3 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1685 idle=4 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=mset
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1679 idle=4 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=mget
+id=785 addr=127.0.0.1:54638 fd=10 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:45:53 ===
+id=700 addr=10.244.1.10:57672 fd=9 name= age=74 idle=74 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1703 idle=23 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1671 idle=4 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1686 idle=1 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1680 idle=1 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=699 addr=10.244.1.10:57668 fd=8 name= age=74 idle=74 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=786 addr=127.0.0.1:54644 fd=10 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:45:54 ===
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1672 idle=5 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1687 idle=2 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1681 idle=2 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=699 addr=10.244.1.10:57668 fd=8 name= age=75 idle=75 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=700 addr=10.244.1.10:57672 fd=9 name= age=75 idle=75 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1704 idle=24 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=787 addr=127.0.0.1:54646 fd=10 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:45:55 ===
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1683 idle=4 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=699 addr=10.244.1.10:57668 fd=8 name= age=77 idle=77 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=700 addr=10.244.1.10:57672 fd=9 name= age=77 idle=77 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1706 idle=26 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1674 idle=7 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1689 idle=4 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=790 addr=127.0.0.1:54672 fd=10 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:45:57 ===
+id=700 addr=10.244.1.10:57672 fd=9 name= age=78 idle=78 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1707 idle=27 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1675 idle=8 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1690 idle=5 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1684 idle=5 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=699 addr=10.244.1.10:57668 fd=8 name= age=78 idle=78 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=791 addr=127.0.0.1:48084 fd=10 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:45:58 ===
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1709 idle=29 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1677 idle=10 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1692 idle=7 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1686 idle=7 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=699 addr=10.244.1.10:57668 fd=8 name= age=80 idle=80 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=700 addr=10.244.1.10:57672 fd=9 name= age=80 idle=80 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=792 addr=127.0.0.1:48096 fd=10 name= age=1 idle=1 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:46:00 ===
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1678 idle=1 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1693 idle=8 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1687 idle=8 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=699 addr=10.244.1.10:57668 fd=8 name= age=81 idle=81 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=700 addr=10.244.1.10:57672 fd=9 name= age=81 idle=81 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1710 idle=0 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=32768 obl=0 oll=0 omem=0 events=r cmd=ping
+id=795 addr=127.0.0.1:48114 fd=10 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:46:01 ===
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1688 idle=9 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=699 addr=10.244.1.10:57668 fd=8 name= age=82 idle=82 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=700 addr=10.244.1.10:57672 fd=9 name= age=82 idle=82 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1711 idle=1 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1679 idle=2 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1694 idle=9 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=796 addr=127.0.0.1:48122 fd=10 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:46:02 ===
+id=699 addr=10.244.1.10:57668 fd=8 name= age=84 idle=84 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=700 addr=10.244.1.10:57672 fd=9 name= age=84 idle=84 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1713 idle=3 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1681 idle=4 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1696 idle=1 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1690 idle=1 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=32768 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=797 addr=127.0.0.1:48138 fd=10 name= age=1 idle=1 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:46:04 ===
+id=700 addr=10.244.1.10:57672 fd=9 name= age=85 idle=85 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1714 idle=4 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1682 idle=5 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1697 idle=2 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1691 idle=2 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=699 addr=10.244.1.10:57668 fd=8 name= age=85 idle=85 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=798 addr=127.0.0.1:48154 fd=10 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:46:05 ===
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1715 idle=5 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1683 idle=6 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1698 idle=3 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1692 idle=3 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=699 addr=10.244.1.10:57668 fd=8 name= age=86 idle=86 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=700 addr=10.244.1.10:57672 fd=9 name= age=86 idle=86 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=801 addr=127.0.0.1:48168 fd=10 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:46:06 ===
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1684 idle=7 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1699 idle=4 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1693 idle=4 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=699 addr=10.244.1.10:57668 fd=8 name= age=87 idle=87 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=700 addr=10.244.1.10:57672 fd=9 name= age=87 idle=87 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1716 idle=6 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=802 addr=127.0.0.1:47774 fd=10 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:46:07 ===
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1701 idle=6 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1695 idle=6 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=699 addr=10.244.1.10:57668 fd=8 name= age=89 idle=89 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=700 addr=10.244.1.10:57672 fd=9 name= age=89 idle=89 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1718 idle=8 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1686 idle=9 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=803 addr=127.0.0.1:47778 fd=10 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:46:09 ===
+id=699 addr=10.244.1.10:57668 fd=8 name= age=90 idle=90 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=700 addr=10.244.1.10:57672 fd=9 name= age=90 idle=90 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1719 idle=9 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1687 idle=10 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1702 idle=7 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1696 idle=7 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=804 addr=127.0.0.1:47782 fd=10 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:46:10 ===
+id=700 addr=10.244.1.10:57672 fd=9 name= age=91 idle=91 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1720 idle=10 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1688 idle=1 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1703 idle=8 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1697 idle=8 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=699 addr=10.244.1.10:57668 fd=8 name= age=91 idle=91 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=807 addr=127.0.0.1:47808 fd=10 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:46:11 ===
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1722 idle=12 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1690 idle=3 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1705 idle=10 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1699 idle=10 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=699 addr=10.244.1.10:57668 fd=8 name= age=93 idle=93 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=700 addr=10.244.1.10:57672 fd=9 name= age=93 idle=93 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=808 addr=127.0.0.1:47822 fd=10 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:46:13 ===
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1691 idle=4 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1706 idle=1 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1700 idle=1 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=699 addr=10.244.1.10:57668 fd=8 name= age=94 idle=94 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=700 addr=10.244.1.10:57672 fd=9 name= age=94 idle=94 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1723 idle=13 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=809 addr=127.0.0.1:47824 fd=10 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:46:14 ===
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1707 idle=2 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1701 idle=2 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=699 addr=10.244.1.10:57668 fd=8 name= age=95 idle=95 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=700 addr=10.244.1.10:57672 fd=9 name= age=95 idle=95 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1724 idle=14 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1692 idle=5 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=810 addr=127.0.0.1:47826 fd=10 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+=== 2026-09-08 05:46:15 ===
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1709 idle=4 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1703 idle=4 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=699 addr=10.244.1.10:57668 fd=8 name= age=97 idle=97 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=keys
+id=700 addr=10.244.1.10:57672 fd=9 name= age=97 idle=97 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1726 idle=16 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1694 idle=7 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=813 addr=127.0.0.1:47850 fd=10 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+

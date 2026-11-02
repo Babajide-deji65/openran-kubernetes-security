@@ -1,0 +1,44 @@
+=== STEP 4D: APPMGR RBAC HARDENING ===
+Date: Tue Aug 25 11:09:11 BST 2026
+
+--- Appmgr Pod Health ---
+deployment-ricplt-appmgr-5b87c685c9-sfkfm         1/1     Running   9 (12h ago)   58d
+
+--- Appmgr Service Connectivity from e2term ---
+404
+
+--- Post-hardening Namespace Scope ---
+===== Namespace: default =====
+list secrets: no
+create pods: no
+delete pods: no
+
+===== Namespace: kube-system =====
+list secrets: no
+create pods: no
+delete pods: no
+
+===== Namespace: ricplt =====
+list secrets: no
+create pods: no
+delete pods: no
+
+===== Namespace: ricinfra =====
+list secrets: no
+create pods: no
+delete pods: no
+
+===== Namespace: ricxapp =====
+list secrets: yes
+create pods: yes
+delete pods: yes
+
+--- Restricted ricinfra Secret Access ---
+ricxapp-helm-secret: yes
+arbitrary secret: no
+
+--- Current RBAC Objects ---
+appmgr-ricxapp-access-scoped                    ClusterRole/svcacct-ricplt-appmgr-ricxapp-access         14m
+appmgr-ricxapp-getappconfig-scoped              ClusterRole/svcacct-ricplt-appmgr-ricxapp-getappconfig   14m
+role.rbac.authorization.k8s.io/appmgr-ricinfra-helm-secret   2026-08-25T09:54:42Z
+rolebinding.rbac.authorization.k8s.io/appmgr-ricinfra-helm-secret   Role/appmgr-ricinfra-helm-secret   14m

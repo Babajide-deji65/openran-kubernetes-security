@@ -1,0 +1,11 @@
+=== STEP 5B: SUBMGR allowPrivilegeEscalation HARDENING ===
+Date: Sun Aug 30 14:49:42 BST 2026
+
+--- Deployment Security Context ---
+{"allowPrivilegeEscalation":false}
+
+--- Pod Status ---
+deployment-ricplt-submgr-7cf4f79cdb-khnzc         1/1     Running   0               3m18s
+
+--- Runtime User ---
+uid=0(root) gid=0(root) groups=0(root)

@@ -1,0 +1,398 @@
+=== BASELINE DEPLOYMENT SPECIFICATIONS ===
+Date: Mon Aug 10 23:10:12 BST 2026
+
+--- deployment.apps/deployment-ricplt-a1mediator ---
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /opt/route
+          name: a1conf
+      dnsPolicy: ClusterFirst
+      hostname: a1mediator
+      imagePullSecrets:
+      - name: secret-nexus3-o-ran-sc-org-10002-o-ran-sc
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+      volumes:
+      - configMap:
+          defaultMode: 420
+          name: configmap-ricplt-a1mediator-a1conf
+        name: a1conf
+status:
+  availableReplicas: 1
+  conditions:
+  - lastTransitionTime: "2026-06-27T22:04:30Z"
+    lastUpdateTime: "2026-06-27T22:07:58Z"
+    message: ReplicaSet "deployment-ricplt-a1mediator-6c66d9c9f7" has successfully
+      progressed.
+    reason: NewReplicaSetAvailable
+    status: "True"
+    type: Progressing
+  - lastTransitionTime: "2026-08-10T07:13:25Z"
+    lastUpdateTime: "2026-08-10T07:13:25Z"
+    message: Deployment has minimum availability.
+    reason: MinimumReplicasAvailable
+
+--- deployment.apps/deployment-ricplt-alarmmanager ---
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /cfg
+          name: config-volume
+        - mountPath: /mnt/pv-ricplt-alarmmanager
+          name: am-persistent-storage
+      dnsPolicy: ClusterFirst
+      hostname: alarmmanager
+      imagePullSecrets:
+      - name: secret-nexus3-o-ran-sc-org-10002-o-ran-sc
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      serviceAccount: svcacct-ricplt-alarmmanager
+      serviceAccountName: svcacct-ricplt-alarmmanager
+      terminationGracePeriodSeconds: 30
+      volumes:
+      - configMap:
+          defaultMode: 420
+          items:
+          - key: alarmmanagercfg
+            mode: 420
+            path: config-file.json
+          name: configmap-ricplt-alarmmanager-alarmmanagercfg
+        name: config-volume
+      - name: am-persistent-storage
+        persistentVolumeClaim:
+          claimName: pvc-ricplt-alarmmanager
+status:
+  availableReplicas: 1
+  conditions:
+  - lastTransitionTime: "2026-06-27T22:05:32Z"
+    lastUpdateTime: "2026-06-27T22:07:37Z"
+    message: ReplicaSet "deployment-ricplt-alarmmanager-7666876479" has successfully
+      progressed.
+
+--- deployment.apps/deployment-ricplt-appmgr ---
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /opt/ric/config/appmgr.yaml
+          name: config-volume
+          subPath: appmgr.yaml
+        - mountPath: /opt/ric/secret
+          name: helm-secret-volume
+        - mountPath: /opt/ric/secret/helm_repo_username
+          name: secret-volume
+          subPath: helm_repo_username
+        - mountPath: /opt/ric/secret/helm_repo_password
+          name: secret-volume
+          subPath: helm_repo_password
+      dnsPolicy: ClusterFirst
+      hostname: appmgr
+      imagePullSecrets:
+      - name: secret-nexus3-o-ran-sc-org-10002-o-ran-sc
+      initContainers:
+      - command:
+--
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /opt/ric/secret
+          name: helm-secret-volume
+        - mountPath: /svcacct-to-kubeconfig.sh
+          name: appmgr-bin-volume
+          subPath: svcacct-to-kubeconfig.sh
+        - mountPath: /appmgr-tiller-secret-copier.sh
+          name: appmgr-bin-volume
+          subPath: appmgr-tiller-secret-copier.sh
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      serviceAccount: svcacct-ricplt-appmgr
+      serviceAccountName: svcacct-ricplt-appmgr
+      terminationGracePeriodSeconds: 30
+      volumes:
+      - configMap:
+          defaultMode: 420
+          name: configmap-ricplt-appmgr-appconfig
+        name: config-volume
+      - name: secret-volume
+        secret:
+          defaultMode: 420
+          secretName: secret-ricplt-appmgr
+      - emptyDir: {}
+        name: helm-secret-volume
+      - configMap:
+          defaultMode: 493
+          name: configmap-ricplt-appmgr-bin
+        name: appmgr-bin-volume
+status:
+  availableReplicas: 1
+  conditions:
+  - lastTransitionTime: "2026-06-27T22:03:32Z"
+
+--- deployment.apps/deployment-ricplt-e2mgr ---
+        resources: {}
+        securityContext:
+          privileged: false
+        stdin: true
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        tty: true
+        volumeMounts:
+        - mountPath: /opt/E2Manager/router.txt
+          name: local-router-file
+          subPath: router.txt
+        - mountPath: /opt/E2Manager/resources/configuration.yaml
+          name: local-configuration-file
+          subPath: configuration.yaml
+      dnsPolicy: ClusterFirst
+      hostname: e2mgr
+      imagePullSecrets:
+      - name: secret-nexus3-o-ran-sc-org-10002-o-ran-sc
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+      volumes:
+      - configMap:
+          defaultMode: 420
+          name: configmap-ricplt-e2mgr-router-configmap
+        name: local-router-file
+      - configMap:
+          defaultMode: 420
+          name: configmap-ricplt-e2mgr-configuration-configmap
+        name: local-configuration-file
+status:
+  availableReplicas: 1
+  conditions:
+  - lastTransitionTime: "2026-06-27T22:04:05Z"
+    lastUpdateTime: "2026-06-27T22:04:46Z"
+    message: ReplicaSet "deployment-ricplt-e2mgr-77fb448967" has successfully progressed.
+    reason: NewReplicaSetAvailable
+    status: "True"
+    type: Progressing
+  - lastTransitionTime: "2026-08-10T07:13:17Z"
+
+--- deployment.apps/deployment-ricplt-e2term-alpha ---
+        resources: {}
+        securityContext:
+          privileged: false
+        stdin: true
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        tty: true
+        volumeMounts:
+        - mountPath: /opt/e2/router.txt
+          name: local-router-file
+          subPath: router.txt
+        - mountPath: /tmp/rmr_verbose
+          name: local-router-file
+          subPath: rmr_verbose
+        - mountPath: /data/outgoing/
+          name: vol-shared
+      dnsPolicy: ClusterFirstWithHostNet
+      hostname: e2term-alpha
+      imagePullSecrets:
+      - name: secret-nexus3-o-ran-sc-org-10002-o-ran-sc
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+      volumes:
+      - configMap:
+          defaultMode: 420
+          name: configmap-ricplt-e2term-router-configmap
+        name: local-router-file
+      - name: vol-shared
+        persistentVolumeClaim:
+          claimName: pvc-ricplt-e2term-alpha
+status:
+  availableReplicas: 1
+  conditions:
+  - lastTransitionTime: "2026-06-27T22:04:17Z"
+    lastUpdateTime: "2026-06-27T22:09:02Z"
+    message: ReplicaSet "deployment-ricplt-e2term-alpha-6bc5476847" has successfully
+      progressed.
+    reason: NewReplicaSetAvailable
+    status: "True"
+    type: Progressing
+  - lastTransitionTime: "2026-08-08T20:58:56Z"
+
+--- deployment.apps/deployment-ricplt-o1mediator ---
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /etc/o1agent
+          name: appconfig-file
+      dnsPolicy: ClusterFirst
+      hostname: o1mediator
+      imagePullSecrets:
+      - name: secret-nexus3-o-ran-sc-org-10002-o-ran-sc
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      serviceAccount: svcacct-ricplt-o1mediator
+      serviceAccountName: svcacct-ricplt-o1mediator
+      terminationGracePeriodSeconds: 30
+      volumes:
+      - configMap:
+          defaultMode: 420
+          name: configmap-ricplt-o1mediator-appconfig-configmap
+        name: appconfig-file
+status:
+  availableReplicas: 1
+  conditions:
+  - lastTransitionTime: "2026-06-27T22:05:18Z"
+    lastUpdateTime: "2026-06-27T22:07:28Z"
+    message: ReplicaSet "deployment-ricplt-o1mediator-5548474c67" has successfully
+      progressed.
+    reason: NewReplicaSetAvailable
+    status: "True"
+    type: Progressing
+  - lastTransitionTime: "2026-07-23T12:12:30Z"
+    lastUpdateTime: "2026-07-23T12:12:30Z"
+    message: Deployment has minimum availability.
+    reason: MinimumReplicasAvailable
+
+--- deployment.apps/deployment-ricplt-rtmgr ---
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /cfg
+          name: rtmgrcfg
+          readOnly: true
+      dnsPolicy: ClusterFirst
+      hostname: rtmgr
+      imagePullSecrets:
+      - name: secret-nexus3-o-ran-sc-org-10002-o-ran-sc
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+      volumes:
+      - configMap:
+          defaultMode: 420
+          items:
+          - key: rtmgrcfg
+            mode: 420
+            path: rtmgr-config.yaml
+          name: configmap-ricplt-rtmgr-rtmgrcfg
+        name: rtmgrcfg
+status:
+  availableReplicas: 1
+  conditions:
+  - lastTransitionTime: "2026-06-27T22:03:46Z"
+    lastUpdateTime: "2026-06-27T22:04:31Z"
+    message: ReplicaSet "deployment-ricplt-rtmgr-6d479f4bc" has successfully progressed.
+    reason: NewReplicaSetAvailable
+    status: "True"
+    type: Progressing
+  - lastTransitionTime: "2026-07-23T12:14:52Z"
+
+--- deployment.apps/deployment-ricplt-submgr ---
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /cfg
+          name: config-volume
+      dnsPolicy: ClusterFirst
+      hostname: submgr
+      imagePullSecrets:
+      - name: secret-nexus3-o-ran-sc-org-10002-o-ran-sc
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+      volumes:
+      - configMap:
+          defaultMode: 420
+          items:
+          - key: submgrcfg
+            mode: 420
+            path: submgr-config.yaml
+          - key: submgrutartg
+            mode: 420
+            path: submgr-uta-rtg.rt
+          name: submgrcfg
+        name: config-volume
+status:
+  availableReplicas: 1
+  conditions:
+  - lastTransitionTime: "2026-06-27T22:04:46Z"
+    lastUpdateTime: "2026-06-27T22:05:17Z"
+    message: ReplicaSet "deployment-ricplt-submgr-5fdddb8f64" has successfully progressed.
+    reason: NewReplicaSetAvailable
+
+--- deployment.apps/deployment-ricplt-vespamgr ---
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      hostname: vespamgr
+      imagePullSecrets:
+      - name: secret-nexus3-o-ran-sc-org-10002-o-ran-sc
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+status:
+  availableReplicas: 1
+  conditions:
+  - lastTransitionTime: "2026-06-27T22:05:05Z"
+    lastUpdateTime: "2026-06-27T22:08:07Z"
+    message: ReplicaSet "deployment-ricplt-vespamgr-786666549b" has successfully progressed.
+    reason: NewReplicaSetAvailable
+    status: "True"
+    type: Progressing
+  - lastTransitionTime: "2026-07-23T12:13:02Z"
+    lastUpdateTime: "2026-07-23T12:13:02Z"
+    message: Deployment has minimum availability.
+    reason: MinimumReplicasAvailable
+    status: "True"
+    type: Available
+  observedGeneration: 1
+  readyReplicas: 1
+  replicas: 1
+  updatedReplicas: 1
+
+--- statefulset/statefulset-ricplt-dbaas-server ---
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /data
+          name: config
+      dnsPolicy: ClusterFirst
+      imagePullSecrets:
+      - name: secret-nexus3-o-ran-sc-org-10002-o-ran-sc
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      shareProcessNamespace: true
+      terminationGracePeriodSeconds: 5
+      volumes:
+      - configMap:
+          defaultMode: 420
+          name: configmap-ricplt-dbaas-config
+        name: config
+  updateStrategy:
+    type: RollingUpdate
+status:
+  availableReplicas: 1
+  collisionCount: 0
+  currentReplicas: 1
+  currentRevision: statefulset-ricplt-dbaas-server-97ddb69c5
+  observedGeneration: 1
+  readyReplicas: 1
+  replicas: 1
+  updateRevision: statefulset-ricplt-dbaas-server-97ddb69c5
+  updatedReplicas: 1

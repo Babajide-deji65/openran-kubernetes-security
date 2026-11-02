@@ -1,0 +1,14 @@
+=== STEP 4C: ALARMMANAGER TOKEN HARDENING ===
+Date: Mon Aug 24 22:10:46 BST 2026
+
+--- Deployment Setting ---
+false
+
+--- Token Presence ---
+Token: NOT PRESENT
+
+--- Pod Health ---
+deployment-ricplt-alarmmanager-5b55698b59-5pqvg   1/1     Running   0               12m
+
+--- Connectivity from e2term ---
+404

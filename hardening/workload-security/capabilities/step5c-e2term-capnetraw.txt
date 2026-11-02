@@ -1,0 +1,14 @@
+=== STEP 5C: E2TERM CAP_NET_RAW HARDENING ===
+Date: Tue Sep  1 11:55:09 BST 2026
+
+--- Security Context ---
+{"allowPrivilegeEscalation":false,"capabilities":{"drop":["NET_RAW"]}}
+
+--- Pod Status ---
+deployment-ricplt-e2term-alpha-8478b4785f-jvmw2   1/1     Running   0             7m37s
+
+--- Effective Capabilities ---
+CapEff:	00000000a80405fb
+
+--- CAP_NET_RAW Verification ---
+deployment-ricplt-e2term-alpha-8478b4785f-jvmw2 -> CAP_NET_RAW NOT PRESENT

@@ -1,0 +1,40 @@
+=== STEP 7E: STREAMING CONNECTION IDLE TIMEOUT FINAL VERIFICATION ===
+Date: Sat Sep 12 13:02:53 BST 2026
+
+--- Kubelet timeout configuration ---
+=== minikube ===
+streamingConnectionIdleTimeout: 4h
+active
+
+=== minikube-m02 ===
+streamingConnectionIdleTimeout: 4h
+active
+
+=== minikube-m03 ===
+streamingConnectionIdleTimeout: 4h
+active
+
+--- Node status ---
+NAME           STATUS   ROLES           AGE   VERSION
+minikube       Ready    control-plane   81d   v1.29.0
+minikube-m02   Ready    <none>          81d   v1.29.0
+minikube-m03   Ready    <none>          81d   v1.29.0
+
+--- Control-plane health ---
+NAME                               READY   STATUS    RESTARTS       AGE
+coredns-76f75df574-frzqf           1/1     Running   23 (28h ago)   81d
+etcd-minikube                      1/1     Running   23 (28h ago)   81d
+kindnet-7bnnc                      1/1     Running   23 (28h ago)   81d
+kindnet-sd5kh                      1/1     Running   23 (28h ago)   81d
+kindnet-smwpr                      1/1     Running   23 (28h ago)   81d
+kube-apiserver-minikube            1/1     Running   16 (28h ago)   25d
+kube-controller-manager-minikube   1/1     Running   16 (28h ago)   25d
+kube-proxy-8ddqw                   1/1     Running   23 (28h ago)   81d
+kube-proxy-g5lmh                   1/1     Running   23 (28h ago)   81d
+kube-proxy-t5j4w                   1/1     Running   23 (28h ago)   81d
+kube-scheduler-minikube            1/1     Running   16 (28h ago)   25d
+metrics-server-c8fdd586f-9hz2h     1/1     Running   28 (61m ago)   76d
+storage-provisioner                1/1     Running   78 (62m ago)   81d
+
+--- Streaming operation validation ---
+PASS: kubectl exec operational after timeout hardening

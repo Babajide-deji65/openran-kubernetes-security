@@ -1,0 +1,11 @@
+NAME                                              READY   STATUS    RESTARTS         AGE   IP           NODE           NOMINATED NODE   READINESS GATES
+deployment-ricplt-a1mediator-6cf77d47d9-sxqd4     1/1     Running   26 (6m11s ago)   22d   10.244.2.3   minikube-m03   <none>           <none>
+deployment-ricplt-alarmmanager-59f4cc855-k7h6r    1/1     Running   12 (6d22h ago)   20d   10.244.1.7   minikube-m02   <none>           <none>
+deployment-ricplt-appmgr-86bdfb6848-rsxsb         1/1     Running   11 (6d22h ago)   19d   10.244.2.4   minikube-m03   <none>           <none>
+deployment-ricplt-e2mgr-6d75b679bf-b7jgt          1/1     Running   73 (6m46s ago)   27d   10.244.1.8   minikube-m02   <none>           <none>
+deployment-ricplt-e2term-alpha-6cdfd9ccf7-vvb7g   1/1     Running   31 (6d22h ago)   27d   10.244.2.7   minikube-m03   <none>           <none>
+deployment-ricplt-o1mediator-78ffb44dd6-zn5cs     1/1     Running   10 (6d22h ago)   18d   10.244.1.4   minikube-m02   <none>           <none>
+deployment-ricplt-rtmgr-99d7557b-7l7pf            1/1     Running   19 (5m52s ago)   19d   10.244.1.6   minikube-m02   <none>           <none>
+deployment-ricplt-submgr-7cb45cfbc8-kkmlw         1/1     Running   30 (6m55s ago)   22d   10.244.1.9   minikube-m02   <none>           <none>
+deployment-ricplt-vespamgr-579cd6c5bb-2lksw       1/1     Running   19 (6d22h ago)   27d   10.244.2.2   minikube-m03   <none>           <none>
+statefulset-ricplt-dbaas-server-0                 1/1     Running   20 (6d22h ago)   22d   10.244.2.6   minikube-m03   <none>           <none>

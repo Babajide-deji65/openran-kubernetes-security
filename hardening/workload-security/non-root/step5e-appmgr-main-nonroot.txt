@@ -1,0 +1,14 @@
+=== STEP 5E: APPMGR MAIN CONTAINER NON-ROOT HARDENING ===
+Date: Wed Sep  2 15:06:41 BST 2026
+
+--- Main Container Security Context ---
+{"allowPrivilegeEscalation":false,"capabilities":{"drop":["NET_RAW"]},"runAsGroup":1000,"runAsNonRoot":true,"runAsUser":1000,"seccompProfile":{"type":"RuntimeDefault"}}
+
+--- Init Container Security Context ---
+{"allowPrivilegeEscalation":false,"seccompProfile":{"type":"RuntimeDefault"}}
+
+--- Main Container Runtime User ---
+uid=1000 gid=1000 groups=1000
+
+--- Pod Status ---
+deployment-ricplt-appmgr-74645cfdd-tcswn          1/1     Running   0               4m59s

@@ -1,0 +1,23 @@
+=== STEP 6B-2: RIC CONFIGURED NETWORK DEPENDENCIES ===
+Date: Tue Sep  8 04:17:43 BST 2026
+
+=== deployment-ricplt-a1mediator ===
+        - containerPort: 4561
+
+=== deployment-ricplt-alarmmanager ===
+        - containerPort: 4561
+        - containerPort: 4560
+        - containerPort: 8080
+
+=== deployment-ricplt-appmgr ===
+        - containerPort: 8080
+        - containerPort: 4561
+        - containerPort: 4560
+          value: https://kubernetes.default.svc.cluster.local/
+
+=== deployment-ricplt-vespamgr ===
+          value: service-ricplt-appmgr-http
+            port: 8080
+        - containerPort: 8080
+        - containerPort: 9095
+

@@ -1,0 +1,31 @@
+
+WORKLOAD: deployment-ricplt-a1mediator
+CONTAINER: container-ricplt-a1mediator | privileged=false | allowPrivilegeEscalation=false
+
+WORKLOAD: deployment-ricplt-alarmmanager
+CONTAINER: container-ricplt-alarmmanager | privileged=false | allowPrivilegeEscalation=false
+
+WORKLOAD: deployment-ricplt-appmgr
+INIT: container-ricplt-appmgr-copy-tiller-secret | privileged=false | allowPrivilegeEscalation=false
+CONTAINER: container-ricplt-appmgr | privileged=false | allowPrivilegeEscalation=false
+
+WORKLOAD: deployment-ricplt-e2mgr
+CONTAINER: container-ricplt-e2mgr | privileged=false | allowPrivilegeEscalation=false
+
+WORKLOAD: deployment-ricplt-e2term-alpha
+CONTAINER: container-ricplt-e2term | privileged=false | allowPrivilegeEscalation=false
+
+WORKLOAD: deployment-ricplt-o1mediator
+CONTAINER: container-ricplt-o1mediator | privileged=false | allowPrivilegeEscalation=false
+
+WORKLOAD: deployment-ricplt-rtmgr
+CONTAINER: container-ricplt-rtmgr | privileged=false | allowPrivilegeEscalation=false
+
+WORKLOAD: deployment-ricplt-submgr
+CONTAINER: container-ricplt-submgr | privileged=false | allowPrivilegeEscalation=false
+
+WORKLOAD: deployment-ricplt-vespamgr
+CONTAINER: container-ricplt-vespamgr | privileged=false | allowPrivilegeEscalation=false
+
+WORKLOAD: statefulset-ricplt-dbaas-server
+CONTAINER: container-ricplt-dbaas-redis | privileged=false | allowPrivilegeEscalation=false

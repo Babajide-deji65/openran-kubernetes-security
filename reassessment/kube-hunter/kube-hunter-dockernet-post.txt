@@ -1,0 +1,52 @@
+2026-09-13 21:46:32,895 INFO kube_hunter.modules.report.collector Started hunting
+2026-09-13 21:46:32,901 INFO kube_hunter.modules.report.collector Discovering Open Kubernetes Services
+2026-09-13 21:46:33,119 INFO kube_hunter.modules.report.collector Found open service "Kubelet API" at 192.168.49.4:10250
+2026-09-13 21:46:33,121 INFO kube_hunter.modules.report.collector Found open service "Kubelet API" at 192.168.49.3:10250
+2026-09-13 21:46:33,122 INFO kube_hunter.modules.report.collector Found open service "Kubelet API" at 192.168.49.2:10250
+2026-09-13 21:46:33,133 INFO kube_hunter.modules.report.collector Found open service "Etcd" at 192.168.49.2:2379
+
+Nodes
++-------------+--------------+
+| TYPE        | LOCATION     |
++-------------+--------------+
+| Node/Master | 192.168.49.4 |
++-------------+--------------+
+| Node/Master | 192.168.49.3 |
++-------------+--------------+
+| Node/Master | 192.168.49.2 |
++-------------+--------------+
+
+Detected Services
++-------------+--------------------+----------------------+
+| SERVICE     | LOCATION           | DESCRIPTION          |
++-------------+--------------------+----------------------+
+| Kubelet API | 192.168.49.4:10250 | The Kubelet is the   |
+|             |                    | main component in    |
+|             |                    | every Node, all pod  |
+|             |                    | operations goes      |
+|             |                    | through the kubelet  |
++-------------+--------------------+----------------------+
+| Kubelet API | 192.168.49.3:10250 | The Kubelet is the   |
+|             |                    | main component in    |
+|             |                    | every Node, all pod  |
+|             |                    | operations goes      |
+|             |                    | through the kubelet  |
++-------------+--------------------+----------------------+
+| Kubelet API | 192.168.49.2:10250 | The Kubelet is the   |
+|             |                    | main component in    |
+|             |                    | every Node, all pod  |
+|             |                    | operations goes      |
+|             |                    | through the kubelet  |
++-------------+--------------------+----------------------+
+| Etcd        | 192.168.49.2:2379  | Etcd is a DB that    |
+|             |                    | stores cluster's     |
+|             |                    | data, it contains    |
+|             |                    | configuration and    |
+|             |                    | current              |
+|             |                    |     state            |
+|             |                    | information, and     |
+|             |                    | might contain        |
+|             |                    | secrets              |
++-------------+--------------------+----------------------+
+
+No vulnerabilities were found

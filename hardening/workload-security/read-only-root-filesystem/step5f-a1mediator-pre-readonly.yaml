@@ -1,0 +1,125 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    deployment.kubernetes.io/revision: "7"
+    meta.helm.sh/release-name: r4-a1mediator
+    meta.helm.sh/release-namespace: ricplt
+  creationTimestamp: "2026-06-27T22:04:30Z"
+  generation: 7
+  labels:
+    app: ricplt-a1mediator
+    app.kubernetes.io/managed-by: Helm
+    chart: a1mediator-3.0.0
+    heritage: Helm
+    release: r4-a1mediator
+  name: deployment-ricplt-a1mediator
+  namespace: ricplt
+  resourceVersion: "636669"
+  uid: 62358808-1748-4bca-9f1c-2fc16dc2762b
+spec:
+  progressDeadlineSeconds: 600
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app: ricplt-a1mediator
+      release: r4-a1mediator
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: ricplt-a1mediator
+        release: r4-a1mediator
+    spec:
+      automountServiceAccountToken: false
+      containers:
+      - envFrom:
+        - configMapRef:
+            name: configmap-ricplt-a1mediator-env
+        - configMapRef:
+            name: configmap-ricplt-dbaas-appconfig
+        image: nexus3.o-ran-sc.org:10002/o-ran-sc/ric-plt-a1:2.5.1
+        imagePullPolicy: IfNotPresent
+        livenessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /a1-p/healthcheck
+            port: http
+            scheme: HTTP
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 1
+        name: container-ricplt-a1mediator
+        ports:
+        - containerPort: 10000
+          name: http
+          protocol: TCP
+        - containerPort: 4561
+          name: rmrroute
+          protocol: TCP
+        - containerPort: 4562
+          name: rmrdata
+          protocol: TCP
+        readinessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /a1-p/healthcheck
+            port: http
+            scheme: HTTP
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 1
+        resources: {}
+        securityContext:
+          allowPrivilegeEscalation: false
+          capabilities:
+            drop:
+            - NET_RAW
+          runAsNonRoot: true
+          runAsUser: 1000
+          seccompProfile:
+            type: RuntimeDefault
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /opt/route
+          name: a1conf
+      dnsPolicy: ClusterFirst
+      hostname: a1mediator
+      imagePullSecrets:
+      - name: secret-nexus3-o-ran-sc-org-10002-o-ran-sc
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+      volumes:
+      - configMap:
+          defaultMode: 420
+          name: configmap-ricplt-a1mediator-a1conf
+        name: a1conf
+status:
+  availableReplicas: 1
+  conditions:
+  - lastTransitionTime: "2026-09-01T21:59:21Z"
+    lastUpdateTime: "2026-09-01T21:59:32Z"
+    message: ReplicaSet "deployment-ricplt-a1mediator-56dd574db4" has successfully
+      progressed.
+    reason: NewReplicaSetAvailable
+    status: "True"
+    type: Progressing
+  - lastTransitionTime: "2026-09-05T22:07:01Z"
+    lastUpdateTime: "2026-09-05T22:07:01Z"
+    message: Deployment has minimum availability.
+    reason: MinimumReplicasAvailable
+    status: "True"
+    type: Available
+  observedGeneration: 7
+  readyReplicas: 1
+  replicas: 1
+  updatedReplicas: 1

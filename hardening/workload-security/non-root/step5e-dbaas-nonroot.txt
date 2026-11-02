@@ -1,0 +1,14 @@
+=== STEP 5E: DBAAS NON-ROOT HARDENING ===
+Date: Wed Sep  2 22:51:44 BST 2026
+
+--- Security Context ---
+{"allowPrivilegeEscalation":false,"capabilities":{"drop":["NET_RAW"]},"runAsGroup":1000,"runAsNonRoot":true,"runAsUser":1000,"seccompProfile":{"type":"RuntimeDefault"}}
+
+--- Redis Runtime Process ---
+    7 1000     redis    redis-server /data/redis.conf
+
+--- Redis Functional Check ---
+PONG
+
+--- Pod Status ---
+statefulset-ricplt-dbaas-server-0                 1/1     Running   0               14m

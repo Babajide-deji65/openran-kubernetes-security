@@ -1,0 +1,14 @@
+=== Token auto-mounting verification ===
+e2term:
+ls: cannot access '/var/run/secrets/kubernetes.io/serviceaccount/': No such file or directory
+command terminated with exit code 2
+
+a1mediator:
+ls: cannot access '/var/run/secrets/kubernetes.io/serviceaccount/': No such file or directory
+command terminated with exit code 2
+
+=== CAP_NET_RAW verification ===
+e2term CapEff:
+CapEff:	00000000a80405fb
+Baseline was: a80425fb (CAP_NET_RAW present)
+Post is:      a80405fb (CAP_NET_RAW removed)

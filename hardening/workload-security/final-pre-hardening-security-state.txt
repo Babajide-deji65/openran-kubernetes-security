@@ -1,0 +1,27 @@
+=== FINAL PRE-HARDENING SECURITY STATE ===
+Date: Mon Aug 17 22:01:22 BST 2026
+
+--- Runtime User IDs ---
+pod/deployment-ricplt-a1mediator-6c66d9c9f7-8vzqf -> uid=1000(a1user) gid=1000(a1user) groups=1000(a1user)
+pod/deployment-ricplt-alarmmanager-7666876479-b44vp -> uid=0(root) gid=0(root) groups=0(root)
+pod/deployment-ricplt-appmgr-5b87c685c9-sfkfm -> Defaulted container "container-ricplt-appmgr" out of: container-ricplt-appmgr, container-ricplt-appmgr-copy-tiller-secret (init)
+pod/deployment-ricplt-e2mgr-77fb448967-pdzdg -> uid=0(root) gid=0(root) groups=0(root)
+pod/deployment-ricplt-e2term-alpha-6bc5476847-h7bnw -> uid=0(root) gid=0(root) groups=0(root)
+pod/deployment-ricplt-o1mediator-5548474c67-gwskx -> uid=0(root) gid=0(root) groups=0(root)
+pod/deployment-ricplt-rtmgr-6d479f4bc-v2mwk -> uid=0(root) gid=0(root) groups=0(root)
+pod/deployment-ricplt-submgr-5fdddb8f64-g9w4c -> uid=0(root) gid=0(root) groups=0(root)
+pod/deployment-ricplt-vespamgr-786666549b-gz2qn -> uid=0(root) gid=0(root) groups=0(root)
+pod/statefulset-ricplt-dbaas-server-0 -> uid=0(root) gid=0(root) groups=0(root),0(root),1(bin),2(daemon),3(sys),4(adm),6(disk),10(wheel),11(floppy),20(dialout),26(tape),27(video)
+
+--- Default ServiceAccount API Access ---
+no
+no
+
+--- appmgr ServiceAccount API Access ---
+yes
+yes
+yes
+yes
+
+--- NetworkPolicies ---
+No resources found in ricplt namespace.

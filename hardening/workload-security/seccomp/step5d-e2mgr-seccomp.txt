@@ -1,0 +1,8 @@
+=== STEP 5D: E2MGR SECCOMP HARDENING ===
+Date: Tue Sep  1 13:56:19 BST 2026
+
+--- Security Context ---
+{"allowPrivilegeEscalation":false,"capabilities":{"drop":["NET_RAW"]},"seccompProfile":{"type":"RuntimeDefault"}}
+
+--- Pod Status ---
+deployment-ricplt-e2mgr-6d75b679bf-b7jgt          1/1     Running   0               2m31s

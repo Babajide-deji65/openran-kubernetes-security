@@ -1,0 +1,13 @@
+=== STEP 6B-3: CLUSTER SERVICE DEPENDENCIES ===
+Date: Tue Sep  8 04:18:00 BST 2026
+
+--- DNS Service ---
+NAME       TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)                  AGE   SELECTOR
+kube-dns   ClusterIP   10.96.0.10   <none>        53/UDP,53/TCP,9153/TCP   77d   k8s-app=kube-dns
+
+--- Kubernetes API Service ---
+NAME         TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE   SELECTOR
+kubernetes   ClusterIP   10.96.0.1    <none>        443/TCP   77d   <none>
+
+--- AppMgr Service Account ---
+ServiceAccount: svcacct-ricplt-appmgr

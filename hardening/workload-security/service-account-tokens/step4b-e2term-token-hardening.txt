@@ -1,0 +1,22 @@
+=== STEP 4B: E2TERM TOKEN HARDENING ===
+Date: Sun Aug 23 23:42:02 BST 2026
+
+--- Deployment Setting ---
+false
+
+--- Token Presence ---
+Token: NOT PRESENT
+
+--- Pod Health ---
+deployment-ricplt-e2term-alpha-7d57d9b7ff-x99zd   1/1     Running   0                12m
+
+--- Connectivity from e2term ---
+service-ricplt-a1mediator-http:10000 -> 404
+service-ricplt-e2mgr-http:3800 -> 404
+service-ricplt-rtmgr-http:3800 -> 404
+service-ricplt-appmgr-http:8080 -> 404
+service-ricplt-o1mediator-http:9001 -> 200
+service-ricplt-alarmmanager-http:8080 -> 404
+service-ricplt-vespamgr-http:8080 -> 404
+dbaas:6379 -> OPEN
+submgr-rmr:4561 -> OPEN

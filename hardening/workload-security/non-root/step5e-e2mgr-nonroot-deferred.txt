@@ -1,0 +1,23 @@
+=== STEP 5E: E2MGR NON-ROOT ASSESSMENT ===
+Date: Wed Sep  2 13:15:18 BST 2026
+
+Decision: Non-root NOT applied
+Reason: E2Mgr actively writes runtime state to
+        /opt/E2Manager/router.txt.stash.inc
+        File permissions: root:root 640
+        Directory permissions: root:root 755
+        A UID 1000 process would not be able to write the existing file
+        or create a replacement in /opt/E2Manager.
+
+--- Runtime User ---
+uid=0(root) gid=0(root) groups=0(root)
+
+--- Runtime File and Directory Permissions ---
+-rw-r----- 1 root root 31 Sep  2 12:15 /opt/E2Manager/router.txt.stash.inc
+drwxr-xr-x 1 root root 4096 Sep  2 12:15 /opt/E2Manager
+
+--- Evidence of Active Write Access ---
+l-wx------ 1 root root 64 Sep  2 11:58 14 -> /opt/E2Manager/router.txt.stash.inc
+
+--- Current Security Context (unchanged) ---
+{"allowPrivilegeEscalation":false,"capabilities":{"drop":["NET_RAW"]},"seccompProfile":{"type":"RuntimeDefault"}}

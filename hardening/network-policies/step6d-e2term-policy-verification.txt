@@ -1,0 +1,38 @@
+=== STEP 6D: E2TERM NETWORKPOLICY VERIFICATION ===
+Date: Wed Sep  9 20:43:07 BST 2026
+
+--- Applied Policy ---
+NAME                      POD-SELECTOR              AGE
+restrict-e2term-ingress   app=ricplt-e2term-alpha   14m
+
+--- Positive: E2Mgr -> E2Term TCP 38000 ---
+PASS: E2Mgr reached E2Term TCP 38000
+
+--- Positive: RTMgr -> E2Term TCP 4561 ---
+PASS: RTMgr reached E2Term TCP 4561
+
+--- Positive: Prometheus -> E2Term TCP 8088 ---
+# HELP exposer_transferred_bytes_total Transferred bytes to metrics services
+# TYPE exposer_transferred_bytes_total counter
+exposer_transferred_bytes_total 75059
+
+--- Negative: A1Mediator -> E2Term TCP 38000 ---
+PASS: A1Mediator blocked from E2Term TCP 38000
+
+--- Negative: A1Mediator -> E2Term TCP 4561 ---
+PASS: A1Mediator blocked from E2Term TCP 4561
+
+--- E2Term Pod Health ---
+NAME                                              READY   STATUS    RESTARTS       AGE   IP           NODE           NOMINATED NODE   READINESS GATES
+deployment-ricplt-e2term-alpha-6cdfd9ccf7-vvb7g   1/1     Running   14 (21h ago)   8d    10.244.2.3   minikube-m03   <none>           <none>
+
+--- E2Term Listening Ports ---
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+tcp        0      0 0.0.0.0:38000           0.0.0.0:*               LISTEN      23/./e2             
+tcp        0      0 10.244.2.3:8088         0.0.0.0:*               LISTEN      23/./e2             
+tcp        0      0 0.0.0.0:4561            0.0.0.0:*               LISTEN      23/./e2             
+
+--- E2Term SCTP Service ---
+NAME                               PORT    NODEPORT   PROTOCOL
+service-ricplt-e2term-sctp-alpha   36422   32222      SCTP

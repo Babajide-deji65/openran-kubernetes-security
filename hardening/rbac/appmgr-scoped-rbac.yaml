@@ -1,0 +1,56 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: appmgr-ricxapp-access-scoped
+  namespace: ricxapp
+subjects:
+- kind: ServiceAccount
+  name: svcacct-ricplt-appmgr
+  namespace: ricplt
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: svcacct-ricplt-appmgr-ricxapp-access
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: appmgr-ricxapp-getappconfig-scoped
+  namespace: ricxapp
+subjects:
+- kind: ServiceAccount
+  name: svcacct-ricplt-appmgr
+  namespace: ricplt
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: svcacct-ricplt-appmgr-ricxapp-getappconfig
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: appmgr-ricinfra-helm-secret
+  namespace: ricinfra
+rules:
+- apiGroups:
+  - ""
+  resources:
+  - secrets
+  resourceNames:
+  - ricxapp-helm-secret
+  verbs:
+  - get
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: appmgr-ricinfra-helm-secret
+  namespace: ricinfra
+subjects:
+- kind: ServiceAccount
+  name: svcacct-ricplt-appmgr
+  namespace: ricplt
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: appmgr-ricinfra-helm-secret

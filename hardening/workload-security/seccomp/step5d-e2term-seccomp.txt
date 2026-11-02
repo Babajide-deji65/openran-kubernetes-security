@@ -1,0 +1,8 @@
+=== STEP 5D: E2TERM SECCOMP HARDENING ===
+Date: Tue Sep  1 14:16:05 BST 2026
+
+--- Security Context ---
+{"allowPrivilegeEscalation":false,"capabilities":{"drop":["NET_RAW"]},"seccompProfile":{"type":"RuntimeDefault"}}
+
+--- Pod Status ---
+deployment-ricplt-e2term-alpha-6cdfd9ccf7-vvb7g   1/1     Running   0               4m13s

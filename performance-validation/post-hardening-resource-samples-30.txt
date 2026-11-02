@@ -1,0 +1,637 @@
+========== POST-HARDENING RESOURCE UTILISATION ==========
+Start: Sat Sep 19 00:28:58 BST 2026
+Samples: 30
+Interval: 10 seconds
+Condition: steady-state RIC deployment
+
+========== SAMPLE 1 ==========
+Timestamp: 2026-09-19 00:28:58 BST
+--- RIC PODS ---
+NAME                                              CPU(cores)   MEMORY(bytes)   
+deployment-ricplt-a1mediator-6cf77d47d9-sxqd4     3m           88Mi            
+deployment-ricplt-alarmmanager-59f4cc855-k7h6r    1m           22Mi            
+deployment-ricplt-appmgr-86bdfb6848-rsxsb         1m           19Mi            
+deployment-ricplt-e2mgr-6d75b679bf-b7jgt          1m           20Mi            
+deployment-ricplt-e2term-alpha-6cdfd9ccf7-vvb7g   8m           18Mi            
+deployment-ricplt-o1mediator-78ffb44dd6-zn5cs     3m           65Mi            
+deployment-ricplt-rtmgr-99d7557b-7l7pf            1m           13Mi            
+deployment-ricplt-submgr-7cb45cfbc8-kkmlw         1m           14Mi            
+deployment-ricplt-vespamgr-579cd6c5bb-2lksw       3m           41Mi            
+statefulset-ricplt-dbaas-server-0                 25m          1Mi             
+
+--- CLUSTER NODES ---
+NAME           CPU(cores)   CPU(%)   MEMORY(bytes)   MEMORY(%)   
+minikube       280m         3%       925Mi           7%          
+minikube-m02   129m         1%       475Mi           3%          
+minikube-m03   205m         2%       666Mi           5%          
+
+========== SAMPLE 2 ==========
+Timestamp: 2026-09-19 00:29:08 BST
+--- RIC PODS ---
+NAME                                              CPU(cores)   MEMORY(bytes)   
+deployment-ricplt-a1mediator-6cf77d47d9-sxqd4     3m           88Mi            
+deployment-ricplt-alarmmanager-59f4cc855-k7h6r    1m           22Mi            
+deployment-ricplt-appmgr-86bdfb6848-rsxsb         1m           19Mi            
+deployment-ricplt-e2mgr-6d75b679bf-b7jgt          1m           20Mi            
+deployment-ricplt-e2term-alpha-6cdfd9ccf7-vvb7g   8m           18Mi            
+deployment-ricplt-o1mediator-78ffb44dd6-zn5cs     3m           65Mi            
+deployment-ricplt-rtmgr-99d7557b-7l7pf            1m           13Mi            
+deployment-ricplt-submgr-7cb45cfbc8-kkmlw         1m           14Mi            
+deployment-ricplt-vespamgr-579cd6c5bb-2lksw       3m           41Mi            
+statefulset-ricplt-dbaas-server-0                 25m          1Mi             
+
+--- CLUSTER NODES ---
+NAME           CPU(cores)   CPU(%)   MEMORY(bytes)   MEMORY(%)   
+minikube       280m         3%       925Mi           7%          
+minikube-m02   129m         1%       475Mi           3%          
+minikube-m03   205m         2%       666Mi           5%          
+
+========== SAMPLE 3 ==========
+Timestamp: 2026-09-19 00:29:18 BST
+--- RIC PODS ---
+NAME                                              CPU(cores)   MEMORY(bytes)   
+deployment-ricplt-a1mediator-6cf77d47d9-sxqd4     3m           88Mi            
+deployment-ricplt-alarmmanager-59f4cc855-k7h6r    1m           22Mi            
+deployment-ricplt-appmgr-86bdfb6848-rsxsb         1m           19Mi            
+deployment-ricplt-e2mgr-6d75b679bf-b7jgt          1m           20Mi            
+deployment-ricplt-e2term-alpha-6cdfd9ccf7-vvb7g   8m           18Mi            
+deployment-ricplt-o1mediator-78ffb44dd6-zn5cs     3m           65Mi            
+deployment-ricplt-rtmgr-99d7557b-7l7pf            1m           13Mi            
+deployment-ricplt-submgr-7cb45cfbc8-kkmlw         1m           14Mi            
+deployment-ricplt-vespamgr-579cd6c5bb-2lksw       3m           41Mi            
+statefulset-ricplt-dbaas-server-0                 25m          1Mi             
+
+--- CLUSTER NODES ---
+NAME           CPU(cores)   CPU(%)   MEMORY(bytes)   MEMORY(%)   
+minikube       280m         3%       925Mi           7%          
+minikube-m02   129m         1%       475Mi           3%          
+minikube-m03   205m         2%       666Mi           5%          
+
+========== SAMPLE 4 ==========
+Timestamp: 2026-09-19 00:29:29 BST
+--- RIC PODS ---
+NAME                                              CPU(cores)   MEMORY(bytes)   
+deployment-ricplt-a1mediator-6cf77d47d9-sxqd4     2m           89Mi            
+deployment-ricplt-alarmmanager-59f4cc855-k7h6r    1m           22Mi            
+deployment-ricplt-appmgr-86bdfb6848-rsxsb         1m           19Mi            
+deployment-ricplt-e2mgr-6d75b679bf-b7jgt          1m           20Mi            
+deployment-ricplt-e2term-alpha-6cdfd9ccf7-vvb7g   6m           18Mi            
+deployment-ricplt-o1mediator-78ffb44dd6-zn5cs     3m           65Mi            
+deployment-ricplt-rtmgr-99d7557b-7l7pf            1m           13Mi            
+deployment-ricplt-submgr-7cb45cfbc8-kkmlw         1m           14Mi            
+deployment-ricplt-vespamgr-579cd6c5bb-2lksw       3m           41Mi            
+statefulset-ricplt-dbaas-server-0                 19m          1Mi             
+
+--- CLUSTER NODES ---
+NAME           CPU(cores)   CPU(%)   MEMORY(bytes)   MEMORY(%)   
+minikube       243m         3%       923Mi           7%          
+minikube-m02   111m         1%       475Mi           3%          
+minikube-m03   182m         2%       667Mi           5%          
+
+========== SAMPLE 5 ==========
+Timestamp: 2026-09-19 00:29:39 BST
+--- RIC PODS ---
+NAME                                              CPU(cores)   MEMORY(bytes)   
+deployment-ricplt-a1mediator-6cf77d47d9-sxqd4     2m           89Mi            
+deployment-ricplt-alarmmanager-59f4cc855-k7h6r    1m           22Mi            
+deployment-ricplt-appmgr-86bdfb6848-rsxsb         1m           19Mi            
+deployment-ricplt-e2mgr-6d75b679bf-b7jgt          1m           20Mi            
+deployment-ricplt-e2term-alpha-6cdfd9ccf7-vvb7g   6m           18Mi            
+deployment-ricplt-o1mediator-78ffb44dd6-zn5cs     3m           65Mi            
+deployment-ricplt-rtmgr-99d7557b-7l7pf            1m           13Mi            
+deployment-ricplt-submgr-7cb45cfbc8-kkmlw         1m           14Mi            
+deployment-ricplt-vespamgr-579cd6c5bb-2lksw       3m           41Mi            
+statefulset-ricplt-dbaas-server-0                 19m          1Mi             
+
+--- CLUSTER NODES ---
+NAME           CPU(cores)   CPU(%)   MEMORY(bytes)   MEMORY(%)   
+minikube       243m         3%       923Mi           7%          
+minikube-m02   111m         1%       475Mi           3%          
+minikube-m03   182m         2%       667Mi           5%          
+
+========== SAMPLE 6 ==========
+Timestamp: 2026-09-19 00:29:50 BST
+--- RIC PODS ---
+NAME                                              CPU(cores)   MEMORY(bytes)   
+deployment-ricplt-a1mediator-6cf77d47d9-sxqd4     2m           89Mi            
+deployment-ricplt-alarmmanager-59f4cc855-k7h6r    1m           22Mi            
+deployment-ricplt-appmgr-86bdfb6848-rsxsb         1m           19Mi            
+deployment-ricplt-e2mgr-6d75b679bf-b7jgt          1m           20Mi            
+deployment-ricplt-e2term-alpha-6cdfd9ccf7-vvb7g   6m           18Mi            
+deployment-ricplt-o1mediator-78ffb44dd6-zn5cs     3m           65Mi            
+deployment-ricplt-rtmgr-99d7557b-7l7pf            1m           13Mi            
+deployment-ricplt-submgr-7cb45cfbc8-kkmlw         1m           14Mi            
+deployment-ricplt-vespamgr-579cd6c5bb-2lksw       3m           41Mi            
+statefulset-ricplt-dbaas-server-0                 19m          1Mi             
+
+--- CLUSTER NODES ---
+NAME           CPU(cores)   CPU(%)   MEMORY(bytes)   MEMORY(%)   
+minikube       243m         3%       923Mi           7%          
+minikube-m02   111m         1%       475Mi           3%          
+minikube-m03   182m         2%       667Mi           5%          
+
+========== SAMPLE 7 ==========
+Timestamp: 2026-09-19 00:30:00 BST
+--- RIC PODS ---
+NAME                                              CPU(cores)   MEMORY(bytes)   
+deployment-ricplt-a1mediator-6cf77d47d9-sxqd4     2m           89Mi            
+deployment-ricplt-alarmmanager-59f4cc855-k7h6r    1m           22Mi            
+deployment-ricplt-appmgr-86bdfb6848-rsxsb         1m           19Mi            
+deployment-ricplt-e2mgr-6d75b679bf-b7jgt          1m           20Mi            
+deployment-ricplt-e2term-alpha-6cdfd9ccf7-vvb7g   6m           18Mi            
+deployment-ricplt-o1mediator-78ffb44dd6-zn5cs     3m           65Mi            
+deployment-ricplt-rtmgr-99d7557b-7l7pf            1m           13Mi            
+deployment-ricplt-submgr-7cb45cfbc8-kkmlw         1m           14Mi            
+deployment-ricplt-vespamgr-579cd6c5bb-2lksw       3m           41Mi            
+statefulset-ricplt-dbaas-server-0                 19m          1Mi             
+
+--- CLUSTER NODES ---
+NAME           CPU(cores)   CPU(%)   MEMORY(bytes)   MEMORY(%)   
+minikube       243m         3%       923Mi           7%          
+minikube-m02   111m         1%       475Mi           3%          
+minikube-m03   182m         2%       667Mi           5%          
+
+========== SAMPLE 8 ==========
+Timestamp: 2026-09-19 00:30:10 BST
+--- RIC PODS ---
+NAME                                              CPU(cores)   MEMORY(bytes)   
+deployment-ricplt-a1mediator-6cf77d47d9-sxqd4     2m           89Mi            
+deployment-ricplt-alarmmanager-59f4cc855-k7h6r    1m           22Mi            
+deployment-ricplt-appmgr-86bdfb6848-rsxsb         1m           19Mi            
+deployment-ricplt-e2mgr-6d75b679bf-b7jgt          1m           20Mi            
+deployment-ricplt-e2term-alpha-6cdfd9ccf7-vvb7g   6m           18Mi            
+deployment-ricplt-o1mediator-78ffb44dd6-zn5cs     3m           65Mi            
+deployment-ricplt-rtmgr-99d7557b-7l7pf            1m           13Mi            
+deployment-ricplt-submgr-7cb45cfbc8-kkmlw         1m           14Mi            
+deployment-ricplt-vespamgr-579cd6c5bb-2lksw       3m           41Mi            
+statefulset-ricplt-dbaas-server-0                 19m          1Mi             
+
+--- CLUSTER NODES ---
+NAME           CPU(cores)   CPU(%)   MEMORY(bytes)   MEMORY(%)   
+minikube       243m         3%       923Mi           7%          
+minikube-m02   111m         1%       475Mi           3%          
+minikube-m03   182m         2%       667Mi           5%          
+
+========== SAMPLE 9 ==========
+Timestamp: 2026-09-19 00:30:21 BST
+--- RIC PODS ---
+NAME                                              CPU(cores)   MEMORY(bytes)   
+deployment-ricplt-a1mediator-6cf77d47d9-sxqd4     2m           89Mi            
+deployment-ricplt-alarmmanager-59f4cc855-k7h6r    1m           22Mi            
+deployment-ricplt-appmgr-86bdfb6848-rsxsb         1m           19Mi            
+deployment-ricplt-e2mgr-6d75b679bf-b7jgt          1m           20Mi            
+deployment-ricplt-e2term-alpha-6cdfd9ccf7-vvb7g   5m           18Mi            
+deployment-ricplt-o1mediator-78ffb44dd6-zn5cs     3m           66Mi            
+deployment-ricplt-rtmgr-99d7557b-7l7pf            1m           13Mi            
+deployment-ricplt-submgr-7cb45cfbc8-kkmlw         1m           14Mi            
+deployment-ricplt-vespamgr-579cd6c5bb-2lksw       3m           41Mi            
+statefulset-ricplt-dbaas-server-0                 15m          1Mi             
+
+--- CLUSTER NODES ---
+NAME           CPU(cores)   CPU(%)   MEMORY(bytes)   MEMORY(%)   
+minikube       219m         2%       925Mi           7%          
+minikube-m02   90m          1%       477Mi           3%          
+minikube-m03   150m         1%       672Mi           5%          
+
+========== SAMPLE 10 ==========
+Timestamp: 2026-09-19 00:30:31 BST
+--- RIC PODS ---
+NAME                                              CPU(cores)   MEMORY(bytes)   
+deployment-ricplt-a1mediator-6cf77d47d9-sxqd4     2m           89Mi            
+deployment-ricplt-alarmmanager-59f4cc855-k7h6r    1m           22Mi            
+deployment-ricplt-appmgr-86bdfb6848-rsxsb         1m           19Mi            
+deployment-ricplt-e2mgr-6d75b679bf-b7jgt          1m           20Mi            
+deployment-ricplt-e2term-alpha-6cdfd9ccf7-vvb7g   5m           18Mi            
+deployment-ricplt-o1mediator-78ffb44dd6-zn5cs     3m           66Mi            
+deployment-ricplt-rtmgr-99d7557b-7l7pf            1m           13Mi            
+deployment-ricplt-submgr-7cb45cfbc8-kkmlw         1m           14Mi            
+deployment-ricplt-vespamgr-579cd6c5bb-2lksw       3m           41Mi            
+statefulset-ricplt-dbaas-server-0                 15m          1Mi             
+
+--- CLUSTER NODES ---
+NAME           CPU(cores)   CPU(%)   MEMORY(bytes)   MEMORY(%)   
+minikube       219m         2%       925Mi           7%          
+minikube-m02   90m          1%       477Mi           3%          
+minikube-m03   150m         1%       672Mi           5%          
+
+========== SAMPLE 11 ==========
+Timestamp: 2026-09-19 00:30:41 BST
+--- RIC PODS ---
+NAME                                              CPU(cores)   MEMORY(bytes)   
+deployment-ricplt-a1mediator-6cf77d47d9-sxqd4     2m           89Mi            
+deployment-ricplt-alarmmanager-59f4cc855-k7h6r    1m           22Mi            
+deployment-ricplt-appmgr-86bdfb6848-rsxsb         1m           19Mi            
+deployment-ricplt-e2mgr-6d75b679bf-b7jgt          1m           20Mi            
+deployment-ricplt-e2term-alpha-6cdfd9ccf7-vvb7g   5m           18Mi            
+deployment-ricplt-o1mediator-78ffb44dd6-zn5cs     3m           66Mi            
+deployment-ricplt-rtmgr-99d7557b-7l7pf            1m           13Mi            
+deployment-ricplt-submgr-7cb45cfbc8-kkmlw         1m           14Mi            
+deployment-ricplt-vespamgr-579cd6c5bb-2lksw       3m           41Mi            
+statefulset-ricplt-dbaas-server-0                 15m          1Mi             
+
+--- CLUSTER NODES ---
+NAME           CPU(cores)   CPU(%)   MEMORY(bytes)   MEMORY(%)   
+minikube       219m         2%       925Mi           7%          
+minikube-m02   90m          1%       477Mi           3%          
+minikube-m03   150m         1%       672Mi           5%          
+
+========== SAMPLE 12 ==========
+Timestamp: 2026-09-19 00:30:52 BST
+--- RIC PODS ---
+NAME                                              CPU(cores)   MEMORY(bytes)   
+deployment-ricplt-a1mediator-6cf77d47d9-sxqd4     2m           89Mi            
+deployment-ricplt-alarmmanager-59f4cc855-k7h6r    1m           22Mi            
+deployment-ricplt-appmgr-86bdfb6848-rsxsb         1m           19Mi            
+deployment-ricplt-e2mgr-6d75b679bf-b7jgt          1m           20Mi            
+deployment-ricplt-e2term-alpha-6cdfd9ccf7-vvb7g   5m           18Mi            
+deployment-ricplt-o1mediator-78ffb44dd6-zn5cs     3m           66Mi            
+deployment-ricplt-rtmgr-99d7557b-7l7pf            1m           13Mi            
+deployment-ricplt-submgr-7cb45cfbc8-kkmlw         1m           14Mi            
+deployment-ricplt-vespamgr-579cd6c5bb-2lksw       3m           41Mi            
+statefulset-ricplt-dbaas-server-0                 15m          1Mi             
+
+--- CLUSTER NODES ---
+NAME           CPU(cores)   CPU(%)   MEMORY(bytes)   MEMORY(%)   
+minikube       219m         2%       925Mi           7%          
+minikube-m02   90m          1%       477Mi           3%          
+minikube-m03   150m         1%       672Mi           5%          
+
+========== SAMPLE 13 ==========
+Timestamp: 2026-09-19 00:31:02 BST
+--- RIC PODS ---
+NAME                                              CPU(cores)   MEMORY(bytes)   
+deployment-ricplt-a1mediator-6cf77d47d9-sxqd4     2m           89Mi            
+deployment-ricplt-alarmmanager-59f4cc855-k7h6r    1m           22Mi            
+deployment-ricplt-appmgr-86bdfb6848-rsxsb         1m           19Mi            
+deployment-ricplt-e2mgr-6d75b679bf-b7jgt          1m           20Mi            
+deployment-ricplt-e2term-alpha-6cdfd9ccf7-vvb7g   5m           18Mi            
+deployment-ricplt-o1mediator-78ffb44dd6-zn5cs     3m           66Mi            
+deployment-ricplt-rtmgr-99d7557b-7l7pf            1m           13Mi            
+deployment-ricplt-submgr-7cb45cfbc8-kkmlw         1m           14Mi            
+deployment-ricplt-vespamgr-579cd6c5bb-2lksw       3m           41Mi            
+statefulset-ricplt-dbaas-server-0                 15m          1Mi             
+
+--- CLUSTER NODES ---
+NAME           CPU(cores)   CPU(%)   MEMORY(bytes)   MEMORY(%)   
+minikube       219m         2%       925Mi           7%          
+minikube-m02   90m          1%       477Mi           3%          
+minikube-m03   150m         1%       672Mi           5%          
+
+========== SAMPLE 14 ==========
+Timestamp: 2026-09-19 00:31:12 BST
+--- RIC PODS ---
+NAME                                              CPU(cores)   MEMORY(bytes)   
+deployment-ricplt-a1mediator-6cf77d47d9-sxqd4     2m           89Mi            
+deployment-ricplt-alarmmanager-59f4cc855-k7h6r    1m           22Mi            
+deployment-ricplt-appmgr-86bdfb6848-rsxsb         1m           19Mi            
+deployment-ricplt-e2mgr-6d75b679bf-b7jgt          1m           20Mi            
+deployment-ricplt-e2term-alpha-6cdfd9ccf7-vvb7g   5m           18Mi            
+deployment-ricplt-o1mediator-78ffb44dd6-zn5cs     3m           66Mi            
+deployment-ricplt-rtmgr-99d7557b-7l7pf            1m           13Mi            
+deployment-ricplt-submgr-7cb45cfbc8-kkmlw         1m           14Mi            
+deployment-ricplt-vespamgr-579cd6c5bb-2lksw       3m           41Mi            
+statefulset-ricplt-dbaas-server-0                 15m          1Mi             
+
+--- CLUSTER NODES ---
+NAME           CPU(cores)   CPU(%)   MEMORY(bytes)   MEMORY(%)   
+minikube       219m         2%       925Mi           7%          
+minikube-m02   90m          1%       477Mi           3%          
+minikube-m03   150m         1%       672Mi           5%          
+
+========== SAMPLE 15 ==========
+Timestamp: 2026-09-19 00:31:22 BST
+--- RIC PODS ---
+NAME                                              CPU(cores)   MEMORY(bytes)   
+deployment-ricplt-a1mediator-6cf77d47d9-sxqd4     2m           89Mi            
+deployment-ricplt-alarmmanager-59f4cc855-k7h6r    1m           22Mi            
+deployment-ricplt-appmgr-86bdfb6848-rsxsb         1m           19Mi            
+deployment-ricplt-e2mgr-6d75b679bf-b7jgt          1m           20Mi            
+deployment-ricplt-e2term-alpha-6cdfd9ccf7-vvb7g   5m           18Mi            
+deployment-ricplt-o1mediator-78ffb44dd6-zn5cs     3m           66Mi            
+deployment-ricplt-rtmgr-99d7557b-7l7pf            2m           13Mi            
+deployment-ricplt-submgr-7cb45cfbc8-kkmlw         1m           14Mi            
+deployment-ricplt-vespamgr-579cd6c5bb-2lksw       3m           41Mi            
+statefulset-ricplt-dbaas-server-0                 15m          1Mi             
+
+--- CLUSTER NODES ---
+NAME           CPU(cores)   CPU(%)   MEMORY(bytes)   MEMORY(%)   
+minikube       223m         2%       926Mi           7%          
+minikube-m02   92m          1%       478Mi           4%          
+minikube-m03   140m         1%       676Mi           5%          
+
+========== SAMPLE 16 ==========
+Timestamp: 2026-09-19 00:31:33 BST
+--- RIC PODS ---
+NAME                                              CPU(cores)   MEMORY(bytes)   
+deployment-ricplt-a1mediator-6cf77d47d9-sxqd4     2m           89Mi            
+deployment-ricplt-alarmmanager-59f4cc855-k7h6r    1m           22Mi            
+deployment-ricplt-appmgr-86bdfb6848-rsxsb         1m           19Mi            
+deployment-ricplt-e2mgr-6d75b679bf-b7jgt          1m           20Mi            
+deployment-ricplt-e2term-alpha-6cdfd9ccf7-vvb7g   5m           18Mi            
+deployment-ricplt-o1mediator-78ffb44dd6-zn5cs     3m           66Mi            
+deployment-ricplt-rtmgr-99d7557b-7l7pf            2m           13Mi            
+deployment-ricplt-submgr-7cb45cfbc8-kkmlw         1m           14Mi            
+deployment-ricplt-vespamgr-579cd6c5bb-2lksw       3m           41Mi            
+statefulset-ricplt-dbaas-server-0                 15m          1Mi             
+
+--- CLUSTER NODES ---
+NAME           CPU(cores)   CPU(%)   MEMORY(bytes)   MEMORY(%)   
+minikube       223m         2%       926Mi           7%          
+minikube-m02   92m          1%       478Mi           4%          
+minikube-m03   140m         1%       676Mi           5%          
+
+========== SAMPLE 17 ==========
+Timestamp: 2026-09-19 00:31:43 BST
+--- RIC PODS ---
+NAME                                              CPU(cores)   MEMORY(bytes)   
+deployment-ricplt-a1mediator-6cf77d47d9-sxqd4     2m           89Mi            
+deployment-ricplt-alarmmanager-59f4cc855-k7h6r    1m           22Mi            
+deployment-ricplt-appmgr-86bdfb6848-rsxsb         1m           19Mi            
+deployment-ricplt-e2mgr-6d75b679bf-b7jgt          1m           20Mi            
+deployment-ricplt-e2term-alpha-6cdfd9ccf7-vvb7g   5m           18Mi            
+deployment-ricplt-o1mediator-78ffb44dd6-zn5cs     3m           66Mi            
+deployment-ricplt-rtmgr-99d7557b-7l7pf            2m           13Mi            
+deployment-ricplt-submgr-7cb45cfbc8-kkmlw         1m           14Mi            
+deployment-ricplt-vespamgr-579cd6c5bb-2lksw       3m           41Mi            
+statefulset-ricplt-dbaas-server-0                 15m          1Mi             
+
+--- CLUSTER NODES ---
+NAME           CPU(cores)   CPU(%)   MEMORY(bytes)   MEMORY(%)   
+minikube       223m         2%       926Mi           7%          
+minikube-m02   92m          1%       478Mi           4%          
+minikube-m03   140m         1%       676Mi           5%          
+
+========== SAMPLE 18 ==========
+Timestamp: 2026-09-19 00:31:53 BST
+--- RIC PODS ---
+NAME                                              CPU(cores)   MEMORY(bytes)   
+deployment-ricplt-a1mediator-6cf77d47d9-sxqd4     2m           89Mi            
+deployment-ricplt-alarmmanager-59f4cc855-k7h6r    1m           22Mi            
+deployment-ricplt-appmgr-86bdfb6848-rsxsb         1m           19Mi            
+deployment-ricplt-e2mgr-6d75b679bf-b7jgt          1m           20Mi            
+deployment-ricplt-e2term-alpha-6cdfd9ccf7-vvb7g   5m           18Mi            
+deployment-ricplt-o1mediator-78ffb44dd6-zn5cs     3m           66Mi            
+deployment-ricplt-rtmgr-99d7557b-7l7pf            2m           13Mi            
+deployment-ricplt-submgr-7cb45cfbc8-kkmlw         1m           14Mi            
+deployment-ricplt-vespamgr-579cd6c5bb-2lksw       3m           41Mi            
+statefulset-ricplt-dbaas-server-0                 15m          1Mi             
+
+--- CLUSTER NODES ---
+NAME           CPU(cores)   CPU(%)   MEMORY(bytes)   MEMORY(%)   
+minikube       223m         2%       926Mi           7%          
+minikube-m02   92m          1%       478Mi           4%          
+minikube-m03   140m         1%       676Mi           5%          
+
+========== SAMPLE 19 ==========
+Timestamp: 2026-09-19 00:32:04 BST
+--- RIC PODS ---
+NAME                                              CPU(cores)   MEMORY(bytes)   
+deployment-ricplt-a1mediator-6cf77d47d9-sxqd4     2m           89Mi            
+deployment-ricplt-alarmmanager-59f4cc855-k7h6r    1m           22Mi            
+deployment-ricplt-appmgr-86bdfb6848-rsxsb         1m           19Mi            
+deployment-ricplt-e2mgr-6d75b679bf-b7jgt          1m           20Mi            
+deployment-ricplt-e2term-alpha-6cdfd9ccf7-vvb7g   5m           18Mi            
+deployment-ricplt-o1mediator-78ffb44dd6-zn5cs     3m           66Mi            
+deployment-ricplt-rtmgr-99d7557b-7l7pf            2m           13Mi            
+deployment-ricplt-submgr-7cb45cfbc8-kkmlw         1m           14Mi            
+deployment-ricplt-vespamgr-579cd6c5bb-2lksw       3m           41Mi            
+statefulset-ricplt-dbaas-server-0                 15m          1Mi             
+
+--- CLUSTER NODES ---
+NAME           CPU(cores)   CPU(%)   MEMORY(bytes)   MEMORY(%)   
+minikube       223m         2%       926Mi           7%          
+minikube-m02   92m          1%       478Mi           4%          
+minikube-m03   140m         1%       676Mi           5%          
+
+========== SAMPLE 20 ==========
+Timestamp: 2026-09-19 00:32:14 BST
+--- RIC PODS ---
+NAME                                              CPU(cores)   MEMORY(bytes)   
+deployment-ricplt-a1mediator-6cf77d47d9-sxqd4     2m           89Mi            
+deployment-ricplt-alarmmanager-59f4cc855-k7h6r    1m           22Mi            
+deployment-ricplt-appmgr-86bdfb6848-rsxsb         1m           19Mi            
+deployment-ricplt-e2mgr-6d75b679bf-b7jgt          1m           20Mi            
+deployment-ricplt-e2term-alpha-6cdfd9ccf7-vvb7g   5m           18Mi            
+deployment-ricplt-o1mediator-78ffb44dd6-zn5cs     3m           66Mi            
+deployment-ricplt-rtmgr-99d7557b-7l7pf            2m           13Mi            
+deployment-ricplt-submgr-7cb45cfbc8-kkmlw         1m           14Mi            
+deployment-ricplt-vespamgr-579cd6c5bb-2lksw       3m           41Mi            
+statefulset-ricplt-dbaas-server-0                 15m          1Mi             
+
+--- CLUSTER NODES ---
+NAME           CPU(cores)   CPU(%)   MEMORY(bytes)   MEMORY(%)   
+minikube       223m         2%       926Mi           7%          
+minikube-m02   92m          1%       478Mi           4%          
+minikube-m03   140m         1%       676Mi           5%          
+
+========== SAMPLE 21 ==========
+Timestamp: 2026-09-19 00:32:24 BST
+--- RIC PODS ---
+NAME                                              CPU(cores)   MEMORY(bytes)   
+deployment-ricplt-a1mediator-6cf77d47d9-sxqd4     2m           89Mi            
+deployment-ricplt-alarmmanager-59f4cc855-k7h6r    1m           22Mi            
+deployment-ricplt-appmgr-86bdfb6848-rsxsb         1m           19Mi            
+deployment-ricplt-e2mgr-6d75b679bf-b7jgt          1m           19Mi            
+deployment-ricplt-e2term-alpha-6cdfd9ccf7-vvb7g   5m           18Mi            
+deployment-ricplt-o1mediator-78ffb44dd6-zn5cs     3m           66Mi            
+deployment-ricplt-rtmgr-99d7557b-7l7pf            1m           13Mi            
+deployment-ricplt-submgr-7cb45cfbc8-kkmlw         1m           14Mi            
+deployment-ricplt-vespamgr-579cd6c5bb-2lksw       2m           41Mi            
+statefulset-ricplt-dbaas-server-0                 16m          1Mi             
+
+--- CLUSTER NODES ---
+NAME           CPU(cores)   CPU(%)   MEMORY(bytes)   MEMORY(%)   
+minikube       227m         2%       927Mi           7%          
+minikube-m02   89m          1%       478Mi           3%          
+minikube-m03   157m         1%       672Mi           5%          
+
+========== SAMPLE 22 ==========
+Timestamp: 2026-09-19 00:32:35 BST
+--- RIC PODS ---
+NAME                                              CPU(cores)   MEMORY(bytes)   
+deployment-ricplt-a1mediator-6cf77d47d9-sxqd4     2m           89Mi            
+deployment-ricplt-alarmmanager-59f4cc855-k7h6r    1m           22Mi            
+deployment-ricplt-appmgr-86bdfb6848-rsxsb         1m           19Mi            
+deployment-ricplt-e2mgr-6d75b679bf-b7jgt          1m           19Mi            
+deployment-ricplt-e2term-alpha-6cdfd9ccf7-vvb7g   5m           18Mi            
+deployment-ricplt-o1mediator-78ffb44dd6-zn5cs     3m           66Mi            
+deployment-ricplt-rtmgr-99d7557b-7l7pf            1m           13Mi            
+deployment-ricplt-submgr-7cb45cfbc8-kkmlw         1m           14Mi            
+deployment-ricplt-vespamgr-579cd6c5bb-2lksw       2m           41Mi            
+statefulset-ricplt-dbaas-server-0                 16m          1Mi             
+
+--- CLUSTER NODES ---
+NAME           CPU(cores)   CPU(%)   MEMORY(bytes)   MEMORY(%)   
+minikube       227m         2%       927Mi           7%          
+minikube-m02   89m          1%       478Mi           3%          
+minikube-m03   157m         1%       672Mi           5%          
+
+========== SAMPLE 23 ==========
+Timestamp: 2026-09-19 00:32:45 BST
+--- RIC PODS ---
+NAME                                              CPU(cores)   MEMORY(bytes)   
+deployment-ricplt-a1mediator-6cf77d47d9-sxqd4     2m           89Mi            
+deployment-ricplt-alarmmanager-59f4cc855-k7h6r    1m           22Mi            
+deployment-ricplt-appmgr-86bdfb6848-rsxsb         1m           19Mi            
+deployment-ricplt-e2mgr-6d75b679bf-b7jgt          1m           19Mi            
+deployment-ricplt-e2term-alpha-6cdfd9ccf7-vvb7g   5m           18Mi            
+deployment-ricplt-o1mediator-78ffb44dd6-zn5cs     3m           66Mi            
+deployment-ricplt-rtmgr-99d7557b-7l7pf            1m           13Mi            
+deployment-ricplt-submgr-7cb45cfbc8-kkmlw         1m           14Mi            
+deployment-ricplt-vespamgr-579cd6c5bb-2lksw       2m           41Mi            
+statefulset-ricplt-dbaas-server-0                 16m          1Mi             
+
+--- CLUSTER NODES ---
+NAME           CPU(cores)   CPU(%)   MEMORY(bytes)   MEMORY(%)   
+minikube       227m         2%       927Mi           7%          
+minikube-m02   89m          1%       478Mi           3%          
+minikube-m03   157m         1%       672Mi           5%          
+
+========== SAMPLE 24 ==========
+Timestamp: 2026-09-19 00:32:55 BST
+--- RIC PODS ---
+NAME                                              CPU(cores)   MEMORY(bytes)   
+deployment-ricplt-a1mediator-6cf77d47d9-sxqd4     2m           89Mi            
+deployment-ricplt-alarmmanager-59f4cc855-k7h6r    1m           22Mi            
+deployment-ricplt-appmgr-86bdfb6848-rsxsb         1m           19Mi            
+deployment-ricplt-e2mgr-6d75b679bf-b7jgt          1m           19Mi            
+deployment-ricplt-e2term-alpha-6cdfd9ccf7-vvb7g   5m           18Mi            
+deployment-ricplt-o1mediator-78ffb44dd6-zn5cs     3m           66Mi            
+deployment-ricplt-rtmgr-99d7557b-7l7pf            1m           13Mi            
+deployment-ricplt-submgr-7cb45cfbc8-kkmlw         1m           14Mi            
+deployment-ricplt-vespamgr-579cd6c5bb-2lksw       2m           41Mi            
+statefulset-ricplt-dbaas-server-0                 16m          1Mi             
+
+--- CLUSTER NODES ---
+NAME           CPU(cores)   CPU(%)   MEMORY(bytes)   MEMORY(%)   
+minikube       227m         2%       927Mi           7%          
+minikube-m02   89m          1%       478Mi           3%          
+minikube-m03   157m         1%       672Mi           5%          
+
+========== SAMPLE 25 ==========
+Timestamp: 2026-09-19 00:33:05 BST
+--- RIC PODS ---
+NAME                                              CPU(cores)   MEMORY(bytes)   
+deployment-ricplt-a1mediator-6cf77d47d9-sxqd4     2m           89Mi            
+deployment-ricplt-alarmmanager-59f4cc855-k7h6r    1m           22Mi            
+deployment-ricplt-appmgr-86bdfb6848-rsxsb         1m           19Mi            
+deployment-ricplt-e2mgr-6d75b679bf-b7jgt          1m           19Mi            
+deployment-ricplt-e2term-alpha-6cdfd9ccf7-vvb7g   5m           18Mi            
+deployment-ricplt-o1mediator-78ffb44dd6-zn5cs     3m           66Mi            
+deployment-ricplt-rtmgr-99d7557b-7l7pf            1m           13Mi            
+deployment-ricplt-submgr-7cb45cfbc8-kkmlw         1m           14Mi            
+deployment-ricplt-vespamgr-579cd6c5bb-2lksw       2m           41Mi            
+statefulset-ricplt-dbaas-server-0                 16m          1Mi             
+
+--- CLUSTER NODES ---
+NAME           CPU(cores)   CPU(%)   MEMORY(bytes)   MEMORY(%)   
+minikube       227m         2%       927Mi           7%          
+minikube-m02   89m          1%       478Mi           3%          
+minikube-m03   157m         1%       672Mi           5%          
+
+========== SAMPLE 26 ==========
+Timestamp: 2026-09-19 00:33:16 BST
+--- RIC PODS ---
+NAME                                              CPU(cores)   MEMORY(bytes)   
+deployment-ricplt-a1mediator-6cf77d47d9-sxqd4     2m           89Mi            
+deployment-ricplt-alarmmanager-59f4cc855-k7h6r    1m           22Mi            
+deployment-ricplt-appmgr-86bdfb6848-rsxsb         1m           19Mi            
+deployment-ricplt-e2mgr-6d75b679bf-b7jgt          1m           19Mi            
+deployment-ricplt-e2term-alpha-6cdfd9ccf7-vvb7g   5m           18Mi            
+deployment-ricplt-o1mediator-78ffb44dd6-zn5cs     3m           66Mi            
+deployment-ricplt-rtmgr-99d7557b-7l7pf            1m           13Mi            
+deployment-ricplt-submgr-7cb45cfbc8-kkmlw         1m           14Mi            
+deployment-ricplt-vespamgr-579cd6c5bb-2lksw       2m           41Mi            
+statefulset-ricplt-dbaas-server-0                 16m          1Mi             
+
+--- CLUSTER NODES ---
+NAME           CPU(cores)   CPU(%)   MEMORY(bytes)   MEMORY(%)   
+minikube       227m         2%       927Mi           7%          
+minikube-m02   89m          1%       478Mi           3%          
+minikube-m03   157m         1%       672Mi           5%          
+
+========== SAMPLE 27 ==========
+Timestamp: 2026-09-19 00:33:26 BST
+--- RIC PODS ---
+NAME                                              CPU(cores)   MEMORY(bytes)   
+deployment-ricplt-a1mediator-6cf77d47d9-sxqd4     2m           89Mi            
+deployment-ricplt-alarmmanager-59f4cc855-k7h6r    1m           22Mi            
+deployment-ricplt-appmgr-86bdfb6848-rsxsb         1m           19Mi            
+deployment-ricplt-e2mgr-6d75b679bf-b7jgt          1m           19Mi            
+deployment-ricplt-e2term-alpha-6cdfd9ccf7-vvb7g   7m           18Mi            
+deployment-ricplt-o1mediator-78ffb44dd6-zn5cs     3m           66Mi            
+deployment-ricplt-rtmgr-99d7557b-7l7pf            1m           13Mi            
+deployment-ricplt-submgr-7cb45cfbc8-kkmlw         1m           14Mi            
+deployment-ricplt-vespamgr-579cd6c5bb-2lksw       3m           41Mi            
+statefulset-ricplt-dbaas-server-0                 17m          1Mi             
+
+--- CLUSTER NODES ---
+NAME           CPU(cores)   CPU(%)   MEMORY(bytes)   MEMORY(%)   
+minikube       225m         2%       925Mi           7%          
+minikube-m02   93m          1%       477Mi           3%          
+minikube-m03   162m         2%       674Mi           5%          
+
+========== SAMPLE 28 ==========
+Timestamp: 2026-09-19 00:33:37 BST
+--- RIC PODS ---
+NAME                                              CPU(cores)   MEMORY(bytes)   
+deployment-ricplt-a1mediator-6cf77d47d9-sxqd4     2m           89Mi            
+deployment-ricplt-alarmmanager-59f4cc855-k7h6r    1m           22Mi            
+deployment-ricplt-appmgr-86bdfb6848-rsxsb         1m           19Mi            
+deployment-ricplt-e2mgr-6d75b679bf-b7jgt          1m           19Mi            
+deployment-ricplt-e2term-alpha-6cdfd9ccf7-vvb7g   7m           18Mi            
+deployment-ricplt-o1mediator-78ffb44dd6-zn5cs     3m           66Mi            
+deployment-ricplt-rtmgr-99d7557b-7l7pf            1m           13Mi            
+deployment-ricplt-submgr-7cb45cfbc8-kkmlw         1m           14Mi            
+deployment-ricplt-vespamgr-579cd6c5bb-2lksw       3m           41Mi            
+statefulset-ricplt-dbaas-server-0                 17m          1Mi             
+
+--- CLUSTER NODES ---
+NAME           CPU(cores)   CPU(%)   MEMORY(bytes)   MEMORY(%)   
+minikube       225m         2%       925Mi           7%          
+minikube-m02   93m          1%       477Mi           3%          
+minikube-m03   162m         2%       674Mi           5%          
+
+========== SAMPLE 29 ==========
+Timestamp: 2026-09-19 00:33:47 BST
+--- RIC PODS ---
+NAME                                              CPU(cores)   MEMORY(bytes)   
+deployment-ricplt-a1mediator-6cf77d47d9-sxqd4     2m           89Mi            
+deployment-ricplt-alarmmanager-59f4cc855-k7h6r    1m           22Mi            
+deployment-ricplt-appmgr-86bdfb6848-rsxsb         1m           19Mi            
+deployment-ricplt-e2mgr-6d75b679bf-b7jgt          1m           19Mi            
+deployment-ricplt-e2term-alpha-6cdfd9ccf7-vvb7g   7m           18Mi            
+deployment-ricplt-o1mediator-78ffb44dd6-zn5cs     3m           66Mi            
+deployment-ricplt-rtmgr-99d7557b-7l7pf            1m           13Mi            
+deployment-ricplt-submgr-7cb45cfbc8-kkmlw         1m           14Mi            
+deployment-ricplt-vespamgr-579cd6c5bb-2lksw       3m           41Mi            
+statefulset-ricplt-dbaas-server-0                 17m          1Mi             
+
+--- CLUSTER NODES ---
+NAME           CPU(cores)   CPU(%)   MEMORY(bytes)   MEMORY(%)   
+minikube       225m         2%       925Mi           7%          
+minikube-m02   93m          1%       477Mi           3%          
+minikube-m03   162m         2%       674Mi           5%          
+
+========== SAMPLE 30 ==========
+Timestamp: 2026-09-19 00:33:57 BST
+--- RIC PODS ---
+NAME                                              CPU(cores)   MEMORY(bytes)   
+deployment-ricplt-a1mediator-6cf77d47d9-sxqd4     2m           89Mi            
+deployment-ricplt-alarmmanager-59f4cc855-k7h6r    1m           22Mi            
+deployment-ricplt-appmgr-86bdfb6848-rsxsb         1m           19Mi            
+deployment-ricplt-e2mgr-6d75b679bf-b7jgt          1m           19Mi            
+deployment-ricplt-e2term-alpha-6cdfd9ccf7-vvb7g   7m           18Mi            
+deployment-ricplt-o1mediator-78ffb44dd6-zn5cs     3m           66Mi            
+deployment-ricplt-rtmgr-99d7557b-7l7pf            1m           13Mi            
+deployment-ricplt-submgr-7cb45cfbc8-kkmlw         1m           14Mi            
+deployment-ricplt-vespamgr-579cd6c5bb-2lksw       3m           41Mi            
+statefulset-ricplt-dbaas-server-0                 17m          1Mi             
+
+--- CLUSTER NODES ---
+NAME           CPU(cores)   CPU(%)   MEMORY(bytes)   MEMORY(%)   
+minikube       225m         2%       925Mi           7%          
+minikube-m02   93m          1%       477Mi           3%          
+minikube-m03   162m         2%       674Mi           5%          
+
+End: Sat Sep 19 00:33:58 BST 2026

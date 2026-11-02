@@ -1,0 +1,8 @@
+=== STEP 5D: VESPAMGR SECCOMP HARDENING ===
+Date: Tue Sep  1 14:06:11 BST 2026
+
+--- Security Context ---
+{"allowPrivilegeEscalation":false,"capabilities":{"drop":["NET_RAW"]},"seccompProfile":{"type":"RuntimeDefault"}}
+
+--- Pod Status ---
+deployment-ricplt-vespamgr-579cd6c5bb-2lksw       1/1     Running   0               103s

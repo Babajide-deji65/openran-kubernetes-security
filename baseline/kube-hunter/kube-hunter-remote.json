@@ -1,0 +1,3 @@
+2026-07-05 21:45:31,014 INFO kube_hunter.modules.report.collector Started hunting
+2026-07-05 21:45:31,025 INFO kube_hunter.modules.report.collector Discovering Open Kubernetes Services
+{"nodes": [], "services": [], "vulnerabilities": []}

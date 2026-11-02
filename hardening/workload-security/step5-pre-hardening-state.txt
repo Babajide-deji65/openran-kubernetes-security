@@ -1,0 +1,27 @@
+=== STEP 5: PRE-HARDENING STATE ===
+Date: Sun Aug 30 13:03:10 BST 2026
+
+--- Security Contexts ---
+POD                                               RUN_AS_USER   RUN_AS_NONROOT   READ_ONLY_FS   ALLOW_PRIV_ESC   SECCOMP
+deployment-ricplt-a1mediator-79f866d8bf-75ktp     <none>        <none>           <none>         <none>           <none>
+deployment-ricplt-alarmmanager-5b55698b59-5pqvg   <none>        <none>           <none>         <none>           <none>
+deployment-ricplt-appmgr-5b87c685c9-sfkfm         <none>        <none>           <none>         <none>           <none>
+deployment-ricplt-e2mgr-7449646d7f-9xjhn          <none>        <none>           <none>         <none>           <none>
+deployment-ricplt-e2term-alpha-7d57d9b7ff-x99zd   <none>        <none>           <none>         <none>           <none>
+deployment-ricplt-o1mediator-94b84ff95-b5s29      <none>        <none>           <none>         <none>           <none>
+deployment-ricplt-rtmgr-7cb74d44b7-slzn4          <none>        <none>           <none>         <none>           <none>
+deployment-ricplt-submgr-78f875d79b-fmfr5         <none>        <none>           <none>         <none>           <none>
+deployment-ricplt-vespamgr-5b8884747b-w8m5f       <none>        <none>           <none>         <none>           <none>
+statefulset-ricplt-dbaas-server-0                 <none>        <none>           <none>         <none>           <none>
+
+--- Runtime User IDs ---
+pod/deployment-ricplt-a1mediator-79f866d8bf-75ktp -> uid=1000(a1user) gid=1000(a1user) groups=1000(a1user)
+pod/deployment-ricplt-alarmmanager-5b55698b59-5pqvg -> uid=0(root) gid=0(root) groups=0(root)
+pod/deployment-ricplt-appmgr-5b87c685c9-sfkfm -> Defaulted container "container-ricplt-appmgr" out of: container-ricplt-appmgr, container-ricplt-appmgr-copy-tiller-secret (init)
+pod/deployment-ricplt-e2mgr-7449646d7f-9xjhn -> uid=0(root) gid=0(root) groups=0(root)
+pod/deployment-ricplt-e2term-alpha-7d57d9b7ff-x99zd -> uid=0(root) gid=0(root) groups=0(root)
+pod/deployment-ricplt-o1mediator-94b84ff95-b5s29 -> uid=0(root) gid=0(root) groups=0(root)
+pod/deployment-ricplt-rtmgr-7cb74d44b7-slzn4 -> uid=0(root) gid=0(root) groups=0(root)
+pod/deployment-ricplt-submgr-78f875d79b-fmfr5 -> uid=0(root) gid=0(root) groups=0(root)
+pod/deployment-ricplt-vespamgr-5b8884747b-w8m5f -> uid=0(root) gid=0(root) groups=0(root)
+pod/statefulset-ricplt-dbaas-server-0 -> uid=0(root) gid=0(root) groups=0(root),0(root),1(bin),2(daemon),3(sys),4(adm),6(disk),10(wheel),11(floppy),20(dialout),26(tape),27(video)

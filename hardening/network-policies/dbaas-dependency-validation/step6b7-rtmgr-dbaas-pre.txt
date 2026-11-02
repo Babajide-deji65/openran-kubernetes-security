@@ -1,0 +1,20 @@
+=== RTMGR DBaaS DEPENDENCY TEST - PRE ===
+Date: Wed Sep  9 18:25:59 BST 2026
+
+--- RTMgr Pod ---
+NAME                                       READY   STATUS    RESTARTS         AGE     IP           NODE           NOMINATED NODE   READINESS GATES
+deployment-ricplt-rtmgr-694f4c5c6d-ds5gv   1/1     Running   10 (5m30s ago)   3d17h   10.244.1.6   minikube-m02   <none>           <none>
+
+--- Current Redis Clients ---
+id=37 addr=10.244.2.5:47612 fd=7 name= age=327 idle=7 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=49 addr=10.244.1.7:45680 fd=18 name= age=310 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=24 addr=10.244.2.7:53786 fd=13 name= age=355 idle=308 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=mset
+id=16 addr=10.244.1.9:41538 fd=8 name= age=357 idle=27 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=42 addr=10.244.1.7:44652 fd=15 name= age=319 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=43 addr=10.244.1.6:39554 fd=16 name= age=319 idle=308 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=mget
+id=44 addr=10.244.1.6:39558 fd=17 name= age=319 idle=319 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=command
+id=174 addr=127.0.0.1:46332 fd=9 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client
+
+--- RTMgr current health ---
+alive=200
+ready=200

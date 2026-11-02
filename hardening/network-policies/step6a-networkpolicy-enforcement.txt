@@ -1,0 +1,53 @@
+=== STEP 6A: NETWORKPOLICY ENFORCEMENT TEST ===
+Date: Tue Sep  8 03:57:35 BST 2026
+
+--- Test Environment ---
+NAME            READY   STATUS    RESTARTS   AGE   IP            NODE           NOMINATED NODE   READINESS GATES
+netpol-client   1/1     Running   0          13m   10.244.2.9    minikube-m03   <none>           <none>
+netpol-server   1/1     Running   0          13m   10.244.1.10   minikube-m02   <none>           <none>
+
+--- Server Pod IP ---
+10.244.1.10
+
+--- Remove Policy for Baseline Test ---
+networkpolicy.networking.k8s.io "deny-server-ingress" deleted from netpol-test namespace
+
+--- Baseline Connectivity Test ---
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to nginx!</title>
+<style>
+
+--- Apply Deny-Ingress Policy ---
+networkpolicy.networking.k8s.io/deny-server-ingress created
+
+--- Applied Policy ---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"networking.k8s.io/v1","kind":"NetworkPolicy","metadata":{"annotations":{},"name":"deny-server-ingress","namespace":"netpol-test"},"spec":{"podSelector":{"matchLabels":{"app":"netpol-server"}},"policyTypes":["Ingress"]}}
+  creationTimestamp: "2026-09-08T02:57:36Z"
+  generation: 1
+  name: deny-server-ingress
+  namespace: netpol-test
+  resourceVersion: "659383"
+  uid: 2142e1a7-1e33-44ab-990c-4ac302a6278f
+spec:
+  podSelector:
+    matchLabels:
+      app: netpol-server
+  policyTypes:
+  - Ingress
+
+--- Post-policy Connectivity Test ---
+curl: (28) Connection timed out after 3001 milliseconds
+command terminated with exit code 28
+
+--- Conclusion ---
+The client successfully reached the server before the NetworkPolicy
+was applied. After the deny-ingress policy was applied to the server,
+the same connection timed out. This confirms active NetworkPolicy
+enforcement in the current Minikube cluster.

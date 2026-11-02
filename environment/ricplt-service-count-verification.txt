@@ -1,0 +1,25 @@
+=== RICPLT SERVICE COUNT ===
+Date: Tue Sep 15 09:45:47 BST 2026
+
+NAME                                     TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)                      AGE
+service-ricplt-a1mediator-http           ClusterIP   10.106.35.130    <none>        10000/TCP                    79d
+service-ricplt-a1mediator-rmr            ClusterIP   10.111.108.13    <none>        4561/TCP,4562/TCP            79d
+service-ricplt-alarmmanager-http         ClusterIP   10.100.87.106    <none>        8080/TCP                     79d
+service-ricplt-alarmmanager-rmr          ClusterIP   10.98.248.248    <none>        4560/TCP,4561/TCP            79d
+service-ricplt-appmgr-http               ClusterIP   10.104.4.214     <none>        8080/TCP                     79d
+service-ricplt-appmgr-rmr                ClusterIP   10.106.141.2     <none>        4561/TCP,4560/TCP            79d
+service-ricplt-dbaas-tcp                 ClusterIP   None             <none>        6379/TCP                     79d
+service-ricplt-e2mgr-http                ClusterIP   10.102.46.52     <none>        3800/TCP                     79d
+service-ricplt-e2mgr-rmr                 ClusterIP   10.97.36.0       <none>        4561/TCP,3801/TCP            79d
+service-ricplt-e2term-prometheus-alpha   ClusterIP   10.108.239.176   <none>        8088/TCP                     79d
+service-ricplt-e2term-rmr-alpha          ClusterIP   10.104.83.5      <none>        4561/TCP,38000/TCP           79d
+service-ricplt-e2term-sctp-alpha         NodePort    10.105.143.165   <none>        36422:32222/SCTP             79d
+service-ricplt-o1mediator-http           ClusterIP   10.97.128.58     <none>        9001/TCP,8080/TCP,3000/TCP   79d
+service-ricplt-o1mediator-tcp-netconf    NodePort    10.109.141.242   <none>        830:30830/TCP                79d
+service-ricplt-rtmgr-http                ClusterIP   10.100.148.57    <none>        3800/TCP                     79d
+service-ricplt-rtmgr-rmr                 ClusterIP   10.96.65.130     <none>        4561/TCP,4560/TCP            79d
+service-ricplt-submgr-http               ClusterIP   None             <none>        3800/TCP                     79d
+service-ricplt-submgr-rmr                ClusterIP   None             <none>        4560/TCP,4561/TCP            79d
+service-ricplt-vespamgr-http             ClusterIP   10.97.52.64      <none>        8080/TCP,9095/TCP            79d
+
+Total services: 19

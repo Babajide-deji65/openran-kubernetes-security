@@ -1,0 +1,120 @@
+=== VERIFICATION RESULTS ===
+Date: Thu Aug  6 21:51:22 BST 2026
+
+--- Profiling endpoint access ---
+Result: 403 Forbidden for anonymous access
+Implication: Profiling enabled but requires authentication
+
+--- Kubelet certificate authority ---
+Result: (empty - not configured)
+
+--- e2term service account token ---
+Files present: ca.crt, namespace, token
+
+--- RIC containers user IDs ---
+e2term: uid=0(root)
+a1mediator: uid=1000(a1user)
+o1mediator: uid=0(root)
+
+--- Worker kubelet config permissions ---
+minikube-m02: 644 root:root
+minikube-m03: 644 root:root
+
+--- Profiling in controller-manager ---
+Result: (empty - not disabled)
+
+--- Profiling in scheduler ---
+Result: (empty - not disabled)
+=== FULL RIC USER ID VERIFICATION ===
+deployment-ricplt-a1mediator: uid=1000(a1user) gid=1000(a1user) groups=1000(a1user)
+deployment-ricplt-alarmmanager: uid=0(root) gid=0(root) groups=0(root)
+deployment-ricplt-appmgr: Defaulted container "container-ricplt-appmgr" out of: container-ricplt-appmgr, container-ricplt-appmgr-copy-tiller-secret (init)
+uid=0(root) gid=0(root) groups=0(root)
+deployment-ricplt-e2mgr: uid=0(root) gid=0(root) groups=0(root)
+deployment-ricplt-e2term-alpha: uid=0(root) gid=0(root) groups=0(root)
+deployment-ricplt-o1mediator: uid=0(root) gid=0(root) groups=0(root)
+deployment-ricplt-rtmgr: uid=0(root) gid=0(root) groups=0(root)
+deployment-ricplt-submgr: uid=0(root) gid=0(root) groups=0(root)
+deployment-ricplt-vespamgr: uid=0(root) gid=0(root) groups=0(root)
+dbaas: uid=0(root) gid=0(root) groups=0(root),0(root),1(bin),2(daemon),3(sys),4(adm),6(disk),10(wheel),11(floppy),20(dialout),26(tape),27(video)
+
+=== PKI DIRECTORY ===
+755 root:root
+total 84
+drwxr-xr-x 3 root root 4096 Jun 22 17:19 .
+drwxr-xr-x 7 root root 4096 Jun 22 17:19 ..
+-rw-r--r-- 1 root root 1123 Jun 22 17:19 apiserver-etcd-client.crt
+-rw------- 1 root root 1675 Jun 22 17:19 apiserver-etcd-client.key
+-rw-r--r-- 1 root root 1176 Jun 22 17:19 apiserver-kubelet-client.crt
+-rw------- 1 root root 1675 Jun 22 17:19 apiserver-kubelet-client.key
+-rw-r--r-- 1 root root 1411 Jun 22 17:19 apiserver.crt
+-rw------- 1 root root 1679 Jun 22 17:19 apiserver.key
+-rw-r--r-- 1 root root 1111 Jun 22 17:19 ca.crt
+-rw------- 1 root root 1675 Jun 22 17:19 ca.key
+drwxr-xr-x 2 root root 4096 Jun 22 17:19 etcd
+-rw-r--r-- 1 root root 1123 Jun 22 17:19 front-proxy-ca.crt
+-rw------- 1 root root 1675 Jun 22 17:19 front-proxy-ca.key
+-rw-r--r-- 1 root root 1119 Jun 22 17:19 front-proxy-client.crt
+-rw------- 1 root root 1675 Jun 22 17:19 front-proxy-client.key
+-rw-r--r-- 1 root root 1119 Jun 22 17:19 proxy-client-ca.crt
+-rw------- 1 root root 1675 Jun 22 17:19 proxy-client-ca.key
+-rw-r--r-- 1 root root 1147 Jun 22 17:19 proxy-client.crt
+-rw------- 1 root root 1679 Jun 22 17:19 proxy-client.key
+-rw------- 1 root root 1675 Jun 22 17:19 sa.key
+-rw------- 1 root root  451 Jun 22 17:19 sa.pub
+
+=== PROFILING ENDPOINT ACCESS ===
+Result: 403 Forbidden for anonymous (system:anonymous)
+
+=== AUDIT LOGGING ===
+API server manifest audit grep: (empty - no audit configuration)
+=== FULL RIC USER ID VERIFICATION ===
+deployment-ricplt-a1mediator: uid=1000(a1user) gid=1000(a1user) groups=1000(a1user)
+deployment-ricplt-alarmmanager: uid=0(root) gid=0(root) groups=0(root)
+deployment-ricplt-appmgr: Defaulted container "container-ricplt-appmgr" out of: container-ricplt-appmgr, container-ricplt-appmgr-copy-tiller-secret (init)
+uid=0(root) gid=0(root) groups=0(root)
+deployment-ricplt-e2mgr: uid=0(root) gid=0(root) groups=0(root)
+deployment-ricplt-e2term-alpha: uid=0(root) gid=0(root) groups=0(root)
+deployment-ricplt-o1mediator: uid=0(root) gid=0(root) groups=0(root)
+deployment-ricplt-rtmgr: uid=0(root) gid=0(root) groups=0(root)
+deployment-ricplt-submgr: uid=0(root) gid=0(root) groups=0(root)
+deployment-ricplt-vespamgr: uid=0(root) gid=0(root) groups=0(root)
+dbaas: uid=0(root) gid=0(root) groups=0(root),0(root),1(bin),2(daemon),3(sys),4(adm),6(disk),10(wheel),11(floppy),20(dialout),26(tape),27(video)
+
+=== PKI DIRECTORY ===
+755 root:root
+total 84
+drwxr-xr-x 3 root root 4096 Jun 22 17:19 .
+drwxr-xr-x 7 root root 4096 Jun 22 17:19 ..
+-rw-r--r-- 1 root root 1123 Jun 22 17:19 apiserver-etcd-client.crt
+-rw------- 1 root root 1675 Jun 22 17:19 apiserver-etcd-client.key
+-rw-r--r-- 1 root root 1176 Jun 22 17:19 apiserver-kubelet-client.crt
+-rw------- 1 root root 1675 Jun 22 17:19 apiserver-kubelet-client.key
+-rw-r--r-- 1 root root 1411 Jun 22 17:19 apiserver.crt
+-rw------- 1 root root 1679 Jun 22 17:19 apiserver.key
+-rw-r--r-- 1 root root 1111 Jun 22 17:19 ca.crt
+-rw------- 1 root root 1675 Jun 22 17:19 ca.key
+drwxr-xr-x 2 root root 4096 Jun 22 17:19 etcd
+-rw-r--r-- 1 root root 1123 Jun 22 17:19 front-proxy-ca.crt
+-rw------- 1 root root 1675 Jun 22 17:19 front-proxy-ca.key
+-rw-r--r-- 1 root root 1119 Jun 22 17:19 front-proxy-client.crt
+-rw------- 1 root root 1675 Jun 22 17:19 front-proxy-client.key
+-rw-r--r-- 1 root root 1119 Jun 22 17:19 proxy-client-ca.crt
+-rw------- 1 root root 1675 Jun 22 17:19 proxy-client-ca.key
+-rw-r--r-- 1 root root 1147 Jun 22 17:19 proxy-client.crt
+-rw------- 1 root root 1679 Jun 22 17:19 proxy-client.key
+-rw------- 1 root root 1675 Jun 22 17:19 sa.key
+-rw------- 1 root root  451 Jun 22 17:19 sa.pub
+
+=== PROFILING ENDPOINT ACCESS ===
+Anonymous access to /debug/pprof/: 403 Forbidden
+
+=== AUDIT LOGGING ===
+grep audit in kube-apiserver.yaml: (empty)
+
+=== ETCD PERMISSIONS ===
+700 root:root
+total 12
+drwx------ 3 root root 4096 Jul 23 12:11 .
+drwxr-xr-x 7 root root 4096 Jun 22 17:19 ..
+drwx------ 4 root root 4096 Jul 23 12:11 member

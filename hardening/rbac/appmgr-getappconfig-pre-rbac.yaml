@@ -1,0 +1,25 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  annotations:
+    meta.helm.sh/release-name: r4-appmgr
+    meta.helm.sh/release-namespace: ricplt
+  creationTimestamp: "2026-06-27T22:03:31Z"
+  labels:
+    app.kubernetes.io/managed-by: Helm
+  name: svcacct-ricplt-appmgr-ricxapp-getappconfig
+  resourceVersion: "7050"
+  uid: c9b35b7e-e185-4c6d-841e-cb2fb9d22846
+rules:
+- apiGroups:
+  - ""
+  resources:
+  - configmaps
+  - endpoints
+  - services
+  verbs:
+  - get
+  - list
+  - create
+  - update
+  - delete

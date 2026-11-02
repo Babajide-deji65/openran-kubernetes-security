@@ -1,0 +1,89 @@
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      meta.helm.sh/release-name: r4-o1mediator
+      meta.helm.sh/release-namespace: ricplt
+    creationTimestamp: "2026-06-27T22:05:18Z"
+    labels:
+      app: ricplt-o1mediator
+      app.kubernetes.io/managed-by: Helm
+      chart: o1mediator-3.0.0
+      heritage: Helm
+      release: r4-o1mediator
+    name: service-ricplt-o1mediator-http
+    namespace: ricplt
+    resourceVersion: "7476"
+    uid: b2ec12e5-c9b3-46bf-915c-1caf1975b644
+  spec:
+    clusterIP: 10.97.128.58
+    clusterIPs:
+    - 10.97.128.58
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: http-supervise
+      port: 9001
+      protocol: TCP
+      targetPort: 9001
+    - name: http-mediation
+      port: 8080
+      protocol: TCP
+      targetPort: 8080
+    - name: http-event
+      port: 3000
+      protocol: TCP
+      targetPort: 3000
+    selector:
+      app: ricplt-o1mediator
+      release: r4-o1mediator
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      meta.helm.sh/release-name: r4-o1mediator
+      meta.helm.sh/release-namespace: ricplt
+    creationTimestamp: "2026-06-27T22:05:18Z"
+    labels:
+      app: ricplt-o1mediator
+      app.kubernetes.io/managed-by: Helm
+      chart: o1mediator-3.0.0
+      heritage: Helm
+      release: r4-o1mediator
+    name: service-ricplt-o1mediator-tcp-netconf
+    namespace: ricplt
+    resourceVersion: "7475"
+    uid: b64e84ed-439d-45f1-82d0-218d980bbe95
+  spec:
+    clusterIP: 10.109.141.242
+    clusterIPs:
+    - 10.109.141.242
+    externalTrafficPolicy: Cluster
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: tcp-netconf
+      nodePort: 30830
+      port: 830
+      protocol: TCP
+      targetPort: 830
+    selector:
+      app: ricplt-o1mediator
+      release: r4-o1mediator
+    sessionAffinity: None
+    type: NodePort
+  status:
+    loadBalancer: {}
+kind: List
+metadata:
+  resourceVersion: ""

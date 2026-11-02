@@ -1,0 +1,15 @@
+=== STEP 5D: PRE-SECCOMP STATE ===
+Date: Tue Sep  1 13:19:10 BST 2026
+
+--- Current Seccomp Configuration ---
+POD                                               POD_SECCOMP   CONTAINER_SECCOMP
+deployment-ricplt-a1mediator-7794b784c9-vw9lj     <none>        <none>
+deployment-ricplt-alarmmanager-d98654c57-fcwg9    <none>        <none>
+deployment-ricplt-appmgr-854bc68fc5-nts2v         <none>        <none>
+deployment-ricplt-e2mgr-745b4dc699-pzc4h          <none>        <none>
+deployment-ricplt-e2term-alpha-8478b4785f-jvmw2   <none>        <none>
+deployment-ricplt-o1mediator-6577c66697-sd2lv     <none>        <none>
+deployment-ricplt-rtmgr-85ccfbff49-wxwfl          <none>        <none>
+deployment-ricplt-submgr-75c8d7f458-snb7t         <none>        <none>
+deployment-ricplt-vespamgr-5d9dc49786-cqn4t       <none>        <none>
+statefulset-ricplt-dbaas-server-0                 <none>        <none>

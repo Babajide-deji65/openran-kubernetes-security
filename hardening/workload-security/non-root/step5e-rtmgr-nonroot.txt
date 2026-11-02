@@ -1,0 +1,19 @@
+=== STEP 5E: RTMGR NON-ROOT HARDENING ===
+Date: Wed Sep  2 13:35:43 BST 2026
+
+--- Security Context ---
+{"allowPrivilegeEscalation":false,"capabilities":{"drop":["NET_RAW"]},"runAsGroup":1000,"runAsNonRoot":true,"runAsUser":1000,"seccompProfile":{"type":"RuntimeDefault"}}
+
+--- Runtime User ---
+uid=1000 gid=1000 groups=1000
+
+--- Listening Ports ---
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+tcp        0      0 0.0.0.0:4560            0.0.0.0:*               LISTEN      1/./rtmgr           
+tcp        0      0 0.0.0.0:4588            0.0.0.0:*               LISTEN      1/./rtmgr           
+tcp6       0      0 :::3800                 :::*                    LISTEN      1/./rtmgr           
+tcp6       0      0 :::8080                 :::*                    LISTEN      1/./rtmgr           
+
+--- Pod Status ---
+deployment-ricplt-rtmgr-944bb78-zgn7n             1/1     Running   0              8m52s

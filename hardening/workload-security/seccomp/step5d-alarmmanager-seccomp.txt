@@ -1,0 +1,8 @@
+=== STEP 5D: ALARMMANAGER SECCOMP HARDENING ===
+Date: Tue Sep  1 13:31:36 BST 2026
+
+--- Security Context ---
+{"allowPrivilegeEscalation":false,"capabilities":{"drop":["NET_RAW"]},"seccompProfile":{"type":"RuntimeDefault"}}
+
+--- Pod Status ---
+deployment-ricplt-alarmmanager-55cd6bf4d5-7chx8   1/1     Running   0               7m43s

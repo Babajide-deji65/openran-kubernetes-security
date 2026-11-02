@@ -1,0 +1,8 @@
+=== STEP 5D: O1MEDIATOR SECCOMP HARDENING ===
+Date: Tue Sep  1 14:10:12 BST 2026
+
+--- Security Context ---
+{"allowPrivilegeEscalation":false,"capabilities":{"drop":["NET_RAW"]},"seccompProfile":{"type":"RuntimeDefault"}}
+
+--- Pod Status ---
+deployment-ricplt-o1mediator-5865d456d7-flrk8     1/1     Running   0               110s

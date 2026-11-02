@@ -1,0 +1,14 @@
+=== STEP 4B: VESPAMGR TOKEN HARDENING ===
+Date: Mon Aug 24 08:23:04 BST 2026
+
+--- Deployment Setting ---
+false
+
+--- Token Presence ---
+Token: NOT PRESENT
+
+--- Pod Health ---
+deployment-ricplt-vespamgr-5b8884747b-w8m5f       1/1     Running   0              5m40s
+
+--- Connectivity from e2term ---
+404

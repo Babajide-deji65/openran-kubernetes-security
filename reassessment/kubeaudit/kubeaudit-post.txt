@@ -1,0 +1,423 @@
+[33m
+[Deprecation Notice]: Kubeaudit is planned for deprecation by October 2024.
+We are actively seeking maintainers who are interested in taking over the stewardship of this project. If you are passionate about continuing its development and maintenance, please reach out to us.
+For users looking for alternatives, we recommend transitioning to Kubebench, which offers similar functionality and is actively maintained.
+Thank you to the community for your contributions and support.[0m
+[33m
+[WARNING]: kubernetes.io for override labels will soon be deprecated. Please, update them to use kubeaudit.io instead.[0m
+[36m
+---------------- Results for ---------------
+
+[0m[36m  apiVersion: v1
+[0m[36m  kind: Namespace
+[0m[36m  metadata:
+[0m[36m    name: ricplt
+[0m[36m
+--------------------------------------------
+
+[0m-- [33m[warning] [0mAllowAllIngressNetworkPolicyExists
+   Message: Found allow all ingress traffic NetworkPolicy.
+   Metadata:
+      PolicyName: restrict-e2term-ingress
+
+-- [33m[warning] [0mAllowAllIngressNetworkPolicyExists
+   Message: Found allow all ingress traffic NetworkPolicy.
+   Metadata:
+      PolicyName: restrict-o1mediator-ingress
+
+-- [31m[error] [0mMissingDefaultDenyIngressAndEgressNetworkPolicy
+   Message: Namespace is missing a default deny ingress and egress NetworkPolicy.
+   Metadata:
+      Namespace: ricplt
+
+[36m
+---------------- Results for ---------------
+
+[0m[36m  apiVersion: apps/v1
+[0m[36m  kind: StatefulSet
+[0m[36m  metadata:
+[0m[36m    name: statefulset-ricplt-dbaas-server
+[0m[36m    namespace: ricplt
+[0m[36m
+--------------------------------------------
+
+[0m-- [31m[error] [0mAppArmorAnnotationMissing
+   Message: AppArmor annotation missing. The annotation 'container.apparmor.security.beta.kubernetes.io/container-ricplt-dbaas-redis' should be added.
+   Metadata:
+      Container: container-ricplt-dbaas-redis
+      MissingAnnotation: container.apparmor.security.beta.kubernetes.io/container-ricplt-dbaas-redis
+
+-- [31m[error] [0mCapabilityShouldDropAll
+   Message: Capability Drop list should be set to ALL. Add the specific ones you need to the Add list and set an override label.
+   Metadata:
+      Container: container-ricplt-dbaas-redis
+
+-- [33m[warning] [0mLimitsNotSet
+   Message: Resource limits not set.
+   Metadata:
+      Container: container-ricplt-dbaas-redis
+
+-- [33m[warning] [0mPrivilegedNil
+   Message: privileged is not set in container SecurityContext. Privileged defaults to 'false' but it should be explicitly set to 'false'.
+   Metadata:
+      Container: container-ricplt-dbaas-redis
+
+[36m
+---------------- Results for ---------------
+
+[0m[36m  apiVersion: apps/v1
+[0m[36m  kind: Deployment
+[0m[36m  metadata:
+[0m[36m    name: deployment-ricplt-a1mediator
+[0m[36m    namespace: ricplt
+[0m[36m
+--------------------------------------------
+
+[0m-- [31m[error] [0mAppArmorAnnotationMissing
+   Message: AppArmor annotation missing. The annotation 'container.apparmor.security.beta.kubernetes.io/container-ricplt-a1mediator' should be added.
+   Metadata:
+      Container: container-ricplt-a1mediator
+      MissingAnnotation: container.apparmor.security.beta.kubernetes.io/container-ricplt-a1mediator
+
+-- [31m[error] [0mCapabilityShouldDropAll
+   Message: Capability Drop list should be set to ALL. Add the specific ones you need to the Add list and set an override label.
+   Metadata:
+      Container: container-ricplt-a1mediator
+
+-- [33m[warning] [0mLimitsNotSet
+   Message: Resource limits not set.
+   Metadata:
+      Container: container-ricplt-a1mediator
+
+-- [33m[warning] [0mPrivilegedNil
+   Message: privileged is not set in container SecurityContext. Privileged defaults to 'false' but it should be explicitly set to 'false'.
+   Metadata:
+      Container: container-ricplt-a1mediator
+
+[36m
+---------------- Results for ---------------
+
+[0m[36m  apiVersion: apps/v1
+[0m[36m  kind: Deployment
+[0m[36m  metadata:
+[0m[36m    name: deployment-ricplt-alarmmanager
+[0m[36m    namespace: ricplt
+[0m[36m
+--------------------------------------------
+
+[0m-- [31m[error] [0mAppArmorAnnotationMissing
+   Message: AppArmor annotation missing. The annotation 'container.apparmor.security.beta.kubernetes.io/container-ricplt-alarmmanager' should be added.
+   Metadata:
+      Container: container-ricplt-alarmmanager
+      MissingAnnotation: container.apparmor.security.beta.kubernetes.io/container-ricplt-alarmmanager
+
+-- [31m[error] [0mCapabilityShouldDropAll
+   Message: Capability Drop list should be set to ALL. Add the specific ones you need to the Add list and set an override label.
+   Metadata:
+      Container: container-ricplt-alarmmanager
+
+-- [33m[warning] [0mLimitsNotSet
+   Message: Resource limits not set.
+   Metadata:
+      Container: container-ricplt-alarmmanager
+
+-- [33m[warning] [0mPrivilegedNil
+   Message: privileged is not set in container SecurityContext. Privileged defaults to 'false' but it should be explicitly set to 'false'.
+   Metadata:
+      Container: container-ricplt-alarmmanager
+
+[36m
+---------------- Results for ---------------
+
+[0m[36m  apiVersion: apps/v1
+[0m[36m  kind: Deployment
+[0m[36m  metadata:
+[0m[36m    name: deployment-ricplt-appmgr
+[0m[36m    namespace: ricplt
+[0m[36m
+--------------------------------------------
+
+[0m-- [31m[error] [0mAppArmorAnnotationMissing
+   Message: AppArmor annotation missing. The annotation 'container.apparmor.security.beta.kubernetes.io/container-ricplt-appmgr' should be added.
+   Metadata:
+      Container: container-ricplt-appmgr
+      MissingAnnotation: container.apparmor.security.beta.kubernetes.io/container-ricplt-appmgr
+
+-- [31m[error] [0mAppArmorAnnotationMissing
+   Message: AppArmor annotation missing. The annotation 'container.apparmor.security.beta.kubernetes.io/container-ricplt-appmgr-copy-tiller-secret' should be added.
+   Metadata:
+      Container: container-ricplt-appmgr-copy-tiller-secret
+      MissingAnnotation: container.apparmor.security.beta.kubernetes.io/container-ricplt-appmgr-copy-tiller-secret
+
+-- [31m[error] [0mCapabilityShouldDropAll
+   Message: Capability Drop list should be set to ALL. Add the specific ones you need to the Add list and set an override label.
+   Metadata:
+      Container: container-ricplt-appmgr
+
+-- [31m[error] [0mCapabilityOrSecurityContextMissing
+   Message: Security Context not set. The Security Context should be specified and all Capabilities should be dropped by setting the Drop list to ALL.
+   Metadata:
+      Container: container-ricplt-appmgr-copy-tiller-secret
+
+-- [33m[warning] [0mLimitsNotSet
+   Message: Resource limits not set.
+   Metadata:
+      Container: container-ricplt-appmgr
+
+-- [33m[warning] [0mLimitsNotSet
+   Message: Resource limits not set.
+   Metadata:
+      Container: container-ricplt-appmgr-copy-tiller-secret
+
+-- [31m[error] [0mRunAsNonRootPSCNilCSCNil
+   Message: runAsNonRoot should be set to true or runAsUser should be set to a value > 0 either in the container SecurityContext or PodSecurityContext.
+   Metadata:
+      Container: container-ricplt-appmgr-copy-tiller-secret
+
+-- [33m[warning] [0mPrivilegedNil
+   Message: privileged is not set in container SecurityContext. Privileged defaults to 'false' but it should be explicitly set to 'false'.
+   Metadata:
+      Container: container-ricplt-appmgr
+
+-- [33m[warning] [0mPrivilegedNil
+   Message: privileged is not set in container SecurityContext. Privileged defaults to 'false' but it should be explicitly set to 'false'.
+   Metadata:
+      Container: container-ricplt-appmgr-copy-tiller-secret
+
+-- [31m[error] [0mReadOnlyRootFilesystemNil
+   Message: readOnlyRootFilesystem is not set in container SecurityContext. It should be set to 'true'.
+   Metadata:
+      Container: container-ricplt-appmgr-copy-tiller-secret
+
+[36m
+---------------- Results for ---------------
+
+[0m[36m  apiVersion: apps/v1
+[0m[36m  kind: Deployment
+[0m[36m  metadata:
+[0m[36m    name: deployment-ricplt-e2mgr
+[0m[36m    namespace: ricplt
+[0m[36m
+--------------------------------------------
+
+[0m-- [31m[error] [0mAppArmorAnnotationMissing
+   Message: AppArmor annotation missing. The annotation 'container.apparmor.security.beta.kubernetes.io/container-ricplt-e2mgr' should be added.
+   Metadata:
+      Container: container-ricplt-e2mgr
+      MissingAnnotation: container.apparmor.security.beta.kubernetes.io/container-ricplt-e2mgr
+
+-- [31m[error] [0mCapabilityShouldDropAll
+   Message: Capability Drop list should be set to ALL. Add the specific ones you need to the Add list and set an override label.
+   Metadata:
+      Container: container-ricplt-e2mgr
+
+-- [33m[warning] [0mLimitsNotSet
+   Message: Resource limits not set.
+   Metadata:
+      Container: container-ricplt-e2mgr
+
+-- [31m[error] [0mRunAsNonRootPSCNilCSCNil
+   Message: runAsNonRoot should be set to true or runAsUser should be set to a value > 0 either in the container SecurityContext or PodSecurityContext.
+   Metadata:
+      Container: container-ricplt-e2mgr
+
+-- [33m[warning] [0mPrivilegedNil
+   Message: privileged is not set in container SecurityContext. Privileged defaults to 'false' but it should be explicitly set to 'false'.
+   Metadata:
+      Container: container-ricplt-e2mgr
+
+-- [31m[error] [0mReadOnlyRootFilesystemNil
+   Message: readOnlyRootFilesystem is not set in container SecurityContext. It should be set to 'true'.
+   Metadata:
+      Container: container-ricplt-e2mgr
+
+[36m
+---------------- Results for ---------------
+
+[0m[36m  apiVersion: apps/v1
+[0m[36m  kind: Deployment
+[0m[36m  metadata:
+[0m[36m    name: deployment-ricplt-e2term-alpha
+[0m[36m    namespace: ricplt
+[0m[36m
+--------------------------------------------
+
+[0m-- [31m[error] [0mAppArmorAnnotationMissing
+   Message: AppArmor annotation missing. The annotation 'container.apparmor.security.beta.kubernetes.io/container-ricplt-e2term' should be added.
+   Metadata:
+      Container: container-ricplt-e2term
+      MissingAnnotation: container.apparmor.security.beta.kubernetes.io/container-ricplt-e2term
+
+-- [31m[error] [0mCapabilityShouldDropAll
+   Message: Capability Drop list should be set to ALL. Add the specific ones you need to the Add list and set an override label.
+   Metadata:
+      Container: container-ricplt-e2term
+
+-- [33m[warning] [0mLimitsNotSet
+   Message: Resource limits not set.
+   Metadata:
+      Container: container-ricplt-e2term
+
+-- [31m[error] [0mRunAsNonRootPSCNilCSCNil
+   Message: runAsNonRoot should be set to true or runAsUser should be set to a value > 0 either in the container SecurityContext or PodSecurityContext.
+   Metadata:
+      Container: container-ricplt-e2term
+
+-- [33m[warning] [0mPrivilegedNil
+   Message: privileged is not set in container SecurityContext. Privileged defaults to 'false' but it should be explicitly set to 'false'.
+   Metadata:
+      Container: container-ricplt-e2term
+
+-- [31m[error] [0mReadOnlyRootFilesystemNil
+   Message: readOnlyRootFilesystem is not set in container SecurityContext. It should be set to 'true'.
+   Metadata:
+      Container: container-ricplt-e2term
+
+[36m
+---------------- Results for ---------------
+
+[0m[36m  apiVersion: apps/v1
+[0m[36m  kind: Deployment
+[0m[36m  metadata:
+[0m[36m    name: deployment-ricplt-o1mediator
+[0m[36m    namespace: ricplt
+[0m[36m
+--------------------------------------------
+
+[0m-- [31m[error] [0mAppArmorAnnotationMissing
+   Message: AppArmor annotation missing. The annotation 'container.apparmor.security.beta.kubernetes.io/container-ricplt-o1mediator' should be added.
+   Metadata:
+      Container: container-ricplt-o1mediator
+      MissingAnnotation: container.apparmor.security.beta.kubernetes.io/container-ricplt-o1mediator
+
+-- [31m[error] [0mCapabilityShouldDropAll
+   Message: Capability Drop list should be set to ALL. Add the specific ones you need to the Add list and set an override label.
+   Metadata:
+      Container: container-ricplt-o1mediator
+
+-- [33m[warning] [0mLimitsNotSet
+   Message: Resource limits not set.
+   Metadata:
+      Container: container-ricplt-o1mediator
+
+-- [31m[error] [0mRunAsNonRootPSCNilCSCNil
+   Message: runAsNonRoot should be set to true or runAsUser should be set to a value > 0 either in the container SecurityContext or PodSecurityContext.
+   Metadata:
+      Container: container-ricplt-o1mediator
+
+-- [33m[warning] [0mPrivilegedNil
+   Message: privileged is not set in container SecurityContext. Privileged defaults to 'false' but it should be explicitly set to 'false'.
+   Metadata:
+      Container: container-ricplt-o1mediator
+
+-- [31m[error] [0mReadOnlyRootFilesystemNil
+   Message: readOnlyRootFilesystem is not set in container SecurityContext. It should be set to 'true'.
+   Metadata:
+      Container: container-ricplt-o1mediator
+
+[36m
+---------------- Results for ---------------
+
+[0m[36m  apiVersion: apps/v1
+[0m[36m  kind: Deployment
+[0m[36m  metadata:
+[0m[36m    name: deployment-ricplt-rtmgr
+[0m[36m    namespace: ricplt
+[0m[36m
+--------------------------------------------
+
+[0m-- [31m[error] [0mAppArmorAnnotationMissing
+   Message: AppArmor annotation missing. The annotation 'container.apparmor.security.beta.kubernetes.io/container-ricplt-rtmgr' should be added.
+   Metadata:
+      MissingAnnotation: container.apparmor.security.beta.kubernetes.io/container-ricplt-rtmgr
+      Container: container-ricplt-rtmgr
+
+-- [31m[error] [0mCapabilityShouldDropAll
+   Message: Capability Drop list should be set to ALL. Add the specific ones you need to the Add list and set an override label.
+   Metadata:
+      Container: container-ricplt-rtmgr
+
+-- [33m[warning] [0mLimitsNotSet
+   Message: Resource limits not set.
+   Metadata:
+      Container: container-ricplt-rtmgr
+
+-- [33m[warning] [0mPrivilegedNil
+   Message: privileged is not set in container SecurityContext. Privileged defaults to 'false' but it should be explicitly set to 'false'.
+   Metadata:
+      Container: container-ricplt-rtmgr
+
+[36m
+---------------- Results for ---------------
+
+[0m[36m  apiVersion: apps/v1
+[0m[36m  kind: Deployment
+[0m[36m  metadata:
+[0m[36m    name: deployment-ricplt-submgr
+[0m[36m    namespace: ricplt
+[0m[36m
+--------------------------------------------
+
+[0m-- [31m[error] [0mAppArmorAnnotationMissing
+   Message: AppArmor annotation missing. The annotation 'container.apparmor.security.beta.kubernetes.io/container-ricplt-submgr' should be added.
+   Metadata:
+      Container: container-ricplt-submgr
+      MissingAnnotation: container.apparmor.security.beta.kubernetes.io/container-ricplt-submgr
+
+-- [31m[error] [0mCapabilityShouldDropAll
+   Message: Capability Drop list should be set to ALL. Add the specific ones you need to the Add list and set an override label.
+   Metadata:
+      Container: container-ricplt-submgr
+
+-- [33m[warning] [0mLimitsNotSet
+   Message: Resource limits not set.
+   Metadata:
+      Container: container-ricplt-submgr
+
+-- [33m[warning] [0mPrivilegedNil
+   Message: privileged is not set in container SecurityContext. Privileged defaults to 'false' but it should be explicitly set to 'false'.
+   Metadata:
+      Container: container-ricplt-submgr
+
+[36m
+---------------- Results for ---------------
+
+[0m[36m  apiVersion: apps/v1
+[0m[36m  kind: Deployment
+[0m[36m  metadata:
+[0m[36m    name: deployment-ricplt-vespamgr
+[0m[36m    namespace: ricplt
+[0m[36m
+--------------------------------------------
+
+[0m-- [31m[error] [0mAppArmorAnnotationMissing
+   Message: AppArmor annotation missing. The annotation 'container.apparmor.security.beta.kubernetes.io/container-ricplt-vespamgr' should be added.
+   Metadata:
+      Container: container-ricplt-vespamgr
+      MissingAnnotation: container.apparmor.security.beta.kubernetes.io/container-ricplt-vespamgr
+
+-- [31m[error] [0mCapabilityShouldDropAll
+   Message: Capability Drop list should be set to ALL. Add the specific ones you need to the Add list and set an override label.
+   Metadata:
+      Container: container-ricplt-vespamgr
+
+-- [33m[warning] [0mLimitsNotSet
+   Message: Resource limits not set.
+   Metadata:
+      Container: container-ricplt-vespamgr
+
+-- [31m[error] [0mRunAsNonRootPSCNilCSCNil
+   Message: runAsNonRoot should be set to true or runAsUser should be set to a value > 0 either in the container SecurityContext or PodSecurityContext.
+   Metadata:
+      Container: container-ricplt-vespamgr
+
+-- [33m[warning] [0mPrivilegedNil
+   Message: privileged is not set in container SecurityContext. Privileged defaults to 'false' but it should be explicitly set to 'false'.
+   Metadata:
+      Container: container-ricplt-vespamgr
+
+-- [31m[error] [0mReadOnlyRootFilesystemNil
+   Message: readOnlyRootFilesystem is not set in container SecurityContext. It should be set to 'true'.
+   Metadata:
+      Container: container-ricplt-vespamgr
+

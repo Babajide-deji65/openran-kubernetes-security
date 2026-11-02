@@ -1,0 +1,38 @@
+Unable to find image 'aquasec/kube-hunter:latest' locally
+latest: Pulling from aquasec/kube-hunter
+2fe32b7ffdab: Pulling fs layer
+01f10cc3d53d: Pulling fs layer
+01704b47dacf: Pulling fs layer
+df9b9388f04a: Pulling fs layer
+6cb9c3e38f46: Pulling fs layer
+a1ef3e6b7a02: Pulling fs layer
+0e6bf730bd1a: Pulling fs layer
+cfa12178a86a: Pulling fs layer
+8722ec4741b6: Pulling fs layer
+0e6bf730bd1a: Download complete
+01f10cc3d53d: Download complete
+a1ef3e6b7a02: Download complete
+cfa12178a86a: Download complete
+8722ec4741b6: Download complete
+df9b9388f04a: Download complete
+df9b9388f04a: Pull complete
+2fe32b7ffdab: Download complete
+a1ef3e6b7a02: Pull complete
+6cb9c3e38f46: Download complete
+01704b47dacf: Download complete
+6cb9c3e38f46: Pull complete
+01f10cc3d53d: Pull complete
+8722ec4741b6: Pull complete
+cfa12178a86a: Pull complete
+01704b47dacf: Pull complete
+0e6bf730bd1a: Pull complete
+2fe32b7ffdab: Pull complete
+Digest: sha256:885520da54150bd9d133b30d59df645fdc5a06644809d987e1d3c707c3dd2aaf
+Status: Downloaded newer image for aquasec/kube-hunter:latest
+2026-07-29 23:10:39,568 INFO kube_hunter.modules.report.collector Started hunting
+2026-07-29 23:10:39,574 INFO kube_hunter.modules.report.collector Discovering Open Kubernetes Services
+2026-07-29 23:10:39,851 INFO kube_hunter.modules.report.collector Found open service "Kubelet API" at 192.168.49.2:10250
+2026-07-29 23:10:39,856 INFO kube_hunter.modules.report.collector Found open service "Kubelet API" at 192.168.49.3:10250
+2026-07-29 23:10:39,863 INFO kube_hunter.modules.report.collector Found open service "Etcd" at 192.168.49.2:2379
+2026-07-29 23:10:39,901 INFO kube_hunter.modules.report.collector Found open service "Kubelet API" at 192.168.49.4:10250
+{"nodes": [{"type": "Node/Master", "location": "192.168.49.2"}, {"type": "Node/Master", "location": "192.168.49.3"}, {"type": "Node/Master", "location": "192.168.49.4"}], "services": [{"service": "Kubelet API", "location": "192.168.49.2:10250"}, {"service": "Kubelet API", "location": "192.168.49.3:10250"}, {"service": "Etcd", "location": "192.168.49.2:2379"}, {"service": "Kubelet API", "location": "192.168.49.4:10250"}], "vulnerabilities": []}

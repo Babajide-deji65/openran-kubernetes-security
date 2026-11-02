@@ -1,0 +1,8 @@
+NAME              STATUS   AGE
+default           Active   13d
+kube-node-lease   Active   13d
+kube-public       Active   13d
+kube-system       Active   13d
+ricinfra          Active   7d21h
+ricplt            Active   7d21h
+ricxapp           Active   7d21h

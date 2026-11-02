@@ -1,0 +1,19 @@
+=== BASELINE CONNECTIVITY TEST ===
+Date: Mon Aug 10 22:46:03 BST 2026
+Source: deployment-ricplt-e2term-alpha
+
+service-ricplt-dbaas-tcp:6379 -> 000command terminated with exit code 1
+service-ricplt-a1mediator-http:10000 -> 404
+service-ricplt-e2mgr-http:3800 -> 404
+service-ricplt-rtmgr-http:3800 -> 404
+service-ricplt-submgr-http:3800 -> 000command terminated with exit code 7
+service-ricplt-appmgr-http:8080 -> 404
+service-ricplt-o1mediator-http:9001 -> 200
+service-ricplt-alarmmanager-http:8080 -> 404
+service-ricplt-vespamgr-http:8080 -> 404
+
+=== FINAL PORT CHECKS ===
+Date: Mon Aug 10 22:55:40 BST 2026
+dbaas:6379 (Redis): OPEN
+submgr-http:3800: CLOSED
+submgr-rmr:4561 (RMR): OPEN

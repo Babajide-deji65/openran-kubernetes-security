@@ -1,0 +1,18 @@
+=== STEP 4C: O1MEDIATOR TOKEN HARDENING ===
+Date: Mon Aug 24 22:42:50 BST 2026
+
+--- Deployment Setting ---
+false
+
+--- Token Presence ---
+Token: NOT PRESENT
+
+--- Pod Health ---
+deployment-ricplt-o1mediator-94b84ff95-b5s29      1/1     Running   0               7m32s
+
+--- HTTP Connectivity from e2term ---
+200
+
+--- External Service Exposure ---
+NAME                                    TYPE       CLUSTER-IP       EXTERNAL-IP   PORT(S)         AGE
+service-ricplt-o1mediator-tcp-netconf   NodePort   10.109.141.242   <none>        830:30830/TCP   57d

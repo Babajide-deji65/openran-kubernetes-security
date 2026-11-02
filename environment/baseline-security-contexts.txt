@@ -1,0 +1,63 @@
+=== BASELINE SECURITY CONTEXTS ===
+Date: Mon Aug 10 22:57:07 BST 2026
+
+Pod: deployment-ricplt-a1mediator-6c66d9c9f7-8vzqf
+  runAsUser: 
+  runAsNonRoot: 
+  readOnlyRootFilesystem: 
+  capabilities: 
+
+Pod: deployment-ricplt-alarmmanager-7666876479-b44vp
+  runAsUser: 
+  runAsNonRoot: 
+  readOnlyRootFilesystem: 
+  capabilities: 
+
+Pod: deployment-ricplt-appmgr-5b87c685c9-sfkfm
+  runAsUser: 
+  runAsNonRoot: 
+  readOnlyRootFilesystem: 
+  capabilities: 
+
+Pod: deployment-ricplt-e2mgr-77fb448967-pdzdg
+  runAsUser: 
+  runAsNonRoot: 
+  readOnlyRootFilesystem: 
+  capabilities: 
+
+Pod: deployment-ricplt-e2term-alpha-6bc5476847-h7bnw
+  runAsUser: 
+  runAsNonRoot: 
+  readOnlyRootFilesystem: 
+  capabilities: 
+
+Pod: deployment-ricplt-o1mediator-5548474c67-gwskx
+  runAsUser: 
+  runAsNonRoot: 
+  readOnlyRootFilesystem: 
+  capabilities: 
+
+Pod: deployment-ricplt-rtmgr-6d479f4bc-v2mwk
+  runAsUser: 
+  runAsNonRoot: 
+  readOnlyRootFilesystem: 
+  capabilities: 
+
+Pod: deployment-ricplt-submgr-5fdddb8f64-g9w4c
+  runAsUser: 
+  runAsNonRoot: 
+  readOnlyRootFilesystem: 
+  capabilities: 
+
+Pod: deployment-ricplt-vespamgr-786666549b-gz2qn
+  runAsUser: 
+  runAsNonRoot: 
+  readOnlyRootFilesystem: 
+  capabilities: 
+
+Pod: statefulset-ricplt-dbaas-server-0
+  runAsUser: 
+  runAsNonRoot: 
+  readOnlyRootFilesystem: 
+  capabilities: 
+

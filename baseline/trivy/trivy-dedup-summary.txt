@@ -1,0 +1,1069 @@
+============================================================
+TOTAL INSTANCES (with duplicates): 1430
+UNIQUE CVE+PACKAGE COMBINATIONS: 261
+  CRITICAL: 7 unique (67 instances)
+  HIGH: 254 unique (1363 instances)
+============================================================
+
+PER-IMAGE UNIQUE COUNTS:
+  ric-plt-a1_2.5.1: CRITICAL=1 HIGH=158 TOTAL=159
+  ric-plt-alarmmanager_0.5.11: CRITICAL=5 HIGH=71 TOTAL=76
+  ric-plt-appmgr_0.5.4: CRITICAL=5 HIGH=74 TOTAL=79
+  ric-plt-dbaas_0.5.5: CRITICAL=6 HIGH=57 TOTAL=63
+  ric-plt-e2_5.5.0: CRITICAL=0 HIGH=140 TOTAL=140
+  ric-plt-e2mgr_5.4.19: CRITICAL=5 HIGH=66 TOTAL=71
+  ric-plt-o1_0.5.3: CRITICAL=5 HIGH=213 TOTAL=218
+  ric-plt-rtmgr_0.8.2: CRITICAL=5 HIGH=79 TOTAL=84
+  ric-plt-submgr_0.8.2: CRITICAL=5 HIGH=82 TOTAL=87
+  ric-plt-vespamgr_0.7.5: CRITICAL=5 HIGH=91 TOTAL=96
+
+============================================================
+ALL UNIQUE CRITICAL CVEs:
+============================================================
+CVE-2022-23806 | stdlib:v1.16 | Fixed:1.16.14, 1.17.7
+  Title: golang: crypto/elliptic: IsOnCurve returns true for invalid field elements
+  Affected (8): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-dbaas_0.5.5, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2022-37434 | zlib:1.2.11-r3 | Fixed:1.2.11-r4
+  Title: zlib: heap-based buffer over-read and overflow in inflate() in inflate.c via a large gzip header ext
+  Affected (1): ric-plt-dbaas_0.5.5
+
+CVE-2023-24538 | stdlib:v1.16 | Fixed:1.19.8, 1.20.3
+  Title: golang: html/template: backticks not treated as string delimiters
+  Affected (8): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-dbaas_0.5.5, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2023-24540 | stdlib:v1.16 | Fixed:1.19.9, 1.20.4
+  Title: golang: html/template: improper handling of JavaScript whitespace
+  Affected (8): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-dbaas_0.5.5, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2023-41419 | gevent:21.8.0 | Fixed:23.9.0
+  Title: python-gevent: privilege escalation via a crafted script to the WSGIServer component
+  Affected (1): ric-plt-a1_2.5.1
+
+CVE-2024-24790 | stdlib:v1.16 | Fixed:1.21.11, 1.22.4
+  Title: golang: net/netip: Unexpected behavior from Is methods for IPv4-mapped IPv6 addresses
+  Affected (8): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-dbaas_0.5.5, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2025-68121 | stdlib:v1.16 | Fixed:1.24.13, 1.25.7, 1.26.0-rc.3
+  Title: crypto/tls: crypto/tls: Incorrect certificate validation during TLS session resumption
+  Affected (8): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-dbaas_0.5.5, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+============================================================
+ALL UNIQUE HIGH CVEs:
+============================================================
+CVE-2020-14040 | golang.org/x/text:v0.3.2 | Fixed:0.3.3
+  Title: golang.org/x/text: possibility to trigger an infinite loop in encoding/unicode could lead to crash
+  Affected (7): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2020-16845 | stdlib:v1.14.4 | Fixed:1.13.15, 1.14.7
+  Title: golang: ReadUvarint and ReadVarint can read an unlimited number of bytes from invalid inputs
+  Affected (2): ric-plt-dbaas_0.5.5, ric-plt-submgr_0.8.2
+
+CVE-2020-28362 | stdlib:v1.14.4 | Fixed:1.14.12, 1.15.5
+  Title: golang: math/big: panic during recursive division of very large numbers
+  Affected (1): ric-plt-submgr_0.8.2
+
+CVE-2020-29652 | golang.org/x/crypto:v0.0.0-20190123085648-057139ce5d2b | Fixed:0.0.0-20201216223049-8b5274cf687f
+  Title: golang: crypto/ssh: crafted authentication request can lead to nil pointer dereference
+  Affected (1): ric-plt-vespamgr_0.7.5
+
+CVE-2020-7919 | golang.org/x/crypto:v0.0.0-20190123085648-057139ce5d2b | Fixed:0.0.0-20200124225646-8b5121be2f68
+  Title: golang: Integer overflow on 32bit architectures via crafted certificate allows for denial of service
+  Affected (1): ric-plt-vespamgr_0.7.5
+
+CVE-2020-9283 | golang.org/x/crypto:v0.0.0-20190123085648-057139ce5d2b | Fixed:0.0.0-20200220183623-bac4c82f6975
+  Title: golang.org/x/crypto: Processing of crafted ssh-ed25519 public keys allows for panic
+  Affected (1): ric-plt-vespamgr_0.7.5
+
+CVE-2021-22600 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-100.113
+  Title: kernel: double free in packet_set_ring() in net/packet/af_packet.c
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2021-27918 | stdlib:v1.16 | Fixed:1.15.9, 1.16.1
+  Title: golang: encoding/xml: infinite loop when using xml.NewTokenDecoder with a custom TokenReader
+  Affected (3): ric-plt-dbaas_0.5.5, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2021-33194 | golang.org/x/net:v0.0.0-20200520004742-59133d7f0dd7 | Fixed:0.0.0-20210520170846-37e1c6afe023
+  Title: golang: x/net/html: infinite loop in ParseFragment
+  Affected (6): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2021-33195 | stdlib:v1.16 | Fixed:1.15.13, 1.16.5
+  Title: golang: net: lookup functions may return invalid host names
+  Affected (8): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-dbaas_0.5.5, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2021-33196 | stdlib:v1.16 | Fixed:1.15.13, 1.16.5
+  Title: golang: archive/zip: malformed archive may cause panic or memory exhaustion
+  Affected (8): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-dbaas_0.5.5, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2021-33198 | stdlib:v1.16 | Fixed:1.15.13, 1.16.5
+  Title: golang: math/big.Rat: may cause a panic or an unrecoverable fatal error if passed inputs with very l
+  Affected (8): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-dbaas_0.5.5, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2021-38561 | golang.org/x/text:v0.3.2 | Fixed:0.3.7
+  Title: golang: out-of-bounds read in golang.org/x/text/language leads to DoS
+  Affected (7): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2021-39293 | stdlib:v1.16 | Fixed:1.16.8, 1.17.1
+  Title: golang: archive/zip: malformed archive may cause panic or memory exhaustion (incomplete fix of CVE-2
+  Affected (8): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-dbaas_0.5.5, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2021-4002 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-92.103
+  Title: kernel: possible leak or coruption of data residing on hugetlbfs
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2021-4034 | libpolkit-agent-1-0:0.105-26ubuntu1.1 | Fixed:0.105-26ubuntu1.2
+  Title: polkit: Local privilege escalation in pkexec due to incorrect handling of argument vector
+  Affected (1): ric-plt-a1_2.5.1
+
+CVE-2021-4034 | libpolkit-gobject-1-0:0.105-26ubuntu1.1 | Fixed:0.105-26ubuntu1.2
+  Title: polkit: Local privilege escalation in pkexec due to incorrect handling of argument vector
+  Affected (1): ric-plt-a1_2.5.1
+
+CVE-2021-4034 | policykit-1:0.105-26ubuntu1.1 | Fixed:0.105-26ubuntu1.2
+  Title: polkit: Local privilege escalation in pkexec due to incorrect handling of argument vector
+  Affected (1): ric-plt-a1_2.5.1
+
+CVE-2021-41771 | stdlib:v1.16 | Fixed:1.16.10, 1.17.3
+  Title: golang: debug/macho: invalid dynamic symbol table command can cause panic
+  Affected (8): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-dbaas_0.5.5, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2021-41772 | stdlib:v1.16 | Fixed:1.16.10, 1.17.3
+  Title: golang: archive/zip: Reader.Open panics on empty string
+  Affected (8): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-dbaas_0.5.5, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2021-43565 | golang.org/x/crypto:v0.0.0-20190123085648-057139ce5d2b | Fixed:0.0.0-20211202192323-5770296d904e
+  Title: golang.org/x/crypto: empty plaintext packet causes panic
+  Affected (1): ric-plt-vespamgr_0.7.5
+
+CVE-2021-44716 | golang.org/x/net:v0.0.0-20200520004742-59133d7f0dd7 | Fixed:0.0.0-20211209124913-491a49abca63
+  Title: golang: net/http: limit growth of header canonicalization cache
+  Affected (6): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2021-44716 | stdlib:v1.16 | Fixed:1.16.12, 1.17.5
+  Title: golang: net/http: limit growth of header canonicalization cache
+  Affected (8): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-dbaas_0.5.5, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2021-47506 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-105.119
+  Title: kernel: nfsd: fix use-after-free due to delegation race
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2021-47634 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-117.132
+  Title: kernel: ubi: Fix race condition between ctrl_cdev_ioctl and ubi_cdev_ioctl
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2021-47642 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-117.132
+  Title: kernel: video: fbdev: nvidiafb: Use strscpy() to prevent buffer overflow
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2022-0001 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-104.118
+  Title: hw: cpu: intel: Branch History Injection (BHI)
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2022-0002 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-104.118
+  Title: hw: cpu: intel: Intra-Mode BTI
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2022-0185 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-96.109
+  Title: kernel: fs_context: heap overflow in legacy parameter handling
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2022-0492 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-105.119
+  Title: kernel: cgroups v1 release_agent feature may allow privilege escalation
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2022-0778 | libssl1.1:1.1.1f-1ubuntu2.9 | Fixed:1.1.1f-1ubuntu2.12
+  Title: openssl: Infinite loop in BN_mod_sqrt() reachable when parsing certificates
+  Affected (7): ric-plt-a1_2.5.1, ric-plt-appmgr_0.5.4, ric-plt-e2_5.5.0, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2
+
+CVE-2022-0778 | openssl:1.1.1f-1ubuntu2.9 | Fixed:1.1.1f-1ubuntu2.12
+  Title: openssl: Infinite loop in BN_mod_sqrt() reachable when parsing certificates
+  Affected (7): ric-plt-a1_2.5.1, ric-plt-appmgr_0.5.4, ric-plt-e2_5.5.0, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2
+
+CVE-2022-0778 | libssl-dev:1.1.1f-1ubuntu2.9 | Fixed:1.1.1f-1ubuntu2.12
+  Title: openssl: Infinite loop in BN_mod_sqrt() reachable when parsing certificates
+  Affected (1): ric-plt-o1_0.5.3
+
+CVE-2022-1055 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-107.121
+  Title: kernel: use-after-free in tc_new_tfilter() in net/sched/cls_api.c
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2022-1116 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-113.127
+  Title: kernel: Integer Overflow or Wraparound vulnerability in io_uring
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2022-1941 | protobuf:3.19.1 | Fixed:3.18.3, 3.19.5, 3.20.2, 4.21.6
+  Title: protobuf: message parsing vulnerability in ProtocolBuffers
+  Affected (1): ric-plt-a1_2.5.1
+
+CVE-2022-21499 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-117.132
+  Title: kernel: possible to use the debugger to write zero into a location of choice
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2022-21698 | github.com/prometheus/client_golang:v0.9.3 | Fixed:1.11.1
+  Title: prometheus/client_golang: Denial of service using InstrumentHandlerCounter
+  Affected (5): ric-plt-alarmmanager_0.5.11, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2022-23772 | stdlib:v1.16 | Fixed:1.16.14, 1.17.7
+  Title: golang: math/big: uncontrolled memory consumption due to an unhandled overflow via Rat.SetString
+  Affected (8): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-dbaas_0.5.5, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2022-23960 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-117.132
+  Title: hw: cpu: arm64: Spectre-BHB
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2022-24407 | libsasl2-2:2.1.27+dfsg-2 | Fixed:2.1.27+dfsg-2ubuntu0.1
+  Title: cyrus-sasl: failure to properly escape SQL input allows an attacker to execute arbitrary SQL command
+  Affected (6): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2
+
+CVE-2022-24407 | libsasl2-modules:2.1.27+dfsg-2 | Fixed:2.1.27+dfsg-2ubuntu0.1
+  Title: cyrus-sasl: failure to properly escape SQL input allows an attacker to execute arbitrary SQL command
+  Affected (6): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2
+
+CVE-2022-24407 | libsasl2-modules-db:2.1.27+dfsg-2 | Fixed:2.1.27+dfsg-2ubuntu0.1
+  Title: cyrus-sasl: failure to properly escape SQL input allows an attacker to execute arbitrary SQL command
+  Affected (6): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2
+
+CVE-2022-24675 | stdlib:v1.16 | Fixed:1.17.9, 1.18.1
+  Title: golang: encoding/pem: fix stack overflow in Decode
+  Affected (8): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-dbaas_0.5.5, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2022-24921 | stdlib:v1.16 | Fixed:1.16.15, 1.17.8
+  Title: golang: regexp: stack exhaustion via a deeply nested expression
+  Affected (8): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-dbaas_0.5.5, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2022-25235 | libexpat1:2.2.9-1build1 | Fixed:2.2.9-1ubuntu0.2
+  Title: expat: Malformed 2- and 3-byte UTF-8 sequences can lead to arbitrary code execution
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2022-25235 | libexpat1-dev:2.2.9-1build1 | Fixed:2.2.9-1ubuntu0.2
+  Title: expat: Malformed 2- and 3-byte UTF-8 sequences can lead to arbitrary code execution
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2022-25236 | libexpat1:2.2.9-1build1 | Fixed:2.2.9-1ubuntu0.2
+  Title: expat: Namespace-separator characters in "xmlns[:prefix]" attribute values can lead to arbitrary cod
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2022-25236 | libexpat1-dev:2.2.9-1build1 | Fixed:2.2.9-1ubuntu0.2
+  Title: expat: Namespace-separator characters in "xmlns[:prefix]" attribute values can lead to arbitrary cod
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2022-25636 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-104.118
+  Title: kernel: heap out of bounds write in nf_dup_netdev.c
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2022-2586 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-124.140
+  Title: kernel: nf_tables cross-table potential use-after-free may lead to local privilege escalation
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2022-2588 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-124.140
+  Title: kernel: a use-after-free in cls_route filter implementation may lead to privilege escalation
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2022-2602 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-131.147
+  Title: kernel: use-after-free when an io_uring request is being processed
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2022-27191 | golang.org/x/crypto:v0.0.0-20190123085648-057139ce5d2b | Fixed:0.0.0-20220314234659-1baeb1ce4c0b
+  Title: golang: crash in a golang.org/x/crypto/ssh server
+  Affected (1): ric-plt-vespamgr_0.7.5
+
+CVE-2022-27664 | golang.org/x/net:v0.0.0-20200520004742-59133d7f0dd7 | Fixed:0.0.0-20220906165146-f3363e06e74c
+  Title: golang: net/http: handle server errors after sending GOAWAY
+  Affected (6): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2022-27664 | stdlib:v1.16 | Fixed:1.18.6, 1.19.1
+  Title: golang: net/http: handle server errors after sending GOAWAY
+  Affected (8): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-dbaas_0.5.5, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2022-28131 | stdlib:v1.16 | Fixed:1.17.12, 1.18.4
+  Title: golang: encoding/xml: stack exhaustion in Decoder.Skip
+  Affected (8): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-dbaas_0.5.5, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2022-28327 | stdlib:v1.16 | Fixed:1.17.9, 1.18.1
+  Title: golang: crypto/elliptic: panic caused by oversized scalar
+  Affected (8): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-dbaas_0.5.5, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2022-2879 | stdlib:v1.16 | Fixed:1.18.7, 1.19.2
+  Title: golang: archive/tar: github.com/vbatts/tar-split: unbounded memory consumption when reading headers
+  Affected (8): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-dbaas_0.5.5, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2022-2880 | stdlib:v1.16 | Fixed:1.18.7, 1.19.2
+  Title: golang: net/http/httputil: ReverseProxy should not forward unparseable query parameters
+  Affected (8): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-dbaas_0.5.5, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2022-29581 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-113.127
+  Title: kernel: use-after-free due to improper update of reference count in net/sched/cls_u32.c
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2022-29799 | networkd-dispatcher:2.1-2~ubuntu20.04.1 | Fixed:2.1-2~ubuntu20.04.3
+  Title: networkd-dispatcher: Directory traversal
+  Affected (1): ric-plt-a1_2.5.1
+
+CVE-2022-29800 | networkd-dispatcher:2.1-2~ubuntu20.04.1 | Fixed:2.1-2~ubuntu20.04.2
+  Title: networkd-dispatcher: Time-of-check-time-of-use (TOCTOU) race condition
+  Affected (1): ric-plt-a1_2.5.1
+
+CVE-2022-29804 | stdlib:v1.16 | Fixed:1.17.11, 1.18.3
+  Title: ELSA-2022-17957: ol8addon security update (IMPORTANT)
+  Affected (8): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-dbaas_0.5.5, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2022-30580 | stdlib:v1.16 | Fixed:1.17.11, 1.18.3
+  Title: golang: os/exec: Code injection in Cmd.Start
+  Affected (8): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-dbaas_0.5.5, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2022-30630 | stdlib:v1.16 | Fixed:1.17.12, 1.18.4
+  Title: golang: io/fs: stack exhaustion in Glob
+  Affected (8): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-dbaas_0.5.5, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2022-30631 | stdlib:v1.16 | Fixed:1.17.12, 1.18.4
+  Title: golang: compress/gzip: stack exhaustion in Reader.Read
+  Affected (8): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-dbaas_0.5.5, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2022-30632 | stdlib:v1.16 | Fixed:1.17.12, 1.18.4
+  Title: golang: path/filepath: stack exhaustion in Glob
+  Affected (8): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-dbaas_0.5.5, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2022-30633 | stdlib:v1.16 | Fixed:1.17.12, 1.18.4
+  Title: golang: encoding/xml: stack exhaustion in Unmarshal
+  Affected (8): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-dbaas_0.5.5, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2022-30634 | stdlib:v1.16 | Fixed:1.17.11, 1.18.3
+  Title: ELSA-2022-17957: ol8addon security update (IMPORTANT)
+  Affected (8): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-dbaas_0.5.5, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2022-30635 | stdlib:v1.16 | Fixed:1.17.12, 1.18.4
+  Title: golang: encoding/gob: stack exhaustion in Decoder.Decode
+  Affected (8): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-dbaas_0.5.5, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2022-3064 | gopkg.in/yaml.v2:v2.2.2 | Fixed:2.2.4
+  Title: go-yaml: Improve heuristics preventing CPU/memory abuse by parsing malicious or large YAML documents
+  Affected (1): ric-plt-vespamgr_0.7.5
+
+CVE-2022-32149 | golang.org/x/text:v0.3.2 | Fixed:0.3.8
+  Title: golang: golang.org/x/text/language: ParseAcceptLanguage takes a long time to parse complex tags
+  Affected (7): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2022-32189 | stdlib:v1.16 | Fixed:1.17.13, 1.18.5
+  Title: golang: math/big: decoding big.Float and big.Rat types can panic if the encoded message is too short
+  Affected (8): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-dbaas_0.5.5, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2022-32250 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-117.132
+  Title: kernel: a use-after-free write in the netfilter subsystem can lead to privilege escalation to root
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2022-34918 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-124.140
+  Title: kernel: heap overflow in nft_set_elem_init()
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2022-3515 | libksba8:1.3.5-2 | Fixed:1.3.5-2ubuntu0.20.04.1
+  Title: libksba: integer overflow may lead to remote code execution
+  Affected (2): ric-plt-a1_2.5.1, ric-plt-o1_0.5.3
+
+CVE-2022-36402 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-200.220
+  Title: kernel: vmwgfx: integer overflow in vmwgfx_execbuf.c
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2022-41222 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-132.148
+  Title: kernel: mm/mremap.c use-after-free vulnerability
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2022-41715 | stdlib:v1.16 | Fixed:1.18.7, 1.19.2
+  Title: golang: regexp/syntax: limit memory used by parsing regexps
+  Affected (8): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-dbaas_0.5.5, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2022-41716 | stdlib:v1.16 | Fixed:1.18.8, 1.19.3
+  Title: Due to unsanitized NUL values, attackers may be able to maliciously se ...
+  Affected (8): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-dbaas_0.5.5, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2022-41720 | stdlib:v1.16 | Fixed:1.18.9, 1.19.4
+  Title: golang: os, net/http: avoid escapes from os.DirFS and http.Dir on Windows
+  Affected (8): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-dbaas_0.5.5, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2022-41722 | stdlib:v1.16 | Fixed:1.19.6, 1.20.1
+  Title: golang: path/filepath: path-filepath filepath.Clean path traversal
+  Affected (8): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-dbaas_0.5.5, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2022-41723 | golang.org/x/net:v0.0.0-20200520004742-59133d7f0dd7 | Fixed:0.7.0
+  Title: golang.org/x/net/http2: avoid quadratic complexity in HPACK decoding
+  Affected (6): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2022-41723 | stdlib:v1.16 | Fixed:1.19.6, 1.20.1
+  Title: golang.org/x/net/http2: avoid quadratic complexity in HPACK decoding
+  Affected (8): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-dbaas_0.5.5, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2022-41724 | stdlib:v1.16 | Fixed:1.19.6, 1.20.1
+  Title: golang: crypto/tls: large handshake records may cause panics
+  Affected (8): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-dbaas_0.5.5, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2022-41725 | stdlib:v1.16 | Fixed:1.19.6, 1.20.1
+  Title: golang: net/http, mime/multipart: denial of service from excessive resource consumption
+  Affected (8): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-dbaas_0.5.5, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2022-42703 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-132.148
+  Title: kernel: use-after-free related to leaf anon_vma double reuse
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2022-42896 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-137.154
+  Title: kernel: use-after-free in l2cap_connect and l2cap_le_connect_req in net/bluetooth/l2cap_core.c
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2022-43945 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-137.154
+  Title: kernel: nfsd buffer overflow by RPC message over TCP with garbage data
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2022-49053 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-122.138
+  Title: kernel: scsi: target: tcmu: Fix possible page UAF
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2022-49176 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-117.132
+  Title: kernel: bfq: fix use-after-free in bfq_dispatch_request
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2022-49179 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-117.132
+  Title: kernel: block, bfq: don't move oom_bfqq
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2022-50386 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-139.156
+  Title: kernel: Bluetooth: L2CAP: Fix user-after-free
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2023-0266 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-144.161
+  Title: ALSA: pcm: Move rwsem lock inside snd_ctl_elem_read to prevent UAF
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2023-0286 | libssl1.1:1.1.1f-1ubuntu2.9 | Fixed:1.1.1f-1ubuntu2.17
+  Title: openssl: X.400 address type confusion in X.509 GeneralName
+  Affected (7): ric-plt-a1_2.5.1, ric-plt-appmgr_0.5.4, ric-plt-e2_5.5.0, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2
+
+CVE-2023-0286 | openssl:1.1.1f-1ubuntu2.9 | Fixed:1.1.1f-1ubuntu2.17
+  Title: openssl: X.400 address type confusion in X.509 GeneralName
+  Affected (7): ric-plt-a1_2.5.1, ric-plt-appmgr_0.5.4, ric-plt-e2_5.5.0, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2
+
+CVE-2023-0286 | libssl-dev:1.1.1f-1ubuntu2.9 | Fixed:1.1.1f-1ubuntu2.17
+  Title: openssl: X.400 address type confusion in X.509 GeneralName
+  Affected (1): ric-plt-o1_0.5.3
+
+CVE-2023-0461 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-144.161
+  Title: kernel: net/ulp: use-after-free in listening ULP sockets
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2023-1281 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-147.164
+  Title: kernel: tcindex: use-after-free vulnerability in traffic control index filter allows privilege escal
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2023-1380 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-150.167
+  Title: Kernel: a USB-accessible slab-out-of-bounds read in brcmfmac
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2023-1829 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-148.165
+  Title: kernel: Use-after-free vulnerability in the Linux Kernel traffic control index filter
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2023-20588 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-163.180
+  Title: hw: amd: division-by-zero may resulting in loss of confidentiality
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2023-20593 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-159.176
+  Title: hw: amd: Cross-Process Information Leak
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2023-21400 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-205.225
+  Title: kernel: io_uring: io_defer_entry object double free vulnerability
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2023-24534 | stdlib:v1.16 | Fixed:1.19.8, 1.20.3
+  Title: golang: net/http, net/textproto: denial of service from excessive memory allocation
+  Affected (8): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-dbaas_0.5.5, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2023-24536 | stdlib:v1.16 | Fixed:1.19.8, 1.20.3
+  Title: golang: net/http, net/textproto, mime/multipart: denial of service from excessive resource consumpti
+  Affected (8): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-dbaas_0.5.5, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2023-24537 | stdlib:v1.16 | Fixed:1.19.8, 1.20.3
+  Title: golang: go/parser: Infinite loop in parsing
+  Affected (8): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-dbaas_0.5.5, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2023-24539 | stdlib:v1.16 | Fixed:1.19.9, 1.20.4
+  Title: golang: html/template: improper sanitization of CSS values
+  Affected (8): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-dbaas_0.5.5, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2023-25577 | Werkzeug:1.0.1 | Fixed:2.2.3
+  Title: python-werkzeug: high resource usage when parsing multipart form data with many fields
+  Affected (1): ric-plt-a1_2.5.1
+
+CVE-2023-29400 | stdlib:v1.16 | Fixed:1.19.9, 1.20.4
+  Title: golang: html/template: improper handling of empty HTML attributes
+  Affected (8): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-dbaas_0.5.5, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2023-29403 | stdlib:v1.16 | Fixed:1.19.10, 1.20.5
+  Title: golang: runtime: unexpected behavior of setuid/setgid binaries
+  Affected (8): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-dbaas_0.5.5, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2023-30456 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-150.167
+  Title: kernel: KVM: nVMX: missing consistency checks for CR0 and CR4
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2023-30861 | Flask:1.1.4 | Fixed:2.3.2, 2.2.5
+  Title: flask: Possible disclosure of permanent session cookie due to missing Vary: Cookie header
+  Affected (1): ric-plt-a1_2.5.1
+
+CVE-2023-3090 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-155.172
+  Title: kernel: ipvlan: out-of-bounds write caused by unclear skb->cb
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2023-31436 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-150.167
+  Title: kernel: out-of-bounds write in qfq_change_class function
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2023-32233 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-150.167
+  Title: kernel: netfilter: use-after-free in nf_tables when processing batch requests can lead to privilege 
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2023-32629 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-155.172
+  Title: kernel: overlayfs: In Ubuntu skip permission checking for trusted.overlayfs.* xattrs
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2023-3390 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-155.172
+  Title: kernel: UAF in nftables when nft_set_lookup_global triggered after handling named and anonymous sets
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2023-35001 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-155.172
+  Title: kernel: nf_tables: stack-out-of-bounds-read in nft_byteorder_eval()
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2023-3567 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-149.166
+  Title: kernel: use after free in vcs_read in drivers/tty/vt/vc_screen.c due to race
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2023-35788 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-153.170
+  Title: kernel: cls_flower: out-of-bounds write in fl_set_geneve_opt()
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2023-3609 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-159.176
+  Title: kernel: net/sched: cls_u32 component reference counter leak if tcf_change_indev() fails
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2023-3611 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-159.176
+  Title: kernel: net/sched: sch_qfq component can be exploited if in qfq_change_agg function happens qfq_enqu
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2023-3776 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-159.176
+  Title: kernel: net/sched: cls_fw component can be exploited as result of failure in tcf_change_indev functi
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2023-37920 | certifi:2021.10.8 | Fixed:2023.7.22
+  Title: python-certifi: Removal of e-Tugra root certificate
+  Affected (1): ric-plt-a1_2.5.1
+
+CVE-2023-39325 | golang.org/x/net:v0.0.0-20200520004742-59133d7f0dd7 | Fixed:0.17.0
+  Title: golang: net/http, x/net/http2: rapid stream resets can cause excessive work (CVE-2023-44487)
+  Affected (6): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2023-39325 | stdlib:v1.16 | Fixed:1.20.10, 1.21.3
+  Title: golang: net/http, x/net/http2: rapid stream resets can cause excessive work (CVE-2023-44487)
+  Affected (8): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-dbaas_0.5.5, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2023-40283 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-163.180
+  Title: kernel: use-after-free in l2cap_sock_release in net/bluetooth/l2cap_sock.c
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2023-4206 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-163.180
+  Title: kernel: net/sched: Use-after-free vulnerabilities in the net/sched classifiers: cls_fw, cls_u32 and 
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2023-4207 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-163.180
+  Title: kernel: net/sched: Use-after-free vulnerabilities in the net/sched classifiers: cls_fw, cls_u32 and 
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2023-4208 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-163.180
+  Title: kernel: net/sched: Use-after-free vulnerabilities in the net/sched classifiers: cls_fw, cls_u32 and 
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2023-4244 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-173.191
+  Title: kernel: Use-after-free in nft_verdict_dump due to a race between set GC and transaction
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2023-42752 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-165.182
+  Title: kernel: integer overflow in igmpv3_newpack leading to exploitable memory access
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2023-42753 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-165.182
+  Title: kernel: netfilter: potential slab-out-of-bound access due to integer underflow
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2023-42755 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-165.182
+  Title: kernel: rsvp: out-of-bounds read in rsvp_classify()
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2023-42756 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-165.182
+  Title: kernel: netfilter: race condition between IPSET_CMD_ADD and IPSET_CMD_SWAP
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2023-43804 | urllib3:1.26.7 | Fixed:2.0.6, 1.26.17
+  Title: python-urllib3: Cookie request header isn't stripped during cross-origin redirects
+  Affected (1): ric-plt-a1_2.5.1
+
+CVE-2023-44487 | libnghttp2-14:1.40.0-1build1 | Fixed:1.40.0-1ubuntu0.2
+  Title: HTTP/2: Multiple HTTP/2 enabled web servers are vulnerable to a DDoS attack (Rapid Reset Attack)
+  Affected (4): ric-plt-e2_5.5.0, ric-plt-e2mgr_5.4.19, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2
+
+CVE-2023-45283 | stdlib:v1.16 | Fixed:1.20.11, 1.21.4, 1.20.12, 1.21.5
+  Title: The filepath package does not recognize paths with a \??\ prefix as sp ...
+  Affected (8): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-dbaas_0.5.5, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2023-45287 | stdlib:v1.16 | Fixed:1.20.0
+  Title: golang: crypto/tls: Timing Side Channel attack in RSA based TLS key exchanges.
+  Affected (8): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-dbaas_0.5.5, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2023-45288 | golang.org/x/net:v0.0.0-20200520004742-59133d7f0dd7 | Fixed:0.23.0
+  Title: golang: net/http, x/net/http2: unlimited number of CONTINUATION frames causes DoS
+  Affected (6): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2023-45288 | stdlib:v1.16 | Fixed:1.21.9, 1.22.2
+  Title: golang: net/http, x/net/http2: unlimited number of CONTINUATION frames causes DoS
+  Affected (8): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-dbaas_0.5.5, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2023-4622 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-165.182
+  Title: kernel: use after free in unix_stream_sendpage
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2023-4623 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-165.182
+  Title: kernel: net/sched: sch_hfsc UAF
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2023-4921 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-165.182
+  Title: kernel: use-after-free in sch_qfq network scheduler
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2023-51781 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-172.190
+  Title: kernel: use-after-free in net/appletalk/ddp.c
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2023-52620 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-189.209
+  Title: kernel: netfilter: nf_tables: disallow timeout for anonymous sets
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2023-52664 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-215.235
+  Title: kernel: net: atlantic: eliminate double free in error handling logic
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2023-52880 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-189.209
+  Title: kernel: tty: n_gsm: require CAP_NET_ADMIN to attach N_GSM0710 ldisc
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2023-52885 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-166.183
+  Title: kernel: SUNRPC: Fix UAF in svc_tcp_listen_data_ready()
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2023-52927 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-215.235
+  Title: kernel: netfilter: allow exp not to be removed in nf_ct_find_expectation
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2023-6176 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-169.187
+  Title: kernel: local dos vulnerability in scatterwalk_copychunks
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2023-6270 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-189.209
+  Title: kernel: AoE: improper reference count leads to use-after-free vulnerability
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2023-6931 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-170.188
+  Title: kernel: Out of boundary write in perf_read_group() as result of overflow a perf_event's read_size
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2023-6932 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-170.188
+  Title: kernel: use-after-free in IPv4 IGMP
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2023-7192 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-152.169
+  Title: kernel: refcount leak in ctnetlink_create_conntrack()
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2024-0646 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-172.190
+  Title: kernel: ktls overwrites readonly memory pages when using function splice with a ktls socket as desti
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2024-1086 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-174.193
+  Title: kernel: nf_tables: use-after-free vulnerability in the nft_verdict_init() function
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2024-26581 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-177.197
+  Title: kernel: nftables: nft_set_rbtree skip end interval element from gc
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2024-26583 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-190.210
+  Title: kernel: tls: race between async notify and socket close
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2024-26584 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-190.210
+  Title: kernel: tls: handle backlogging of crypto requests
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2024-26585 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-190.210
+  Title: kernel: tls: race between tx work scheduling and socket close
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2024-26597 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-176.196
+  Title: In the Linux kernel, the following vulnerability has been resolved:  n ...
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2024-26642 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-189.209
+  Title: kernel: netfilter: nf_tables: disallow anonymous set with timeout flag
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2024-26643 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-187.207
+  Title: kernel: netfilter: nf_tables: mark set as dead when unbinding anonymous set with timeout
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2024-26689 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-215.235
+  Title: kernel: ceph: prevent use-after-free in encode_cap_msg()
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2024-26800 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-200.220
+  Title: kernel: tls: fix use-after-free on failed backlog decryption
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2024-26828 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-189.209
+  Title: kernel: cifs: fix underflow in parse_server_interfaces()
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2024-26921 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-193.213
+  Title: kernel: inet: inet_defrag: prevent sk release while still in use
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2024-26923 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-189.209
+  Title: kernel: af_unix: Fix garbage collector racing against connect()
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2024-26925 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-187.207
+  Title: kernel: netfilter: nf_tables: release mutex after nft_gc_seq_end from abort path
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2024-26928 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-212.232
+  Title: kernel: smb: client: potential use-after-free in cifs_debug_files_proc_show()
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2024-26960 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-198.218
+  Title: kernel: mm: swap: fix race between free_swap_and_cache() and swapoff()
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2024-27397 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-198.218
+  Title: kernel: netfilter: nf_tables: use timestamp to check for set element timeout
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2024-27398 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-192.212
+  Title: kernel: Bluetooth: Fix use-after-free bugs caused by sco_sock_timeout
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2024-34069 | Werkzeug:1.0.1 | Fixed:3.0.3
+  Title: python-werkzeug: user may execute code on a developer's machine
+  Affected (1): ric-plt-a1_2.5.1
+
+CVE-2024-34156 | stdlib:v1.16 | Fixed:1.22.7, 1.23.1
+  Title: encoding/gob: golang: Calling Decoder.Decode on a message which contains deeply nested structures ca
+  Affected (8): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-dbaas_0.5.5, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2024-35864 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-212.232
+  Title: kernel: smb: client: fix potential UAF in smb2_is_valid_lease_break()
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2024-36016 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-190.210
+  Title: kernel: tty: n_gsm: fix possible out-of-bounds in gsm0_receive()
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2024-36971 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-192.212
+  Title: kernel: net: kernel: UAF in network route management
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2024-38558 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-192.212
+  Title: kernel: net: openvswitch: fix overwriting ct original tuple for ICMPv6
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2024-38630 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-198.218
+  Title: kernel: watchdog: cpu5wdt.c: Fix use-after-free bug caused by cpu5wdt_trigger
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2024-43882 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-200.220
+  Title: kernel: exec: Fix ToCToU between perm check and set-uid/gid usage
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2024-45337 | golang.org/x/crypto:v0.0.0-20190123085648-057139ce5d2b | Fixed:0.31.0
+  Title: golang.org/x/crypto/ssh: Misuse of ServerConfig.PublicKeyCallback may cause authorization bypass in 
+  Affected (1): ric-plt-vespamgr_0.7.5
+
+CVE-2024-45338 | golang.org/x/net:v0.0.0-20200520004742-59133d7f0dd7 | Fixed:0.33.0
+  Title: golang.org/x/net/html: Non-linear parsing of case-insensitive content in golang.org/x/net/html
+  Affected (6): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2024-47685 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-208.228
+  Title: kernel: netfilter: nf_reject_ipv6: fix nf_reject_ip6_tcphdr_put()
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2024-49883 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-208.228
+  Title: kernel: ext4: aovid use-after-free in ext4_ext_insert_extent()
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2024-49958 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-208.228
+  Title: kernel: ocfs2: reserve space for inline xattr before attaching reflink tree
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2024-50264 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-204.224
+  Title: kernel: vsock/virtio: Initialization of the dangling pointer occurring in vsk->trans
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2024-50299 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-208.228
+  Title: kernel: sctp: properly validate chunk size in sctp_sf_ootb()
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2024-50302 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-208.228
+  Title: kernel: HID: core: zero-initialize the report buffer
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2024-53063 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-208.228
+  Title: kernel: media: dvbdev: prevent the risk of out of memory access
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2024-53103 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-205.225
+  Title: kernel: hv_sock: Initializing vsk->trans to NULL to prevent a dangling pointer
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2024-53104 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-208.228
+  Title: kernel: media: uvcvideo: Skip parsing frames of type UVC_VS_UNDEFINED in uvc_parse_format
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2024-53140 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-211.231
+  Title: kernel: netlink: terminate outstanding dump on socket close
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2024-53150 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-211.231
+  Title: kernel: ALSA: usb-audio: Fix out of bounds reads when finding clock sources
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2024-53171 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-211.231
+  Title: kernel: ubifs: authentication: Fix use-after-free in ubifs_tnc_end_commit
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2024-53197 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-211.231
+  Title: kernel: ALSA: usb-audio: Fix potential out-of-bound accesses for Extigy and Mbox devices
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2024-53217 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-211.231
+  Title: kernel: NFSD: Prevent NULL dereference in nfsd4_process_cb_update()
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2024-56581 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-211.231
+  Title: kernel: btrfs: ref-verify: fix use-after-free after invalid ref action
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2024-56593 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-211.231
+  Title: kernel: wifi: brcmfmac: Fix oops due to NULL pointer dereference in brcmf_sdiod_sglist_rw()
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2024-56595 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-211.231
+  Title: kernel: jfs: add a check to prevent array-index-out-of-bounds in dbAdjTree
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2024-56596 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-211.231
+  Title: kernel: jfs: fix array-index-out-of-bounds in jfs_readdir
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2024-56598 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-211.231
+  Title: kernel: jfs: array-index-out-of-bounds fix in dtReadFirst
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2024-56658 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-212.232
+  Title: kernel: net: defer final 'struct net' free in netns dismantle
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2024-57850 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-211.231
+  Title: kernel: jffs2: Prevent rtime decompress memory corruption
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2024-58083 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-216.236
+  Title: kernel: KVM: Explicitly verify target vCPU is online in kvm_get_vcpu()
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2025-21647 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-216.236
+  Title: kernel: sched: sch_cake: add bounds checks to host bulk flow fairness counts
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2025-21703 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-214.234
+  Title: kernel: netem: Update sch->q.qlen before qdisc_tree_reduce_backlog()
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2025-21704 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-216.236
+  Title: kernel: Linux kernel: usb: cdc-acm: Memory corruption due to improper buffer size check
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2025-21715 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-216.236
+  Title: kernel: net: davicom: fix UAF in dm9000_drv_remove
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2025-21718 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-216.236
+  Title: kernel: net: rose: fix timer races against user threads
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2025-21735 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-216.236
+  Title: kernel: NFC: nci: Add bounds checking in nci_hci_create_pipe()
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2025-21761 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-216.236
+  Title: kernel: openvswitch: use RCU protection in ovs_vport_cmd_fill_info()
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2025-21791 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-216.236
+  Title: kernel: vrf: use RCU protection in l3mdev_l3_out()
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2025-21926 | linux-libc-dev:5.4.0-91.102 | Fixed:5.4.0-216.236
+  Title: kernel: net: gso: fix ownership in __udp_gso_segment
+  Affected (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2025-22869 | golang.org/x/crypto:v0.0.0-20190123085648-057139ce5d2b | Fixed:0.35.0
+  Title: golang.org/x/crypto/ssh: Denial of Service in the Key Exchange of golang.org/x/crypto/ssh
+  Affected (1): ric-plt-vespamgr_0.7.5
+
+CVE-2025-4565 | protobuf:3.19.1 | Fixed:4.25.8, 5.29.5, 6.31.1
+  Title: python-protobuf: Unbounded recursion in Python Protobuf
+  Affected (1): ric-plt-a1_2.5.1
+
+CVE-2025-47913 | golang.org/x/crypto:v0.0.0-20190123085648-057139ce5d2b | Fixed:0.43.0
+  Title: golang.org/x/crypto/ssh/agent: golang.org/x/crypto/ssh/agent: SSH client panic due to unexpected SSH
+  Affected (1): ric-plt-vespamgr_0.7.5
+
+CVE-2025-61726 | stdlib:v1.16 | Fixed:1.24.12, 1.25.6
+  Title: golang: net/url: Memory exhaustion in query parameter parsing in net/url
+  Affected (8): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-dbaas_0.5.5, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2025-61729 | stdlib:v1.16 | Fixed:1.24.11, 1.25.5
+  Title: crypto/x509: golang: Denial of Service due to excessive resource consumption via crafted certificate
+  Affected (8): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-dbaas_0.5.5, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2025-65637 | github.com/sirupsen/logrus:v1.3.0 | Fixed:1.8.3, 1.9.1, 1.9.3
+  Title: github.com/sirupsen/logrus: github.com/sirupsen/logrus: Denial-of-Service due to large single-line p
+  Affected (1): ric-plt-vespamgr_0.7.5
+
+CVE-2025-66418 | urllib3:1.26.7 | Fixed:2.6.0
+  Title: urllib3: urllib3: Unbounded decompression chain leads to resource exhaustion
+  Affected (1): ric-plt-a1_2.5.1
+
+CVE-2025-66471 | urllib3:1.26.7 | Fixed:2.6.0
+  Title: urllib3: urllib3 Streaming API improperly handles highly compressed data
+  Affected (1): ric-plt-a1_2.5.1
+
+CVE-2026-0994 | protobuf:3.19.1 | Fixed:6.33.5, 5.29.6
+  Title: python: protobuf: Protobuf: Denial of Service due to recursion depth bypass
+  Affected (1): ric-plt-a1_2.5.1
+
+CVE-2026-21441 | urllib3:1.26.7 | Fixed:2.6.3
+  Title: urllib3: urllib3 vulnerable to decompression-bomb safeguard bypass when following HTTP redirects (st
+  Affected (1): ric-plt-a1_2.5.1
+
+CVE-2026-25679 | stdlib:v1.16 | Fixed:1.25.8, 1.26.1
+  Title: net/url: Incorrect parsing of IPv6 host literals in net/url
+  Affected (8): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-dbaas_0.5.5, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2026-25681 | golang.org/x/net:v0.0.0-20200520004742-59133d7f0dd7 | Fixed:0.55.0
+  Title: golang.org/x/net/html: golang.org/x/net/html: Arbitrary code execution via Cross-Site Scripting
+  Affected (6): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2026-27136 | golang.org/x/net:v0.0.0-20200520004742-59133d7f0dd7 | Fixed:0.55.0
+  Title: Parsing arbitrary HTML which is then rendered using Render can result  ...
+  Affected (6): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2026-27145 | stdlib:v1.16 | Fixed:1.25.11, 1.26.4
+  Title: crypto/x509: golang: golang crypto/x509: Denial of Service via excessive processing of DNS SAN entri
+  Affected (8): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-dbaas_0.5.5, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2026-32280 | stdlib:v1.16 | Fixed:1.25.9, 1.26.2
+  Title: crypto/x509: crypto/tls: golang: Go: Denial of Service vulnerability in certificate chain building
+  Affected (8): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-dbaas_0.5.5, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2026-32281 | stdlib:v1.16 | Fixed:1.25.9, 1.26.2
+  Title: crypto/x509: golang: Go crypto/x509: Denial of Service via inefficient certificate chain validation
+  Affected (8): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-dbaas_0.5.5, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2026-32283 | stdlib:v1.16 | Fixed:1.25.9, 1.26.2
+  Title: crypto/tls: golang: Go crypto/tls: Denial of Service via multiple TLS 1.3 key update messages
+  Affected (8): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-dbaas_0.5.5, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2026-33811 | stdlib:v1.16 | Fixed:1.25.10, 1.26.3
+  Title: net: golang: Go net package: Denial of Service via long CNAME response in LookupCNAME
+  Affected (8): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-dbaas_0.5.5, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2026-33814 | golang.org/x/net:v0.0.0-20200520004742-59133d7f0dd7 | Fixed:0.53.0
+  Title: net/http/internal/http2: golang: golang.org/x/net: Go HTTP/2: Denial of Service via malformed SETTIN
+  Affected (6): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2026-33814 | stdlib:v1.16 | Fixed:1.25.10, 1.26.3
+  Title: net/http/internal/http2: golang: golang.org/x/net: Go HTTP/2: Denial of Service via malformed SETTIN
+  Affected (8): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-dbaas_0.5.5, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2026-39820 | stdlib:v1.16 | Fixed:1.25.10, 1.26.3
+  Title: net/mail: golang: Go net/mail: Denial of Service via crafted email inputs
+  Affected (8): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-dbaas_0.5.5, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2026-39821 | golang.org/x/net:v0.0.0-20200520004742-59133d7f0dd7 | Fixed:0.55.0
+  Title: golang.org/x/net/idna: golang: golang.org/x/net/idna: Privilege escalation via incorrect Punycode la
+  Affected (6): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2026-39827 | golang.org/x/crypto:v0.0.0-20190123085648-057139ce5d2b | Fixed:0.52.0
+  Title: An authenticated SSH client that repeatedly opened channels which were ...
+  Affected (1): ric-plt-vespamgr_0.7.5
+
+CVE-2026-39828 | golang.org/x/crypto:v0.0.0-20190123085648-057139ce5d2b | Fixed:0.52.0
+  Title: golang.org/x/crypto/ssh: golang.org/x/crypto/ssh: Unauthorized command execution via discarded SSH p
+  Affected (1): ric-plt-vespamgr_0.7.5
+
+CVE-2026-39829 | golang.org/x/crypto:v0.0.0-20190123085648-057139ce5d2b | Fixed:0.52.0
+  Title: golang.org/x/crypto/ssh: golang.org/x/crypto/ssh: Denial of Service via crafted public key with exce
+  Affected (1): ric-plt-vespamgr_0.7.5
+
+CVE-2026-39830 | golang.org/x/crypto:v0.0.0-20190123085648-057139ce5d2b | Fixed:0.52.0
+  Title: golang.org/x/crypto/ssh: golang.org/x/crypto/ssh: Denial of Service via resource leak from unsolicit
+  Affected (1): ric-plt-vespamgr_0.7.5
+
+CVE-2026-39832 | golang.org/x/crypto:v0.0.0-20190123085648-057139ce5d2b | Fixed:0.52.0
+  Title: golang.org/x/crypto/ssh/agent: golang.org/x/crypto/ssh/agent: Security bypass due to improper handli
+  Affected (1): ric-plt-vespamgr_0.7.5
+
+CVE-2026-39835 | golang.org/x/crypto:v0.0.0-20190123085648-057139ce5d2b | Fixed:0.52.0
+  Title: golang.org/x/crypto/ssh: golang: golang.org/x/crypto/ssh: Denial of Service via crafted SSH certific
+  Affected (1): ric-plt-vespamgr_0.7.5
+
+CVE-2026-39836 | stdlib:v1.16 | Fixed:1.25.10, 1.26.3
+  Title: ELSA-2026-22121:  golang security update (IMPORTANT)
+  Affected (8): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-dbaas_0.5.5, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2026-42499 | stdlib:v1.16 | Fixed:1.25.10, 1.26.3
+  Title: net/mail: golang: net/mail: Denial of Service via pathological email address parsing
+  Affected (8): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-dbaas_0.5.5, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2026-42502 | golang.org/x/net:v0.0.0-20200520004742-59133d7f0dd7 | Fixed:0.55.0
+  Title: Parsing arbitrary HTML which is then rendered using Render can result  ...
+  Affected (6): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2026-42504 | stdlib:v1.16 | Fixed:1.25.11, 1.26.4
+  Title: Decoding a maliciously-crafted MIME header containing many invalid enc ...
+  Affected (8): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-dbaas_0.5.5, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2026-42508 | golang.org/x/crypto:v0.0.0-20190123085648-057139ce5d2b | Fixed:0.52.0
+  Title: golang.org/x/crypto/ssh/knownhosts: golang: golang.org/x/crypto/ssh/knownhosts: Revocation bypass vi
+  Affected (1): ric-plt-vespamgr_0.7.5
+
+CVE-2026-44431 | urllib3:1.26.7 | Fixed:2.7.0
+  Title: urllib3: urllib3: Information disclosure via cross-origin redirects forwarding sensitive headers
+  Affected (1): ric-plt-a1_2.5.1
+
+CVE-2026-46595 | golang.org/x/crypto:v0.0.0-20190123085648-057139ce5d2b | Fixed:0.52.0
+  Title: golang.org/x/crypto/ssh: golang.org/x/crypto/ssh: Authorization bypass due to skipped source-address
+  Affected (1): ric-plt-vespamgr_0.7.5
+
+CVE-2026-46597 | golang.org/x/crypto:v0.0.0-20190123085648-057139ce5d2b | Fixed:0.52.0
+  Title: An incorrectly placed cast from bytes to int allowed for server-side p ...
+  Affected (1): ric-plt-vespamgr_0.7.5
+
+GHSA-6v7p-g79w-8964 | msgpack:1.0.3 | Fixed:1.2.1
+  Title: MessagePack for Python: Out-of-bounds read / crash on Unpacker reuse after a caught error
+  Affected (1): ric-plt-a1_2.5.1
+

@@ -1,0 +1,106 @@
+=== ALARMMANAGER DBaaS BLOCK TEST ===
+Date: Tue Sep  8 06:08:06 BST 2026
+
+--- Temporary NetworkPolicy ---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"networking.k8s.io/v1","kind":"NetworkPolicy","metadata":{"annotations":{},"name":"test-block-alarmmanager-dbaas","namespace":"ricplt"},"spec":{"ingress":[{"from":[{"podSelector":{"matchExpressions":[{"key":"app","operator":"NotIn","values":["ricplt-alarmmanager"]}]}}],"ports":[{"port":6379,"protocol":"TCP"}]}],"podSelector":{"matchLabels":{"app":"ricplt-dbaas"}},"policyTypes":["Ingress"]}}
+  creationTimestamp: "2026-09-08T05:00:19Z"
+  generation: 1
+  name: test-block-alarmmanager-dbaas
+  namespace: ricplt
+  resourceVersion: "664954"
+  uid: 616cbab2-d680-4a89-a0bc-086c3bada5ba
+spec:
+  ingress:
+  - from:
+    - podSelector:
+        matchExpressions:
+        - key: app
+          operator: NotIn
+          values:
+          - ricplt-alarmmanager
+    ports:
+    - port: 6379
+      protocol: TCP
+  podSelector:
+    matchLabels:
+      app: ricplt-dbaas
+  policyTypes:
+  - Ingress
+
+--- AlarmManager state ---
+NAME                                              READY   STATUS    RESTARTS   AGE     IP            NODE           NOMINATED NODE   READINESS GATES
+deployment-ricplt-alarmmanager-5b665d7f45-r69vk   1/1     Running   0          6m57s   10.244.1.11   minikube-m02   <none>           <none>
+
+--- Deployment readiness ---
+Ready: 1/1
+
+--- Relevant AlarmManager logs ---
+dial tcp 10.244.2.4:6379: i/o timeout
+{"ts":1788843685398,"crit":"INFO","id":"alarm-manager","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"7","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","time":"2026-09-08T05:01:25"},"msg":"Register new counter with opts: {ricxapp SDL Stored The total number of stored SDL transactions map[]}"}
+{"ts":1788843685398,"crit":"INFO","id":"alarm-manager","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"7","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","time":"2026-09-08T05:01:25"},"msg":"Register new counter with opts: {ricxapp SDL StoreError The total number of SDL store errors map[]}"}
+dial tcp 10.244.2.4:6379: i/o timeout
+{"ts":1788843715471,"crit":"WARNING","id":"alarm-manager","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"7","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","alarmManager":"0.5.10:c2987f0","time":"2026-09-08T05:01:55"},"msg":"Database connection not ready, waiting ..."}
+{"ts":1788843735496,"crit":"WARNING","id":"alarm-manager","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"7","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","alarmManager":"0.5.10:c2987f0","time":"2026-09-08T05:02:15"},"msg":"Database connection not ready, waiting ..."}
+{"ts":1788843755516,"crit":"WARNING","id":"alarm-manager","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"7","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","alarmManager":"0.5.10:c2987f0","time":"2026-09-08T05:02:35"},"msg":"Database connection not ready, waiting ..."}
+{"ts":1788843775537,"crit":"WARNING","id":"alarm-manager","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"7","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","alarmManager":"0.5.10:c2987f0","time":"2026-09-08T05:02:55"},"msg":"Database connection not ready, waiting ..."}
+{"ts":1788843795572,"crit":"WARNING","id":"alarm-manager","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"7","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","alarmManager":"0.5.10:c2987f0","time":"2026-09-08T05:03:15"},"msg":"Database connection not ready, waiting ..."}
+{"ts":1788843810618,"crit":"WARNING","id":"alarm-manager","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"7","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","alarmManager":"0.5.10:c2987f0","time":"2026-09-08T05:03:30"},"msg":"Database connection not ready, waiting ..."}
+{"ts":1788843815648,"crit":"WARNING","id":"alarm-manager","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"7","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","alarmManager":"0.5.10:c2987f0","time":"2026-09-08T05:03:35"},"msg":"Database connection not ready, waiting ..."}
+{"ts":1788843820690,"crit":"WARNING","id":"alarm-manager","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"7","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","alarmManager":"0.5.10:c2987f0","time":"2026-09-08T05:03:40"},"msg":"Database connection not ready, waiting ..."}
+{"ts":1788843825699,"crit":"WARNING","id":"alarm-manager","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"7","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","alarmManager":"0.5.10:c2987f0","time":"2026-09-08T05:03:45"},"msg":"Database connection not ready, waiting ..."}
+{"ts":1788843830714,"crit":"WARNING","id":"alarm-manager","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"7","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","alarmManager":"0.5.10:c2987f0","time":"2026-09-08T05:03:50"},"msg":"Database connection not ready, waiting ..."}
+{"ts":1788843835753,"crit":"WARNING","id":"alarm-manager","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"7","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","alarmManager":"0.5.10:c2987f0","time":"2026-09-08T05:03:55"},"msg":"Database connection not ready, waiting ..."}
+{"ts":1788843840786,"crit":"WARNING","id":"alarm-manager","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"7","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","alarmManager":"0.5.10:c2987f0","time":"2026-09-08T05:04:00"},"msg":"Database connection not ready, waiting ..."}
+{"ts":1788843845799,"crit":"WARNING","id":"alarm-manager","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"7","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","alarmManager":"0.5.10:c2987f0","time":"2026-09-08T05:04:05"},"msg":"Database connection not ready, waiting ..."}
+{"ts":1788843850816,"crit":"WARNING","id":"alarm-manager","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"7","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","alarmManager":"0.5.10:c2987f0","time":"2026-09-08T05:04:10"},"msg":"Database connection not ready, waiting ..."}
+{"ts":1788843855852,"crit":"WARNING","id":"alarm-manager","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"7","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","alarmManager":"0.5.10:c2987f0","time":"2026-09-08T05:04:15"},"msg":"Database connection not ready, waiting ..."}
+{"ts":1788843860891,"crit":"WARNING","id":"alarm-manager","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"7","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","alarmManager":"0.5.10:c2987f0","time":"2026-09-08T05:04:20"},"msg":"Database connection not ready, waiting ..."}
+{"ts":1788843865924,"crit":"WARNING","id":"alarm-manager","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"7","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","alarmManager":"0.5.10:c2987f0","time":"2026-09-08T05:04:25"},"msg":"Database connection not ready, waiting ..."}
+{"ts":1788843870952,"crit":"WARNING","id":"alarm-manager","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"7","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","alarmManager":"0.5.10:c2987f0","time":"2026-09-08T05:04:30"},"msg":"Database connection not ready, waiting ..."}
+{"ts":1788843875988,"crit":"WARNING","id":"alarm-manager","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"7","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","alarmManager":"0.5.10:c2987f0","time":"2026-09-08T05:04:35"},"msg":"Database connection not ready, waiting ..."}
+{"ts":1788843880998,"crit":"WARNING","id":"alarm-manager","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"7","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","alarmManager":"0.5.10:c2987f0","time":"2026-09-08T05:04:40"},"msg":"Database connection not ready, waiting ..."}
+{"ts":1788843886027,"crit":"WARNING","id":"alarm-manager","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"7","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","alarmManager":"0.5.10:c2987f0","time":"2026-09-08T05:04:46"},"msg":"Database connection not ready, waiting ..."}
+{"ts":1788843891065,"crit":"WARNING","id":"alarm-manager","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"7","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","alarmManager":"0.5.10:c2987f0","time":"2026-09-08T05:04:51"},"msg":"Database connection not ready, waiting ..."}
+{"ts":1788843896090,"crit":"WARNING","id":"alarm-manager","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"7","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","alarmManager":"0.5.10:c2987f0","time":"2026-09-08T05:04:56"},"msg":"Database connection not ready, waiting ..."}
+{"ts":1788843901111,"crit":"WARNING","id":"alarm-manager","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"7","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","alarmManager":"0.5.10:c2987f0","time":"2026-09-08T05:05:01"},"msg":"Database connection not ready, waiting ..."}
+{"ts":1788843906140,"crit":"WARNING","id":"alarm-manager","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"7","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","alarmManager":"0.5.10:c2987f0","time":"2026-09-08T05:05:06"},"msg":"Database connection not ready, waiting ..."}
+{"ts":1788843911177,"crit":"WARNING","id":"alarm-manager","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"7","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","alarmManager":"0.5.10:c2987f0","time":"2026-09-08T05:05:11"},"msg":"Database connection not ready, waiting ..."}
+{"ts":1788843916217,"crit":"WARNING","id":"alarm-manager","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"7","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","alarmManager":"0.5.10:c2987f0","time":"2026-09-08T05:05:16"},"msg":"Database connection not ready, waiting ..."}
+{"ts":1788843921238,"crit":"WARNING","id":"alarm-manager","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"7","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","alarmManager":"0.5.10:c2987f0","time":"2026-09-08T05:05:21"},"msg":"Database connection not ready, waiting ..."}
+{"ts":1788843926252,"crit":"WARNING","id":"alarm-manager","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"7","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","alarmManager":"0.5.10:c2987f0","time":"2026-09-08T05:05:26"},"msg":"Database connection not ready, waiting ..."}
+{"ts":1788843931270,"crit":"WARNING","id":"alarm-manager","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"7","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","alarmManager":"0.5.10:c2987f0","time":"2026-09-08T05:05:31"},"msg":"Database connection not ready, waiting ..."}
+{"ts":1788843936284,"crit":"WARNING","id":"alarm-manager","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"7","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","alarmManager":"0.5.10:c2987f0","time":"2026-09-08T05:05:36"},"msg":"Database connection not ready, waiting ..."}
+{"ts":1788843941300,"crit":"WARNING","id":"alarm-manager","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"7","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","alarmManager":"0.5.10:c2987f0","time":"2026-09-08T05:05:41"},"msg":"Database connection not ready, waiting ..."}
+{"ts":1788843946338,"crit":"WARNING","id":"alarm-manager","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"7","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","alarmManager":"0.5.10:c2987f0","time":"2026-09-08T05:05:46"},"msg":"Database connection not ready, waiting ..."}
+{"ts":1788843951372,"crit":"WARNING","id":"alarm-manager","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"7","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","alarmManager":"0.5.10:c2987f0","time":"2026-09-08T05:05:51"},"msg":"Database connection not ready, waiting ..."}
+{"ts":1788843956410,"crit":"WARNING","id":"alarm-manager","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"7","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","alarmManager":"0.5.10:c2987f0","time":"2026-09-08T05:05:56"},"msg":"Database connection not ready, waiting ..."}
+{"ts":1788843961416,"crit":"WARNING","id":"alarm-manager","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"7","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","alarmManager":"0.5.10:c2987f0","time":"2026-09-08T05:06:01"},"msg":"Database connection not ready, waiting ..."}
+{"ts":1788843966441,"crit":"WARNING","id":"alarm-manager","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"7","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","alarmManager":"0.5.10:c2987f0","time":"2026-09-08T05:06:06"},"msg":"Database connection not ready, waiting ..."}
+{"ts":1788843971463,"crit":"WARNING","id":"alarm-manager","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"7","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","alarmManager":"0.5.10:c2987f0","time":"2026-09-08T05:06:11"},"msg":"Database connection not ready, waiting ..."}
+{"ts":1788843976476,"crit":"WARNING","id":"alarm-manager","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"7","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","alarmManager":"0.5.10:c2987f0","time":"2026-09-08T05:06:16"},"msg":"Database connection not ready, waiting ..."}
+{"ts":1788843981493,"crit":"WARNING","id":"alarm-manager","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"7","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","alarmManager":"0.5.10:c2987f0","time":"2026-09-08T05:06:21"},"msg":"Database connection not ready, waiting ..."}
+{"ts":1788843986516,"crit":"WARNING","id":"alarm-manager","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"7","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","alarmManager":"0.5.10:c2987f0","time":"2026-09-08T05:06:26"},"msg":"Database connection not ready, waiting ..."}
+{"ts":1788843991546,"crit":"WARNING","id":"alarm-manager","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"7","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","alarmManager":"0.5.10:c2987f0","time":"2026-09-08T05:06:31"},"msg":"Database connection not ready, waiting ..."}
+{"ts":1788843996589,"crit":"WARNING","id":"alarm-manager","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"7","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","alarmManager":"0.5.10:c2987f0","time":"2026-09-08T05:06:36"},"msg":"Database connection not ready, waiting ..."}
+{"ts":1788844001621,"crit":"WARNING","id":"alarm-manager","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"7","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","alarmManager":"0.5.10:c2987f0","time":"2026-09-08T05:06:41"},"msg":"Database connection not ready, waiting ..."}
+{"ts":1788844006662,"crit":"WARNING","id":"alarm-manager","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"7","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","alarmManager":"0.5.10:c2987f0","time":"2026-09-08T05:06:46"},"msg":"Database connection not ready, waiting ..."}
+{"ts":1788844011703,"crit":"WARNING","id":"alarm-manager","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"7","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","alarmManager":"0.5.10:c2987f0","time":"2026-09-08T05:06:51"},"msg":"Database connection not ready, waiting ..."}
+{"ts":1788844016733,"crit":"WARNING","id":"alarm-manager","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"7","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","alarmManager":"0.5.10:c2987f0","time":"2026-09-08T05:06:56"},"msg":"Database connection not ready, waiting ..."}
+{"ts":1788844021762,"crit":"WARNING","id":"alarm-manager","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"7","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","alarmManager":"0.5.10:c2987f0","time":"2026-09-08T05:07:01"},"msg":"Database connection not ready, waiting ..."}
+{"ts":1788844026791,"crit":"WARNING","id":"alarm-manager","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"7","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","alarmManager":"0.5.10:c2987f0","time":"2026-09-08T05:07:06"},"msg":"Database connection not ready, waiting ..."}
+{"ts":1788844031800,"crit":"WARNING","id":"alarm-manager","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"7","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","alarmManager":"0.5.10:c2987f0","time":"2026-09-08T05:07:11"},"msg":"Database connection not ready, waiting ..."}
+{"ts":1788844036830,"crit":"WARNING","id":"alarm-manager","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"7","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","alarmManager":"0.5.10:c2987f0","time":"2026-09-08T05:07:16"},"msg":"Database connection not ready, waiting ..."}
+{"ts":1788844041863,"crit":"WARNING","id":"alarm-manager","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"7","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","alarmManager":"0.5.10:c2987f0","time":"2026-09-08T05:07:21"},"msg":"Database connection not ready, waiting ..."}
+{"ts":1788844046901,"crit":"WARNING","id":"alarm-manager","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"7","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","alarmManager":"0.5.10:c2987f0","time":"2026-09-08T05:07:26"},"msg":"Database connection not ready, waiting ..."}
+{"ts":1788844051928,"crit":"WARNING","id":"alarm-manager","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"7","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","alarmManager":"0.5.10:c2987f0","time":"2026-09-08T05:07:31"},"msg":"Database connection not ready, waiting ..."}
+{"ts":1788844056967,"crit":"WARNING","id":"alarm-manager","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"7","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","alarmManager":"0.5.10:c2987f0","time":"2026-09-08T05:07:36"},"msg":"Database connection not ready, waiting ..."}
+{"ts":1788844061998,"crit":"WARNING","id":"alarm-manager","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"7","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","alarmManager":"0.5.10:c2987f0","time":"2026-09-08T05:07:41"},"msg":"Database connection not ready, waiting ..."}
+{"ts":1788844067010,"crit":"WARNING","id":"alarm-manager","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"7","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","alarmManager":"0.5.10:c2987f0","time":"2026-09-08T05:07:47"},"msg":"Database connection not ready, waiting ..."}
+{"ts":1788844072018,"crit":"WARNING","id":"alarm-manager","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"7","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","alarmManager":"0.5.10:c2987f0","time":"2026-09-08T05:07:52"},"msg":"Database connection not ready, waiting ..."}
+{"ts":1788844077042,"crit":"WARNING","id":"alarm-manager","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"7","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","alarmManager":"0.5.10:c2987f0","time":"2026-09-08T05:07:57"},"msg":"Database connection not ready, waiting ..."}
+{"ts":1788844082089,"crit":"WARNING","id":"alarm-manager","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"7","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","alarmManager":"0.5.10:c2987f0","time":"2026-09-08T05:08:02"},"msg":"Database connection not ready, waiting ..."}

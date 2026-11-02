@@ -1,0 +1,13 @@
+=== STEP 5C: CAP_NET_RAW PRESENCE CHECK ===
+Date: Mon Aug 31 08:17:27 BST 2026
+
+deployment-ricplt-a1mediator-7794b784c9-vw9lj -> CAP_NET_RAW NOT PRESENT
+deployment-ricplt-alarmmanager-6b65df6cf9-2qfsp -> CAP_NET_RAW PRESENT
+deployment-ricplt-appmgr-774c6b5bff-dbmbx -> CAP_NET_RAW PRESENT
+deployment-ricplt-e2mgr-866df89c9-tzf5f -> CAP_NET_RAW PRESENT
+deployment-ricplt-e2term-alpha-5fc968b7f5-5kff4 -> CAP_NET_RAW PRESENT
+deployment-ricplt-o1mediator-7d4459bdd9-d9zmc -> CAP_NET_RAW PRESENT
+deployment-ricplt-rtmgr-85f568dcf5-4xr9k -> CAP_NET_RAW PRESENT
+deployment-ricplt-submgr-7cf4f79cdb-khnzc -> CAP_NET_RAW PRESENT
+deployment-ricplt-vespamgr-5c8fcdd88d-nb22z -> CAP_NET_RAW PRESENT
+statefulset-ricplt-dbaas-server-0 -> CAP_NET_RAW NOT PRESENT

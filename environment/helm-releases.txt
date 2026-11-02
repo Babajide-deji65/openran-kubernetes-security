@@ -1,0 +1,11 @@
+NAME           	NAMESPACE	REVISION	UPDATED                                	STATUS  	CHART             	APP VERSION
+r4-a1mediator  	ricplt   	1       	2026-06-27 23:04:30.649751729 +0100 BST	deployed	a1mediator-3.0.0  	1.0        
+r4-alarmmanager	ricplt   	1       	2026-06-27 23:05:31.268637714 +0100 BST	deployed	alarmmanager-5.0.0	1.0        
+r4-appmgr      	ricplt   	1       	2026-06-27 23:03:31.635325704 +0100 BST	deployed	appmgr-3.0.0      	1.0        
+r4-dbaas       	ricplt   	1       	2026-06-27 23:03:20.00247877 +0100 BST 	deployed	dbaas-2.0.0       	1.0        
+r4-e2mgr       	ricplt   	1       	2026-06-27 23:04:05.426423158 +0100 BST	deployed	e2mgr-3.0.0       	1.0        
+r4-e2term      	ricplt   	1       	2026-06-27 23:04:17.593249758 +0100 BST	deployed	e2term-3.0.0      	1.0        
+r4-o1mediator  	ricplt   	1       	2026-06-27 23:05:18.166745595 +0100 BST	deployed	o1mediator-3.0.0  	1.0        
+r4-rtmgr       	ricplt   	1       	2026-06-27 23:03:46.13265342 +0100 BST 	deployed	rtmgr-3.0.0       	1.0        
+r4-submgr      	ricplt   	1       	2026-06-27 23:04:46.246556585 +0100 BST	deployed	submgr-3.0.0      	1.0        
+r4-vespamgr    	ricplt   	1       	2026-06-27 23:05:04.779939329 +0100 BST	deployed	vespamgr-3.0.0    	1.0        

@@ -1,0 +1,98 @@
+=== APPMGR PRE-RBAC SCOPE ASSESSMENT ===
+Date: Tue Aug 25 10:49:22 BST 2026
+
+===== Namespace: default =====
+get pods:                      yes
+list pods:                     yes
+create pods:                   yes
+delete pods:                   yes
+create pods/portforward:       yes
+get configmaps:                yes
+list configmaps:               yes
+create configmaps:             yes
+delete configmaps:             yes
+get services:                  yes
+create services:               yes
+delete services:               yes
+get endpoints:                 yes
+create endpoints:              yes
+delete endpoints:              yes
+get secrets:                   yes
+list secrets:                  yes
+
+===== Namespace: kube-system =====
+get pods:                      yes
+list pods:                     yes
+create pods:                   yes
+delete pods:                   yes
+create pods/portforward:       yes
+get configmaps:                yes
+list configmaps:               yes
+create configmaps:             yes
+delete configmaps:             yes
+get services:                  yes
+create services:               yes
+delete services:               yes
+get endpoints:                 yes
+create endpoints:              yes
+delete endpoints:              yes
+get secrets:                   yes
+list secrets:                  yes
+
+===== Namespace: ricplt =====
+get pods:                      yes
+list pods:                     yes
+create pods:                   yes
+delete pods:                   yes
+create pods/portforward:       yes
+get configmaps:                yes
+list configmaps:               yes
+create configmaps:             yes
+delete configmaps:             yes
+get services:                  yes
+create services:               yes
+delete services:               yes
+get endpoints:                 yes
+create endpoints:              yes
+delete endpoints:              yes
+get secrets:                   yes
+list secrets:                  yes
+
+===== Namespace: ricinfra =====
+get pods:                      yes
+list pods:                     yes
+create pods:                   yes
+delete pods:                   yes
+create pods/portforward:       yes
+get configmaps:                yes
+list configmaps:               yes
+create configmaps:             yes
+delete configmaps:             yes
+get services:                  yes
+create services:               yes
+delete services:               yes
+get endpoints:                 yes
+create endpoints:              yes
+delete endpoints:              yes
+get secrets:                   yes
+list secrets:                  yes
+
+===== Namespace: ricxapp =====
+get pods:                      yes
+list pods:                     yes
+create pods:                   yes
+delete pods:                   yes
+create pods/portforward:       yes
+get configmaps:                yes
+list configmaps:               yes
+create configmaps:             yes
+delete configmaps:             yes
+get services:                  yes
+create services:               yes
+delete services:               yes
+get endpoints:                 yes
+create endpoints:              yes
+delete endpoints:              yes
+get secrets:                   yes
+list secrets:                  yes
+

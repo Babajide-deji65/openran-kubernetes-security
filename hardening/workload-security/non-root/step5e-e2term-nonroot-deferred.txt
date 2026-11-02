@@ -1,0 +1,25 @@
+=== STEP 5E: E2TERM NON-ROOT ASSESSMENT ===
+Date: Wed Sep  2 15:18:47 BST 2026
+
+Decision: Non-root NOT applied
+Reason 1: Application writes to /opt/e2/router.txt.stash.inc (root:root 640)
+          Active write handle confirmed on the running E2 process
+Reason 2: startup.sh uses sed -i on /opt/e2/config/config.conf
+          Directory /opt/e2/config is root:root 755
+          sed -i requires write access to the directory to create temp files
+
+--- Runtime User ---
+uid=0(root) gid=0(root) groups=0(root)
+
+--- File Permissions ---
+-rw-r----- 1 root root 1928 Sep  2 19:48 /opt/e2/router.txt.stash
+-rw-r----- 1 root root   31 Sep  2 19:48 /opt/e2/router.txt.stash.inc
+drwxr-xr-x 1 root root 4096 Sep  2 19:48 /opt/e2
+drwxr-xr-x 1 root root 4096 Sep  2 16:50 /opt/e2/config
+-rw-rw-r-- 1 root root 495 Sep  2 16:50 /opt/e2/config/config.conf
+
+--- Write Handle Evidence ---
+l-wx------ 1 root root 64 Sep  2 19:42 /proc/23/fd/12 -> /opt/e2/router.txt.stash.inc
+
+--- Current Security Context (unchanged) ---
+{"allowPrivilegeEscalation":false,"capabilities":{"drop":["NET_RAW"]},"seccompProfile":{"type":"RuntimeDefault"}}

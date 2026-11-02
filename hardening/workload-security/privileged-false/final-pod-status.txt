@@ -1,0 +1,11 @@
+NAME                                              READY   STATUS    RESTARTS      AGE
+deployment-ricplt-a1mediator-8448dd8465-mwdgf     1/1     Running   1 (41m ago)   52m
+deployment-ricplt-alarmmanager-df64b6bdc-wlh2c    1/1     Running   0             58m
+deployment-ricplt-appmgr-76d79f7cfb-bvdp6         1/1     Running   0             46m
+deployment-ricplt-e2mgr-7c57f6b74f-k8g7l          1/1     Running   1 (42m ago)   52m
+deployment-ricplt-e2term-alpha-857cf5cf45-jd4k2   1/1     Running   0             52m
+deployment-ricplt-o1mediator-69f6668c46-g8t4f     1/1     Running   0             49m
+deployment-ricplt-rtmgr-8548fd4bd-8nhsg           1/1     Running   0             49m
+deployment-ricplt-submgr-5f79558b58-b24gc         1/1     Running   0             49m
+deployment-ricplt-vespamgr-5c9fd87b9d-8vwsb       1/1     Running   0             48m
+statefulset-ricplt-dbaas-server-0                 1/1     Running   0             42m

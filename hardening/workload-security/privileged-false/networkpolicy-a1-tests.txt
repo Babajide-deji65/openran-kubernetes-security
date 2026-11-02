@@ -1,0 +1,2 @@
+A1Mediator to DBaaS: CONNECTED
+A1Mediator to E2Term: NOT CONNECTED (timed out)

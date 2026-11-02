@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: restrict-appmgr-ingress
+  namespace: ricplt
+spec:
+  podSelector:
+    matchLabels:
+      app: ricplt-appmgr
+  policyTypes:
+  - Ingress
+  ingress:
+  # Approved RIC components with identified AppMgr HTTP dependencies
+  - from:
+    - podSelector:
+        matchExpressions:
+        - key: app
+          operator: In
+          values:
+          - ricplt-vespamgr
+          - ricplt-o1mediator
+          - ricplt-rtmgr
+    ports:
+    - protocol: TCP
+      port: 8080

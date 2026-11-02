@@ -1,0 +1,48 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: restrict-e2term-ingress
+  namespace: ricplt
+spec:
+  podSelector:
+    matchLabels:
+      app: ricplt-e2term-alpha
+  policyTypes:
+  - Ingress
+  ingress:
+
+  # E2Mgr -> E2Term RMR data
+  - from:
+    - podSelector:
+        matchLabels:
+          app: ricplt-e2mgr
+    ports:
+    - protocol: TCP
+      port: 38000
+
+  # RTMgr -> E2Term RMR route
+  - from:
+    - podSelector:
+        matchLabels:
+          app: ricplt-rtmgr
+    ports:
+    - protocol: TCP
+      port: 4561
+
+  # Prometheus in ricinfra -> E2Term metrics
+  - from:
+    - namespaceSelector:
+        matchLabels:
+          kubernetes.io/metadata.name: ricinfra
+      podSelector:
+        matchLabels:
+          app.kubernetes.io/name: prometheus
+          app.kubernetes.io/component: server
+    ports:
+    - protocol: TCP
+      port: 8088
+
+  # External/RAN-facing SCTP interface
+  - ports:
+    - protocol: SCTP
+      port: 36422

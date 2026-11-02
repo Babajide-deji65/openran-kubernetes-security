@@ -1,0 +1,14 @@
+=== STEP 5C: E2MGR CAP_NET_RAW HARDENING ===
+Date: Tue Sep  1 11:19:28 BST 2026
+
+--- Security Context ---
+{"allowPrivilegeEscalation":false,"capabilities":{"drop":["NET_RAW"]}}
+
+--- Pod Status ---
+deployment-ricplt-e2mgr-745b4dc699-pzc4h          1/1     Running   0             4m43s
+
+--- Effective Capabilities ---
+CapEff:	00000000a80405fb
+
+--- CAP_NET_RAW Verification ---
+deployment-ricplt-e2mgr-745b4dc699-pzc4h -> CAP_NET_RAW NOT PRESENT

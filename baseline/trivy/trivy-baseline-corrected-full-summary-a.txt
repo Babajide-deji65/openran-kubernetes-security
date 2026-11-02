@@ -1,0 +1,96 @@
+======================================================================
+CORRECTED TRIVY BASELINE SUMMARY
+======================================================================
+Images processed: 10
+TOTAL IMAGE-LEVEL CVE+PACKAGE INSTANCES: 1073
+UNIQUE CVE+PACKAGE COMBINATIONS: 261
+  CRITICAL: 7 unique (42 image-level instances)
+  HIGH: 254 unique (1031 image-level instances)
+======================================================================
+
+PER-IMAGE UNIQUE HIGH/CRITICAL COUNTS:
+
+ric-plt-a1_2.5.1: CRITICAL=1 HIGH=158 TOTAL=159
+ric-plt-alarmmanager_0.5.11: CRITICAL=5 HIGH=71 TOTAL=76
+ric-plt-appmgr_0.5.4: CRITICAL=5 HIGH=74 TOTAL=79
+ric-plt-dbaas_0.5.5: CRITICAL=6 HIGH=57 TOTAL=63
+ric-plt-e2_5.5.0: CRITICAL=0 HIGH=140 TOTAL=140
+ric-plt-e2mgr_5.4.19: CRITICAL=5 HIGH=66 TOTAL=71
+ric-plt-o1_0.5.3: CRITICAL=5 HIGH=213 TOTAL=218
+ric-plt-rtmgr_0.8.2: CRITICAL=5 HIGH=79 TOTAL=84
+ric-plt-submgr_0.8.2: CRITICAL=5 HIGH=82 TOTAL=87
+ric-plt-vespamgr_0.7.5: CRITICAL=5 HIGH=91 TOTAL=96
+
+======================================================================
+ALL UNIQUE CRITICAL CVE+PACKAGE COMBINATIONS
+======================================================================
+CVE-2022-23806 | Package: stdlib
+  Title: golang: crypto/elliptic: IsOnCurve returns true for invalid field elements
+  Affected images (8):
+    ric-plt-alarmmanager_0.5.11 | Installed: v1.16.1 | Fixed: 1.16.14, 1.17.7
+    ric-plt-appmgr_0.5.4 | Installed: v1.16.4 | Fixed: 1.16.14, 1.17.7
+    ric-plt-dbaas_0.5.5 | Installed: v1.13.8 | Fixed: 1.16.14, 1.17.7
+    ric-plt-e2mgr_5.4.19 | Installed: v1.16.4 | Fixed: 1.16.14, 1.17.7
+    ric-plt-o1_0.5.3 | Installed: v1.16.4 | Fixed: 1.16.14, 1.17.7
+    ric-plt-rtmgr_0.8.2 | Installed: v1.16.4 | Fixed: 1.16.14, 1.17.7
+    ric-plt-submgr_0.8.2 | Installed: v1.14.4 | Fixed: 1.16.14, 1.17.7
+    ric-plt-vespamgr_0.7.5 | Installed: v1.16 | Fixed: 1.16.14, 1.17.7
+
+CVE-2022-37434 | Package: zlib
+  Title: zlib: heap-based buffer over-read and overflow in inflate() in inflate.c via a large gzip header extra field
+  Affected images (1):
+    ric-plt-dbaas_0.5.5 | Installed: 1.2.11-r3 | Fixed: 1.2.11-r4
+
+CVE-2023-24538 | Package: stdlib
+  Title: golang: html/template: backticks not treated as string delimiters
+  Affected images (8):
+    ric-plt-alarmmanager_0.5.11 | Installed: v1.16.1 | Fixed: 1.19.8, 1.20.3
+    ric-plt-appmgr_0.5.4 | Installed: v1.16.4 | Fixed: 1.19.8, 1.20.3
+    ric-plt-dbaas_0.5.5 | Installed: v1.13.8 | Fixed: 1.19.8, 1.20.3
+    ric-plt-e2mgr_5.4.19 | Installed: v1.16.4 | Fixed: 1.19.8, 1.20.3
+    ric-plt-o1_0.5.3 | Installed: v1.16.4 | Fixed: 1.19.8, 1.20.3
+    ric-plt-rtmgr_0.8.2 | Installed: v1.16.4 | Fixed: 1.19.8, 1.20.3
+    ric-plt-submgr_0.8.2 | Installed: v1.14.4 | Fixed: 1.19.8, 1.20.3
+    ric-plt-vespamgr_0.7.5 | Installed: v1.16 | Fixed: 1.19.8, 1.20.3
+
+CVE-2023-24540 | Package: stdlib
+  Title: golang: html/template: improper handling of JavaScript whitespace
+  Affected images (8):
+    ric-plt-alarmmanager_0.5.11 | Installed: v1.16.1 | Fixed: 1.19.9, 1.20.4
+    ric-plt-appmgr_0.5.4 | Installed: v1.16.4 | Fixed: 1.19.9, 1.20.4
+    ric-plt-dbaas_0.5.5 | Installed: v1.13.8 | Fixed: 1.19.9, 1.20.4
+    ric-plt-e2mgr_5.4.19 | Installed: v1.16.4 | Fixed: 1.19.9, 1.20.4
+    ric-plt-o1_0.5.3 | Installed: v1.16.4 | Fixed: 1.19.9, 1.20.4
+    ric-plt-rtmgr_0.8.2 | Installed: v1.16.4 | Fixed: 1.19.9, 1.20.4
+    ric-plt-submgr_0.8.2 | Installed: v1.14.4 | Fixed: 1.19.9, 1.20.4
+    ric-plt-vespamgr_0.7.5 | Installed: v1.16 | Fixed: 1.19.9, 1.20.4
+
+CVE-2023-41419 | Package: gevent
+  Title: python-gevent: privilege escalation via a crafted script to the WSGIServer component
+  Affected images (1):
+    ric-plt-a1_2.5.1 | Installed: 21.8.0 | Fixed: 23.9.0
+
+CVE-2024-24790 | Package: stdlib
+  Title: golang: net/netip: Unexpected behavior from Is methods for IPv4-mapped IPv6 addresses
+  Affected images (8):
+    ric-plt-alarmmanager_0.5.11 | Installed: v1.16.1 | Fixed: 1.21.11, 1.22.4
+    ric-plt-appmgr_0.5.4 | Installed: v1.16.4 | Fixed: 1.21.11, 1.22.4
+    ric-plt-dbaas_0.5.5 | Installed: v1.13.8 | Fixed: 1.21.11, 1.22.4
+    ric-plt-e2mgr_5.4.19 | Installed: v1.16.4 | Fixed: 1.21.11, 1.22.4
+    ric-plt-o1_0.5.3 | Installed: v1.16.4 | Fixed: 1.21.11, 1.22.4
+    ric-plt-rtmgr_0.8.2 | Installed: v1.16.4 | Fixed: 1.21.11, 1.22.4
+    ric-plt-submgr_0.8.2 | Installed: v1.14.4 | Fixed: 1.21.11, 1.22.4
+    ric-plt-vespamgr_0.7.5 | Installed: v1.16 | Fixed: 1.21.11, 1.22.4
+
+CVE-2025-68121 | Package: stdlib
+  Title: crypto/tls: crypto/tls: Incorrect certificate validation during TLS session resumption
+  Affected images (8):
+    ric-plt-alarmmanager_0.5.11 | Installed: v1.16.1 | Fixed: 1.24.13, 1.25.7, 1.26.0-rc.3
+    ric-plt-appmgr_0.5.4 | Installed: v1.16.4 | Fixed: 1.24.13, 1.25.7, 1.26.0-rc.3
+    ric-plt-dbaas_0.5.5 | Installed: v1.13.8 | Fixed: 1.24.13, 1.25.7, 1.26.0-rc.3
+    ric-plt-e2mgr_5.4.19 | Installed: v1.16.4 | Fixed: 1.24.13, 1.25.7, 1.26.0-rc.3
+    ric-plt-o1_0.5.3 | Installed: v1.16.4 | Fixed: 1.24.13, 1.25.7, 1.26.0-rc.3
+    ric-plt-rtmgr_0.8.2 | Installed: v1.16.4 | Fixed: 1.24.13, 1.25.7, 1.26.0-rc.3
+    ric-plt-submgr_0.8.2 | Installed: v1.14.4 | Fixed: 1.24.13, 1.25.7, 1.26.0-rc.3
+    ric-plt-vespamgr_0.7.5 | Installed: v1.16 | Fixed: 1.24.13, 1.25.7, 1.26.0-rc.3
+

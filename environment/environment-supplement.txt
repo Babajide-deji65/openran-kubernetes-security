@@ -1,0 +1,27 @@
+=== ENVIRONMENT SUPPLEMENT ===
+Date: Fri Sep 18 23:38:30 BST 2026
+
+=== WSL ===
+Distribution: Ubuntu 26.04 LTS (Resolute Raccoon)
+Kernel: 6.6.114.1-microsoft-standard-WSL2
+WSL version: 2.7.3.0
+Windows host: 10.0.26200.9457
+
+=== Docker Host ===
+Version: 29.5.3, Driver: overlayfs, Cgroup: cgroupfs
+
+=== Container Runtime (inside nodes) ===
+minikube: docker://29.2.1
+minikube-m02: docker://29.2.1
+minikube-m03: docker://29.2.1
+
+=== CNI: kindnet ===
+Image: docker.io/kindest/kindnetd:v20260213-ea8e5717 (all 3 nodes)
+
+=== Minikube ===
+minikube version: v1.38.1
+commit: c93a4cb9311efc66b90d33ea03f75f2c4120e9b0
+
+=== Kubernetes ===
+Server: v1.29.0
+Client (kubectl): v1.34.1

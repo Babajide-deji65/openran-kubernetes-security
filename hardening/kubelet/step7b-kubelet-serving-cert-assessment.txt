@@ -1,0 +1,33 @@
+=== STEP 7B: KUBELET SERVING CERTIFICATE ASSESSMENT ===
+Date: Fri Sep 11 08:39:08 BST 2026
+
+===== minikube =====
+--- kubelet serving certificate files ---
+/var/lib/kubelet/pki/kubelet-client-2026-06-22-17-19-48.pem
+/var/lib/kubelet/pki/kubelet.crt
+/var/lib/minikube/certs/etcd/server.crt
+/var/lib/minikube/certs/apiserver-kubelet-client.crt
+/var/lib/minikube/certs/apiserver.crt
+/var/lib/minikube/certs/apiserver-etcd-client.crt
+
+--- kubelet certificate-related config ---
+rotateCertificates: true
+
+===== minikube-m02 =====
+--- kubelet serving certificate files ---
+/var/lib/kubelet/pki/kubelet-client-2026-06-22-17-20-43.pem
+/var/lib/kubelet/pki/kubelet.crt
+
+--- kubelet certificate-related config ---
+rotateCertificates: true
+
+===== minikube-m03 =====
+--- kubelet serving certificate files ---
+/var/lib/kubelet/pki/kubelet-client-2026-06-22-17-21-29.pem
+/var/lib/kubelet/pki/kubelet.crt
+
+--- kubelet certificate-related config ---
+rotateCertificates: true
+
+===== METRICS SERVER CURRENT ARGS =====
+["--cert-dir=/tmp","--secure-port=4443","--kubelet-preferred-address-types=InternalIP,ExternalIP,Hostname","--kubelet-use-node-status-port","--metric-resolution=60s","--kubelet-insecure-tls"]

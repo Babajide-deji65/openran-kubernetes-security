@@ -1,0 +1,69 @@
+============================================================
+TOTAL IMAGE INSTANCES: 1397
+UNIQUE CVE+PACKAGE COMBINATIONS: 355
+  CRITICAL: 12 unique (57 image instances)
+  HIGH: 343 unique (1340 image instances)
+============================================================
+
+PER-IMAGE UNIQUE COUNTS:
+  ric-plt-a1_2.5.1: CRITICAL=6 HIGH=237 TOTAL=243
+  ric-plt-alarmmanager_0.5.11: CRITICAL=5 HIGH=80 TOTAL=85
+  ric-plt-appmgr_0.5.4: CRITICAL=5 HIGH=83 TOTAL=88
+  ric-plt-dbaas_0.5.5: CRITICAL=6 HIGH=65 TOTAL=71
+  ric-plt-e2_5.5.0: CRITICAL=5 HIGH=219 TOTAL=224
+  ric-plt-e2mgr_5.4.19: CRITICAL=5 HIGH=75 TOTAL=80
+  ric-plt-o1_0.5.3: CRITICAL=10 HIGH=301 TOTAL=311
+  ric-plt-rtmgr_0.8.2: CRITICAL=5 HIGH=88 TOTAL=93
+  ric-plt-submgr_0.8.2: CRITICAL=5 HIGH=91 TOTAL=96
+  ric-plt-vespamgr_0.7.5: CRITICAL=5 HIGH=101 TOTAL=106
+
+============================================================
+ALL UNIQUE CRITICAL CVEs:
+============================================================
+CVE-2021-20322 | Package: linux-libc-dev | Installed: 5.4.0-91.102 | Fixed: 5.4.0-92.103
+  Title: kernel: new DNS Cache Poisoning Attack based on ICMP fragment needed packets replies
+  Affected images (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2022-0435 | Package: linux-libc-dev | Installed: 5.4.0-91.102 | Fixed: 5.4.0-105.119
+  Title: kernel: remote stack overflow via kernel panic on systems using TIPC may lead to DoS
+  Affected images (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2022-23806 | Package: stdlib | Installed: v1.16.1 | Fixed: 1.16.14, 1.17.7
+  Title: golang: crypto/elliptic: IsOnCurve returns true for invalid field elements
+  Affected images (8): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-dbaas_0.5.5, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2022-37434 | Package: zlib | Installed: 1.2.11-r3 | Fixed: 1.2.11-r4
+  Title: zlib: heap-based buffer over-read and overflow in inflate() in inflate.c via a large gzip header extra field
+  Affected images (1): ric-plt-dbaas_0.5.5
+
+CVE-2022-49279 | Package: linux-libc-dev | Installed: 5.4.0-91.102 | Fixed: 5.4.0-117.132
+  Title: kernel: NFSD: prevent integer overflow on 32 bit systems
+  Affected images (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2022-49770 | Package: linux-libc-dev | Installed: 5.4.0-91.102 | Fixed: 5.4.0-144.161
+  Title: kernel: ceph: avoid putting the realm twice when decoding snaps fails
+  Affected images (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2022-50401 | Package: linux-libc-dev | Installed: 5.4.0-91.102 | Fixed: 5.4.0-144.161
+  Title: kernel: nfsd: under NFSv4.1, fix double svc_xprt_put on rpc_create failure
+  Affected images (3): ric-plt-a1_2.5.1, ric-plt-e2_5.5.0, ric-plt-o1_0.5.3
+
+CVE-2023-24538 | Package: stdlib | Installed: v1.16.1 | Fixed: 1.19.8, 1.20.3
+  Title: golang: html/template: backticks not treated as string delimiters
+  Affected images (8): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-dbaas_0.5.5, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2023-24540 | Package: stdlib | Installed: v1.16.1 | Fixed: 1.19.9, 1.20.4
+  Title: golang: html/template: improper handling of JavaScript whitespace
+  Affected images (8): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-dbaas_0.5.5, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2023-41419 | Package: gevent | Installed: 21.8.0 | Fixed: 23.9.0
+  Title: python-gevent: privilege escalation via a crafted script to the WSGIServer component
+  Affected images (1): ric-plt-a1_2.5.1
+
+CVE-2024-24790 | Package: stdlib | Installed: v1.16.1 | Fixed: 1.21.11, 1.22.4
+  Title: golang: net/netip: Unexpected behavior from Is methods for IPv4-mapped IPv6 addresses
+  Affected images (8): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-dbaas_0.5.5, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5
+
+CVE-2025-68121 | Package: stdlib | Installed: v1.16.1 | Fixed: 1.24.13, 1.25.7, 1.26.0-rc.3
+  Title: crypto/tls: crypto/tls: Incorrect certificate validation during TLS session resumption
+  Affected images (8): ric-plt-alarmmanager_0.5.11, ric-plt-appmgr_0.5.4, ric-plt-dbaas_0.5.5, ric-plt-e2mgr_5.4.19, ric-plt-o1_0.5.3, ric-plt-rtmgr_0.8.2, ric-plt-submgr_0.8.2, ric-plt-vespamgr_0.7.5

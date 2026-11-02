@@ -1,0 +1,11 @@
+=== STEP 5B: O1MEDIATOR allowPrivilegeEscalation HARDENING ===
+Date: Sun Aug 30 15:30:29 BST 2026
+
+--- Deployment Security Context ---
+{"allowPrivilegeEscalation":false}
+
+--- Pod Status ---
+deployment-ricplt-o1mediator-7d4459bdd9-d9zmc     1/1     Running   0               2m23s
+
+--- Runtime User ---
+uid=0(root) gid=0(root) groups=0(root)

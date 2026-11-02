@@ -1,0 +1,14 @@
+=== BASELINE POD HEALTH ===
+Date: Mon Aug 10 22:56:32 BST 2026
+
+NAME                                              RESTARTS   STATUS
+deployment-ricplt-a1mediator-6c66d9c9f7-8vzqf     21         Running
+deployment-ricplt-alarmmanager-7666876479-b44vp   3          Running
+deployment-ricplt-appmgr-5b87c685c9-sfkfm         3          Running
+deployment-ricplt-e2mgr-77fb448967-pdzdg          34         Running
+deployment-ricplt-e2term-alpha-6bc5476847-h7bnw   24         Running
+deployment-ricplt-o1mediator-5548474c67-gwskx     3          Running
+deployment-ricplt-rtmgr-6d479f4bc-v2mwk           10         Running
+deployment-ricplt-submgr-5fdddb8f64-g9w4c         5          Running
+deployment-ricplt-vespamgr-786666549b-gz2qn       3          Running
+statefulset-ricplt-dbaas-server-0                 38         Running

@@ -1,0 +1,14 @@
+=== STEP 5C: O1MEDIATOR CAP_NET_RAW HARDENING ===
+Date: Tue Sep  1 11:46:26 BST 2026
+
+--- Security Context ---
+{"allowPrivilegeEscalation":false,"capabilities":{"drop":["NET_RAW"]}}
+
+--- Pod Status ---
+deployment-ricplt-o1mediator-6577c66697-sd2lv     1/1     Running   0             2m1s
+
+--- Effective Capabilities ---
+CapEff:	00000000a80405fb
+
+--- CAP_NET_RAW Verification ---
+deployment-ricplt-o1mediator-6577c66697-sd2lv -> CAP_NET_RAW NOT PRESENT

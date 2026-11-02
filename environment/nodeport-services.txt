@@ -1,0 +1,2 @@
+ricplt        service-ricplt-e2term-sctp-alpha         NodePort    10.105.143.165   <none>        36422:32222/SCTP             7d21h
+ricplt        service-ricplt-o1mediator-tcp-netconf    NodePort    10.109.141.242   <none>        830:30830/TCP                7d21h

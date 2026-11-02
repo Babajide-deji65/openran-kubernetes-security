@@ -1,0 +1,55 @@
+=== STEP 5E: O1MEDIATOR NON-ROOT ASSESSMENT ===
+Date: Wed Sep  2 22:59:09 BST 2026
+
+Decision: Non-root NOT applied
+Reason 1: SSH host private keys at /etc/ssh/ssh_host_*_key are root:root 600
+          These root-only keys present a compatibility concern for NETCONF-over-SSH
+Reason 2: PID files are written under /run/ (root:root 755)
+          netopeer2-server.pid and supervisord.pid
+Reason 3: Supervisor logs are written to /var/log/supervisor/ (root:root 755)
+          supervisord.conf configures logfile and pidfile in root-owned paths
+Reason 4: supervisord runs as PID 1 and manages the Netopeer2 and O1Agent processes
+          Moving the container to a non-root UID would require filesystem/runtime remediation
+Note: TCP port 830 was assessed separately and was not itself a blocker because
+      net.ipv4.ip_unprivileged_port_start=0 in the tested environment
+
+--- Runtime User ---
+uid=0(root) gid=0(root) groups=0(root)
+
+--- Runtime Processes ---
+    PID USER     GROUP    COMMAND
+      1 root     root     /usr/bin/python3 /usr/bin/supervisord
+     10 root     root     /usr/local/bin/netopeer2-server -d
+     11 root     root     /usr/local/bin/o1agent -f /etc/o1agent/config-file.json
+    119 root     root     sh -c ps -eo pid,user,group,args
+    125 root     root     ps -eo pid,user,group,args
+
+--- SSH Key Permissions ---
+-rw------- 1 root root 1413 Dec  3  2021 /etc/ssh/ssh_host_dsa_key
+-rw------- 1 root root  537 Dec  3  2021 /etc/ssh/ssh_host_ecdsa_key
+-rw------- 1 root root  432 Dec  3  2021 /etc/ssh/ssh_host_ed25519_key
+-rw------- 1 root root 2635 Dec  3  2021 /etc/ssh/ssh_host_rsa_key
+
+--- PID Files ---
+-rw-r----- 1 root root 3 Sep  2 21:20 /run/netopeer2-server.pid
+-rw-r--r-- 1 root root 2 Sep  2 21:20 /run/supervisord.pid
+drwxr-xr-x 1 root root 4096 Sep  2 21:20 /run
+
+--- Supervisor Log Directory ---
+drwxr-xr-x 1 root root 4096 Sep  2 21:20 /var/log/supervisor
+total 300
+-rw------- 1 root root      0 Sep  2 21:20 netopeer2-server-stdout---supervisor-2zv5375e.log
+-rw------- 1 root root 130120 Sep  2 21:59 o1agent-stdout---supervisor-39wu61b2.log
+-rw------- 1 root root    608 Sep  2 21:20 process-state-stderr---supervisor-4d057ytl.log
+-rw------- 1 root root      0 Sep  2 21:20 process-state-stdout---supervisor-j0zmxuo5.log
+-rw-r--r-- 1 root root 161543 Sep  2 21:59 supervisord.log
+
+--- Supervisor Configuration ---
+logfile=/var/log/supervisor/supervisord.log
+pidfile=/var/run/supervisord.pid
+
+--- Port 830 Privilege Setting ---
+0
+
+--- Current Security Context (unchanged) ---
+{"allowPrivilegeEscalation":false,"capabilities":{"drop":["NET_RAW"]},"seccompProfile":{"type":"RuntimeDefault"}}

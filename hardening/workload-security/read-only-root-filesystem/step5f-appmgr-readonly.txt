@@ -1,0 +1,21 @@
+=== STEP 5F: APPMGR READ-ONLY ROOT FS ===
+Date: Sun Sep  6 00:32:05 BST 2026
+
+--- Security Context ---
+{"allowPrivilegeEscalation":false,"capabilities":{"drop":["NET_RAW"]},"readOnlyRootFilesystem":true,"runAsGroup":1000,"runAsNonRoot":true,"runAsUser":1000,"seccompProfile":{"type":"RuntimeDefault"}}
+
+--- Pod Status ---
+deployment-ricplt-appmgr-6667cbb665-wjgt9         1/1     Running   0              5m22s
+
+--- Runtime Process ---
+    PID USER     GROUP    COMMAND
+      1 1000     1000     /bin/bash /opt/xAppManager/appmgr-entrypoint.sh
+      8 1000     1000     /opt/xAppManager/appmgr -f /opt/ric/config/appmgr.yaml
+     43 1000     1000     sh -c ps -eo pid,user,group,args | grep -E "/opt/xAppManager/appmgr|PID"
+     50 1000     1000     grep -E /opt/xAppManager/appmgr|PID
+
+--- Write Test (root FS) ---
+touch: cannot touch '/readonly-test': Read-only file system
+
+--- Write Test (/tmp) ---
+touch: cannot touch '/tmp/readonly-test': Read-only file system

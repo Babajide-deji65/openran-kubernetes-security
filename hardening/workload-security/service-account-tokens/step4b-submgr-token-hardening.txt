@@ -1,0 +1,14 @@
+=== STEP 4B: SUBMGR TOKEN HARDENING ===
+Date: Mon Aug 24 08:35:53 BST 2026
+
+--- Deployment Setting ---
+false
+
+--- Token Presence ---
+Token: NOT PRESENT
+
+--- Pod Health ---
+deployment-ricplt-submgr-78f875d79b-fmfr5         1/1     Running   0             4m48s
+
+--- RMR Connectivity from e2term ---
+OPEN

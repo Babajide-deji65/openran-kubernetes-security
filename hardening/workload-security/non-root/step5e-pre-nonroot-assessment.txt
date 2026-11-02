@@ -1,0 +1,150 @@
+=== STEP 5E: PRE-NONROOT ASSESSMENT ===
+Date: Tue Sep  1 21:54:36 BST 2026
+
+--- Current Kubernetes User Configuration ---
+POD                                               RUN_AS_USER   RUN_AS_NONROOT
+deployment-ricplt-a1mediator-5845b98477-tnnhw     <none>        <none>
+deployment-ricplt-alarmmanager-55cd6bf4d5-7chx8   <none>        <none>
+deployment-ricplt-appmgr-574bd8cf9-g29n6          <none>        <none>
+deployment-ricplt-e2mgr-6d75b679bf-b7jgt          <none>        <none>
+deployment-ricplt-e2term-alpha-6cdfd9ccf7-vvb7g   <none>        <none>
+deployment-ricplt-o1mediator-5865d456d7-flrk8     <none>        <none>
+deployment-ricplt-rtmgr-7d4d9c8c7-zqltb           <none>        <none>
+deployment-ricplt-submgr-685c5d956-r85tw          <none>        <none>
+deployment-ricplt-vespamgr-579cd6c5bb-2lksw       <none>        <none>
+statefulset-ricplt-dbaas-server-0                 <none>        <none>
+
+--- Current Runtime Users ---
+deployment-ricplt-a1mediator-5845b98477-tnnhw -> uid=1000(a1user) gid=1000(a1user) groups=1000(a1user)
+deployment-ricplt-alarmmanager-55cd6bf4d5-7chx8 -> uid=0(root) gid=0(root) groups=0(root)
+deployment-ricplt-appmgr-574bd8cf9-g29n6 -> Defaulted container "container-ricplt-appmgr" out of: container-ricplt-appmgr, container-ricplt-appmgr-copy-tiller-secret (init)
+deployment-ricplt-e2mgr-6d75b679bf-b7jgt -> uid=0(root) gid=0(root) groups=0(root)
+deployment-ricplt-e2term-alpha-6cdfd9ccf7-vvb7g -> uid=0(root) gid=0(root) groups=0(root)
+deployment-ricplt-o1mediator-5865d456d7-flrk8 -> uid=0(root) gid=0(root) groups=0(root)
+deployment-ricplt-rtmgr-7d4d9c8c7-zqltb -> uid=0(root) gid=0(root) groups=0(root)
+deployment-ricplt-submgr-685c5d956-r85tw -> uid=0(root) gid=0(root) groups=0(root)
+deployment-ricplt-vespamgr-579cd6c5bb-2lksw -> uid=0(root) gid=0(root) groups=0(root)
+statefulset-ricplt-dbaas-server-0 -> uid=0(root) gid=0(root) groups=0(root),0(root),1(bin),2(daemon),3(sys),4(adm),6(disk),10(wheel),11(floppy),20(dialout),26(tape),27(video)
+
+--- Listening Ports ---
+=== deployment-ricplt-a1mediator-5845b98477-tnnhw ===
+  sl  local_address rem_address   st tx_queue rx_queue tr tm->when retrnsmt   uid  timeout inode                                                     
+   0: 00000000:11D2 00000000:0000 0A 00000000:00000000 00:00000000 00000000  1000        0 7569751 1 0000000000000000 100 0 0 10 0                   
+   1: 00000000:11D1 00000000:0000 0A 00000000:00000000 00:00000000 00000000  1000        0 7573706 1 0000000000000000 100 0 1 10 0                   
+   2: 0902F40A:8454 0A02F40A:18EB 01 00000000:00000000 00:00000000 00000000  1000        0 7571867 1 0000000000000000 20 4 28 10 -1                  
+   3: 0902F40A:11D1 0801F40A:84E8 01 00000000:00000000 00:00000000 00000000  1000        0 7569160 1 0000000000000000 20 4 30 10 -1                  
+   4: 0902F40A:9798 8241600A:11D0 01 00000000:00000000 00:00000000 00000000  1000        0 7573922 1 0000000000000000 20 4 31 10 -1                  
+
+=== deployment-ricplt-alarmmanager-55cd6bf4d5-7chx8 ===
+  sl  local_address rem_address   st tx_queue rx_queue tr tm->when retrnsmt   uid  timeout inode                                                     
+   0: 00000000:11EC 00000000:0000 0A 00000000:00000000 00:00000000 00000000     0        0 7476449 1 0000000000000000 100 0 0 10 0                   
+   1: 00000000:11D0 00000000:0000 0A 00000000:00000000 00:00000000 00000000     0        0 7474497 1 0000000000000000 100 0 0 10 0                   
+
+=== deployment-ricplt-appmgr-574bd8cf9-g29n6 ===
+Defaulted container "container-ricplt-appmgr" out of: container-ricplt-appmgr, container-ricplt-appmgr-copy-tiller-secret (init)
+  sl  local_address rem_address   st tx_queue rx_queue tr tm->when retrnsmt   uid  timeout inode                                                     
+
+=== deployment-ricplt-e2mgr-6d75b679bf-b7jgt ===
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+tcp        0      0 0.0.0.0:4561            0.0.0.0:*               LISTEN      7/./main            
+tcp        0      0 0.0.0.0:3801            0.0.0.0:*               LISTEN      7/./main            
+tcp6       0      0 :::3800                 :::*                    LISTEN      7/./main            
+
+=== deployment-ricplt-e2term-alpha-6cdfd9ccf7-vvb7g ===
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+tcp        0      0 0.0.0.0:38000           0.0.0.0:*               LISTEN      24/./e2             
+tcp        0      0 0.0.0.0:4561            0.0.0.0:*               LISTEN      24/./e2             
+tcp        0      0 10.244.2.5:8088         0.0.0.0:*               LISTEN      24/./e2             
+
+=== deployment-ricplt-o1mediator-5865d456d7-flrk8 ===
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+tcp        0      0 0.0.0.0:4588            0.0.0.0:*               LISTEN      10/o1agent          
+tcp        0      0 0.0.0.0:4561            0.0.0.0:*               LISTEN      10/o1agent          
+tcp        0      0 0.0.0.0:4560            0.0.0.0:*               LISTEN      10/o1agent          
+tcp        0      0 0.0.0.0:830             0.0.0.0:*               LISTEN      9/netopeer2-server  
+tcp        0      0 0.0.0.0:9001            0.0.0.0:*               LISTEN      1/python3           
+tcp6       0      0 :::8080                 :::*                    LISTEN      10/o1agent          
+
+=== deployment-ricplt-rtmgr-7d4d9c8c7-zqltb ===
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+tcp        0      0 0.0.0.0:4588            0.0.0.0:*               LISTEN      1/./rtmgr           
+tcp        1      0 0.0.0.0:4560            0.0.0.0:*               LISTEN      1/./rtmgr           
+tcp6       0      0 :::3800                 :::*                    LISTEN      1/./rtmgr           
+tcp6       0      0 :::8080                 :::*                    LISTEN      1/./rtmgr           
+
+=== deployment-ricplt-submgr-685c5d956-r85tw ===
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+tcp        0      0 0.0.0.0:4588            0.0.0.0:*               LISTEN      1/submgr            
+tcp        0      0 0.0.0.0:4560            0.0.0.0:*               LISTEN      1/submgr            
+tcp        0      0 0.0.0.0:4561            0.0.0.0:*               LISTEN      1/submgr            
+tcp6       0      0 :::8088                 :::*                    LISTEN      1/submgr            
+tcp6       0      0 :::8080                 :::*                    LISTEN      1/submgr            
+
+=== deployment-ricplt-vespamgr-579cd6c5bb-2lksw ===
+  sl  local_address rem_address   st tx_queue rx_queue tr tm->when retrnsmt   uid  timeout inode                                                     
+   0: 00000000:11EC 00000000:0000 0A 00000000:00000000 00:00000000 00000000     0        0 7493200 1 0000000000000000 100 0 0 10 0                   
+   1: 00000000:11D1 00000000:0000 0A 00000000:00000000 00:00000000 00000000     0        0 7494086 1 0000000000000000 100 0 0 10 0                   
+   2: 00000000:9C35 00000000:0000 0A 00000000:00000000 00:00000000 00000000     0        0 7494082 1 0000000000000000 100 0 0 10 0                   
+
+=== statefulset-ricplt-dbaas-server-0 ===
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+tcp        0      0 0.0.0.0:6379            0.0.0.0:*               LISTEN      7/redis-server
+
+--- Directory Ownership and Permissions ---
+=== deployment-ricplt-a1mediator-5845b98477-tnnhw ===
+drwxrwxrwt 1 root root 4096 Dec  3  2021 /tmp
+drwxr-xr-x 1 root root 4096 Dec  3  2021 /var/log
+lrwxrwxrwx 1 root root    4 Oct  6  2021 /var/run -> /run
+
+=== deployment-ricplt-alarmmanager-55cd6bf4d5-7chx8 ===
+drwxrwxrwt 1 root root 4096 Sep  1 20:10 /tmp
+drwxr-xr-x 3 root root 4096 Oct  6  2021 /var/log
+lrwxrwxrwx 1 root root    4 Oct  6  2021 /var/run -> /run
+
+=== deployment-ricplt-appmgr-574bd8cf9-g29n6 ===
+Defaulted container "container-ricplt-appmgr" out of: container-ricplt-appmgr, container-ricplt-appmgr-copy-tiller-secret (init)
+drwxrwxrwt 1 root root 4096 Dec  3  2021 /tmp
+drwxr-xr-x 1 root root 4096 Oct  6  2021 /var/log
+lrwxrwxrwx 1 root root    4 Oct  6  2021 /var/run -> /run
+
+=== deployment-ricplt-e2mgr-6d75b679bf-b7jgt ===
+drwxrwxrwt 1 root root 4096 Dec 14  2021 /tmp
+drwxr-xr-x 1 root root 4096 Oct  6  2021 /var/log
+lrwxrwxrwx 1 root root    4 Oct  6  2021 /var/run -> /run
+
+=== deployment-ricplt-e2term-alpha-6cdfd9ccf7-vvb7g ===
+drwxrwxrwt 1 root root 4096 Sep  2 01:43 /tmp
+drwxr-xr-x 1 root root 4096 Oct  6  2021 /var/log
+lrwxrwxrwx 1 root root    4 Oct  6  2021 /var/run -> /run
+
+=== deployment-ricplt-o1mediator-5865d456d7-flrk8 ===
+drwxrwxrwt 1 root root 4096 Sep  1 20:11 /tmp
+drwxr-xr-x 1 root root 4096 Dec  3  2021 /var/log
+lrwxrwxrwx 1 root root    4 Oct  6  2021 /var/run -> /run
+
+=== deployment-ricplt-rtmgr-7d4d9c8c7-zqltb ===
+drwxrwxrwt 1 root root 4096 Sep  1 20:12 /tmp
+drwxr-xr-x 1 root root 4096 Oct  6  2021 /var/log
+lrwxrwxrwx 1 root root    4 Oct  6  2021 /var/run -> /run
+
+=== deployment-ricplt-submgr-685c5d956-r85tw ===
+drwxrwxrwt 1 root root 4096 Sep  1 20:11 /tmp
+drwxr-xr-x 1 root root 4096 Oct  6  2021 /var/log
+lrwxrwxrwx 1 root root    4 Oct  6  2021 /var/run -> /run
+
+=== deployment-ricplt-vespamgr-579cd6c5bb-2lksw ===
+drwxrwxrwt 1 root root 4096 Sep  1 20:11 /tmp
+drwxr-xr-x 3 root root 4096 Oct  6  2021 /var/log
+lrwxrwxrwx 1 root root    4 Oct  6  2021 /var/run -> /run
+
+=== statefulset-ricplt-dbaas-server-0 ===
+drwxrwxrwt    1 root     root          4096 Apr 24  2020 /tmp
+drwxr-xr-x    2 root     root          4096 Apr 23  2020 /var/log
+lrwxrwxrwx    1 root     root             4 Apr 23  2020 /var/run -> /run
+

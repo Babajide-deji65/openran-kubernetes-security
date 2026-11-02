@@ -1,0 +1,14 @@
+=== STEP 4B: RTMGR TOKEN HARDENING ===
+Date: Sun Aug 23 23:24:06 BST 2026
+
+--- Deployment Setting ---
+false
+
+--- Token Presence ---
+Token: NOT PRESENT
+
+--- Pod Health ---
+deployment-ricplt-rtmgr-7cb74d44b7-slzn4          1/1     Running   0                4m21s
+
+--- Connectivity from e2term ---
+404

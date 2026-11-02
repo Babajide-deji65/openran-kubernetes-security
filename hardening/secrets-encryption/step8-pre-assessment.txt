@@ -1,0 +1,33 @@
+=== STEP 8: SECRETS ENCRYPTION AT REST PRE-ASSESSMENT ===
+Date: Sat Sep 12 19:41:37 BST 2026
+
+--- API server encryption config flag ---
+Not configured
+
+--- Current secrets in ricplt ---
+NAME                                    TYPE                 DATA   AGE
+secret-ricplt-appmgr                    Opaque               2      76d
+sh.helm.release.v1.r4-a1mediator.v1     helm.sh/release.v1   1      76d
+sh.helm.release.v1.r4-alarmmanager.v1   helm.sh/release.v1   1      76d
+sh.helm.release.v1.r4-appmgr.v1         helm.sh/release.v1   1      76d
+sh.helm.release.v1.r4-dbaas.v1          helm.sh/release.v1   1      76d
+sh.helm.release.v1.r4-e2mgr.v1          helm.sh/release.v1   1      76d
+sh.helm.release.v1.r4-e2term.v1         helm.sh/release.v1   1      76d
+sh.helm.release.v1.r4-o1mediator.v1     helm.sh/release.v1   1      76d
+sh.helm.release.v1.r4-rtmgr.v1          helm.sh/release.v1   1      76d
+sh.helm.release.v1.r4-submgr.v1         helm.sh/release.v1   1      76d
+sh.helm.release.v1.r4-vespamgr.v1       helm.sh/release.v1   1      76d
+vespa-secrets                           Opaque               2      76d
+
+--- Current secrets in ricinfra ---
+NAME                               TYPE                 DATA   AGE
+sh.helm.release.v1.prometheus.v1   helm.sh/release.v1   1      76d
+sh.helm.release.v1.prometheus.v2   helm.sh/release.v1   1      76d
+sh.helm.release.v1.prometheus.v3   helm.sh/release.v1   1      72d
+sh.helm.release.v1.prometheus.v4   helm.sh/release.v1   1      72d
+sh.helm.release.v1.prometheus.v5   helm.sh/release.v1   1      72d
+sh.helm.release.v1.prometheus.v6   helm.sh/release.v1   1      25d
+sh.helm.release.v1.prometheus.v7   helm.sh/release.v1   1      25d
+sh.helm.release.v1.prometheus.v8   helm.sh/release.v1   1      25d
+
+--- Read a secret directly from etcd (unencrypted check) ---

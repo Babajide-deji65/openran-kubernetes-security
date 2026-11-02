@@ -1,0 +1,16 @@
+========== PROMETHEUS PODS ==========
+prometheus-alertmanager-0                           1/1     Running   20 (7h37m ago)   27d
+prometheus-kube-state-metrics-54874d694d-dktkh      1/1     Running   59 (3h52m ago)   27d
+prometheus-prometheus-node-exporter-q7vtt           1/1     Running   20 (7h37m ago)   27d
+prometheus-prometheus-node-exporter-qm442           1/1     Running   20 (7h37m ago)   27d
+prometheus-prometheus-node-exporter-vfs9t           1/1     Running   20 (7h37m ago)   27d
+prometheus-prometheus-pushgateway-954c8c7fc-wrlzw   1/1     Running   20 (7h37m ago)   27d
+prometheus-server-56c9c44cf5-lg579                  2/2     Running   40 (7h37m ago)   27d
+
+========== PROMETHEUS SERVICES ==========
+prometheus-alertmanager               ClusterIP   10.102.66.178    <none>        9093/TCP   78d
+prometheus-alertmanager-headless      ClusterIP   None             <none>        9093/TCP   78d
+prometheus-kube-state-metrics         ClusterIP   10.107.161.49    <none>        8080/TCP   78d
+prometheus-prometheus-node-exporter   ClusterIP   10.103.225.240   <none>        9100/TCP   78d
+prometheus-prometheus-pushgateway     ClusterIP   10.110.200.180   <none>        9091/TCP   78d
+prometheus-server                     ClusterIP   10.107.50.224    <none>        80/TCP     78d

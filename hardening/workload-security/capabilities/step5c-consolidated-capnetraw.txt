@@ -1,0 +1,55 @@
+=== STEP 5C: CONSOLIDATED CAP_NET_RAW VERIFICATION ===
+Date: Tue Sep  1 12:30:46 BST 2026
+
+=== deployment-ricplt-a1mediator-7794b784c9-vw9lj ===
+CapEff: 0000000000000000
+CAP_NET_RAW -> NOT PRESENT
+
+=== deployment-ricplt-alarmmanager-d98654c57-fcwg9 ===
+CapEff: 00000000a80405fb
+CAP_NET_RAW -> NOT PRESENT
+
+=== deployment-ricplt-appmgr-854bc68fc5-nts2v ===
+CapEff: 00000000a80405fb
+CAP_NET_RAW -> NOT PRESENT
+
+=== deployment-ricplt-e2mgr-745b4dc699-pzc4h ===
+CapEff: 00000000a80405fb
+CAP_NET_RAW -> NOT PRESENT
+
+=== deployment-ricplt-e2term-alpha-8478b4785f-jvmw2 ===
+CapEff: 00000000a80405fb
+CAP_NET_RAW -> NOT PRESENT
+
+=== deployment-ricplt-o1mediator-6577c66697-sd2lv ===
+CapEff: 00000000a80405fb
+CAP_NET_RAW -> NOT PRESENT
+
+=== deployment-ricplt-rtmgr-85ccfbff49-wxwfl ===
+CapEff: 00000000a80405fb
+CAP_NET_RAW -> NOT PRESENT
+
+=== deployment-ricplt-submgr-75c8d7f458-snb7t ===
+CapEff: 00000000a80405fb
+CAP_NET_RAW -> NOT PRESENT
+
+=== deployment-ricplt-vespamgr-5d9dc49786-cqn4t ===
+CapEff: 00000000a80405fb
+CAP_NET_RAW -> NOT PRESENT
+
+=== statefulset-ricplt-dbaas-server-0 ===
+CapEff: 0000000000000000
+CAP_NET_RAW -> NOT PRESENT
+
+--- Current RIC Pod Health ---
+NAME                                              READY   STATUS    RESTARTS       AGE
+deployment-ricplt-a1mediator-7794b784c9-vw9lj     1/1     Running   3 (130m ago)   47h
+deployment-ricplt-alarmmanager-d98654c57-fcwg9    1/1     Running   0              111m
+deployment-ricplt-appmgr-854bc68fc5-nts2v         1/1     Running   0              33m
+deployment-ricplt-e2mgr-745b4dc699-pzc4h          1/1     Running   0              76m
+deployment-ricplt-e2term-alpha-8478b4785f-jvmw2   1/1     Running   0              43m
+deployment-ricplt-o1mediator-6577c66697-sd2lv     1/1     Running   0              46m
+deployment-ricplt-rtmgr-85ccfbff49-wxwfl          1/1     Running   0              66m
+deployment-ricplt-submgr-75c8d7f458-snb7t         1/1     Running   0              61m
+deployment-ricplt-vespamgr-5d9dc49786-cqn4t       1/1     Running   0              52m
+statefulset-ricplt-dbaas-server-0                 1/1     Running   1 (28h ago)    46h

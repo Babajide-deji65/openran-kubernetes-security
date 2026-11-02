@@ -1,0 +1,74 @@
+=== STEP 5C: RUNTIME CAPABILITY STATE ===
+Date: Mon Aug 31 08:11:43 BST 2026
+
+=== deployment-ricplt-a1mediator-7794b784c9-vw9lj ===
+CapInh:	0000000000000000
+CapPrm:	0000000000000000
+CapEff:	0000000000000000
+CapBnd:	00000000a80425fb
+CapAmb:	0000000000000000
+
+=== deployment-ricplt-alarmmanager-6b65df6cf9-2qfsp ===
+CapInh:	0000000000000000
+CapPrm:	00000000a80425fb
+CapEff:	00000000a80425fb
+CapBnd:	00000000a80425fb
+CapAmb:	0000000000000000
+
+=== deployment-ricplt-appmgr-774c6b5bff-dbmbx ===
+Defaulted container "container-ricplt-appmgr" out of: container-ricplt-appmgr, container-ricplt-appmgr-copy-tiller-secret (init)
+CapInh:	0000000000000000
+CapPrm:	00000000a80425fb
+CapEff:	00000000a80425fb
+CapBnd:	00000000a80425fb
+CapAmb:	0000000000000000
+
+=== deployment-ricplt-e2mgr-866df89c9-tzf5f ===
+CapInh:	0000000000000000
+CapPrm:	00000000a80425fb
+CapEff:	00000000a80425fb
+CapBnd:	00000000a80425fb
+CapAmb:	0000000000000000
+
+=== deployment-ricplt-e2term-alpha-5fc968b7f5-5kff4 ===
+CapInh:	0000000000000000
+CapPrm:	00000000a80425fb
+CapEff:	00000000a80425fb
+CapBnd:	00000000a80425fb
+CapAmb:	0000000000000000
+
+=== deployment-ricplt-o1mediator-7d4459bdd9-d9zmc ===
+CapInh:	0000000000000000
+CapPrm:	00000000a80425fb
+CapEff:	00000000a80425fb
+CapBnd:	00000000a80425fb
+CapAmb:	0000000000000000
+
+=== deployment-ricplt-rtmgr-85f568dcf5-4xr9k ===
+CapInh:	0000000000000000
+CapPrm:	00000000a80425fb
+CapEff:	00000000a80425fb
+CapBnd:	00000000a80425fb
+CapAmb:	0000000000000000
+
+=== deployment-ricplt-submgr-7cf4f79cdb-khnzc ===
+CapInh:	0000000000000000
+CapPrm:	00000000a80425fb
+CapEff:	00000000a80425fb
+CapBnd:	00000000a80425fb
+CapAmb:	0000000000000000
+
+=== deployment-ricplt-vespamgr-5c8fcdd88d-nb22z ===
+CapInh:	0000000000000000
+CapPrm:	00000000a80425fb
+CapEff:	00000000a80425fb
+CapBnd:	00000000a80425fb
+CapAmb:	0000000000000000
+
+=== statefulset-ricplt-dbaas-server-0 ===
+CapInh:	0000000000000000
+CapPrm:	0000000000000000
+CapEff:	0000000000000000
+CapBnd:	00000000a80425fb
+CapAmb:	0000000000000000
+

@@ -1,0 +1,21 @@
+=== BASELINE RESOURCE USAGE ===
+Date: Mon Aug 10 22:56:05 BST 2026
+
+--- Pod CPU/Memory ---
+NAME                                              CPU(cores)   MEMORY(bytes)   
+deployment-ricplt-a1mediator-6c66d9c9f7-8vzqf     3m           131Mi           
+deployment-ricplt-alarmmanager-7666876479-b44vp   1m           23Mi            
+deployment-ricplt-appmgr-5b87c685c9-sfkfm         1m           19Mi            
+deployment-ricplt-e2mgr-77fb448967-pdzdg          1m           6Mi             
+deployment-ricplt-e2term-alpha-6bc5476847-h7bnw   4m           30Mi            
+deployment-ricplt-o1mediator-5548474c67-gwskx     3m           109Mi           
+deployment-ricplt-rtmgr-6d479f4bc-v2mwk           2m           56Mi            
+deployment-ricplt-submgr-5fdddb8f64-g9w4c         1m           16Mi            
+deployment-ricplt-vespamgr-786666549b-gz2qn       3m           44Mi            
+statefulset-ricplt-dbaas-server-0                 8m           1Mi             
+
+--- Node CPU/Memory ---
+NAME           CPU(cores)   CPU(%)   MEMORY(bytes)   MEMORY(%)   
+minikube       244m         3%       1112Mi          9%          
+minikube-m02   104m         1%       688Mi           5%          
+minikube-m03   139m         1%       955Mi           7%          

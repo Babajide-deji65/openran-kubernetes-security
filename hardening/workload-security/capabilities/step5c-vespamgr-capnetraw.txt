@@ -1,0 +1,14 @@
+=== STEP 5C: VESPAMGR CAP_NET_RAW HARDENING ===
+Date: Tue Sep  1 11:42:48 BST 2026
+
+--- Security Context ---
+{"allowPrivilegeEscalation":false,"capabilities":{"drop":["NET_RAW"]}}
+
+--- Pod Status ---
+deployment-ricplt-vespamgr-5d9dc49786-cqn4t       1/1     Running   0             4m4s
+
+--- Effective Capabilities ---
+CapEff:	00000000a80405fb
+
+--- CAP_NET_RAW Verification ---
+deployment-ricplt-vespamgr-5d9dc49786-cqn4t -> CAP_NET_RAW NOT PRESENT

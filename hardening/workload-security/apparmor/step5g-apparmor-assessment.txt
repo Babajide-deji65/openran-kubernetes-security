@@ -1,0 +1,28 @@
+=== STEP 5G: APPARMOR ASSESSMENT ===
+Date: Mon Sep  7 00:32:11 BST 2026
+
+Decision: AppArmor NOT applied
+Reason: AppArmor is disabled at kernel level on all three Minikube nodes
+        in the experimental environment.
+        /sys/module/apparmor/parameters/enabled returns 'N' on all nodes.
+        No AppArmor profiles are loaded on any node.
+        No AppArmor configuration is present on the RIC workloads.
+        Enabling AppArmor would therefore require changes to the
+        underlying Minikube node/kernel configuration rather than
+        a workload-level Kubernetes hardening change.
+
+--- Node AppArmor Status ---
+minikube: N
+minikube-m02: N
+minikube-m03: N
+
+--- RIC Pod AppArmor Annotations ---
+No AppArmor annotations on any pod
+
+Note:
+Where AppArmor is enabled and supported in a production Kubernetes
+environment, an appropriate default or custom AppArmor profile
+should be considered for RIC containers. This would provide an
+additional mandatory access control layer over file and process
+access, complementing the seccomp RuntimeDefault profile already
+applied in this study.

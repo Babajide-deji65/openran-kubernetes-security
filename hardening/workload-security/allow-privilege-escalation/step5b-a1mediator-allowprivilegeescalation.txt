@@ -1,0 +1,11 @@
+=== STEP 5B: A1MEDIATOR allowPrivilegeEscalation HARDENING ===
+Date: Sun Aug 30 13:20:21 BST 2026
+
+--- Deployment Security Context ---
+{"allowPrivilegeEscalation":false}
+
+--- Pod Status ---
+deployment-ricplt-a1mediator-7794b784c9-vw9lj     1/1     Running   0                3m19s
+
+--- Runtime User ---
+uid=1000(a1user) gid=1000(a1user) groups=1000(a1user)

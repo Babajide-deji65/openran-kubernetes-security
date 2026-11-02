@@ -1,0 +1,21 @@
+=== STEP 7D: KUBELET CONFIG PERMISSION HARDENING ===
+Date: Sat Sep 12 12:26:45 BST 2026
+
+=== minikube ===
+Before:
+644 root:root /var/lib/kubelet/config.yaml
+After:
+600 root:root /var/lib/kubelet/config.yaml
+
+=== minikube-m02 ===
+Before:
+644 root:root /var/lib/kubelet/config.yaml
+After:
+600 root:root /var/lib/kubelet/config.yaml
+
+=== minikube-m03 ===
+Before:
+644 root:root /var/lib/kubelet/config.yaml
+After:
+600 root:root /var/lib/kubelet/config.yaml
+

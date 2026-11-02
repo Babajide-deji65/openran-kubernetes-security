@@ -1,0 +1,16 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: restrict-o1mediator-ingress
+  namespace: ricplt
+spec:
+  podSelector:
+    matchLabels:
+      app: ricplt-o1mediator
+  policyTypes:
+  - Ingress
+  ingress:
+  # Preserve the externally-facing NETCONF management interface
+  - ports:
+    - protocol: TCP
+      port: 830

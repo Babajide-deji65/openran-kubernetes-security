@@ -1,0 +1,14 @@
+=== STEP 8B: POST-ENCRYPTION VERIFICATION ===
+Date: Sat Sep 12 21:17:01 BST 2026
+
+--- Kubernetes API retrieval (decrypted transparently) ---
+STEP8-ENCRYPTED-TEST-1789243952
+
+--- Direct etcd read (encrypted) ---
+/registry/secrets/ricplt/step8-encryption-test
+k8s:enc:aescbc:v1:key1:
+	u_VuTg8
+:0qe
+j/-.
+
+Conclusion: New secrets are encrypted at rest with AES-CBC (k8s:enc:aescbc:v1:key1)

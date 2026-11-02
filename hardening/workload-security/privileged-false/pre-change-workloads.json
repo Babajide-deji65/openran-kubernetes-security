@@ -1,0 +1,1979 @@
+{
+    "apiVersion": "v1",
+    "items": [
+        {
+            "apiVersion": "apps/v1",
+            "kind": "Deployment",
+            "metadata": {
+                "annotations": {
+                    "deployment.kubernetes.io/revision": "8",
+                    "meta.helm.sh/release-name": "r4-a1mediator",
+                    "meta.helm.sh/release-namespace": "ricplt"
+                },
+                "creationTimestamp": "2026-06-27T22:04:30Z",
+                "generation": 8,
+                "labels": {
+                    "app": "ricplt-a1mediator",
+                    "app.kubernetes.io/managed-by": "Helm",
+                    "chart": "a1mediator-3.0.0",
+                    "heritage": "Helm",
+                    "release": "r4-a1mediator"
+                },
+                "name": "deployment-ricplt-a1mediator",
+                "namespace": "ricplt",
+                "resourceVersion": "860982",
+                "uid": "62358808-1748-4bca-9f1c-2fc16dc2762b"
+            },
+            "spec": {
+                "progressDeadlineSeconds": 600,
+                "replicas": 1,
+                "revisionHistoryLimit": 10,
+                "selector": {
+                    "matchLabels": {
+                        "app": "ricplt-a1mediator",
+                        "release": "r4-a1mediator"
+                    }
+                },
+                "strategy": {
+                    "rollingUpdate": {
+                        "maxSurge": "25%",
+                        "maxUnavailable": "25%"
+                    },
+                    "type": "RollingUpdate"
+                },
+                "template": {
+                    "metadata": {
+                        "creationTimestamp": null,
+                        "labels": {
+                            "app": "ricplt-a1mediator",
+                            "release": "r4-a1mediator"
+                        }
+                    },
+                    "spec": {
+                        "automountServiceAccountToken": false,
+                        "containers": [
+                            {
+                                "envFrom": [
+                                    {
+                                        "configMapRef": {
+                                            "name": "configmap-ricplt-a1mediator-env"
+                                        }
+                                    },
+                                    {
+                                        "configMapRef": {
+                                            "name": "configmap-ricplt-dbaas-appconfig"
+                                        }
+                                    }
+                                ],
+                                "image": "nexus3.o-ran-sc.org:10002/o-ran-sc/ric-plt-a1:2.5.1",
+                                "imagePullPolicy": "IfNotPresent",
+                                "livenessProbe": {
+                                    "failureThreshold": 3,
+                                    "httpGet": {
+                                        "path": "/a1-p/healthcheck",
+                                        "port": "http",
+                                        "scheme": "HTTP"
+                                    },
+                                    "periodSeconds": 10,
+                                    "successThreshold": 1,
+                                    "timeoutSeconds": 1
+                                },
+                                "name": "container-ricplt-a1mediator",
+                                "ports": [
+                                    {
+                                        "containerPort": 10000,
+                                        "name": "http",
+                                        "protocol": "TCP"
+                                    },
+                                    {
+                                        "containerPort": 4561,
+                                        "name": "rmrroute",
+                                        "protocol": "TCP"
+                                    },
+                                    {
+                                        "containerPort": 4562,
+                                        "name": "rmrdata",
+                                        "protocol": "TCP"
+                                    }
+                                ],
+                                "readinessProbe": {
+                                    "failureThreshold": 3,
+                                    "httpGet": {
+                                        "path": "/a1-p/healthcheck",
+                                        "port": "http",
+                                        "scheme": "HTTP"
+                                    },
+                                    "periodSeconds": 10,
+                                    "successThreshold": 1,
+                                    "timeoutSeconds": 1
+                                },
+                                "resources": {},
+                                "securityContext": {
+                                    "allowPrivilegeEscalation": false,
+                                    "capabilities": {
+                                        "drop": [
+                                            "NET_RAW"
+                                        ]
+                                    },
+                                    "readOnlyRootFilesystem": true,
+                                    "runAsNonRoot": true,
+                                    "runAsUser": 1000,
+                                    "seccompProfile": {
+                                        "type": "RuntimeDefault"
+                                    }
+                                },
+                                "terminationMessagePath": "/dev/termination-log",
+                                "terminationMessagePolicy": "File",
+                                "volumeMounts": [
+                                    {
+                                        "mountPath": "/opt/route",
+                                        "name": "a1conf"
+                                    }
+                                ]
+                            }
+                        ],
+                        "dnsPolicy": "ClusterFirst",
+                        "hostname": "a1mediator",
+                        "imagePullSecrets": [
+                            {
+                                "name": "secret-nexus3-o-ran-sc-org-10002-o-ran-sc"
+                            }
+                        ],
+                        "restartPolicy": "Always",
+                        "schedulerName": "default-scheduler",
+                        "securityContext": {},
+                        "terminationGracePeriodSeconds": 30,
+                        "volumes": [
+                            {
+                                "configMap": {
+                                    "defaultMode": 420,
+                                    "name": "configmap-ricplt-a1mediator-a1conf"
+                                },
+                                "name": "a1conf"
+                            }
+                        ]
+                    }
+                }
+            },
+            "status": {
+                "availableReplicas": 1,
+                "conditions": [
+                    {
+                        "lastTransitionTime": "2026-09-01T21:59:21Z",
+                        "lastUpdateTime": "2026-09-05T22:51:01Z",
+                        "message": "ReplicaSet \"deployment-ricplt-a1mediator-6cf77d47d9\" has successfully progressed.",
+                        "reason": "NewReplicaSetAvailable",
+                        "status": "True",
+                        "type": "Progressing"
+                    },
+                    {
+                        "lastTransitionTime": "2026-09-28T20:23:40Z",
+                        "lastUpdateTime": "2026-09-28T20:23:40Z",
+                        "message": "Deployment has minimum availability.",
+                        "reason": "MinimumReplicasAvailable",
+                        "status": "True",
+                        "type": "Available"
+                    }
+                ],
+                "observedGeneration": 8,
+                "readyReplicas": 1,
+                "replicas": 1,
+                "updatedReplicas": 1
+            }
+        },
+        {
+            "apiVersion": "apps/v1",
+            "kind": "Deployment",
+            "metadata": {
+                "annotations": {
+                    "deployment.kubernetes.io/revision": "10",
+                    "meta.helm.sh/release-name": "r4-alarmmanager",
+                    "meta.helm.sh/release-namespace": "ricplt"
+                },
+                "creationTimestamp": "2026-06-27T22:05:32Z",
+                "generation": 10,
+                "labels": {
+                    "app": "ricplt-alarmmanager",
+                    "app.kubernetes.io/managed-by": "Helm",
+                    "chart": "alarmmanager-5.0.0",
+                    "heritage": "Helm",
+                    "release": "r4-alarmmanager"
+                },
+                "name": "deployment-ricplt-alarmmanager",
+                "namespace": "ricplt",
+                "resourceVersion": "860481",
+                "uid": "5f0e0995-61ba-4219-8330-308c5c39a758"
+            },
+            "spec": {
+                "progressDeadlineSeconds": 600,
+                "replicas": 1,
+                "revisionHistoryLimit": 10,
+                "selector": {
+                    "matchLabels": {
+                        "app": "ricplt-alarmmanager",
+                        "release": "r4-alarmmanager"
+                    }
+                },
+                "strategy": {
+                    "rollingUpdate": {
+                        "maxSurge": "25%",
+                        "maxUnavailable": "25%"
+                    },
+                    "type": "RollingUpdate"
+                },
+                "template": {
+                    "metadata": {
+                        "annotations": {
+                            "kubectl.kubernetes.io/restartedAt": "2026-09-08T06:31:44+01:00"
+                        },
+                        "creationTimestamp": null,
+                        "labels": {
+                            "app": "ricplt-alarmmanager",
+                            "release": "r4-alarmmanager"
+                        }
+                    },
+                    "spec": {
+                        "automountServiceAccountToken": false,
+                        "containers": [
+                            {
+                                "env": [
+                                    {
+                                        "name": "PLT_NAMESPACE",
+                                        "value": "ricplt"
+                                    }
+                                ],
+                                "envFrom": [
+                                    {
+                                        "configMapRef": {
+                                            "name": "configmap-ricplt-dbaas-appconfig"
+                                        }
+                                    },
+                                    {
+                                        "configMapRef": {
+                                            "name": "configmap-ricplt-alarmmanager-env"
+                                        }
+                                    }
+                                ],
+                                "image": "nexus3.o-ran-sc.org:10002/o-ran-sc/ric-plt-alarmmanager:0.5.11",
+                                "imagePullPolicy": "IfNotPresent",
+                                "name": "container-ricplt-alarmmanager",
+                                "ports": [
+                                    {
+                                        "containerPort": 4561,
+                                        "name": "rmrroute",
+                                        "protocol": "TCP"
+                                    },
+                                    {
+                                        "containerPort": 4560,
+                                        "name": "rmrdata",
+                                        "protocol": "TCP"
+                                    },
+                                    {
+                                        "containerPort": 8080,
+                                        "name": "http",
+                                        "protocol": "TCP"
+                                    }
+                                ],
+                                "resources": {},
+                                "securityContext": {
+                                    "allowPrivilegeEscalation": false,
+                                    "capabilities": {
+                                        "drop": [
+                                            "NET_RAW"
+                                        ]
+                                    },
+                                    "readOnlyRootFilesystem": true,
+                                    "runAsGroup": 1000,
+                                    "runAsNonRoot": true,
+                                    "runAsUser": 1000,
+                                    "seccompProfile": {
+                                        "type": "RuntimeDefault"
+                                    }
+                                },
+                                "terminationMessagePath": "/dev/termination-log",
+                                "terminationMessagePolicy": "File",
+                                "volumeMounts": [
+                                    {
+                                        "mountPath": "/cfg",
+                                        "name": "config-volume"
+                                    },
+                                    {
+                                        "mountPath": "/mnt/pv-ricplt-alarmmanager",
+                                        "name": "am-persistent-storage"
+                                    },
+                                    {
+                                        "mountPath": "/tmp",
+                                        "name": "tmp-volume"
+                                    }
+                                ]
+                            }
+                        ],
+                        "dnsPolicy": "ClusterFirst",
+                        "hostname": "alarmmanager",
+                        "imagePullSecrets": [
+                            {
+                                "name": "secret-nexus3-o-ran-sc-org-10002-o-ran-sc"
+                            }
+                        ],
+                        "restartPolicy": "Always",
+                        "schedulerName": "default-scheduler",
+                        "securityContext": {},
+                        "serviceAccount": "svcacct-ricplt-alarmmanager",
+                        "serviceAccountName": "svcacct-ricplt-alarmmanager",
+                        "terminationGracePeriodSeconds": 30,
+                        "volumes": [
+                            {
+                                "configMap": {
+                                    "defaultMode": 420,
+                                    "items": [
+                                        {
+                                            "key": "alarmmanagercfg",
+                                            "mode": 420,
+                                            "path": "config-file.json"
+                                        }
+                                    ],
+                                    "name": "configmap-ricplt-alarmmanager-alarmmanagercfg"
+                                },
+                                "name": "config-volume"
+                            },
+                            {
+                                "name": "am-persistent-storage",
+                                "persistentVolumeClaim": {
+                                    "claimName": "pvc-ricplt-alarmmanager"
+                                }
+                            },
+                            {
+                                "emptyDir": {},
+                                "name": "tmp-volume"
+                            }
+                        ]
+                    }
+                }
+            },
+            "status": {
+                "availableReplicas": 1,
+                "conditions": [
+                    {
+                        "lastTransitionTime": "2026-06-27T22:05:32Z",
+                        "lastUpdateTime": "2026-09-08T05:31:46Z",
+                        "message": "ReplicaSet \"deployment-ricplt-alarmmanager-59f4cc855\" has successfully progressed.",
+                        "reason": "NewReplicaSetAvailable",
+                        "status": "True",
+                        "type": "Progressing"
+                    },
+                    {
+                        "lastTransitionTime": "2026-09-28T20:22:14Z",
+                        "lastUpdateTime": "2026-09-28T20:22:14Z",
+                        "message": "Deployment has minimum availability.",
+                        "reason": "MinimumReplicasAvailable",
+                        "status": "True",
+                        "type": "Available"
+                    }
+                ],
+                "observedGeneration": 10,
+                "readyReplicas": 1,
+                "replicas": 1,
+                "updatedReplicas": 1
+            }
+        },
+        {
+            "apiVersion": "apps/v1",
+            "kind": "Deployment",
+            "metadata": {
+                "annotations": {
+                    "deployment.kubernetes.io/revision": "10",
+                    "meta.helm.sh/release-name": "r4-appmgr",
+                    "meta.helm.sh/release-namespace": "ricplt"
+                },
+                "creationTimestamp": "2026-06-27T22:03:32Z",
+                "generation": 10,
+                "labels": {
+                    "app": "ricplt-appmgr",
+                    "app.kubernetes.io/managed-by": "Helm",
+                    "chart": "appmgr-3.0.0",
+                    "heritage": "Helm",
+                    "release": "r4-appmgr"
+                },
+                "name": "deployment-ricplt-appmgr",
+                "namespace": "ricplt",
+                "resourceVersion": "860866",
+                "uid": "b459fe64-8dab-44a2-b6a3-34456e3c16a4"
+            },
+            "spec": {
+                "progressDeadlineSeconds": 600,
+                "replicas": 1,
+                "revisionHistoryLimit": 10,
+                "selector": {
+                    "matchLabels": {
+                        "app": "ricplt-appmgr",
+                        "release": "r4-appmgr"
+                    }
+                },
+                "strategy": {
+                    "rollingUpdate": {
+                        "maxSurge": "25%",
+                        "maxUnavailable": "25%"
+                    },
+                    "type": "RollingUpdate"
+                },
+                "template": {
+                    "metadata": {
+                        "annotations": {
+                            "kubectl.kubernetes.io/restartedAt": "2026-09-08T22:15:18+01:00"
+                        },
+                        "creationTimestamp": null,
+                        "labels": {
+                            "app": "ricplt-appmgr",
+                            "release": "r4-appmgr"
+                        }
+                    },
+                    "spec": {
+                        "containers": [
+                            {
+                                "envFrom": [
+                                    {
+                                        "configMapRef": {
+                                            "name": "configmap-ricplt-appmgr-env"
+                                        }
+                                    },
+                                    {
+                                        "configMapRef": {
+                                            "name": "configmap-ricplt-dbaas-appconfig"
+                                        }
+                                    }
+                                ],
+                                "image": "nexus3.o-ran-sc.org:10002/o-ran-sc/ric-plt-appmgr:0.5.4",
+                                "imagePullPolicy": "IfNotPresent",
+                                "name": "container-ricplt-appmgr",
+                                "ports": [
+                                    {
+                                        "containerPort": 8080,
+                                        "name": "http",
+                                        "protocol": "TCP"
+                                    },
+                                    {
+                                        "containerPort": 4561,
+                                        "name": "rmrroute",
+                                        "protocol": "TCP"
+                                    },
+                                    {
+                                        "containerPort": 4560,
+                                        "name": "rmrdata",
+                                        "protocol": "TCP"
+                                    }
+                                ],
+                                "resources": {},
+                                "securityContext": {
+                                    "allowPrivilegeEscalation": false,
+                                    "capabilities": {
+                                        "drop": [
+                                            "NET_RAW"
+                                        ]
+                                    },
+                                    "readOnlyRootFilesystem": true,
+                                    "runAsGroup": 1000,
+                                    "runAsNonRoot": true,
+                                    "runAsUser": 1000,
+                                    "seccompProfile": {
+                                        "type": "RuntimeDefault"
+                                    }
+                                },
+                                "terminationMessagePath": "/dev/termination-log",
+                                "terminationMessagePolicy": "File",
+                                "volumeMounts": [
+                                    {
+                                        "mountPath": "/opt/ric/config/appmgr.yaml",
+                                        "name": "config-volume",
+                                        "subPath": "appmgr.yaml"
+                                    },
+                                    {
+                                        "mountPath": "/opt/ric/secret",
+                                        "name": "helm-secret-volume"
+                                    },
+                                    {
+                                        "mountPath": "/opt/ric/secret/helm_repo_username",
+                                        "name": "secret-volume",
+                                        "subPath": "helm_repo_username"
+                                    },
+                                    {
+                                        "mountPath": "/opt/ric/secret/helm_repo_password",
+                                        "name": "secret-volume",
+                                        "subPath": "helm_repo_password"
+                                    }
+                                ]
+                            }
+                        ],
+                        "dnsPolicy": "ClusterFirst",
+                        "hostname": "appmgr",
+                        "imagePullSecrets": [
+                            {
+                                "name": "secret-nexus3-o-ran-sc-org-10002-o-ran-sc"
+                            }
+                        ],
+                        "initContainers": [
+                            {
+                                "command": [
+                                    "/appmgr-tiller-secret-copier.sh"
+                                ],
+                                "env": [
+                                    {
+                                        "name": "SVCACCT_NAME",
+                                        "value": "svcacct-ricplt-appmgr"
+                                    },
+                                    {
+                                        "name": "CLUSTER_NAME",
+                                        "value": "kubernetes"
+                                    },
+                                    {
+                                        "name": "KUBECONFIG",
+                                        "value": "/tmp/kubeconfig"
+                                    },
+                                    {
+                                        "name": "K8S_API_HOST",
+                                        "value": "https://kubernetes.default.svc.cluster.local/"
+                                    },
+                                    {
+                                        "name": "SECRET_NAMESPACE",
+                                        "value": "ricinfra"
+                                    },
+                                    {
+                                        "name": "SECRET_NAME",
+                                        "value": "ricxapp-helm-secret"
+                                    }
+                                ],
+                                "envFrom": [
+                                    {
+                                        "configMapRef": {
+                                            "name": "configmap-ricplt-appmgr-env"
+                                        }
+                                    }
+                                ],
+                                "image": "nexus3.o-ran-sc.org:10002/o-ran-sc/it-dep-init:0.0.1",
+                                "imagePullPolicy": "IfNotPresent",
+                                "name": "container-ricplt-appmgr-copy-tiller-secret",
+                                "resources": {},
+                                "securityContext": {
+                                    "allowPrivilegeEscalation": false,
+                                    "seccompProfile": {
+                                        "type": "RuntimeDefault"
+                                    }
+                                },
+                                "terminationMessagePath": "/dev/termination-log",
+                                "terminationMessagePolicy": "File",
+                                "volumeMounts": [
+                                    {
+                                        "mountPath": "/opt/ric/secret",
+                                        "name": "helm-secret-volume"
+                                    },
+                                    {
+                                        "mountPath": "/svcacct-to-kubeconfig.sh",
+                                        "name": "appmgr-bin-volume",
+                                        "subPath": "svcacct-to-kubeconfig.sh"
+                                    },
+                                    {
+                                        "mountPath": "/appmgr-tiller-secret-copier.sh",
+                                        "name": "appmgr-bin-volume",
+                                        "subPath": "appmgr-tiller-secret-copier.sh"
+                                    }
+                                ]
+                            }
+                        ],
+                        "restartPolicy": "Always",
+                        "schedulerName": "default-scheduler",
+                        "securityContext": {},
+                        "serviceAccount": "svcacct-ricplt-appmgr",
+                        "serviceAccountName": "svcacct-ricplt-appmgr",
+                        "terminationGracePeriodSeconds": 30,
+                        "volumes": [
+                            {
+                                "configMap": {
+                                    "defaultMode": 420,
+                                    "name": "configmap-ricplt-appmgr-appconfig"
+                                },
+                                "name": "config-volume"
+                            },
+                            {
+                                "name": "secret-volume",
+                                "secret": {
+                                    "defaultMode": 420,
+                                    "secretName": "secret-ricplt-appmgr"
+                                }
+                            },
+                            {
+                                "emptyDir": {},
+                                "name": "helm-secret-volume"
+                            },
+                            {
+                                "configMap": {
+                                    "defaultMode": 493,
+                                    "name": "configmap-ricplt-appmgr-bin"
+                                },
+                                "name": "appmgr-bin-volume"
+                            }
+                        ]
+                    }
+                }
+            },
+            "status": {
+                "availableReplicas": 1,
+                "conditions": [
+                    {
+                        "lastTransitionTime": "2026-06-27T22:03:32Z",
+                        "lastUpdateTime": "2026-09-08T21:15:23Z",
+                        "message": "ReplicaSet \"deployment-ricplt-appmgr-86bdfb6848\" has successfully progressed.",
+                        "reason": "NewReplicaSetAvailable",
+                        "status": "True",
+                        "type": "Progressing"
+                    },
+                    {
+                        "lastTransitionTime": "2026-09-28T20:22:57Z",
+                        "lastUpdateTime": "2026-09-28T20:22:57Z",
+                        "message": "Deployment has minimum availability.",
+                        "reason": "MinimumReplicasAvailable",
+                        "status": "True",
+                        "type": "Available"
+                    }
+                ],
+                "observedGeneration": 10,
+                "readyReplicas": 1,
+                "replicas": 1,
+                "updatedReplicas": 1
+            }
+        },
+        {
+            "apiVersion": "apps/v1",
+            "kind": "Deployment",
+            "metadata": {
+                "annotations": {
+                    "deployment.kubernetes.io/revision": "5",
+                    "meta.helm.sh/release-name": "r4-e2mgr",
+                    "meta.helm.sh/release-namespace": "ricplt"
+                },
+                "creationTimestamp": "2026-06-27T22:04:05Z",
+                "generation": 5,
+                "labels": {
+                    "app": "ricplt-e2mgr",
+                    "app.kubernetes.io/managed-by": "Helm",
+                    "chart": "e2mgr-3.0.0",
+                    "heritage": "Helm",
+                    "release": "r4-e2mgr"
+                },
+                "name": "deployment-ricplt-e2mgr",
+                "namespace": "ricplt",
+                "resourceVersion": "861019",
+                "uid": "3f94bdbc-4646-4de0-8df7-b1eb902fc7aa"
+            },
+            "spec": {
+                "progressDeadlineSeconds": 600,
+                "replicas": 1,
+                "revisionHistoryLimit": 10,
+                "selector": {
+                    "matchLabels": {
+                        "app": "ricplt-e2mgr",
+                        "release": "r4-e2mgr"
+                    }
+                },
+                "strategy": {
+                    "rollingUpdate": {
+                        "maxSurge": "25%",
+                        "maxUnavailable": "25%"
+                    },
+                    "type": "RollingUpdate"
+                },
+                "template": {
+                    "metadata": {
+                        "creationTimestamp": null,
+                        "labels": {
+                            "app": "ricplt-e2mgr",
+                            "release": "r4-e2mgr"
+                        }
+                    },
+                    "spec": {
+                        "automountServiceAccountToken": false,
+                        "containers": [
+                            {
+                                "envFrom": [
+                                    {
+                                        "configMapRef": {
+                                            "name": "configmap-ricplt-e2mgr-env"
+                                        }
+                                    },
+                                    {
+                                        "configMapRef": {
+                                            "name": "configmap-ricplt-dbaas-appconfig"
+                                        }
+                                    }
+                                ],
+                                "image": "nexus3.o-ran-sc.org:10002/o-ran-sc/ric-plt-e2mgr:5.4.19",
+                                "imagePullPolicy": "IfNotPresent",
+                                "livenessProbe": {
+                                    "failureThreshold": 3,
+                                    "httpGet": {
+                                        "path": "v1/health",
+                                        "port": 3800,
+                                        "scheme": "HTTP"
+                                    },
+                                    "initialDelaySeconds": 3,
+                                    "periodSeconds": 10,
+                                    "successThreshold": 1,
+                                    "timeoutSeconds": 1
+                                },
+                                "name": "container-ricplt-e2mgr",
+                                "ports": [
+                                    {
+                                        "containerPort": 3800,
+                                        "name": "http",
+                                        "protocol": "TCP"
+                                    },
+                                    {
+                                        "containerPort": 4561,
+                                        "name": "rmrroute",
+                                        "protocol": "TCP"
+                                    },
+                                    {
+                                        "containerPort": 3801,
+                                        "name": "rmrdata",
+                                        "protocol": "TCP"
+                                    }
+                                ],
+                                "readinessProbe": {
+                                    "failureThreshold": 3,
+                                    "httpGet": {
+                                        "path": "v1/health",
+                                        "port": 3800,
+                                        "scheme": "HTTP"
+                                    },
+                                    "initialDelaySeconds": 3,
+                                    "periodSeconds": 10,
+                                    "successThreshold": 1,
+                                    "timeoutSeconds": 1
+                                },
+                                "resources": {},
+                                "securityContext": {
+                                    "allowPrivilegeEscalation": false,
+                                    "capabilities": {
+                                        "drop": [
+                                            "NET_RAW"
+                                        ]
+                                    },
+                                    "seccompProfile": {
+                                        "type": "RuntimeDefault"
+                                    }
+                                },
+                                "stdin": true,
+                                "terminationMessagePath": "/dev/termination-log",
+                                "terminationMessagePolicy": "File",
+                                "tty": true,
+                                "volumeMounts": [
+                                    {
+                                        "mountPath": "/opt/E2Manager/router.txt",
+                                        "name": "local-router-file",
+                                        "subPath": "router.txt"
+                                    },
+                                    {
+                                        "mountPath": "/opt/E2Manager/resources/configuration.yaml",
+                                        "name": "local-configuration-file",
+                                        "subPath": "configuration.yaml"
+                                    }
+                                ]
+                            }
+                        ],
+                        "dnsPolicy": "ClusterFirst",
+                        "hostname": "e2mgr",
+                        "imagePullSecrets": [
+                            {
+                                "name": "secret-nexus3-o-ran-sc-org-10002-o-ran-sc"
+                            }
+                        ],
+                        "restartPolicy": "Always",
+                        "schedulerName": "default-scheduler",
+                        "securityContext": {},
+                        "terminationGracePeriodSeconds": 30,
+                        "volumes": [
+                            {
+                                "configMap": {
+                                    "defaultMode": 420,
+                                    "name": "configmap-ricplt-e2mgr-router-configmap"
+                                },
+                                "name": "local-router-file"
+                            },
+                            {
+                                "configMap": {
+                                    "defaultMode": 420,
+                                    "name": "configmap-ricplt-e2mgr-configuration-configmap"
+                                },
+                                "name": "local-configuration-file"
+                            }
+                        ]
+                    }
+                }
+            },
+            "status": {
+                "availableReplicas": 1,
+                "conditions": [
+                    {
+                        "lastTransitionTime": "2026-06-27T22:04:05Z",
+                        "lastUpdateTime": "2026-09-01T12:53:52Z",
+                        "message": "ReplicaSet \"deployment-ricplt-e2mgr-6d75b679bf\" has successfully progressed.",
+                        "reason": "NewReplicaSetAvailable",
+                        "status": "True",
+                        "type": "Progressing"
+                    },
+                    {
+                        "lastTransitionTime": "2026-09-28T20:23:58Z",
+                        "lastUpdateTime": "2026-09-28T20:23:58Z",
+                        "message": "Deployment has minimum availability.",
+                        "reason": "MinimumReplicasAvailable",
+                        "status": "True",
+                        "type": "Available"
+                    }
+                ],
+                "observedGeneration": 5,
+                "readyReplicas": 1,
+                "replicas": 1,
+                "updatedReplicas": 1
+            }
+        },
+        {
+            "apiVersion": "apps/v1",
+            "kind": "Deployment",
+            "metadata": {
+                "annotations": {
+                    "deployment.kubernetes.io/revision": "5",
+                    "meta.helm.sh/release-name": "r4-e2term",
+                    "meta.helm.sh/release-namespace": "ricplt"
+                },
+                "creationTimestamp": "2026-06-27T22:04:17Z",
+                "generation": 5,
+                "labels": {
+                    "app": "ricplt-e2term-alpha",
+                    "app.kubernetes.io/managed-by": "Helm",
+                    "chart": "e2term-3.0.0",
+                    "heritage": "Helm",
+                    "release": "r4-e2term"
+                },
+                "name": "deployment-ricplt-e2term-alpha",
+                "namespace": "ricplt",
+                "resourceVersion": "861105",
+                "uid": "669d1437-981d-46c8-aa9c-01e93c148754"
+            },
+            "spec": {
+                "progressDeadlineSeconds": 600,
+                "replicas": 1,
+                "revisionHistoryLimit": 10,
+                "selector": {
+                    "matchLabels": {
+                        "app": "ricplt-e2term-alpha",
+                        "release": "r4-e2term"
+                    }
+                },
+                "strategy": {
+                    "rollingUpdate": {
+                        "maxSurge": "25%",
+                        "maxUnavailable": "25%"
+                    },
+                    "type": "RollingUpdate"
+                },
+                "template": {
+                    "metadata": {
+                        "creationTimestamp": null,
+                        "labels": {
+                            "app": "ricplt-e2term-alpha",
+                            "release": "r4-e2term"
+                        }
+                    },
+                    "spec": {
+                        "automountServiceAccountToken": false,
+                        "containers": [
+                            {
+                                "env": [
+                                    {
+                                        "name": "SYSTEM_NAME",
+                                        "value": "SEP"
+                                    },
+                                    {
+                                        "name": "CONFIG_MAP_NAME",
+                                        "value": "/etc/config/log-level"
+                                    },
+                                    {
+                                        "name": "HOST_NAME",
+                                        "valueFrom": {
+                                            "fieldRef": {
+                                                "apiVersion": "v1",
+                                                "fieldPath": "spec.nodeName"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "name": "SERVICE_NAME",
+                                        "value": "RIC_E2_TERM"
+                                    },
+                                    {
+                                        "name": "CONTAINER_NAME",
+                                        "value": "container-ricplt-e2term"
+                                    },
+                                    {
+                                        "name": "POD_NAME",
+                                        "valueFrom": {
+                                            "fieldRef": {
+                                                "apiVersion": "v1",
+                                                "fieldPath": "metadata.name"
+                                            }
+                                        }
+                                    }
+                                ],
+                                "envFrom": [
+                                    {
+                                        "configMapRef": {
+                                            "name": "configmap-ricplt-e2term-env-alpha"
+                                        }
+                                    }
+                                ],
+                                "image": "nexus3.o-ran-sc.org:10002/o-ran-sc/ric-plt-e2:5.5.0",
+                                "imagePullPolicy": "IfNotPresent",
+                                "livenessProbe": {
+                                    "exec": {
+                                        "command": [
+                                            "/bin/sh",
+                                            "-c",
+                                            "ip=`hostname -i`;export RMR_SRC_ID=$ip;/opt/e2/rmr_probe -h $ip:38000"
+                                        ]
+                                    },
+                                    "failureThreshold": 3,
+                                    "initialDelaySeconds": 10,
+                                    "periodSeconds": 10,
+                                    "successThreshold": 1,
+                                    "timeoutSeconds": 1
+                                },
+                                "name": "container-ricplt-e2term",
+                                "ports": [
+                                    {
+                                        "containerPort": 4561,
+                                        "name": "rmrroute-alpha",
+                                        "protocol": "TCP"
+                                    },
+                                    {
+                                        "containerPort": 38000,
+                                        "name": "rmrdata-alpha",
+                                        "protocol": "TCP"
+                                    },
+                                    {
+                                        "containerPort": 36422,
+                                        "name": "sctp-alpha",
+                                        "protocol": "SCTP"
+                                    },
+                                    {
+                                        "containerPort": 8088,
+                                        "name": "prmts-alpha",
+                                        "protocol": "TCP"
+                                    }
+                                ],
+                                "readinessProbe": {
+                                    "exec": {
+                                        "command": [
+                                            "/bin/sh",
+                                            "-c",
+                                            "ip=`hostname -i`;export RMR_SRC_ID=$ip;/opt/e2/rmr_probe -h $ip:38000"
+                                        ]
+                                    },
+                                    "failureThreshold": 3,
+                                    "initialDelaySeconds": 120,
+                                    "periodSeconds": 60,
+                                    "successThreshold": 1,
+                                    "timeoutSeconds": 1
+                                },
+                                "resources": {},
+                                "securityContext": {
+                                    "allowPrivilegeEscalation": false,
+                                    "capabilities": {
+                                        "drop": [
+                                            "NET_RAW"
+                                        ]
+                                    },
+                                    "seccompProfile": {
+                                        "type": "RuntimeDefault"
+                                    }
+                                },
+                                "stdin": true,
+                                "terminationMessagePath": "/dev/termination-log",
+                                "terminationMessagePolicy": "File",
+                                "tty": true,
+                                "volumeMounts": [
+                                    {
+                                        "mountPath": "/opt/e2/router.txt",
+                                        "name": "local-router-file",
+                                        "subPath": "router.txt"
+                                    },
+                                    {
+                                        "mountPath": "/tmp/rmr_verbose",
+                                        "name": "local-router-file",
+                                        "subPath": "rmr_verbose"
+                                    },
+                                    {
+                                        "mountPath": "/data/outgoing/",
+                                        "name": "vol-shared"
+                                    }
+                                ]
+                            }
+                        ],
+                        "dnsPolicy": "ClusterFirstWithHostNet",
+                        "hostname": "e2term-alpha",
+                        "imagePullSecrets": [
+                            {
+                                "name": "secret-nexus3-o-ran-sc-org-10002-o-ran-sc"
+                            }
+                        ],
+                        "restartPolicy": "Always",
+                        "schedulerName": "default-scheduler",
+                        "securityContext": {},
+                        "terminationGracePeriodSeconds": 30,
+                        "volumes": [
+                            {
+                                "configMap": {
+                                    "defaultMode": 420,
+                                    "name": "configmap-ricplt-e2term-router-configmap"
+                                },
+                                "name": "local-router-file"
+                            },
+                            {
+                                "name": "vol-shared",
+                                "persistentVolumeClaim": {
+                                    "claimName": "pvc-ricplt-e2term-alpha"
+                                }
+                            }
+                        ]
+                    }
+                }
+            },
+            "status": {
+                "availableReplicas": 1,
+                "conditions": [
+                    {
+                        "lastTransitionTime": "2026-06-27T22:04:17Z",
+                        "lastUpdateTime": "2026-09-01T13:14:17Z",
+                        "message": "ReplicaSet \"deployment-ricplt-e2term-alpha-6cdfd9ccf7\" has successfully progressed.",
+                        "reason": "NewReplicaSetAvailable",
+                        "status": "True",
+                        "type": "Progressing"
+                    },
+                    {
+                        "lastTransitionTime": "2026-09-28T20:24:54Z",
+                        "lastUpdateTime": "2026-09-28T20:24:54Z",
+                        "message": "Deployment has minimum availability.",
+                        "reason": "MinimumReplicasAvailable",
+                        "status": "True",
+                        "type": "Available"
+                    }
+                ],
+                "observedGeneration": 5,
+                "readyReplicas": 1,
+                "replicas": 1,
+                "updatedReplicas": 1
+            }
+        },
+        {
+            "apiVersion": "apps/v1",
+            "kind": "Deployment",
+            "metadata": {
+                "annotations": {
+                    "deployment.kubernetes.io/revision": "8",
+                    "meta.helm.sh/release-name": "r4-o1mediator",
+                    "meta.helm.sh/release-namespace": "ricplt"
+                },
+                "creationTimestamp": "2026-06-27T22:05:18Z",
+                "generation": 8,
+                "labels": {
+                    "app": "ricplt-o1mediator",
+                    "app.kubernetes.io/managed-by": "Helm",
+                    "chart": "o1mediator-3.0.0",
+                    "heritage": "Helm",
+                    "release": "r4-o1mediator"
+                },
+                "name": "deployment-ricplt-o1mediator",
+                "namespace": "ricplt",
+                "resourceVersion": "860437",
+                "uid": "376e0d77-5f10-4206-8124-5b3d749d494f"
+            },
+            "spec": {
+                "progressDeadlineSeconds": 600,
+                "replicas": 1,
+                "revisionHistoryLimit": 10,
+                "selector": {
+                    "matchLabels": {
+                        "app": "ricplt-o1mediator",
+                        "release": "r4-o1mediator"
+                    }
+                },
+                "strategy": {
+                    "rollingUpdate": {
+                        "maxSurge": "25%",
+                        "maxUnavailable": "25%"
+                    },
+                    "type": "RollingUpdate"
+                },
+                "template": {
+                    "metadata": {
+                        "annotations": {
+                            "kubectl.kubernetes.io/restartedAt": "2026-09-09T22:19:08+01:00"
+                        },
+                        "creationTimestamp": null,
+                        "labels": {
+                            "app": "ricplt-o1mediator",
+                            "release": "r4-o1mediator"
+                        }
+                    },
+                    "spec": {
+                        "automountServiceAccountToken": false,
+                        "containers": [
+                            {
+                                "envFrom": [
+                                    {
+                                        "configMapRef": {
+                                            "name": "configmap-ricplt-dbaas-appconfig"
+                                        }
+                                    },
+                                    {
+                                        "configMapRef": {
+                                            "name": "configmap-ricplt-o1mediator-env"
+                                        }
+                                    }
+                                ],
+                                "image": "nexus3.o-ran-sc.org:10002/o-ran-sc/ric-plt-o1:0.5.3",
+                                "imagePullPolicy": "IfNotPresent",
+                                "name": "container-ricplt-o1mediator",
+                                "ports": [
+                                    {
+                                        "containerPort": 9001,
+                                        "name": "http-supervise",
+                                        "protocol": "TCP"
+                                    },
+                                    {
+                                        "containerPort": 8080,
+                                        "name": "http-mediation",
+                                        "protocol": "TCP"
+                                    },
+                                    {
+                                        "containerPort": 3000,
+                                        "name": "http-event",
+                                        "protocol": "TCP"
+                                    }
+                                ],
+                                "resources": {},
+                                "securityContext": {
+                                    "allowPrivilegeEscalation": false,
+                                    "capabilities": {
+                                        "drop": [
+                                            "NET_RAW"
+                                        ]
+                                    },
+                                    "seccompProfile": {
+                                        "type": "RuntimeDefault"
+                                    }
+                                },
+                                "terminationMessagePath": "/dev/termination-log",
+                                "terminationMessagePolicy": "File",
+                                "volumeMounts": [
+                                    {
+                                        "mountPath": "/etc/o1agent",
+                                        "name": "appconfig-file"
+                                    }
+                                ]
+                            }
+                        ],
+                        "dnsPolicy": "ClusterFirst",
+                        "hostname": "o1mediator",
+                        "imagePullSecrets": [
+                            {
+                                "name": "secret-nexus3-o-ran-sc-org-10002-o-ran-sc"
+                            }
+                        ],
+                        "restartPolicy": "Always",
+                        "schedulerName": "default-scheduler",
+                        "securityContext": {},
+                        "serviceAccount": "svcacct-ricplt-o1mediator",
+                        "serviceAccountName": "svcacct-ricplt-o1mediator",
+                        "terminationGracePeriodSeconds": 30,
+                        "volumes": [
+                            {
+                                "configMap": {
+                                    "defaultMode": 420,
+                                    "name": "configmap-ricplt-o1mediator-appconfig-configmap"
+                                },
+                                "name": "appconfig-file"
+                            }
+                        ]
+                    }
+                }
+            },
+            "status": {
+                "availableReplicas": 1,
+                "conditions": [
+                    {
+                        "lastTransitionTime": "2026-06-27T22:05:18Z",
+                        "lastUpdateTime": "2026-09-09T21:19:09Z",
+                        "message": "ReplicaSet \"deployment-ricplt-o1mediator-78ffb44dd6\" has successfully progressed.",
+                        "reason": "NewReplicaSetAvailable",
+                        "status": "True",
+                        "type": "Progressing"
+                    },
+                    {
+                        "lastTransitionTime": "2026-09-28T20:22:12Z",
+                        "lastUpdateTime": "2026-09-28T20:22:12Z",
+                        "message": "Deployment has minimum availability.",
+                        "reason": "MinimumReplicasAvailable",
+                        "status": "True",
+                        "type": "Available"
+                    }
+                ],
+                "observedGeneration": 8,
+                "readyReplicas": 1,
+                "replicas": 1,
+                "updatedReplicas": 1
+            }
+        },
+        {
+            "apiVersion": "apps/v1",
+            "kind": "Deployment",
+            "metadata": {
+                "annotations": {
+                    "deployment.kubernetes.io/revision": "9",
+                    "meta.helm.sh/release-name": "r4-rtmgr",
+                    "meta.helm.sh/release-namespace": "ricplt"
+                },
+                "creationTimestamp": "2026-06-27T22:03:46Z",
+                "generation": 9,
+                "labels": {
+                    "app": "ricplt-rtmgr",
+                    "app.kubernetes.io/managed-by": "Helm",
+                    "chart": "rtmgr-3.0.0",
+                    "heritage": "Helm",
+                    "release": "r4-rtmgr"
+                },
+                "name": "deployment-ricplt-rtmgr",
+                "namespace": "ricplt",
+                "resourceVersion": "861063",
+                "uid": "0bb5e1dc-6e85-4841-82fe-0ad6219fcd20"
+            },
+            "spec": {
+                "progressDeadlineSeconds": 600,
+                "replicas": 1,
+                "revisionHistoryLimit": 10,
+                "selector": {
+                    "matchLabels": {
+                        "app": "ricplt-rtmgr",
+                        "release": "r4-rtmgr"
+                    }
+                },
+                "strategy": {
+                    "rollingUpdate": {
+                        "maxSurge": "25%",
+                        "maxUnavailable": "25%"
+                    },
+                    "type": "RollingUpdate"
+                },
+                "template": {
+                    "metadata": {
+                        "annotations": {
+                            "kubectl.kubernetes.io/restartedAt": "2026-09-09T18:43:23+01:00"
+                        },
+                        "creationTimestamp": null,
+                        "labels": {
+                            "app": "ricplt-rtmgr",
+                            "release": "r4-rtmgr"
+                        }
+                    },
+                    "spec": {
+                        "automountServiceAccountToken": false,
+                        "containers": [
+                            {
+                                "command": [
+                                    "/run_rtmgr.sh"
+                                ],
+                                "envFrom": [
+                                    {
+                                        "configMapRef": {
+                                            "name": "configmap-ricplt-rtmgr-env"
+                                        }
+                                    },
+                                    {
+                                        "configMapRef": {
+                                            "name": "configmap-ricplt-dbaas-appconfig"
+                                        }
+                                    }
+                                ],
+                                "image": "nexus3.o-ran-sc.org:10002/o-ran-sc/ric-plt-rtmgr:0.8.2",
+                                "imagePullPolicy": "IfNotPresent",
+                                "livenessProbe": {
+                                    "failureThreshold": 3,
+                                    "httpGet": {
+                                        "path": "ric/v1/health/alive",
+                                        "port": 8080,
+                                        "scheme": "HTTP"
+                                    },
+                                    "initialDelaySeconds": 5,
+                                    "periodSeconds": 15,
+                                    "successThreshold": 1,
+                                    "timeoutSeconds": 1
+                                },
+                                "name": "container-ricplt-rtmgr",
+                                "ports": [
+                                    {
+                                        "containerPort": 3800,
+                                        "name": "http",
+                                        "protocol": "TCP"
+                                    },
+                                    {
+                                        "containerPort": 4561,
+                                        "name": "rmrroute",
+                                        "protocol": "TCP"
+                                    },
+                                    {
+                                        "containerPort": 4560,
+                                        "name": "rmrdata",
+                                        "protocol": "TCP"
+                                    }
+                                ],
+                                "readinessProbe": {
+                                    "failureThreshold": 3,
+                                    "httpGet": {
+                                        "path": "ric/v1/health/ready",
+                                        "port": 8080,
+                                        "scheme": "HTTP"
+                                    },
+                                    "initialDelaySeconds": 5,
+                                    "periodSeconds": 15,
+                                    "successThreshold": 1,
+                                    "timeoutSeconds": 1
+                                },
+                                "resources": {},
+                                "securityContext": {
+                                    "allowPrivilegeEscalation": false,
+                                    "capabilities": {
+                                        "drop": [
+                                            "NET_RAW"
+                                        ]
+                                    },
+                                    "readOnlyRootFilesystem": true,
+                                    "runAsGroup": 1000,
+                                    "runAsNonRoot": true,
+                                    "runAsUser": 1000,
+                                    "seccompProfile": {
+                                        "type": "RuntimeDefault"
+                                    }
+                                },
+                                "terminationMessagePath": "/dev/termination-log",
+                                "terminationMessagePolicy": "File",
+                                "volumeMounts": [
+                                    {
+                                        "mountPath": "/cfg",
+                                        "name": "rtmgrcfg",
+                                        "readOnly": true
+                                    },
+                                    {
+                                        "mountPath": "/tmp",
+                                        "name": "tmp-volume"
+                                    },
+                                    {
+                                        "mountPath": "/db",
+                                        "name": "db-volume"
+                                    }
+                                ]
+                            }
+                        ],
+                        "dnsPolicy": "ClusterFirst",
+                        "hostname": "rtmgr",
+                        "imagePullSecrets": [
+                            {
+                                "name": "secret-nexus3-o-ran-sc-org-10002-o-ran-sc"
+                            }
+                        ],
+                        "restartPolicy": "Always",
+                        "schedulerName": "default-scheduler",
+                        "securityContext": {},
+                        "terminationGracePeriodSeconds": 30,
+                        "volumes": [
+                            {
+                                "configMap": {
+                                    "defaultMode": 420,
+                                    "items": [
+                                        {
+                                            "key": "rtmgrcfg",
+                                            "mode": 420,
+                                            "path": "rtmgr-config.yaml"
+                                        }
+                                    ],
+                                    "name": "configmap-ricplt-rtmgr-rtmgrcfg"
+                                },
+                                "name": "rtmgrcfg"
+                            },
+                            {
+                                "emptyDir": {},
+                                "name": "tmp-volume"
+                            },
+                            {
+                                "emptyDir": {},
+                                "name": "db-volume"
+                            }
+                        ]
+                    }
+                }
+            },
+            "status": {
+                "availableReplicas": 1,
+                "conditions": [
+                    {
+                        "lastTransitionTime": "2026-06-27T22:03:46Z",
+                        "lastUpdateTime": "2026-09-09T17:44:09Z",
+                        "message": "ReplicaSet \"deployment-ricplt-rtmgr-99d7557b\" has successfully progressed.",
+                        "reason": "NewReplicaSetAvailable",
+                        "status": "True",
+                        "type": "Progressing"
+                    },
+                    {
+                        "lastTransitionTime": "2026-09-28T20:24:23Z",
+                        "lastUpdateTime": "2026-09-28T20:24:23Z",
+                        "message": "Deployment has minimum availability.",
+                        "reason": "MinimumReplicasAvailable",
+                        "status": "True",
+                        "type": "Available"
+                    }
+                ],
+                "observedGeneration": 9,
+                "readyReplicas": 1,
+                "replicas": 1,
+                "updatedReplicas": 1
+            }
+        },
+        {
+            "apiVersion": "apps/v1",
+            "kind": "Deployment",
+            "metadata": {
+                "annotations": {
+                    "deployment.kubernetes.io/revision": "7",
+                    "meta.helm.sh/release-name": "r4-submgr",
+                    "meta.helm.sh/release-namespace": "ricplt"
+                },
+                "creationTimestamp": "2026-06-27T22:04:46Z",
+                "generation": 7,
+                "labels": {
+                    "app": "ricplt-submgr",
+                    "app.kubernetes.io/managed-by": "Helm",
+                    "chart": "submgr-3.0.0",
+                    "heritage": "Helm",
+                    "release": "r4-submgr"
+                },
+                "name": "deployment-ricplt-submgr",
+                "namespace": "ricplt",
+                "resourceVersion": "860973",
+                "uid": "cd1e3d5f-93cf-4a84-a388-a072b2de4ae2"
+            },
+            "spec": {
+                "progressDeadlineSeconds": 600,
+                "replicas": 1,
+                "revisionHistoryLimit": 10,
+                "selector": {
+                    "matchLabels": {
+                        "app": "ricplt-submgr",
+                        "release": "r4-submgr"
+                    }
+                },
+                "strategy": {
+                    "rollingUpdate": {
+                        "maxSurge": "25%",
+                        "maxUnavailable": "25%"
+                    },
+                    "type": "RollingUpdate"
+                },
+                "template": {
+                    "metadata": {
+                        "creationTimestamp": null,
+                        "labels": {
+                            "app": "ricplt-submgr",
+                            "release": "r4-submgr"
+                        }
+                    },
+                    "spec": {
+                        "automountServiceAccountToken": false,
+                        "containers": [
+                            {
+                                "args": [
+                                    "-f",
+                                    "/cfg/submgr-config.yaml"
+                                ],
+                                "command": [
+                                    "/submgr"
+                                ],
+                                "envFrom": [
+                                    {
+                                        "configMapRef": {
+                                            "name": "configmap-ricplt-submgr-env"
+                                        }
+                                    },
+                                    {
+                                        "configMapRef": {
+                                            "name": "configmap-ricplt-dbaas-appconfig"
+                                        }
+                                    }
+                                ],
+                                "image": "nexus3.o-ran-sc.org:10002/o-ran-sc/ric-plt-submgr:0.8.2",
+                                "imagePullPolicy": "IfNotPresent",
+                                "livenessProbe": {
+                                    "failureThreshold": 3,
+                                    "httpGet": {
+                                        "path": "ric/v1/health/alive",
+                                        "port": 8080,
+                                        "scheme": "HTTP"
+                                    },
+                                    "initialDelaySeconds": 5,
+                                    "periodSeconds": 15,
+                                    "successThreshold": 1,
+                                    "timeoutSeconds": 1
+                                },
+                                "name": "container-ricplt-submgr",
+                                "ports": [
+                                    {
+                                        "containerPort": 3800,
+                                        "name": "http",
+                                        "protocol": "TCP"
+                                    },
+                                    {
+                                        "containerPort": 4561,
+                                        "name": "rmrroute",
+                                        "protocol": "TCP"
+                                    },
+                                    {
+                                        "containerPort": 4560,
+                                        "name": "rmrdata",
+                                        "protocol": "TCP"
+                                    }
+                                ],
+                                "readinessProbe": {
+                                    "failureThreshold": 3,
+                                    "httpGet": {
+                                        "path": "ric/v1/health/ready",
+                                        "port": 8080,
+                                        "scheme": "HTTP"
+                                    },
+                                    "initialDelaySeconds": 5,
+                                    "periodSeconds": 15,
+                                    "successThreshold": 1,
+                                    "timeoutSeconds": 1
+                                },
+                                "resources": {},
+                                "securityContext": {
+                                    "allowPrivilegeEscalation": false,
+                                    "capabilities": {
+                                        "drop": [
+                                            "NET_RAW"
+                                        ]
+                                    },
+                                    "readOnlyRootFilesystem": true,
+                                    "runAsGroup": 1000,
+                                    "runAsNonRoot": true,
+                                    "runAsUser": 1000,
+                                    "seccompProfile": {
+                                        "type": "RuntimeDefault"
+                                    }
+                                },
+                                "terminationMessagePath": "/dev/termination-log",
+                                "terminationMessagePolicy": "File",
+                                "volumeMounts": [
+                                    {
+                                        "mountPath": "/cfg",
+                                        "name": "config-volume"
+                                    },
+                                    {
+                                        "mountPath": "/tmp",
+                                        "name": "tmp-volume"
+                                    }
+                                ]
+                            }
+                        ],
+                        "dnsPolicy": "ClusterFirst",
+                        "hostname": "submgr",
+                        "imagePullSecrets": [
+                            {
+                                "name": "secret-nexus3-o-ran-sc-org-10002-o-ran-sc"
+                            }
+                        ],
+                        "restartPolicy": "Always",
+                        "schedulerName": "default-scheduler",
+                        "securityContext": {},
+                        "terminationGracePeriodSeconds": 30,
+                        "volumes": [
+                            {
+                                "configMap": {
+                                    "defaultMode": 420,
+                                    "items": [
+                                        {
+                                            "key": "submgrcfg",
+                                            "mode": 420,
+                                            "path": "submgr-config.yaml"
+                                        },
+                                        {
+                                            "key": "submgrutartg",
+                                            "mode": 420,
+                                            "path": "submgr-uta-rtg.rt"
+                                        }
+                                    ],
+                                    "name": "submgrcfg"
+                                },
+                                "name": "config-volume"
+                            },
+                            {
+                                "emptyDir": {},
+                                "name": "tmp-volume"
+                            }
+                        ]
+                    }
+                }
+            },
+            "status": {
+                "availableReplicas": 1,
+                "conditions": [
+                    {
+                        "lastTransitionTime": "2026-06-27T22:04:46Z",
+                        "lastUpdateTime": "2026-09-05T23:51:14Z",
+                        "message": "ReplicaSet \"deployment-ricplt-submgr-7cb45cfbc8\" has successfully progressed.",
+                        "reason": "NewReplicaSetAvailable",
+                        "status": "True",
+                        "type": "Progressing"
+                    },
+                    {
+                        "lastTransitionTime": "2026-09-28T20:23:38Z",
+                        "lastUpdateTime": "2026-09-28T20:23:38Z",
+                        "message": "Deployment has minimum availability.",
+                        "reason": "MinimumReplicasAvailable",
+                        "status": "True",
+                        "type": "Available"
+                    }
+                ],
+                "observedGeneration": 7,
+                "readyReplicas": 1,
+                "replicas": 1,
+                "updatedReplicas": 1
+            }
+        },
+        {
+            "apiVersion": "apps/v1",
+            "kind": "Deployment",
+            "metadata": {
+                "annotations": {
+                    "deployment.kubernetes.io/revision": "5",
+                    "meta.helm.sh/release-name": "r4-vespamgr",
+                    "meta.helm.sh/release-namespace": "ricplt"
+                },
+                "creationTimestamp": "2026-06-27T22:05:05Z",
+                "generation": 5,
+                "labels": {
+                    "app": "ricplt-vespamgr",
+                    "app.kubernetes.io/managed-by": "Helm",
+                    "chart": "vespamgr-3.0.0",
+                    "heritage": "Helm",
+                    "release": "r4-vespamgr"
+                },
+                "name": "deployment-ricplt-vespamgr",
+                "namespace": "ricplt",
+                "resourceVersion": "860758",
+                "uid": "47b9dc3f-0b70-4728-a432-a903e8bbe0f3"
+            },
+            "spec": {
+                "progressDeadlineSeconds": 600,
+                "replicas": 1,
+                "revisionHistoryLimit": 10,
+                "selector": {
+                    "matchLabels": {
+                        "app": "ricplt-vespamgr",
+                        "release": "r4-vespamgr"
+                    }
+                },
+                "strategy": {
+                    "rollingUpdate": {
+                        "maxSurge": "25%",
+                        "maxUnavailable": "25%"
+                    },
+                    "type": "RollingUpdate"
+                },
+                "template": {
+                    "metadata": {
+                        "creationTimestamp": null,
+                        "labels": {
+                            "app": "ricplt-vespamgr",
+                            "release": "r4-vespamgr"
+                        }
+                    },
+                    "spec": {
+                        "automountServiceAccountToken": false,
+                        "containers": [
+                            {
+                                "env": [
+                                    {
+                                        "name": "VESMGR_APPMGRDOMAN",
+                                        "value": "service-ricplt-appmgr-http"
+                                    }
+                                ],
+                                "envFrom": [
+                                    {
+                                        "configMapRef": {
+                                            "name": "configmap-ricplt-vespamgr"
+                                        }
+                                    },
+                                    {
+                                        "secretRef": {
+                                            "name": "vespa-secrets"
+                                        }
+                                    }
+                                ],
+                                "image": "nexus3.o-ran-sc.org:10002/o-ran-sc/ric-plt-vespamgr:0.7.5",
+                                "imagePullPolicy": "IfNotPresent",
+                                "livenessProbe": {
+                                    "failureThreshold": 3,
+                                    "httpGet": {
+                                        "path": "/supervision",
+                                        "port": 8080,
+                                        "scheme": "HTTP"
+                                    },
+                                    "initialDelaySeconds": 30,
+                                    "periodSeconds": 60,
+                                    "successThreshold": 1,
+                                    "timeoutSeconds": 20
+                                },
+                                "name": "container-ricplt-vespamgr",
+                                "ports": [
+                                    {
+                                        "containerPort": 8080,
+                                        "name": "http",
+                                        "protocol": "TCP"
+                                    },
+                                    {
+                                        "containerPort": 9095,
+                                        "name": "alert",
+                                        "protocol": "TCP"
+                                    }
+                                ],
+                                "resources": {},
+                                "securityContext": {
+                                    "allowPrivilegeEscalation": false,
+                                    "capabilities": {
+                                        "drop": [
+                                            "NET_RAW"
+                                        ]
+                                    },
+                                    "seccompProfile": {
+                                        "type": "RuntimeDefault"
+                                    }
+                                },
+                                "terminationMessagePath": "/dev/termination-log",
+                                "terminationMessagePolicy": "File"
+                            }
+                        ],
+                        "dnsPolicy": "ClusterFirst",
+                        "hostname": "vespamgr",
+                        "imagePullSecrets": [
+                            {
+                                "name": "secret-nexus3-o-ran-sc-org-10002-o-ran-sc"
+                            }
+                        ],
+                        "restartPolicy": "Always",
+                        "schedulerName": "default-scheduler",
+                        "securityContext": {},
+                        "terminationGracePeriodSeconds": 30
+                    }
+                }
+            },
+            "status": {
+                "availableReplicas": 1,
+                "conditions": [
+                    {
+                        "lastTransitionTime": "2026-06-27T22:05:05Z",
+                        "lastUpdateTime": "2026-09-01T13:04:30Z",
+                        "message": "ReplicaSet \"deployment-ricplt-vespamgr-579cd6c5bb\" has successfully progressed.",
+                        "reason": "NewReplicaSetAvailable",
+                        "status": "True",
+                        "type": "Progressing"
+                    },
+                    {
+                        "lastTransitionTime": "2026-09-28T20:22:41Z",
+                        "lastUpdateTime": "2026-09-28T20:22:41Z",
+                        "message": "Deployment has minimum availability.",
+                        "reason": "MinimumReplicasAvailable",
+                        "status": "True",
+                        "type": "Available"
+                    }
+                ],
+                "observedGeneration": 5,
+                "readyReplicas": 1,
+                "replicas": 1,
+                "updatedReplicas": 1
+            }
+        },
+        {
+            "apiVersion": "apps/v1",
+            "kind": "StatefulSet",
+            "metadata": {
+                "annotations": {
+                    "meta.helm.sh/release-name": "r4-dbaas",
+                    "meta.helm.sh/release-namespace": "ricplt"
+                },
+                "creationTimestamp": "2026-06-27T22:03:20Z",
+                "generation": 7,
+                "labels": {
+                    "app": "ricplt-dbaas",
+                    "app.kubernetes.io/managed-by": "Helm",
+                    "chart": "dbaas-2.0.0",
+                    "heritage": "Helm",
+                    "release": "r4-dbaas"
+                },
+                "name": "statefulset-ricplt-dbaas-server",
+                "namespace": "ricplt",
+                "resourceVersion": "860876",
+                "uid": "6eb00794-172c-4054-91fe-4a86a035f856"
+            },
+            "spec": {
+                "persistentVolumeClaimRetentionPolicy": {
+                    "whenDeleted": "Retain",
+                    "whenScaled": "Retain"
+                },
+                "podManagementPolicy": "OrderedReady",
+                "replicas": 1,
+                "revisionHistoryLimit": 10,
+                "selector": {
+                    "matchLabels": {
+                        "app": "ricplt-dbaas",
+                        "release": "r4-dbaas"
+                    }
+                },
+                "serviceName": "service-ricplt-dbaas-tcp",
+                "template": {
+                    "metadata": {
+                        "creationTimestamp": null,
+                        "labels": {
+                            "app": "ricplt-dbaas",
+                            "release": "r4-dbaas"
+                        }
+                    },
+                    "spec": {
+                        "automountServiceAccountToken": false,
+                        "containers": [
+                            {
+                                "args": [
+                                    "/data/redis.conf"
+                                ],
+                                "command": [
+                                    "redis-server"
+                                ],
+                                "envFrom": [
+                                    {
+                                        "configMapRef": {
+                                            "name": "configmap-ricplt-dbaas-appconfig"
+                                        }
+                                    }
+                                ],
+                                "image": "nexus3.o-ran-sc.org:10002/o-ran-sc/ric-plt-dbaas:0.5.5",
+                                "imagePullPolicy": "IfNotPresent",
+                                "livenessProbe": {
+                                    "exec": {
+                                        "command": [
+                                            "/bin/sh",
+                                            "-c",
+                                            "timeout 10 redis-cli -p 6379 ping"
+                                        ]
+                                    },
+                                    "failureThreshold": 3,
+                                    "initialDelaySeconds": 15,
+                                    "periodSeconds": 5,
+                                    "successThreshold": 1,
+                                    "timeoutSeconds": 1
+                                },
+                                "name": "container-ricplt-dbaas-redis",
+                                "ports": [
+                                    {
+                                        "containerPort": 6379,
+                                        "name": "redis",
+                                        "protocol": "TCP"
+                                    }
+                                ],
+                                "readinessProbe": {
+                                    "exec": {
+                                        "command": [
+                                            "/bin/sh",
+                                            "-c",
+                                            "timeout 10 redis-cli -p 6379 ping"
+                                        ]
+                                    },
+                                    "failureThreshold": 3,
+                                    "initialDelaySeconds": 15,
+                                    "periodSeconds": 5,
+                                    "successThreshold": 1,
+                                    "timeoutSeconds": 1
+                                },
+                                "resources": {},
+                                "securityContext": {
+                                    "allowPrivilegeEscalation": false,
+                                    "capabilities": {
+                                        "drop": [
+                                            "NET_RAW"
+                                        ]
+                                    },
+                                    "readOnlyRootFilesystem": true,
+                                    "runAsGroup": 1000,
+                                    "runAsNonRoot": true,
+                                    "runAsUser": 1000,
+                                    "seccompProfile": {
+                                        "type": "RuntimeDefault"
+                                    }
+                                },
+                                "terminationMessagePath": "/dev/termination-log",
+                                "terminationMessagePolicy": "File",
+                                "volumeMounts": [
+                                    {
+                                        "mountPath": "/data",
+                                        "name": "config"
+                                    }
+                                ]
+                            }
+                        ],
+                        "dnsPolicy": "ClusterFirst",
+                        "imagePullSecrets": [
+                            {
+                                "name": "secret-nexus3-o-ran-sc-org-10002-o-ran-sc"
+                            }
+                        ],
+                        "restartPolicy": "Always",
+                        "schedulerName": "default-scheduler",
+                        "securityContext": {},
+                        "shareProcessNamespace": true,
+                        "terminationGracePeriodSeconds": 5,
+                        "volumes": [
+                            {
+                                "configMap": {
+                                    "defaultMode": 420,
+                                    "name": "configmap-ricplt-dbaas-config"
+                                },
+                                "name": "config"
+                            }
+                        ]
+                    }
+                },
+                "updateStrategy": {
+                    "type": "RollingUpdate"
+                }
+            },
+            "status": {
+                "availableReplicas": 1,
+                "collisionCount": 0,
+                "currentReplicas": 1,
+                "currentRevision": "statefulset-ricplt-dbaas-server-9948dfb48",
+                "observedGeneration": 7,
+                "readyReplicas": 1,
+                "replicas": 1,
+                "updateRevision": "statefulset-ricplt-dbaas-server-9948dfb48",
+                "updatedReplicas": 1
+            }
+        }
+    ],
+    "kind": "List",
+    "metadata": {
+        "resourceVersion": ""
+    }
+}

@@ -1,0 +1,7 @@
+Corrected Trivy baseline
+Image-level CVE+package instances: 1073
+Unique CVE+package combinations: 261
+Critical unique: 7
+High unique: 254
+
+Note: the original 1430 instance total was inflated by duplicate image counting in the first post-processing script. The unique count of 261 was unaffected.

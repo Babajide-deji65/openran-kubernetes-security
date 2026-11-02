@@ -1,0 +1,17 @@
+minikube
+type: Control Plane
+host: Running
+kubelet: Running
+apiserver: Running
+kubeconfig: Configured
+
+minikube-m02
+type: Worker
+host: Running
+kubelet: Running
+
+minikube-m03
+type: Worker
+host: Running
+kubelet: Running
+

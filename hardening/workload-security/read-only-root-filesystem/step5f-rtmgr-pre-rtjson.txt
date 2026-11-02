@@ -1,0 +1,1 @@
+{"XApps":[],"E2Ts":{"10.104.83.5:38000":{"name":"E2TERMINST","fqdn":"10.104.83.5:38000","ranlist":[]}},"MeidMap":null,"Pcs":[{"name":"SUBMAN","fqdn":"service-ricplt-submgr-rmr.ricplt","port":4560},{"name":"E2MAN","fqdn":"service-ricplt-e2mgr-rmr.ricplt","port":3801},{"name":"A1MEDIATOR","fqdn":"service-ricplt-a1mediator-rmr.ricplt","port":4562}]}

@@ -1,0 +1,100 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    deployment.kubernetes.io/revision: "2"
+    meta.helm.sh/release-name: r4-o1mediator
+    meta.helm.sh/release-namespace: ricplt
+  creationTimestamp: "2026-06-27T22:05:18Z"
+  generation: 2
+  labels:
+    app: ricplt-o1mediator
+    app.kubernetes.io/managed-by: Helm
+    chart: o1mediator-3.0.0
+    heritage: Helm
+    release: r4-o1mediator
+  name: deployment-ricplt-o1mediator
+  namespace: ricplt
+  resourceVersion: "572075"
+  uid: 376e0d77-5f10-4206-8124-5b3d749d494f
+spec:
+  progressDeadlineSeconds: 600
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app: ricplt-o1mediator
+      release: r4-o1mediator
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: ricplt-o1mediator
+        release: r4-o1mediator
+    spec:
+      automountServiceAccountToken: false
+      containers:
+      - envFrom:
+        - configMapRef:
+            name: configmap-ricplt-dbaas-appconfig
+        - configMapRef:
+            name: configmap-ricplt-o1mediator-env
+        image: nexus3.o-ran-sc.org:10002/o-ran-sc/ric-plt-o1:0.5.3
+        imagePullPolicy: IfNotPresent
+        name: container-ricplt-o1mediator
+        ports:
+        - containerPort: 9001
+          name: http-supervise
+          protocol: TCP
+        - containerPort: 8080
+          name: http-mediation
+          protocol: TCP
+        - containerPort: 3000
+          name: http-event
+          protocol: TCP
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /etc/o1agent
+          name: appconfig-file
+      dnsPolicy: ClusterFirst
+      hostname: o1mediator
+      imagePullSecrets:
+      - name: secret-nexus3-o-ran-sc-org-10002-o-ran-sc
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      serviceAccount: svcacct-ricplt-o1mediator
+      serviceAccountName: svcacct-ricplt-o1mediator
+      terminationGracePeriodSeconds: 30
+      volumes:
+      - configMap:
+          defaultMode: 420
+          name: configmap-ricplt-o1mediator-appconfig-configmap
+        name: appconfig-file
+status:
+  availableReplicas: 1
+  conditions:
+  - lastTransitionTime: "2026-06-27T22:05:18Z"
+    lastUpdateTime: "2026-08-24T21:35:21Z"
+    message: ReplicaSet "deployment-ricplt-o1mediator-94b84ff95" has successfully
+      progressed.
+    reason: NewReplicaSetAvailable
+    status: "True"
+    type: Progressing
+  - lastTransitionTime: "2026-08-30T09:53:44Z"
+    lastUpdateTime: "2026-08-30T09:53:44Z"
+    message: Deployment has minimum availability.
+    reason: MinimumReplicasAvailable
+    status: "True"
+    type: Available
+  observedGeneration: 2
+  readyReplicas: 1
+  replicas: 1
+  updatedReplicas: 1

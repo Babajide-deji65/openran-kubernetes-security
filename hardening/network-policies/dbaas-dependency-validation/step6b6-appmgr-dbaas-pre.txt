@@ -1,0 +1,13 @@
+=== APPMGR DBaaS DEPENDENCY TEST - PRE ===
+Date: Tue Sep  8 21:59:26 BST 2026
+
+--- AppMgr Pod ---
+NAME                                        READY   STATUS    RESTARTS      AGE     IP           NODE           NOMINATED NODE   READINESS GATES
+deployment-ricplt-appmgr-6667cbb665-wjgt9   1/1     Running   4 (13h ago)   2d21h   10.244.2.7   minikube-m03   <none>           <none>
+
+--- Current Redis Clients ---
+id=46 addr=10.244.1.2:50620 fd=17 name= age=560 idle=79 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=mget
+id=143 addr=10.244.1.2:60948 fd=18 name= age=319 idle=1 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=19 addr=10.244.1.5:39102 fd=8 name= age=603 idle=3 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.3:46822 fd=9 name= age=579 idle=9 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=277 addr=127.0.0.1:34408 fd=7 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client

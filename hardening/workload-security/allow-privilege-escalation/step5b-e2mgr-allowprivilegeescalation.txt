@@ -1,0 +1,11 @@
+=== STEP 5B: E2MGR allowPrivilegeEscalation HARDENING ===
+Date: Sun Aug 30 13:31:12 BST 2026
+
+--- Deployment Security Context ---
+{"allowPrivilegeEscalation":false}
+
+--- Pod Status ---
+deployment-ricplt-e2mgr-866df89c9-tzf5f           1/1     Running   0              4m44s
+
+--- Runtime User ---
+uid=0(root) gid=0(root) groups=0(root)

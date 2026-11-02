@@ -1,0 +1,23 @@
+=== STEP 5F: ALARMMANAGER READ-ONLY ROOT FS ===
+Date: Sun Sep  6 00:45:32 BST 2026
+
+--- Security Context ---
+{"allowPrivilegeEscalation":false,"capabilities":{"drop":["NET_RAW"]},"readOnlyRootFilesystem":true,"runAsGroup":1000,"runAsNonRoot":true,"runAsUser":1000,"seccompProfile":{"type":"RuntimeDefault"}}
+
+--- Pod Status ---
+deployment-ricplt-alarmmanager-7848c59c97-vslsm   1/1     Running   0              3m15s
+
+--- /tmp Mount (emptyDir) ---
+/dev/sdd on /tmp type ext4 (rw,relatime)
+
+--- /tmp/alarm.rt ---
+-rw-r--r-- 1 1000 1000 33 Sep  5 23:42 /tmp/alarm.rt
+newrt|start
+rte|13111|
+newrt|end
+
+--- Write Test (root FS) ---
+touch: cannot touch '/readonly-test': Read-only file system
+
+--- Write Test (/tmp) ---
+/tmp writable

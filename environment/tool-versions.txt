@@ -1,0 +1,7 @@
+Helm: v3.21.0+ge0878d4
+Docker: Docker version 29.5.3, build d1c06ef
+Trivy: Version: 0.71.0
+kube-bench: 0.10.6
+kubeaudit: 0.22.2
+Minikube: v1.38.1
+kube-hunter: 0.6.8

@@ -1,0 +1,119 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    deployment.kubernetes.io/revision: "5"
+    meta.helm.sh/release-name: r4-alarmmanager
+    meta.helm.sh/release-namespace: ricplt
+  creationTimestamp: "2026-06-27T22:05:32Z"
+  generation: 5
+  labels:
+    app: ricplt-alarmmanager
+    app.kubernetes.io/managed-by: Helm
+    chart: alarmmanager-5.0.0
+    heritage: Helm
+    release: r4-alarmmanager
+  name: deployment-ricplt-alarmmanager
+  namespace: ricplt
+  resourceVersion: "619835"
+  uid: 5f0e0995-61ba-4219-8330-308c5c39a758
+spec:
+  progressDeadlineSeconds: 600
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app: ricplt-alarmmanager
+      release: r4-alarmmanager
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: ricplt-alarmmanager
+        release: r4-alarmmanager
+    spec:
+      automountServiceAccountToken: false
+      containers:
+      - env:
+        - name: PLT_NAMESPACE
+          value: ricplt
+        envFrom:
+        - configMapRef:
+            name: configmap-ricplt-dbaas-appconfig
+        - configMapRef:
+            name: configmap-ricplt-alarmmanager-env
+        image: nexus3.o-ran-sc.org:10002/o-ran-sc/ric-plt-alarmmanager:0.5.11
+        imagePullPolicy: IfNotPresent
+        name: container-ricplt-alarmmanager
+        ports:
+        - containerPort: 4561
+          name: rmrroute
+          protocol: TCP
+        - containerPort: 4560
+          name: rmrdata
+          protocol: TCP
+        - containerPort: 8080
+          name: http
+          protocol: TCP
+        resources: {}
+        securityContext:
+          allowPrivilegeEscalation: false
+          capabilities:
+            drop:
+            - NET_RAW
+          seccompProfile:
+            type: RuntimeDefault
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /cfg
+          name: config-volume
+        - mountPath: /mnt/pv-ricplt-alarmmanager
+          name: am-persistent-storage
+      dnsPolicy: ClusterFirst
+      hostname: alarmmanager
+      imagePullSecrets:
+      - name: secret-nexus3-o-ran-sc-org-10002-o-ran-sc
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      serviceAccount: svcacct-ricplt-alarmmanager
+      serviceAccountName: svcacct-ricplt-alarmmanager
+      terminationGracePeriodSeconds: 30
+      volumes:
+      - configMap:
+          defaultMode: 420
+          items:
+          - key: alarmmanagercfg
+            mode: 420
+            path: config-file.json
+          name: configmap-ricplt-alarmmanager-alarmmanagercfg
+        name: config-volume
+      - name: am-persistent-storage
+        persistentVolumeClaim:
+          claimName: pvc-ricplt-alarmmanager
+status:
+  availableReplicas: 1
+  conditions:
+  - lastTransitionTime: "2026-06-27T22:05:32Z"
+    lastUpdateTime: "2026-09-01T12:23:56Z"
+    message: ReplicaSet "deployment-ricplt-alarmmanager-55cd6bf4d5" has successfully
+      progressed.
+    reason: NewReplicaSetAvailable
+    status: "True"
+    type: Progressing
+  - lastTransitionTime: "2026-09-02T11:17:33Z"
+    lastUpdateTime: "2026-09-02T11:17:33Z"
+    message: Deployment has minimum availability.
+    reason: MinimumReplicasAvailable
+    status: "True"
+    type: Available
+  observedGeneration: 5
+  readyReplicas: 1
+  replicas: 1
+  updatedReplicas: 1

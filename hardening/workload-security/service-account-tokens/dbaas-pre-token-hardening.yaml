@@ -1,0 +1,105 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  annotations:
+    meta.helm.sh/release-name: r4-dbaas
+    meta.helm.sh/release-namespace: ricplt
+  creationTimestamp: "2026-06-27T22:03:20Z"
+  generation: 1
+  labels:
+    app: ricplt-dbaas
+    app.kubernetes.io/managed-by: Helm
+    chart: dbaas-2.0.0
+    heritage: Helm
+    release: r4-dbaas
+  name: statefulset-ricplt-dbaas-server
+  namespace: ricplt
+  resourceVersion: "542214"
+  uid: 6eb00794-172c-4054-91fe-4a86a035f856
+spec:
+  persistentVolumeClaimRetentionPolicy:
+    whenDeleted: Retain
+    whenScaled: Retain
+  podManagementPolicy: OrderedReady
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app: ricplt-dbaas
+      release: r4-dbaas
+  serviceName: service-ricplt-dbaas-tcp
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: ricplt-dbaas
+        release: r4-dbaas
+    spec:
+      containers:
+      - args:
+        - /data/redis.conf
+        command:
+        - redis-server
+        envFrom:
+        - configMapRef:
+            name: configmap-ricplt-dbaas-appconfig
+        image: nexus3.o-ran-sc.org:10002/o-ran-sc/ric-plt-dbaas:0.5.5
+        imagePullPolicy: IfNotPresent
+        livenessProbe:
+          exec:
+            command:
+            - /bin/sh
+            - -c
+            - timeout 10 redis-cli -p 6379 ping
+          failureThreshold: 3
+          initialDelaySeconds: 15
+          periodSeconds: 5
+          successThreshold: 1
+          timeoutSeconds: 1
+        name: container-ricplt-dbaas-redis
+        ports:
+        - containerPort: 6379
+          name: redis
+          protocol: TCP
+        readinessProbe:
+          exec:
+            command:
+            - /bin/sh
+            - -c
+            - timeout 10 redis-cli -p 6379 ping
+          failureThreshold: 3
+          initialDelaySeconds: 15
+          periodSeconds: 5
+          successThreshold: 1
+          timeoutSeconds: 1
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /data
+          name: config
+      dnsPolicy: ClusterFirst
+      imagePullSecrets:
+      - name: secret-nexus3-o-ran-sc-org-10002-o-ran-sc
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      shareProcessNamespace: true
+      terminationGracePeriodSeconds: 5
+      volumes:
+      - configMap:
+          defaultMode: 420
+          name: configmap-ricplt-dbaas-config
+        name: config
+  updateStrategy:
+    type: RollingUpdate
+status:
+  availableReplicas: 1
+  collisionCount: 0
+  currentReplicas: 1
+  currentRevision: statefulset-ricplt-dbaas-server-97ddb69c5
+  observedGeneration: 1
+  readyReplicas: 1
+  replicas: 1
+  updateRevision: statefulset-ricplt-dbaas-server-97ddb69c5
+  updatedReplicas: 1

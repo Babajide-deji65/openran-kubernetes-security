@@ -1,0 +1,24 @@
+=== STEP 5F: A1MEDIATOR READ-ONLY ROOT FS ===
+Date: Sun Sep  6 00:05:50 BST 2026
+
+--- Security Context ---
+{"allowPrivilegeEscalation":false,"capabilities":{"drop":["NET_RAW"]},"readOnlyRootFilesystem":true,"runAsNonRoot":true,"runAsUser":1000,"seccompProfile":{"type":"RuntimeDefault"}}
+
+--- Pod Status ---
+deployment-ricplt-a1mediator-6cf77d47d9-sxqd4     1/1     Running   0              15m
+
+--- Functional Health Check ---
+""
+
+--- Write Test (root FS) ---
+touch: cannot touch '/readonly-test': Read-only file system
+
+--- Write Test (/tmp) ---
+touch: cannot touch '/tmp/readonly-test': Read-only file system
+
+--- /opt/route Mount State ---
+/dev/sdd on /opt/route type ext4 (ro,relatime)
+drwxrwxrwx 3 root root 4096 Sep  5 22:50 /opt/route
+total 0
+lrwxrwxrwx 1 root root 15 Sep  5 22:50 local.rt -> ..data/local.rt
+lrwxrwxrwx 1 root root 19 Sep  5 22:50 loglevel.txt -> ..data/loglevel.txt

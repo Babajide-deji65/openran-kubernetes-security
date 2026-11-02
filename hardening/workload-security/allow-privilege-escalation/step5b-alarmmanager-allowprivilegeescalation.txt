@@ -1,0 +1,11 @@
+=== STEP 5B: ALARMMANAGER allowPrivilegeEscalation HARDENING ===
+Date: Sun Aug 30 15:25:45 BST 2026
+
+--- Deployment Security Context ---
+{"allowPrivilegeEscalation":false}
+
+--- Pod Status ---
+deployment-ricplt-alarmmanager-6b65df6cf9-2qfsp   1/1     Running   0               2m10s
+
+--- Runtime User ---
+uid=0(root) gid=0(root) groups=0(root)

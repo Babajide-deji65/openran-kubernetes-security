@@ -1,0 +1,30 @@
+3m58s       Normal    Killing                           pod/statefulset-ricplt-dbaas-server-0                  Stopping container container-ricplt-dbaas-redis
+3m56s       Normal    SuccessfulDelete                  statefulset/statefulset-ricplt-dbaas-server            delete Pod statefulset-ricplt-dbaas-server-0 in StatefulSet statefulset-ricplt-dbaas-server successful
+3m56s       Normal    Created                           pod/statefulset-ricplt-dbaas-server-0                  Created container container-ricplt-dbaas-redis
+3m56s       Normal    Pulled                            pod/statefulset-ricplt-dbaas-server-0                  Container image "nexus3.o-ran-sc.org:10002/o-ran-sc/ric-plt-dbaas:0.5.5" already present on machine
+3m56s       Normal    RecreatingTerminatedPod           statefulset/statefulset-ricplt-dbaas-server            StatefulSet ricplt/statefulset-ricplt-dbaas-server is recreating terminated Pod statefulset-ricplt-dbaas-server-0
+3m56s       Normal    SuccessfulCreate                  statefulset/statefulset-ricplt-dbaas-server            create Pod statefulset-ricplt-dbaas-server-0 in StatefulSet statefulset-ricplt-dbaas-server successful
+3m55s       Normal    Started                           pod/statefulset-ricplt-dbaas-server-0                  Started container container-ricplt-dbaas-redis
+3m36s       Warning   Unhealthy                         pod/deployment-ricplt-e2mgr-7c57f6b74f-k8g7l           Readiness probe failed: HTTP probe failed with statuscode: 500
+3m36s       Warning   Unhealthy                         pod/deployment-ricplt-e2mgr-7c57f6b74f-k8g7l           Liveness probe failed: HTTP probe failed with statuscode: 500
+3m36s       Normal    Killing                           pod/deployment-ricplt-e2mgr-7c57f6b74f-k8g7l           Container container-ricplt-e2mgr failed liveness probe, will be restarted
+3m29s       Normal    Killing                           pod/deployment-ricplt-a1mediator-8448dd8465-mwdgf      Container container-ricplt-a1mediator failed liveness probe, will be restarted
+3m29s       Warning   FailedToRetrieveImagePullSecret   pod/deployment-ricplt-a1mediator-8448dd8465-mwdgf      Unable to retrieve some image pull secrets (secret-nexus3-o-ran-sc-org-10002-o-ran-sc); attempting to pull the image may not succeed.
+3m29s       Warning   Unhealthy                         pod/deployment-ricplt-a1mediator-8448dd8465-mwdgf      Readiness probe failed: HTTP probe failed with statuscode: 500
+3m29s       Warning   Unhealthy                         pod/deployment-ricplt-a1mediator-8448dd8465-mwdgf      Liveness probe failed: HTTP probe failed with statuscode: 500
+3m6s        Normal    Pulled                            pod/deployment-ricplt-e2mgr-7c57f6b74f-k8g7l           Container image "nexus3.o-ran-sc.org:10002/o-ran-sc/ric-plt-e2mgr:5.4.19" already present on machine
+3m6s        Normal    Started                           pod/deployment-ricplt-e2mgr-7c57f6b74f-k8g7l           Started container container-ricplt-e2mgr
+3m6s        Normal    Created                           pod/deployment-ricplt-e2mgr-7c57f6b74f-k8g7l           Created container container-ricplt-e2mgr
+3m4s        Warning   FailedToRetrieveImagePullSecret   pod/deployment-ricplt-e2mgr-7c57f6b74f-k8g7l           Unable to retrieve some image pull secrets (secret-nexus3-o-ran-sc-org-10002-o-ran-sc); attempting to pull the image may not succeed.
+2m59s       Normal    Created                           pod/deployment-ricplt-a1mediator-8448dd8465-mwdgf      Created container container-ricplt-a1mediator
+2m59s       Normal    Pulled                            pod/deployment-ricplt-a1mediator-8448dd8465-mwdgf      Container image "nexus3.o-ran-sc.org:10002/o-ran-sc/ric-plt-a1:2.5.1" already present on machine
+2m59s       Normal    Started                           pod/deployment-ricplt-a1mediator-8448dd8465-mwdgf      Started container container-ricplt-a1mediator
+79s         Warning   FailedToRetrieveImagePullSecret   pod/statefulset-ricplt-dbaas-server-0                  Unable to retrieve some image pull secrets (secret-nexus3-o-ran-sc-org-10002-o-ran-sc); attempting to pull the image may not succeed.
+76s         Warning   FailedToRetrieveImagePullSecret   pod/deployment-ricplt-appmgr-76d79f7cfb-bvdp6          Unable to retrieve some image pull secrets (secret-nexus3-o-ran-sc-org-10002-o-ran-sc); attempting to pull the image may not succeed.
+68s         Warning   FailedToRetrieveImagePullSecret   pod/deployment-ricplt-submgr-5f79558b58-b24gc          Unable to retrieve some image pull secrets (secret-nexus3-o-ran-sc-org-10002-o-ran-sc); attempting to pull the image may not succeed.
+65s         Warning   Unhealthy                         pod/deployment-ricplt-e2term-alpha-857cf5cf45-jd4k2    Readiness probe failed: command "/bin/sh -c ip=`hostname -i`;export RMR_SRC_ID=$ip;/opt/e2/rmr_probe -h $ip:38000" timed out
+39s         Warning   FailedToRetrieveImagePullSecret   pod/deployment-ricplt-rtmgr-8548fd4bd-8nhsg            Unable to retrieve some image pull secrets (secret-nexus3-o-ran-sc-org-10002-o-ran-sc); attempting to pull the image may not succeed.
+27s         Warning   FailedToRetrieveImagePullSecret   pod/deployment-ricplt-vespamgr-5c9fd87b9d-8vwsb        Unable to retrieve some image pull secrets (secret-nexus3-o-ran-sc-org-10002-o-ran-sc); attempting to pull the image may not succeed.
+26s         Warning   FailedToRetrieveImagePullSecret   pod/deployment-ricplt-o1mediator-69f6668c46-g8t4f      Unable to retrieve some image pull secrets (secret-nexus3-o-ran-sc-org-10002-o-ran-sc); attempting to pull the image may not succeed.
+19s         Warning   FailedToRetrieveImagePullSecret   pod/deployment-ricplt-alarmmanager-df64b6bdc-wlh2c     Unable to retrieve some image pull secrets (secret-nexus3-o-ran-sc-org-10002-o-ran-sc); attempting to pull the image may not succeed.
+7s          Warning   FailedToRetrieveImagePullSecret   pod/deployment-ricplt-e2term-alpha-857cf5cf45-jd4k2    Unable to retrieve some image pull secrets (secret-nexus3-o-ran-sc-org-10002-o-ran-sc); attempting to pull the image may not succeed.

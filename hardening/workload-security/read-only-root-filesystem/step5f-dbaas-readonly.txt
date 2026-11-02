@@ -1,0 +1,21 @@
+=== STEP 5F: DBAAS READ-ONLY ROOT FS ===
+Date: Sun Sep  6 00:18:14 BST 2026
+
+--- Security Context ---
+{"allowPrivilegeEscalation":false,"capabilities":{"drop":["NET_RAW"]},"readOnlyRootFilesystem":true,"runAsGroup":1000,"runAsNonRoot":true,"runAsUser":1000,"seccompProfile":{"type":"RuntimeDefault"}}
+
+--- Pod Status ---
+statefulset-ricplt-dbaas-server-0                 1/1     Running   0                5m34s
+
+--- Redis Runtime User ---
+Uid:	1000	1000	1000	1000
+Gid:	1000	1000	1000	1000
+
+--- Redis Health ---
+PONG
+
+--- Write Test (root FS) ---
+touch: /readonly-test: Read-only file system
+
+--- Write Test (/tmp) ---
+touch: /tmp/readonly-test: Read-only file system

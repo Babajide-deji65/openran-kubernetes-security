@@ -1,0 +1,35 @@
+=== STEP 7C: KUBELET SERVING CERTIFICATE DETAILS ===
+Date: Fri Sep 11 08:40:29 BST 2026
+
+===== minikube =====
+--- Subject / Issuer / Validity / SAN ---
+subject=CN = minikube@1782148788
+issuer=CN = minikube-ca@1782148788
+notBefore=Jun 22 16:19:48 2026 GMT
+notAfter=Jun 22 16:19:48 2027 GMT
+X509v3 Subject Alternative Name: 
+    DNS:minikube
+
+===== minikube-m02 =====
+--- Subject / Issuer / Validity / SAN ---
+subject=CN = minikube-m02@1782148843
+issuer=CN = minikube-m02-ca@1782148843
+notBefore=Jun 22 16:20:43 2026 GMT
+notAfter=Jun 22 16:20:43 2027 GMT
+X509v3 Subject Alternative Name: 
+    DNS:minikube-m02
+
+===== minikube-m03 =====
+--- Subject / Issuer / Validity / SAN ---
+subject=CN = minikube-m03@1782148889
+issuer=CN = minikube-m03-ca@1782148889
+notBefore=Jun 22 16:21:29 2026 GMT
+notAfter=Jun 22 16:21:29 2027 GMT
+X509v3 Subject Alternative Name: 
+    DNS:minikube-m03
+
+===== NODE ADDRESSES =====
+NAME           STATUS   ROLES           AGE   VERSION   INTERNAL-IP    EXTERNAL-IP   OS-IMAGE                         KERNEL-VERSION                      CONTAINER-RUNTIME
+minikube       Ready    control-plane   80d   v1.29.0   192.168.49.2   <none>        Debian GNU/Linux 12 (bookworm)   6.6.114.1-microsoft-standard-WSL2   docker://29.2.1
+minikube-m02   Ready    <none>          80d   v1.29.0   192.168.49.3   <none>        Debian GNU/Linux 12 (bookworm)   6.6.114.1-microsoft-standard-WSL2   docker://29.2.1
+minikube-m03   Ready    <none>          80d   v1.29.0   192.168.49.4   <none>        Debian GNU/Linux 12 (bookworm)   6.6.114.1-microsoft-standard-WSL2   docker://29.2.1

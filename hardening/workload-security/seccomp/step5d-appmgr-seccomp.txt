@@ -1,0 +1,12 @@
+=== STEP 5D: APPMGR SECCOMP HARDENING ===
+Date: Tue Sep  1 14:23:11 BST 2026
+
+--- Main and Init Container Security Contexts ---
+Main: {"allowPrivilegeEscalation":false,"capabilities":{"drop":["NET_RAW"]},"seccompProfile":{"type":"RuntimeDefault"}}
+Init: {"allowPrivilegeEscalation":false,"seccompProfile":{"type":"RuntimeDefault"}}
+
+--- Pod Status ---
+deployment-ricplt-appmgr-574bd8cf9-g29n6          1/1     Running   0              3m9s
+
+--- Init Container Status ---
+{"terminated":{"containerID":"docker://95ff2cecacd77055bcc95c188e9047256a1a58fe0ee886487e918c840979e723","exitCode":0,"finishedAt":"2026-09-01T13:20:03Z","reason":"Completed","startedAt":"2026-09-01T13:20:02Z"}}

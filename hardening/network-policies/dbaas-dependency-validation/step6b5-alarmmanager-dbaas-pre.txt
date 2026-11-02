@@ -1,0 +1,13 @@
+=== ALARMMANAGER DBaaS DEPENDENCY TEST - PRE ===
+Date: Tue Sep  8 05:43:49 BST 2026
+
+--- AlarmManager Pod ---
+NAME                                              READY   STATUS    RESTARTS      AGE    IP           NODE           NOMINATED NODE   READINESS GATES
+deployment-ricplt-alarmmanager-7848c59c97-vslsm   1/1     Running   3 (75m ago)   2d5h   10.244.1.3   minikube-m02   <none>           <none>
+
+--- Current Redis Clients ---
+id=9 addr=10.244.1.9:40486 fd=7 name= age=1579 idle=19 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=35 addr=10.244.2.2:50954 fd=12 name= age=1547 idle=10 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=27 addr=10.244.1.6:41660 fd=16 name= age=1562 idle=1 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=mget
+id=30 addr=10.244.1.6:41662 fd=17 name= age=1556 idle=1 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=mset
+id=661 addr=127.0.0.1:36542 fd=8 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client

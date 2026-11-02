@@ -1,0 +1,31 @@
+=== STEP 5D: CONSOLIDATED SECCOMP VERIFICATION ===
+Date: Tue Sep  1 14:32:59 BST 2026
+
+--- Main Container Seccomp Profiles ---
+POD                                               SECCOMP
+deployment-ricplt-a1mediator-666f5d5df7-md4hx     RuntimeDefault
+deployment-ricplt-alarmmanager-55cd6bf4d5-7chx8   RuntimeDefault
+deployment-ricplt-appmgr-574bd8cf9-g29n6          RuntimeDefault
+deployment-ricplt-e2mgr-6d75b679bf-b7jgt          RuntimeDefault
+deployment-ricplt-e2term-alpha-6cdfd9ccf7-vvb7g   RuntimeDefault
+deployment-ricplt-o1mediator-5865d456d7-flrk8     RuntimeDefault
+deployment-ricplt-rtmgr-7d4d9c8c7-zqltb           RuntimeDefault
+deployment-ricplt-submgr-685c5d956-r85tw          RuntimeDefault
+deployment-ricplt-vespamgr-579cd6c5bb-2lksw       RuntimeDefault
+statefulset-ricplt-dbaas-server-0                 RuntimeDefault
+
+--- APPMGR Init Container Seccomp Profile ---
+container-ricplt-appmgr-copy-tiller-secret -> RuntimeDefault
+
+--- Current RIC Pod Health ---
+NAME                                              READY   STATUS    RESTARTS        AGE
+deployment-ricplt-a1mediator-666f5d5df7-md4hx     1/1     Running   1 (2m45s ago)   7m16s
+deployment-ricplt-alarmmanager-55cd6bf4d5-7chx8   1/1     Running   0               69m
+deployment-ricplt-appmgr-574bd8cf9-g29n6          1/1     Running   0               12m
+deployment-ricplt-e2mgr-6d75b679bf-b7jgt          1/1     Running   1 (2m41s ago)   39m
+deployment-ricplt-e2term-alpha-6cdfd9ccf7-vvb7g   1/1     Running   0               21m
+deployment-ricplt-o1mediator-5865d456d7-flrk8     1/1     Running   0               24m
+deployment-ricplt-rtmgr-7d4d9c8c7-zqltb           1/1     Running   0               35m
+deployment-ricplt-submgr-685c5d956-r85tw          1/1     Running   0               31m
+deployment-ricplt-vespamgr-579cd6c5bb-2lksw       1/1     Running   0               28m
+statefulset-ricplt-dbaas-server-0                 1/1     Running   0               3m36s

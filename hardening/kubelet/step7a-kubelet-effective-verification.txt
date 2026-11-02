@@ -1,0 +1,55 @@
+=== STEP 7A: KUBELET EFFECTIVE SECURITY VERIFICATION ===
+Date: Fri Sep 11 08:36:36 BST 2026
+
+===== minikube =====
+--- Kubelet listeners ---
+LISTEN 0      4096               *:10250            *:*    users:(("kubelet",pid=1351,fd=19))       
+
+===== minikube-m02 =====
+--- Kubelet listeners ---
+LISTEN 0      4096               *:10250            *:*    users:(("kubelet",pid=112,fd=20))      
+
+===== minikube-m03 =====
+--- Kubelet listeners ---
+LISTEN 0      4096               *:10250            *:*    users:(("kubelet",pid=112,fd=18))    
+
+===== METRICS SERVER =====
+      - args:
+        - --cert-dir=/tmp
+        - --secure-port=4443
+        - --kubelet-preferred-address-types=InternalIP,ExternalIP,Hostname
+        - --kubelet-use-node-status-port
+        - --metric-resolution=60s
+        - --kubelet-insecure-tls
+        image: registry.k8s.io/metrics-server/metrics-server:v0.8.1@sha256:b2d2efaf5ac3b366ed0f839d2412a2c4279d4fc2a2a733f12c52133faed36c41
+        imagePullPolicy: IfNotPresent
+        livenessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /livez
+            port: https
+            scheme: HTTPS
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 1
+        name: metrics-server
+        ports:
+        - containerPort: 4443
+
+--- Metrics API current functionality ---
+NAME           CPU(cores)   CPU(%)   MEMORY(bytes)   MEMORY(%)   
+minikube       434m         5%       931Mi           7%          
+minikube-m02   203m         2%       451Mi           3%          
+minikube-m03   347m         4%       628Mi           5%          
+
+NAME                                              CPU(cores)   MEMORY(bytes)   
+deployment-ricplt-a1mediator-6cf77d47d9-sxqd4     4m           40Mi            
+deployment-ricplt-alarmmanager-59f4cc855-k7h6r    1m           22Mi            
+deployment-ricplt-appmgr-86bdfb6848-rsxsb         1m           19Mi            
+deployment-ricplt-e2mgr-6d75b679bf-b7jgt          2m           7Mi             
+deployment-ricplt-e2term-alpha-6cdfd9ccf7-vvb7g   15m          29Mi            
+deployment-ricplt-o1mediator-78ffb44dd6-zn5cs     5m           65Mi            
+deployment-ricplt-rtmgr-99d7557b-7l7pf            4m           11Mi            
+deployment-ricplt-submgr-7cb45cfbc8-kkmlw         2m           14Mi            
+deployment-ricplt-vespamgr-579cd6c5bb-2lksw       4m           41Mi            
+statefulset-ricplt-dbaas-server-0                 39m          5Mi             

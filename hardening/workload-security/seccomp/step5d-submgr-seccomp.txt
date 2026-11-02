@@ -1,0 +1,8 @@
+=== STEP 5D: SUBMGR SECCOMP HARDENING ===
+Date: Tue Sep  1 14:03:17 BST 2026
+
+--- Security Context ---
+{"allowPrivilegeEscalation":false,"capabilities":{"drop":["NET_RAW"]},"seccompProfile":{"type":"RuntimeDefault"}}
+
+--- Pod Status ---
+deployment-ricplt-submgr-685c5d956-r85tw          1/1     Running   0               2m15s

@@ -1,0 +1,17 @@
+# Sensitive encryption material - never commit
+encryption-key.txt
+
+# Unsanitised baseline kube-hunter outputs containing ServiceAccount JWT material
+kube-hunter-internal.json
+kube-hunter-internal-formatted.json
+kube-hunter-internal-active.json
+
+# Unsanitised post-hardening kube-hunter outputs
+kube-hunter-internal-post.txt
+kube-hunter-active-post.txt
+
+# OS/editor artifacts
+.DS_Store
+Thumbs.db
+*.swp
+*~

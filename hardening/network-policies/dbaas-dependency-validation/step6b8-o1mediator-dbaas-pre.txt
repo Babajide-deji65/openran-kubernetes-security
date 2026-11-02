@@ -1,0 +1,11 @@
+=== O1MEDIATOR DBaaS DEPENDENCY TEST - PRE ===
+Date: Wed Sep  9 19:17:49 BST 2026
+
+NAME                                            READY   STATUS    RESTARTS      AGE   IP           NODE           NOMINATED NODE   READINESS GATES
+deployment-ricplt-o1mediator-5865d456d7-flrk8   1/1     Running   9 (20h ago)   8d    10.244.1.4   minikube-m02   <none>           <none>
+
+id=37 addr=10.244.2.5:47612 fd=7 name= age=3437 idle=8 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=49 addr=10.244.1.7:45680 fd=18 name= age=3420 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=16 addr=10.244.1.9:41538 fd=8 name= age=3467 idle=17 flags=P db=0 sub=1 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=ping
+id=42 addr=10.244.1.7:44652 fd=15 name= age=3429 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=smembers
+id=1604 addr=127.0.0.1:55288 fd=9 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=32742 obl=0 oll=0 omem=0 events=r cmd=client

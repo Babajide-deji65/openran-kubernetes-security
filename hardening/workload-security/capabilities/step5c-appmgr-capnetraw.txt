@@ -1,0 +1,17 @@
+=== STEP 5C: APPMGR CAP_NET_RAW HARDENING ===
+Date: Tue Sep  1 12:02:16 BST 2026
+
+--- Main Container Security Context ---
+{"allowPrivilegeEscalation":false,"capabilities":{"drop":["NET_RAW"]}}
+
+--- Pod Status ---
+deployment-ricplt-appmgr-854bc68fc5-nts2v         1/1     Running   0              5m13s
+
+--- Init Container Status ---
+{"terminated":{"containerID":"docker://0f53d2a1e9b91d03ae24a794f713f7d69973fe1b5d1ee55ce3b059f388feaec5","exitCode":0,"finishedAt":"2026-09-01T10:57:06Z","reason":"Completed","startedAt":"2026-09-01T10:57:05Z"}}
+
+--- Effective Capabilities ---
+CapEff:	00000000a80405fb
+
+--- CAP_NET_RAW Verification ---
+deployment-ricplt-appmgr-854bc68fc5-nts2v -> CAP_NET_RAW NOT PRESENT

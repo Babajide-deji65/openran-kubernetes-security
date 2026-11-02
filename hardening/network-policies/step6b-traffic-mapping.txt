@@ -1,0 +1,262 @@
+=== STEP 6B: RIC TRAFFIC MAPPING ===
+Date: Tue Sep  8 04:07:12 BST 2026
+
+--- RIC Services ---
+NAME                                     TYPE        CLUSTER-IP       PORTS            PROTOCOLS
+service-ricplt-a1mediator-http           ClusterIP   10.106.35.130    10000            TCP
+service-ricplt-a1mediator-rmr            ClusterIP   10.111.108.13    4561,4562        TCP,TCP
+service-ricplt-alarmmanager-http         ClusterIP   10.100.87.106    8080             TCP
+service-ricplt-alarmmanager-rmr          ClusterIP   10.98.248.248    4560,4561        TCP,TCP
+service-ricplt-appmgr-http               ClusterIP   10.104.4.214     8080             TCP
+service-ricplt-appmgr-rmr                ClusterIP   10.106.141.2     4561,4560        TCP,TCP
+service-ricplt-dbaas-tcp                 ClusterIP   None             6379             TCP
+service-ricplt-e2mgr-http                ClusterIP   10.102.46.52     3800             TCP
+service-ricplt-e2mgr-rmr                 ClusterIP   10.97.36.0       4561,3801        TCP,TCP
+service-ricplt-e2term-prometheus-alpha   ClusterIP   10.108.239.176   8088             TCP
+service-ricplt-e2term-rmr-alpha          ClusterIP   10.104.83.5      4561,38000       TCP,TCP
+service-ricplt-e2term-sctp-alpha         NodePort    10.105.143.165   36422            SCTP
+service-ricplt-o1mediator-http           ClusterIP   10.97.128.58     9001,8080,3000   TCP,TCP,TCP
+service-ricplt-o1mediator-tcp-netconf    NodePort    10.109.141.242   830              TCP
+service-ricplt-rtmgr-http                ClusterIP   10.100.148.57    3800             TCP
+service-ricplt-rtmgr-rmr                 ClusterIP   10.96.65.130     4561,4560        TCP,TCP
+service-ricplt-submgr-http               ClusterIP   None             3800             TCP
+service-ricplt-submgr-rmr                ClusterIP   None             4560,4561        TCP,TCP
+service-ricplt-vespamgr-http             ClusterIP   10.97.52.64      8080,9095        TCP,TCP
+
+--- Service Selectors ---
+NAME                                     SELECTOR
+service-ricplt-a1mediator-http           map[app:ricplt-a1mediator release:r4-a1mediator]
+service-ricplt-a1mediator-rmr            map[app:ricplt-a1mediator release:r4-a1mediator]
+service-ricplt-alarmmanager-http         map[app:ricplt-alarmmanager release:r4-alarmmanager]
+service-ricplt-alarmmanager-rmr          map[app:ricplt-alarmmanager release:r4-alarmmanager]
+service-ricplt-appmgr-http               map[app:ricplt-appmgr release:r4-appmgr]
+service-ricplt-appmgr-rmr                map[app:ricplt-appmgr release:r4-appmgr]
+service-ricplt-dbaas-tcp                 map[app:ricplt-dbaas release:r4-dbaas]
+service-ricplt-e2mgr-http                map[app:ricplt-e2mgr release:r4-e2mgr]
+service-ricplt-e2mgr-rmr                 map[app:ricplt-e2mgr release:r4-e2mgr]
+service-ricplt-e2term-prometheus-alpha   map[app:ricplt-e2term-alpha release:r4-e2term]
+service-ricplt-e2term-rmr-alpha          map[app:ricplt-e2term-alpha release:r4-e2term]
+service-ricplt-e2term-sctp-alpha         map[app:ricplt-e2term-alpha release:r4-e2term]
+service-ricplt-o1mediator-http           map[app:ricplt-o1mediator release:r4-o1mediator]
+service-ricplt-o1mediator-tcp-netconf    map[app:ricplt-o1mediator release:r4-o1mediator]
+service-ricplt-rtmgr-http                map[app:ricplt-rtmgr release:r4-rtmgr]
+service-ricplt-rtmgr-rmr                 map[app:ricplt-rtmgr release:r4-rtmgr]
+service-ricplt-submgr-http               map[app:ricplt-submgr release:r4-submgr]
+service-ricplt-submgr-rmr                map[app:ricplt-submgr release:r4-submgr]
+service-ricplt-vespamgr-http             map[app:ricplt-vespamgr release:r4-vespamgr]
+
+--- Service Endpoints ---
+NAME                                     ENDPOINTS                                         AGE
+service-ricplt-a1mediator-http           10.244.2.3:10000                                  72d
+service-ricplt-a1mediator-rmr            10.244.2.3:4561,10.244.2.3:4562                   72d
+service-ricplt-alarmmanager-http         10.244.1.9:8080                                   72d
+service-ricplt-alarmmanager-rmr          10.244.1.9:4561,10.244.1.9:4560                   72d
+service-ricplt-appmgr-http               10.244.2.7:8080                                   72d
+service-ricplt-appmgr-rmr                10.244.2.7:4561,10.244.2.7:4560                   72d
+service-ricplt-dbaas-tcp                 10.244.2.6:6379                                   72d
+service-ricplt-e2mgr-http                10.244.1.2:3800                                   72d
+service-ricplt-e2mgr-rmr                 10.244.1.2:4561,10.244.1.2:3801                   72d
+service-ricplt-e2term-prometheus-alpha   10.244.2.5:8088                                   72d
+service-ricplt-e2term-rmr-alpha          10.244.2.5:4561,10.244.2.5:38000                  72d
+service-ricplt-e2term-sctp-alpha         10.244.2.5:36422                                  72d
+service-ricplt-o1mediator-http           10.244.1.7:3000,10.244.1.7:9001,10.244.1.7:8080   72d
+service-ricplt-o1mediator-tcp-netconf    10.244.1.7:830                                    72d
+service-ricplt-rtmgr-http                10.244.1.8:3800                                   72d
+service-ricplt-rtmgr-rmr                 10.244.1.8:4561,10.244.1.8:4560                   72d
+service-ricplt-submgr-http               10.244.1.6:3800                                   72d
+service-ricplt-submgr-rmr                10.244.1.6:4561,10.244.1.6:4560                   72d
+service-ricplt-vespamgr-http             10.244.2.2:9095,10.244.2.2:8080                   72d
+
+--- Pod IPs ---
+POD                                               IP           NODE
+deployment-ricplt-a1mediator-6cf77d47d9-sxqd4     10.244.2.3   minikube-m03
+deployment-ricplt-alarmmanager-7848c59c97-vslsm   10.244.1.9   minikube-m02
+deployment-ricplt-appmgr-6667cbb665-wjgt9         10.244.2.7   minikube-m03
+deployment-ricplt-e2mgr-6d75b679bf-b7jgt          10.244.1.2   minikube-m02
+deployment-ricplt-e2term-alpha-6cdfd9ccf7-vvb7g   10.244.2.5   minikube-m03
+deployment-ricplt-o1mediator-5865d456d7-flrk8     10.244.1.7   minikube-m02
+deployment-ricplt-rtmgr-694f4c5c6d-ds5gv          10.244.1.8   minikube-m02
+deployment-ricplt-submgr-7cb45cfbc8-kkmlw         10.244.1.6   minikube-m02
+deployment-ricplt-vespamgr-579cd6c5bb-2lksw       10.244.2.2   minikube-m03
+statefulset-ricplt-dbaas-server-0                 10.244.2.6   minikube-m03
+
+--- Listening Ports and Established Connections Per Component ---
+=== deployment-ricplt-a1mediator-6cf77d47d9-sxqd4 ===
+-- Listening / Connected Sockets --
+Neither ss nor netstat available
+
+=== deployment-ricplt-alarmmanager-7848c59c97-vslsm ===
+-- Listening / Connected Sockets --
+Neither ss nor netstat available
+
+=== deployment-ricplt-appmgr-6667cbb665-wjgt9 ===
+-- Listening / Connected Sockets --
+Defaulted container "container-ricplt-appmgr" out of: container-ricplt-appmgr, container-ricplt-appmgr-copy-tiller-secret (init)
+Neither ss nor netstat available
+
+=== deployment-ricplt-e2mgr-6d75b679bf-b7jgt ===
+-- Listening / Connected Sockets --
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+tcp        0      0 0.0.0.0:3801            0.0.0.0:*               LISTEN      7/./main            
+tcp        0      0 0.0.0.0:4561            0.0.0.0:*               LISTEN      7/./main            
+tcp6       0      0 :::3800                 :::*                    LISTEN      7/./main            
+Active Internet connections (w/o servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+tcp        0      0 10.244.1.2:45744        10.104.83.5:38000       ESTABLISHED 7/./main            
+tcp        0      0 10.244.1.2:39580        10.96.65.130:4560       ESTABLISHED 7/./main            
+tcp        0      0 10.244.1.2:49386        10.244.2.6:6379         ESTABLISHED 7/./main            
+tcp        0      0 10.244.1.2:49374        10.244.2.6:6379         ESTABLISHED 7/./main            
+tcp        0      0 10.244.1.2:4561         10.244.1.8:57462        ESTABLISHED 7/./main            
+tcp        0      0 10.244.1.2:3801         10.244.2.5:36350        ESTABLISHED 7/./main            
+tcp6       0      0 10.244.1.2:3800         10.244.1.1:35928        TIME_WAIT   -                   
+tcp6       0      0 10.244.1.2:3800         10.244.1.1:37444        TIME_WAIT   -                   
+tcp6       0      0 10.244.1.2:3800         10.244.1.1:33502        TIME_WAIT   -                   
+tcp6       0      0 10.244.1.2:3800         10.244.1.1:40832        TIME_WAIT   -                   
+tcp6       0      0 10.244.1.2:3800         10.244.1.1:53148        TIME_WAIT   -                   
+tcp6       0      0 10.244.1.2:3800         10.244.1.1:53136        TIME_WAIT   -                   
+tcp6       0      0 10.244.1.2:3800         10.244.1.1:35930        TIME_WAIT   -                   
+tcp6       0      0 10.244.1.2:3800         10.244.1.1:40836        TIME_WAIT   -                   
+tcp6       0      0 10.244.1.2:3800         10.244.1.1:46348        TIME_WAIT   -                   
+tcp6       0      0 10.244.1.2:3800         10.244.1.1:33504        TIME_WAIT   -                   
+tcp6       0      0 10.244.1.2:3800         10.244.1.1:37446        TIME_WAIT   -                   
+tcp6       0      0 10.244.1.2:3800         10.244.1.1:46350        TIME_WAIT   -                   
+
+=== deployment-ricplt-e2term-alpha-6cdfd9ccf7-vvb7g ===
+-- Listening / Connected Sockets --
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+tcp        0      0 0.0.0.0:38000           0.0.0.0:*               LISTEN      24/./e2             
+tcp        0      0 0.0.0.0:4561            0.0.0.0:*               LISTEN      24/./e2             
+tcp        0      0 10.244.2.5:8088         0.0.0.0:*               LISTEN      24/./e2             
+Active Internet connections (w/o servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+tcp        0      0 10.244.2.5:33940        10.96.65.130:4560       ESTABLISHED 24/./e2             
+tcp        0      0 10.244.2.5:8088         10.244.2.8:35880        TIME_WAIT   -                   
+tcp        0      0 10.244.2.5:43337        10.244.2.5:46350        TIME_WAIT   -                   
+tcp        0      0 10.244.2.5:50742        10.244.2.5:38000        TIME_WAIT   -                   
+tcp        0      0 10.244.2.5:46148        10.244.2.5:38000        TIME_WAIT   -                   
+tcp        0      0 10.244.2.5:43881        10.244.2.5:56794        TIME_WAIT   -                   
+tcp        0      0 10.244.2.5:45544        10.244.2.5:38000        TIME_WAIT   -                   
+tcp        0      0 10.244.2.5:46160        10.244.2.5:38000        TIME_WAIT   -                   
+tcp        0      0 10.244.2.5:36350        10.97.36.0:3801         ESTABLISHED 24/./e2             
+tcp        0      0 10.244.2.5:43315        10.244.2.5:37108        TIME_WAIT   -                   
+tcp        0      0 10.244.2.5:57278        10.244.2.5:38000        TIME_WAIT   -                   
+tcp        0      0 10.244.2.5:43960        10.244.2.5:50764        TIME_WAIT   -                   
+tcp        0      0 10.244.2.5:43869        10.244.2.5:50454        TIME_WAIT   -                   
+tcp        0      0 10.244.2.5:4561         10.244.1.8:48366        ESTABLISHED 24/./e2             
+tcp        0      0 10.244.2.5:36730        10.244.2.5:38000        TIME_WAIT   -                   
+tcp        0      0 10.244.2.5:38000        10.244.1.2:45744        ESTABLISHED 24/./e2             
+tcp        0      0 10.244.2.5:54170        10.244.2.5:38000        TIME_WAIT   -                   
+tcp        0      0 10.244.2.5:43020        10.244.2.5:37068        TIME_WAIT   -                   
+tcp        0      0 10.244.2.5:43897        10.244.2.5:41942        TIME_WAIT   -                   
+
+=== deployment-ricplt-o1mediator-5865d456d7-flrk8 ===
+-- Listening / Connected Sockets --
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+tcp        0      0 0.0.0.0:4561            0.0.0.0:*               LISTEN      10/o1agent          
+tcp        0      0 0.0.0.0:4560            0.0.0.0:*               LISTEN      10/o1agent          
+tcp        0      0 0.0.0.0:4588            0.0.0.0:*               LISTEN      10/o1agent          
+tcp        0      0 0.0.0.0:830             0.0.0.0:*               LISTEN      9/netopeer2-server  
+tcp        0      0 0.0.0.0:9001            0.0.0.0:*               LISTEN      1/python3           
+tcp6       0      0 :::8080                 :::*                    LISTEN      10/o1agent          
+Active Internet connections (w/o servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+
+=== deployment-ricplt-rtmgr-694f4c5c6d-ds5gv ===
+-- Listening / Connected Sockets --
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+tcp        0      0 0.0.0.0:4560            0.0.0.0:*               LISTEN      1/./rtmgr           
+tcp        0      0 0.0.0.0:4588            0.0.0.0:*               LISTEN      1/./rtmgr           
+tcp6       0      0 :::8080                 :::*                    LISTEN      1/./rtmgr           
+tcp6       0      0 :::3800                 :::*                    LISTEN      1/./rtmgr           
+Active Internet connections (w/o servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+tcp        0      0 10.244.1.8:4560         10.244.1.2:39580        ESTABLISHED 1/./rtmgr           
+tcp        0      0 10.244.1.8:57462        10.97.36.0:4561         ESTABLISHED 1/./rtmgr           
+tcp        0      0 10.244.1.8:52500        10.244.1.8:4560         ESTABLISHED 1/./rtmgr           
+tcp        0      0 10.244.1.8:4560         10.244.2.5:33940        ESTABLISHED 1/./rtmgr           
+tcp        0      0 10.244.1.8:43958        10.111.108.13:4561      ESTABLISHED 1/./rtmgr           
+tcp        0      0 10.244.1.8:4560         10.244.2.3:52352        ESTABLISHED 1/./rtmgr           
+tcp        0      0 10.244.1.8:4560         10.244.1.8:52500        ESTABLISHED 1/./rtmgr           
+tcp        0      0 10.244.1.8:54556        10.244.1.6:4561         ESTABLISHED 1/./rtmgr           
+tcp        0      0 10.244.1.8:4560         10.244.1.6:34810        ESTABLISHED 1/./rtmgr           
+tcp        0      0 10.244.1.8:48366        10.104.83.5:4561        ESTABLISHED 1/./rtmgr           
+tcp6       0      0 10.244.1.8:8080         10.244.1.1:40118        TIME_WAIT   -                   
+tcp6       0      0 10.244.1.8:8080         10.244.1.1:44746        TIME_WAIT   -                   
+tcp6       0      0 10.244.1.8:8080         10.244.1.1:44744        TIME_WAIT   -                   
+tcp6       0      0 10.244.1.8:8080         10.244.1.1:50120        TIME_WAIT   -                   
+tcp6       0      0 10.244.1.8:8080         10.244.1.1:36966        TIME_WAIT   -                   
+tcp6       0      0 10.244.1.8:8080         10.244.1.1:36968        TIME_WAIT   -                   
+tcp6       0      0 10.244.1.8:8080         10.244.1.1:40116        TIME_WAIT   -                   
+tcp6       0      0 10.244.1.8:8080         10.244.1.1:50104        TIME_WAIT   -                   
+
+=== deployment-ricplt-submgr-7cb45cfbc8-kkmlw ===
+-- Listening / Connected Sockets --
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+tcp        0      0 0.0.0.0:4588            0.0.0.0:*               LISTEN      1/submgr            
+tcp        0      0 0.0.0.0:4560            0.0.0.0:*               LISTEN      1/submgr            
+tcp        0      0 0.0.0.0:4561            0.0.0.0:*               LISTEN      1/submgr            
+tcp6       0      0 :::8080                 :::*                    LISTEN      1/submgr            
+tcp6       0      0 :::8088                 :::*                    LISTEN      1/submgr            
+Active Internet connections (w/o servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+tcp        0      0 10.244.1.6:4561         10.244.1.8:54556        ESTABLISHED 1/submgr            
+tcp        0      0 10.244.1.6:34810        10.96.65.130:4560       ESTABLISHED 1/submgr            
+tcp        0      0 10.244.1.6:47654        10.244.2.6:6379         ESTABLISHED 1/submgr            
+tcp6       0      0 10.244.1.6:8080         10.244.1.1:53232        TIME_WAIT   -                   
+tcp6       0      0 10.244.1.6:8080         10.244.1.1:53234        TIME_WAIT   -                   
+tcp6       0      0 10.244.1.6:8080         10.244.1.1:40322        TIME_WAIT   -                   
+tcp6       0      0 10.244.1.6:8080         10.244.1.1:46558        TIME_WAIT   -                   
+tcp6       0      0 10.244.1.6:8080         10.244.1.1:41432        TIME_WAIT   -                   
+tcp6       0      0 10.244.1.6:8080         10.244.1.1:46560        TIME_WAIT   -                   
+tcp6       0      0 10.244.1.6:8080         10.244.1.1:41434        TIME_WAIT   -                   
+tcp6       0      0 10.244.1.6:8080         10.244.1.1:40330        TIME_WAIT   -                   
+
+=== deployment-ricplt-vespamgr-579cd6c5bb-2lksw ===
+-- Listening / Connected Sockets --
+Neither ss nor netstat available
+
+=== statefulset-ricplt-dbaas-server-0 ===
+-- Listening / Connected Sockets --
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+tcp        0      0 0.0.0.0:6379            0.0.0.0:*               LISTEN      7/redis-server
+Active Internet connections (w/o servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+tcp        0      0 127.0.0.1:36784         127.0.0.1:6379          TIME_WAIT   -
+tcp        0      0 127.0.0.1:44188         127.0.0.1:6379          TIME_WAIT   -
+tcp        0      0 127.0.0.1:36760         127.0.0.1:6379          TIME_WAIT   -
+tcp        0      0 127.0.0.1:59940         127.0.0.1:6379          TIME_WAIT   -
+tcp        0      0 10.244.2.6:6379         10.244.2.3:47368        ESTABLISHED 7/redis-server
+tcp        0      0 127.0.0.1:44210         127.0.0.1:6379          TIME_WAIT   -
+tcp        0      0 127.0.0.1:59960         127.0.0.1:6379          TIME_WAIT   -
+tcp        0      0 10.244.2.6:6379         10.244.1.2:49386        ESTABLISHED 7/redis-server
+tcp        0      0 127.0.0.1:58766         127.0.0.1:6379          TIME_WAIT   -
+tcp        0      0 127.0.0.1:55126         127.0.0.1:6379          TIME_WAIT   -
+tcp        0      0 127.0.0.1:44190         127.0.0.1:6379          TIME_WAIT   -
+tcp        0      0 127.0.0.1:44198         127.0.0.1:6379          TIME_WAIT   -
+tcp        0      0 127.0.0.1:44178         127.0.0.1:6379          TIME_WAIT   -
+tcp        0      0 127.0.0.1:55142         127.0.0.1:6379          TIME_WAIT   -
+tcp        0      0 127.0.0.1:58768         127.0.0.1:6379          TIME_WAIT   -
+tcp        0      0 127.0.0.1:58760         127.0.0.1:6379          TIME_WAIT   -
+tcp        0      0 10.244.2.6:6379         10.244.1.2:49374        ESTABLISHED 7/redis-server
+tcp        0      0 127.0.0.1:59946         127.0.0.1:6379          TIME_WAIT   -
+tcp        0      0 127.0.0.1:36762         127.0.0.1:6379          TIME_WAIT   -
+tcp        0      0 10.244.2.6:6379         10.244.1.6:47654        ESTABLISHED 7/redis-server
+tcp        0      0 127.0.0.1:44218         127.0.0.1:6379          TIME_WAIT   -
+tcp        0      0 127.0.0.1:36768         127.0.0.1:6379          TIME_WAIT   -
+tcp        0      0 127.0.0.1:58744         127.0.0.1:6379          TIME_WAIT   -
+tcp        0      0 127.0.0.1:52720         127.0.0.1:6379          TIME_WAIT   -
+tcp        0      0 127.0.0.1:44170         127.0.0.1:6379          TIME_WAIT   -
+tcp        0      0 127.0.0.1:52702         127.0.0.1:6379          TIME_WAIT   -
+tcp        0      0 127.0.0.1:59954         127.0.0.1:6379          TIME_WAIT   -
+tcp        0      0 127.0.0.1:44182         127.0.0.1:6379          TIME_WAIT   -
+tcp        0      0 127.0.0.1:52716         127.0.0.1:6379          TIME_WAIT   -
+tcp        0      0 127.0.0.1:52686         127.0.0.1:6379          TIME_WAIT   -
+
+--- E2Term SCTP Check ---
+sctp                :::36422                                        LISTEN      24/./e2             

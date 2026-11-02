@@ -1,0 +1,14 @@
+=== STEP 5C: RTMGR CAP_NET_RAW HARDENING ===
+Date: Tue Sep  1 11:26:28 BST 2026
+
+--- Security Context ---
+{"allowPrivilegeEscalation":false,"capabilities":{"drop":["NET_RAW"]}}
+
+--- Pod Status ---
+deployment-ricplt-rtmgr-85ccfbff49-wxwfl          1/1     Running   0             116s
+
+--- Effective Capabilities ---
+CapEff:	00000000a80405fb
+
+--- CAP_NET_RAW Verification ---
+deployment-ricplt-rtmgr-85ccfbff49-wxwfl -> CAP_NET_RAW NOT PRESENT

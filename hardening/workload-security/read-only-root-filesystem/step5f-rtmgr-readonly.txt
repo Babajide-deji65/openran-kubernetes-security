@@ -1,0 +1,41 @@
+=== STEP 5F: RTMGR READ-ONLY ROOT FILESYSTEM ===
+Date: Sun Sep  6 23:15:24 BST 2026
+
+--- Security Context ---
+{"allowPrivilegeEscalation":false,"capabilities":{"drop":["NET_RAW"]},"readOnlyRootFilesystem":true,"runAsGroup":1000,"runAsNonRoot":true,"runAsUser":1000,"seccompProfile":{"type":"RuntimeDefault"}}
+
+--- Pod Status ---
+deployment-ricplt-rtmgr-694f4c5c6d-ds5gv          1/1     Running   3 (28m ago)    22h
+
+--- Volume Mounts ---
+rtmgrcfg -> /cfg
+tmp-volume -> /tmp
+db-volume -> /db
+
+--- /tmp and /db Mounts ---
+/dev/sde on /tmp type ext4 (rw,relatime)
+/dev/sde on /db type ext4 (rw,relatime)
+
+--- /db/rt.json Ownership and State ---
+-rw-r--r-- 1 1000 1000 348 Sep  6 21:51 /db/rt.json
+{"XApps":[],"E2Ts":{"10.104.83.5:38000":{"name":"E2TERMINST","fqdn":"10.104.83.5:38000","ranlist":[]}},"MeidMap":null,"Pcs":[{"name":"SUBMAN","fqdn":"service-ricplt-submgr-rmr.ricplt","port":4560},{"name":"E2MAN","fqdn":"service-ricplt-e2mgr-rmr.ricplt","port":3801},{"name":"A1MEDIATOR","fqdn":"service-ricplt-a1mediator-rmr.ricplt","port":4562}]}
+--- E2Mgr E2T Registration State ---
+[{"e2tAddress":"10.104.83.5:38000","ranNames":[]}]
+--- Listening Ports ---
+tcp        0      0 0.0.0.0:4588            0.0.0.0:*               LISTEN      1/./rtmgr           
+tcp        0      0 0.0.0.0:4560            0.0.0.0:*               LISTEN      1/./rtmgr           
+tcp6       0      0 :::3800                 :::*                    LISTEN      1/./rtmgr           
+tcp6       0      0 :::8080                 :::*                    LISTEN      1/./rtmgr           
+
+--- Health Checks ---
+alive: 200
+ready: 200
+
+--- Root Filesystem Write Test ---
+touch: cannot touch '/readonly-test': Read-only file system
+
+--- /tmp Writable Exception Test ---
+/tmp writable: PASS
+
+--- /db Writable Exception Test ---
+/db writable: PASS

@@ -1,0 +1,27 @@
+=== STEP 6E: O1MEDIATOR NETWORKPOLICY VERIFICATION ===
+Date: Wed Sep  9 22:47:06 BST 2026
+
+--- Applied Policy ---
+NAME                          POD-SELECTOR            AGE
+restrict-o1mediator-ingress   app=ricplt-o1mediator   37m
+
+--- Positive: NETCONF TCP 830 ---
+PASS: NETCONF TCP 830 reachable
+
+--- Negative: A1Mediator -> O1Mediator TCP 8080 ---
+PASS: A1Mediator blocked from O1Mediator TCP 8080
+
+--- DBaaS egress preserved ---
+FAIL: No Redis connection observed
+
+--- Pod Health ---
+NAME                                            READY   STATUS    RESTARTS   AGE   IP            NODE           NOMINATED NODE   READINESS GATES
+deployment-ricplt-o1mediator-78ffb44dd6-zn5cs   1/1     Running   0          30m   10.244.1.14   minikube-m02   <none>           <none>
+
+--- DBaaS validation clarification ---
+Post-policy restart validation previously confirmed two Redis client
+connections from O1Mediator Pod IP 10.244.1.14 (commands: keys and command).
+The later CLIENT LIST snapshot contained no O1Mediator connection because
+the database connection is not permanently maintained. This does not
+indicate NetworkPolicy failure.
+RESULT: PASS - outbound DBaaS dependency was preserved after hardening.

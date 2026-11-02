@@ -1,0 +1,306 @@
+=== STEP 6B-4: DBaaS/REDIS DEPENDENCY CHECK ===
+Date: Tue Sep  8 05:27:08 BST 2026
+
+--- Deployment references ---
+        containers:
+        - envFrom:
+          - configMapRef:
+              name: configmap-ricplt-a1mediator-env
+          - configMapRef:
+              name: configmap-ricplt-dbaas-appconfig
+          image: nexus3.o-ran-sc.org:10002/o-ran-sc/ric-plt-a1:2.5.1
+          imagePullPolicy: IfNotPresent
+          livenessProbe:
+            failureThreshold: 3
+            httpGet:
+              path: /a1-p/healthcheck
+              port: http
+              scheme: HTTP
+--
+        - env:
+          - name: PLT_NAMESPACE
+            value: ricplt
+          envFrom:
+          - configMapRef:
+              name: configmap-ricplt-dbaas-appconfig
+          - configMapRef:
+              name: configmap-ricplt-alarmmanager-env
+          image: nexus3.o-ran-sc.org:10002/o-ran-sc/ric-plt-alarmmanager:0.5.11
+          imagePullPolicy: IfNotPresent
+          name: container-ricplt-alarmmanager
+          ports:
+          - containerPort: 4561
+            name: rmrroute
+--
+        containers:
+        - envFrom:
+          - configMapRef:
+              name: configmap-ricplt-appmgr-env
+          - configMapRef:
+              name: configmap-ricplt-dbaas-appconfig
+          image: nexus3.o-ran-sc.org:10002/o-ran-sc/ric-plt-appmgr:0.5.4
+          imagePullPolicy: IfNotPresent
+          name: container-ricplt-appmgr
+          ports:
+          - containerPort: 8080
+            name: http
+            protocol: TCP
+          - containerPort: 4561
+--
+        containers:
+        - envFrom:
+          - configMapRef:
+              name: configmap-ricplt-e2mgr-env
+          - configMapRef:
+              name: configmap-ricplt-dbaas-appconfig
+          image: nexus3.o-ran-sc.org:10002/o-ran-sc/ric-plt-e2mgr:5.4.19
+          imagePullPolicy: IfNotPresent
+          livenessProbe:
+            failureThreshold: 3
+            httpGet:
+              path: v1/health
+              port: 3800
+              scheme: HTTP
+--
+      spec:
+        automountServiceAccountToken: false
+        containers:
+        - envFrom:
+          - configMapRef:
+              name: configmap-ricplt-dbaas-appconfig
+          - configMapRef:
+              name: configmap-ricplt-o1mediator-env
+          image: nexus3.o-ran-sc.org:10002/o-ran-sc/ric-plt-o1:0.5.3
+          imagePullPolicy: IfNotPresent
+          name: container-ricplt-o1mediator
+          ports:
+          - containerPort: 9001
+            name: http-supervise
+--
+          - /run_rtmgr.sh
+          envFrom:
+          - configMapRef:
+              name: configmap-ricplt-rtmgr-env
+          - configMapRef:
+              name: configmap-ricplt-dbaas-appconfig
+          image: nexus3.o-ran-sc.org:10002/o-ran-sc/ric-plt-rtmgr:0.8.2
+          imagePullPolicy: IfNotPresent
+          livenessProbe:
+            failureThreshold: 3
+            httpGet:
+              path: ric/v1/health/alive
+              port: 8080
+              scheme: HTTP
+--
+          - /submgr
+          envFrom:
+          - configMapRef:
+              name: configmap-ricplt-submgr-env
+          - configMapRef:
+              name: configmap-ricplt-dbaas-appconfig
+          image: nexus3.o-ran-sc.org:10002/o-ran-sc/ric-plt-submgr:0.8.2
+          imagePullPolicy: IfNotPresent
+          livenessProbe:
+            failureThreshold: 3
+            httpGet:
+              path: ric/v1/health/alive
+              port: 8080
+              scheme: HTTP
+
+--- StatefulSet references ---
+items:
+- apiVersion: apps/v1
+  kind: StatefulSet
+  metadata:
+    annotations:
+      meta.helm.sh/release-name: r4-dbaas
+      meta.helm.sh/release-namespace: ricplt
+    creationTimestamp: "2026-06-27T22:03:20Z"
+    generation: 7
+    labels:
+      app: ricplt-dbaas
+      app.kubernetes.io/managed-by: Helm
+      chart: dbaas-2.0.0
+      heritage: Helm
+      release: r4-dbaas
+    name: statefulset-ricplt-dbaas-server
+    namespace: ricplt
+    resourceVersion: "662039"
+    uid: 6eb00794-172c-4054-91fe-4a86a035f856
+  spec:
+    persistentVolumeClaimRetentionPolicy:
+      whenDeleted: Retain
+      whenScaled: Retain
+    podManagementPolicy: OrderedReady
+    replicas: 1
+    revisionHistoryLimit: 10
+    selector:
+      matchLabels:
+        app: ricplt-dbaas
+        release: r4-dbaas
+    serviceName: service-ricplt-dbaas-tcp
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          app: ricplt-dbaas
+          release: r4-dbaas
+      spec:
+        automountServiceAccountToken: false
+        containers:
+        - args:
+          - /data/redis.conf
+          command:
+          - redis-server
+          envFrom:
+          - configMapRef:
+              name: configmap-ricplt-dbaas-appconfig
+          image: nexus3.o-ran-sc.org:10002/o-ran-sc/ric-plt-dbaas:0.5.5
+          imagePullPolicy: IfNotPresent
+          livenessProbe:
+            exec:
+              command:
+              - /bin/sh
+              - -c
+              - timeout 10 redis-cli -p 6379 ping
+            failureThreshold: 3
+            initialDelaySeconds: 15
+            periodSeconds: 5
+            successThreshold: 1
+            timeoutSeconds: 1
+          name: container-ricplt-dbaas-redis
+          ports:
+          - containerPort: 6379
+            name: redis
+            protocol: TCP
+          readinessProbe:
+            exec:
+              command:
+              - /bin/sh
+              - -c
+              - timeout 10 redis-cli -p 6379 ping
+            failureThreshold: 3
+            initialDelaySeconds: 15
+            periodSeconds: 5
+            successThreshold: 1
+            timeoutSeconds: 1
+          resources: {}
+          securityContext:
+            allowPrivilegeEscalation: false
+--
+        shareProcessNamespace: true
+        terminationGracePeriodSeconds: 5
+        volumes:
+        - configMap:
+            defaultMode: 420
+            name: configmap-ricplt-dbaas-config
+          name: config
+    updateStrategy:
+      type: RollingUpdate
+  status:
+    availableReplicas: 1
+    collisionCount: 0
+    currentReplicas: 1
+    currentRevision: statefulset-ricplt-dbaas-server-9948dfb48
+    observedGeneration: 7
+    readyReplicas: 1
+    replicas: 1
+    updateRevision: statefulset-ricplt-dbaas-server-9948dfb48
+    updatedReplicas: 1
+kind: List
+metadata:
+  resourceVersion: ""
+
+--- ConfigMap references ---
+    namespace: ricplt
+    resourceVersion: "7048"
+    uid: a3e86324-a579-44dd-bec3-aaf3d08d17fe
+- apiVersion: v1
+  data:
+    DBAAS_NODE_COUNT: "1"
+    DBAAS_SERVICE_HOST: service-ricplt-dbaas-tcp.ricplt
+    DBAAS_SERVICE_PORT: "6379"
+  kind: ConfigMap
+  metadata:
+    annotations:
+      meta.helm.sh/release-name: r4-dbaas
+      meta.helm.sh/release-namespace: ricplt
+    creationTimestamp: "2026-06-27T22:03:20Z"
+    labels:
+      app.kubernetes.io/managed-by: Helm
+    name: configmap-ricplt-dbaas-appconfig
+    namespace: ricplt
+    resourceVersion: "7009"
+    uid: 8ba30668-ccf9-4879-9d71-182c7b1e725f
+- apiVersion: v1
+  data:
+    redis.conf: |
+      dir "/data"
+      bind 0.0.0.0
+      loadmodule /usr/local/libexec/redismodule/libredismodule.so
+      protected-mode no
+  kind: ConfigMap
+  metadata:
+    annotations:
+      meta.helm.sh/release-name: r4-dbaas
+      meta.helm.sh/release-namespace: ricplt
+    creationTimestamp: "2026-06-27T22:03:20Z"
+    labels:
+      app: ricplt-dbaas
+      app.kubernetes.io/managed-by: Helm
+      chart: dbaas-2.0.0
+      heritage: Helm
+      release: r4-dbaas
+    name: configmap-ricplt-dbaas-config
+    namespace: ricplt
+    resourceVersion: "7008"
+    uid: 370d6ddb-85cf-426c-b779-dcadfe7ddf30
+- apiVersion: v1
+  data:
+    configuration.yaml: "logging:\n  logLevel:  \"info\"     \nhttp:\n  port: 3800\nrmr:\n
+      \ port: 3801\n  maxMsgSize: 65536\n\nroutingManager:\n  baseUrl: \"http://service-ricplt-rtmgr-http:3800/ric/v1/handles/\"\nnotificationResponseBuffer:
+      100\nbigRedButtonTimeoutSec: 5 \nmaxConnectionAttempts: 3 \nmaxRnibConnectionAttempts:
+--
+      \"nexus3.o-ran-sc.org:10002/o-ran-sc\"\n    name: ric-plt-a1\n    tag: 2.5.1\n
+      \ rmr_timeout_config:\n    a1_rcv_retry_times: 20\n    ins_del_no_resp_ttl:
+      5\n    ins_del_resp_ttl: 10\n\nappmgr:\n  image:\n   init:\n     registry: \"nexus3.o-ran-sc.org:10002/o-ran-sc\"\n
+      \    name: it-dep-init\n     tag: 0.0.1\n   appmgr:\n     registry: \"nexus3.o-ran-sc.org:10002/o-ran-sc\"\n
+      \    name: ric-plt-appmgr\n     tag: 0.5.4\n   chartmuseum:\n     registry:
+      \"docker.io\"\n     name: chartmuseum/chartmuseum\n     tag: v0.8.2\n\n\ndbaas:\n
+      \ image:\n    registry: \"nexus3.o-ran-sc.org:10002/o-ran-sc\"\n    name: ric-plt-dbaas\n
+      \   tag: 0.5.5\n  enableHighAvailability: false\n  # Enable pod anti affinity
+      only if you have more than 3 k8s nodes\n  enablePodAntiAffinity: false\n\n\ne2mgr:\n
+      \ image:\n    registry: \"nexus3.o-ran-sc.org:10002/o-ran-sc\"\n    name: ric-plt-e2mgr\n
+      \   tag: 5.4.19\n  privilegedmode: false\n  globalRicId:\n    ricId: \"AACCE\"\n
+      \   mcc: \"310\"\n    mnc: \"411\"\n  rnibWriter:\n    stateChangeMessageChannel:
+      RAN_CONNECTION_STATUS_CHANGE\n    ranManipulationMessageChannel: RAN_MANIPULATION\n\ne2term:\n
+      \ alpha:\n    image:\n      registry: \"nexus3.o-ran-sc.org:10002/o-ran-sc\"\n
+      \     name: ric-plt-e2\n      tag: 5.5.0\n    privilegedmode: false\n    hostnetworkmode:
+      false\n    env:\n      print: \"1\"\n      messagecollectorfile: \"/data/outgoing/\"\n
+      \   dataVolSize: 100Mi\n    storageClassName: local-storage\n    pizpub:\n      enabled:
+      false\n\n\njaegeradapter:\n  image:\n    registry: \"docker.io\"\n    name:
+      jaegertracing/all-in-one\n    tag: 1.12\n\n\n#rsm:\n#  image:\n#    init:\n#
+      \     name: redis\n#      tag: latest\n#      registry: \"docker.io\"\n#    main:\n#
+      \     name: ric-plt-resource-status-manager\n#      tag: 3.0.1\n#      registry:
+      \"nexus3.o-ran-sc.org:10002/o-ran-sc\"\n#  privilegedmode: false\n\nrtmgr:\n
+      \ image:\n    registry: \"nexus3.o-ran-sc.org:10002/o-ran-sc\"\n    name: ric-plt-rtmgr\n
+      \   tag: 0.8.2\n\nsubmgr:\n  image:\n    registry: \"nexus3.o-ran-sc.org:10002/o-ran-sc\"\n
+      \   name: ric-plt-submgr\n    tag: 0.8.2\n\nvespamgr:\n  image:\n    registry:
+      \"nexus3.o-ran-sc.org:10002/o-ran-sc\"\n    name: ric-plt-vespamgr\n    tag:
+      0.7.5\n  prometheusurl: \"http://r4-infrastructure-prometheus-server.ricplt\"\n\no1mediator:\n
+      \ image:\n    registry: \"nexus3.o-ran-sc.org:10002/o-ran-sc\"\n    name: ric-plt-o1\n
+--
+        "hostAddr": "service-ricplt-rtmgr-http"
+        "port"    : 3800
+        "baseUrl" : "/ric/v1"
+      "db":
+        "sessionNamespace": "XMSession"
+        "host": ":6379"
+        "prot": "tcp"
+        "maxIdle": 80
+        "maxActive": 12000
+      "controls":
+        "e2tSubReqTimeout_ms": 2000
+        "e2tSubDelReqTime_ms": 2000
+        "e2tRecvMsgTimeout_ms": 2000
+        "e2tMaxSubReqTryCount": 2

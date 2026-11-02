@@ -1,0 +1,93 @@
+========== STEP 10: OPERATIONAL/PERFORMANCE EVALUATION ==========
+Date: Mon Sep 14 01:10:49 BST 2026
+
+========== CLUSTER NODES ==========
+NAME           STATUS   ROLES           AGE   VERSION   INTERNAL-IP    EXTERNAL-IP   OS-IMAGE                         KERNEL-VERSION                      CONTAINER-RUNTIME
+minikube       Ready    control-plane   83d   v1.29.0   192.168.49.2   <none>        Debian GNU/Linux 12 (bookworm)   6.6.114.1-microsoft-standard-WSL2   docker://29.2.1
+minikube-m02   Ready    <none>          83d   v1.29.0   192.168.49.3   <none>        Debian GNU/Linux 12 (bookworm)   6.6.114.1-microsoft-standard-WSL2   docker://29.2.1
+minikube-m03   Ready    <none>          83d   v1.29.0   192.168.49.4   <none>        Debian GNU/Linux 12 (bookworm)   6.6.114.1-microsoft-standard-WSL2   docker://29.2.1
+
+========== RIC POD STATUS ==========
+NAME                                              READY   STATUS    RESTARTS         AGE     IP           NODE           NOMINATED NODE   READINESS GATES
+deployment-ricplt-a1mediator-6cf77d47d9-sxqd4     1/1     Running   18 (7h36m ago)   8d      10.244.2.3   minikube-m03   <none>           <none>
+deployment-ricplt-alarmmanager-59f4cc855-k7h6r    1/1     Running   7 (7h36m ago)    5d18h   10.244.1.5   minikube-m02   <none>           <none>
+deployment-ricplt-appmgr-86bdfb6848-rsxsb         1/1     Running   6 (7h36m ago)    5d2h    10.244.2.8   minikube-m03   <none>           <none>
+deployment-ricplt-e2mgr-6d75b679bf-b7jgt          1/1     Running   53 (3h52m ago)   12d     10.244.1.2   minikube-m02   <none>           <none>
+deployment-ricplt-e2term-alpha-6cdfd9ccf7-vvb7g   1/1     Running   21 (3h50m ago)   12d     10.244.2.4   minikube-m03   <none>           <none>
+deployment-ricplt-o1mediator-78ffb44dd6-zn5cs     1/1     Running   5 (7h36m ago)    4d2h    10.244.1.3   minikube-m02   <none>           <none>
+deployment-ricplt-rtmgr-99d7557b-7l7pf            1/1     Running   9 (7h36m ago)    4d6h    10.244.1.6   minikube-m02   <none>           <none>
+deployment-ricplt-submgr-7cb45cfbc8-kkmlw         1/1     Running   20 (3h51m ago)   8d      10.244.1.4   minikube-m02   <none>           <none>
+deployment-ricplt-vespamgr-579cd6c5bb-2lksw       1/1     Running   14 (7h36m ago)   12d     10.244.2.5   minikube-m03   <none>           <none>
+statefulset-ricplt-dbaas-server-0                 1/1     Running   10 (7h36m ago)   8d      10.244.2.6   minikube-m03   <none>           <none>
+
+========== RIC POD RESTART COUNTS ==========
+POD                                               READY   RESTARTS   STATUS    NODE
+deployment-ricplt-a1mediator-6cf77d47d9-sxqd4     true    18         Running   minikube-m03
+deployment-ricplt-alarmmanager-59f4cc855-k7h6r    true    7          Running   minikube-m02
+deployment-ricplt-appmgr-86bdfb6848-rsxsb         true    6          Running   minikube-m03
+deployment-ricplt-e2mgr-6d75b679bf-b7jgt          true    53         Running   minikube-m02
+deployment-ricplt-e2term-alpha-6cdfd9ccf7-vvb7g   true    21         Running   minikube-m03
+deployment-ricplt-o1mediator-78ffb44dd6-zn5cs     true    5          Running   minikube-m02
+deployment-ricplt-rtmgr-99d7557b-7l7pf            true    9          Running   minikube-m02
+deployment-ricplt-submgr-7cb45cfbc8-kkmlw         true    20         Running   minikube-m02
+deployment-ricplt-vespamgr-579cd6c5bb-2lksw       true    14         Running   minikube-m03
+statefulset-ricplt-dbaas-server-0                 true    10         Running   minikube-m03
+
+========== RIC SERVICES ==========
+NAME                                     TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)                      AGE
+service-ricplt-a1mediator-http           ClusterIP   10.106.35.130    <none>        10000/TCP                    78d
+service-ricplt-a1mediator-rmr            ClusterIP   10.111.108.13    <none>        4561/TCP,4562/TCP            78d
+service-ricplt-alarmmanager-http         ClusterIP   10.100.87.106    <none>        8080/TCP                     78d
+service-ricplt-alarmmanager-rmr          ClusterIP   10.98.248.248    <none>        4560/TCP,4561/TCP            78d
+service-ricplt-appmgr-http               ClusterIP   10.104.4.214     <none>        8080/TCP                     78d
+service-ricplt-appmgr-rmr                ClusterIP   10.106.141.2     <none>        4561/TCP,4560/TCP            78d
+service-ricplt-dbaas-tcp                 ClusterIP   None             <none>        6379/TCP                     78d
+service-ricplt-e2mgr-http                ClusterIP   10.102.46.52     <none>        3800/TCP                     78d
+service-ricplt-e2mgr-rmr                 ClusterIP   10.97.36.0       <none>        4561/TCP,3801/TCP            78d
+service-ricplt-e2term-prometheus-alpha   ClusterIP   10.108.239.176   <none>        8088/TCP                     78d
+service-ricplt-e2term-rmr-alpha          ClusterIP   10.104.83.5      <none>        4561/TCP,38000/TCP           78d
+service-ricplt-e2term-sctp-alpha         NodePort    10.105.143.165   <none>        36422:32222/SCTP             78d
+service-ricplt-o1mediator-http           ClusterIP   10.97.128.58     <none>        9001/TCP,8080/TCP,3000/TCP   78d
+service-ricplt-o1mediator-tcp-netconf    NodePort    10.109.141.242   <none>        830:30830/TCP                78d
+service-ricplt-rtmgr-http                ClusterIP   10.100.148.57    <none>        3800/TCP                     78d
+service-ricplt-rtmgr-rmr                 ClusterIP   10.96.65.130     <none>        4561/TCP,4560/TCP            78d
+service-ricplt-submgr-http               ClusterIP   None             <none>        3800/TCP                     78d
+service-ricplt-submgr-rmr                ClusterIP   None             <none>        4560/TCP,4561/TCP            78d
+service-ricplt-vespamgr-http             ClusterIP   10.97.52.64      <none>        8080/TCP,9095/TCP            78d
+
+========== NODE RESOURCE USAGE ==========
+NAME           CPU(cores)   CPU(%)   MEMORY(bytes)   MEMORY(%)   
+minikube       300m         3%       985Mi           8%          
+minikube-m02   120m         1%       459Mi           3%          
+minikube-m03   234m         2%       700Mi           5%          
+
+========== RIC POD RESOURCE USAGE ==========
+POD                                               NAME                            CPU(cores)   MEMORY(bytes)   
+deployment-ricplt-a1mediator-6cf77d47d9-sxqd4     container-ricplt-a1mediator     3m           90Mi            
+deployment-ricplt-alarmmanager-59f4cc855-k7h6r    container-ricplt-alarmmanager   1m           22Mi            
+deployment-ricplt-appmgr-86bdfb6848-rsxsb         container-ricplt-appmgr         1m           19Mi            
+deployment-ricplt-e2mgr-6d75b679bf-b7jgt          container-ricplt-e2mgr          1m           7Mi             
+deployment-ricplt-e2term-alpha-6cdfd9ccf7-vvb7g   container-ricplt-e2term         10m          18Mi            
+deployment-ricplt-o1mediator-78ffb44dd6-zn5cs     container-ricplt-o1mediator     3m           65Mi            
+deployment-ricplt-rtmgr-99d7557b-7l7pf            container-ricplt-rtmgr          1m           27Mi            
+deployment-ricplt-submgr-7cb45cfbc8-kkmlw         container-ricplt-submgr         1m           14Mi            
+deployment-ricplt-vespamgr-579cd6c5bb-2lksw       container-ricplt-vespamgr       3m           39Mi            
+statefulset-ricplt-dbaas-server-0                 container-ricplt-dbaas-redis    36m          5Mi             
+=== RESOURCE SNAPSHOT 3 ===
+Date: Sat Sep 19 00:25:54 BST 2026
+NAME                                              CPU(cores)   MEMORY(bytes)   
+deployment-ricplt-a1mediator-6cf77d47d9-sxqd4     2m           88Mi            
+deployment-ricplt-alarmmanager-59f4cc855-k7h6r    1m           22Mi            
+deployment-ricplt-appmgr-86bdfb6848-rsxsb         1m           19Mi            
+deployment-ricplt-e2mgr-6d75b679bf-b7jgt          1m           20Mi            
+deployment-ricplt-e2term-alpha-6cdfd9ccf7-vvb7g   8m           18Mi            
+deployment-ricplt-o1mediator-78ffb44dd6-zn5cs     3m           66Mi            
+deployment-ricplt-rtmgr-99d7557b-7l7pf            1m           13Mi            
+deployment-ricplt-submgr-7cb45cfbc8-kkmlw         1m           14Mi            
+deployment-ricplt-vespamgr-579cd6c5bb-2lksw       3m           41Mi            
+statefulset-ricplt-dbaas-server-0                 22m          1Mi             
+
+NAME           CPU(cores)   CPU(%)   MEMORY(bytes)   MEMORY(%)   
+minikube       278m         3%       927Mi           7%          
+minikube-m02   110m         1%       478Mi           3%          
+minikube-m03   210m         2%       668Mi           5%          

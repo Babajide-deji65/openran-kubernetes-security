@@ -1,0 +1,523 @@
+=== BASELINE HELM VALUES ===
+Date: Mon Aug 10 23:10:32 BST 2026
+
+--- r4-a1mediator ---
+COMPUTED VALUES:
+a1mediator:
+  image:
+    name: ric-plt-a1
+    registry: nexus3.o-ran-sc.org:10002/o-ran-sc
+    tag: 2.5.1
+  imagePullPolicy: IfNotPresent
+  loglevel: INFO
+  replicaCount: 1
+  rmr_timeout_config:
+    a1_rcv_retry_times: 20
+    ins_del_no_resp_ttl: 5
+    ins_del_resp_ttl: 10
+alarmmanager:
+  image:
+    name: ric-plt-alarmmanager
+    registry: nexus3.o-ran-sc.org:10002/o-ran-sc
+    tag: 0.5.11
+appmgr:
+  image:
+    appmgr:
+      name: ric-plt-appmgr
+      registry: nexus3.o-ran-sc.org:10002/o-ran-sc
+      tag: 0.5.4
+    chartmuseum:
+      name: chartmuseum/chartmuseum
+      registry: docker.io
+      tag: v0.8.2
+    init:
+      name: it-dep-init
+      registry: nexus3.o-ran-sc.org:10002/o-ran-sc
+      tag: 0.0.1
+common:
+  releasePrefix: r4
+dbaas:
+  enableHighAvailability: false
+  enablePodAntiAffinity: false
+  image:
+    name: ric-plt-dbaas
+    registry: nexus3.o-ran-sc.org:10002/o-ran-sc
+    tag: 0.5.5
+e2mgr:
+  globalRicId:
+    mcc: "310"
+    mnc: "411"
+    ricId: AACCE
+  image:
+    name: ric-plt-e2mgr
+    registry: nexus3.o-ran-sc.org:10002/o-ran-sc
+    tag: 5.4.19
+
+--- r4-alarmmanager ---
+COMPUTED VALUES:
+a1mediator:
+  image:
+    name: ric-plt-a1
+    registry: nexus3.o-ran-sc.org:10002/o-ran-sc
+    tag: 2.5.1
+  rmr_timeout_config:
+    a1_rcv_retry_times: 20
+    ins_del_no_resp_ttl: 5
+    ins_del_resp_ttl: 10
+alarmmanager:
+  dataVolSize: 100Mi
+  image:
+    name: ric-plt-alarmmanager
+    registry: nexus3.o-ran-sc.org:10002/o-ran-sc
+    tag: 0.5.11
+  imagePullPolicy: IfNotPresent
+  replicaCount: 1
+  storageClassName: local-storage
+appmgr:
+  image:
+    appmgr:
+      name: ric-plt-appmgr
+      registry: nexus3.o-ran-sc.org:10002/o-ran-sc
+      tag: 0.5.4
+    chartmuseum:
+      name: chartmuseum/chartmuseum
+      registry: docker.io
+      tag: v0.8.2
+    init:
+      name: it-dep-init
+      registry: nexus3.o-ran-sc.org:10002/o-ran-sc
+      tag: 0.0.1
+common:
+  releasePrefix: r4
+dbaas:
+  enableHighAvailability: false
+  enablePodAntiAffinity: false
+  image:
+    name: ric-plt-dbaas
+    registry: nexus3.o-ran-sc.org:10002/o-ran-sc
+    tag: 0.5.5
+e2mgr:
+  globalRicId:
+    mcc: "310"
+    mnc: "411"
+    ricId: AACCE
+  image:
+    name: ric-plt-e2mgr
+    registry: nexus3.o-ran-sc.org:10002/o-ran-sc
+
+--- r4-appmgr ---
+COMPUTED VALUES:
+a1mediator:
+  image:
+    name: ric-plt-a1
+    registry: nexus3.o-ran-sc.org:10002/o-ran-sc
+    tag: 2.5.1
+  rmr_timeout_config:
+    a1_rcv_retry_times: 20
+    ins_del_no_resp_ttl: 5
+    ins_del_resp_ttl: 10
+alarmmanager:
+  image:
+    name: ric-plt-alarmmanager
+    registry: nexus3.o-ran-sc.org:10002/o-ran-sc
+    tag: 0.5.11
+appmgr:
+  appcertpath: /opt/ric/certificates
+  appconfigpath: /opt/ric/config
+  appsecretpath: /opt/ric/secret
+  image:
+    appmgr:
+      name: ric-plt-appmgr
+      registry: nexus3.o-ran-sc.org:10002/o-ran-sc
+      tag: 0.5.4
+    chartmuseum:
+      name: chartmuseum/chartmuseum
+      registry: docker.io
+      tag: v0.8.2
+    init:
+      name: it-dep-init
+      registry: nexus3.o-ran-sc.org:10002/o-ran-sc
+      tag: 0.0.1
+  imagePullPolicy: IfNotPresent
+  replicaCount: 1
+  reponame: helm-repo
+  tillerkey: ricxapp
+common:
+  k8sAPIHost: https://kubernetes.default.svc.cluster.local/
+  releasePrefix: r4
+  tillers:
+    ricxapp:
+      deployNameSpace: ricinfra
+      image:
+        tiller:
+          name: kubernetes-helm/tiller
+          registry: gcr.io
+          tag: v2.12.3
+        tillerTLSSecrets:
+          name: it-dep-secret
+          registry: nexus3.o-ran-sc.org:10002/o-ran-sc
+
+--- r4-dbaas ---
+COMPUTED VALUES:
+a1mediator:
+  image:
+    name: ric-plt-a1
+    registry: nexus3.o-ran-sc.org:10002/o-ran-sc
+    tag: 2.5.1
+  rmr_timeout_config:
+    a1_rcv_retry_times: 20
+    ins_del_no_resp_ttl: 5
+    ins_del_resp_ttl: 10
+alarmmanager:
+  image:
+    name: ric-plt-alarmmanager
+    registry: nexus3.o-ran-sc.org:10002/o-ran-sc
+    tag: 0.5.11
+appmgr:
+  image:
+    appmgr:
+      name: ric-plt-appmgr
+      registry: nexus3.o-ran-sc.org:10002/o-ran-sc
+      tag: 0.5.4
+    chartmuseum:
+      name: chartmuseum/chartmuseum
+      registry: docker.io
+      tag: v0.8.2
+    init:
+      name: it-dep-init
+      registry: nexus3.o-ran-sc.org:10002/o-ran-sc
+      tag: 0.0.1
+common:
+  releasePrefix: r4
+dbaas:
+  enableHighAvailability: false
+  enablePodAntiAffinity: false
+  haReplicas: 3
+  image:
+    name: ric-plt-dbaas
+    registry: nexus3.o-ran-sc.org:10002/o-ran-sc
+    tag: 0.5.5
+  imagePullPolicy: IfNotPresent
+  probeTimeout: 10
+  probeTimeoutCommand: timeout
+  redis:
+    ha_config:
+      loadmodule: /usr/local/libexec/redismodule/libredismodule.so
+      maxmemory: "0"
+      maxmemory-policy: volatile-lru
+      min-slaves-max-lag: 5
+      min-slaves-to-write: 1
+      protected-mode: "no"
+
+--- r4-e2mgr ---
+COMPUTED VALUES:
+a1mediator:
+  image:
+    name: ric-plt-a1
+    registry: nexus3.o-ran-sc.org:10002/o-ran-sc
+    tag: 2.5.1
+  rmr_timeout_config:
+    a1_rcv_retry_times: 20
+    ins_del_no_resp_ttl: 5
+    ins_del_resp_ttl: 10
+alarmmanager:
+  image:
+    name: ric-plt-alarmmanager
+    registry: nexus3.o-ran-sc.org:10002/o-ran-sc
+    tag: 0.5.11
+appmgr:
+  image:
+    appmgr:
+      name: ric-plt-appmgr
+      registry: nexus3.o-ran-sc.org:10002/o-ran-sc
+      tag: 0.5.4
+    chartmuseum:
+      name: chartmuseum/chartmuseum
+      registry: docker.io
+      tag: v0.8.2
+    init:
+      name: it-dep-init
+      registry: nexus3.o-ran-sc.org:10002/o-ran-sc
+      tag: 0.0.1
+common:
+  releasePrefix: r4
+dbaas:
+  enableHighAvailability: false
+  enablePodAntiAffinity: false
+  image:
+    name: ric-plt-dbaas
+    registry: nexus3.o-ran-sc.org:10002/o-ran-sc
+    tag: 0.5.5
+e2mgr:
+  globalRicId:
+    mcc: "310"
+    mnc: "411"
+    plmnId: 131014
+    ricId: AACCE
+    ricNearRtId: 556670
+  image:
+    name: ric-plt-e2mgr
+    registry: nexus3.o-ran-sc.org:10002/o-ran-sc
+    tag: 5.4.19
+  imagePullPolicy: IfNotPresent
+
+--- r4-e2term ---
+COMPUTED VALUES:
+a1mediator:
+  image:
+    name: ric-plt-a1
+    registry: nexus3.o-ran-sc.org:10002/o-ran-sc
+    tag: 2.5.1
+  rmr_timeout_config:
+    a1_rcv_retry_times: 20
+    ins_del_no_resp_ttl: 5
+    ins_del_resp_ttl: 10
+alarmmanager:
+  image:
+    name: ric-plt-alarmmanager
+    registry: nexus3.o-ran-sc.org:10002/o-ran-sc
+    tag: 0.5.11
+appmgr:
+  image:
+    appmgr:
+      name: ric-plt-appmgr
+      registry: nexus3.o-ran-sc.org:10002/o-ran-sc
+      tag: 0.5.4
+    chartmuseum:
+      name: chartmuseum/chartmuseum
+      registry: docker.io
+      tag: v0.8.2
+    init:
+      name: it-dep-init
+      registry: nexus3.o-ran-sc.org:10002/o-ran-sc
+      tag: 0.0.1
+common:
+  releasePrefix: r4
+common_env_variables:
+  ConfigMapName: /etc/config/log-level
+  ServiceName: RIC_E2_TERM
+dbaas:
+  enableHighAvailability: false
+  enablePodAntiAffinity: false
+  image:
+    name: ric-plt-dbaas
+    registry: nexus3.o-ran-sc.org:10002/o-ran-sc
+    tag: 0.5.5
+e2mgr:
+  globalRicId:
+    mcc: "310"
+    mnc: "411"
+    ricId: AACCE
+  image:
+    name: ric-plt-e2mgr
+    registry: nexus3.o-ran-sc.org:10002/o-ran-sc
+    tag: 5.4.19
+
+--- r4-o1mediator ---
+COMPUTED VALUES:
+a1mediator:
+  image:
+    name: ric-plt-a1
+    registry: nexus3.o-ran-sc.org:10002/o-ran-sc
+    tag: 2.5.1
+  rmr_timeout_config:
+    a1_rcv_retry_times: 20
+    ins_del_no_resp_ttl: 5
+    ins_del_resp_ttl: 10
+alarmmanager:
+  image:
+    name: ric-plt-alarmmanager
+    registry: nexus3.o-ran-sc.org:10002/o-ran-sc
+    tag: 0.5.11
+appmgr:
+  image:
+    appmgr:
+      name: ric-plt-appmgr
+      registry: nexus3.o-ran-sc.org:10002/o-ran-sc
+      tag: 0.5.4
+    chartmuseum:
+      name: chartmuseum/chartmuseum
+      registry: docker.io
+      tag: v0.8.2
+    init:
+      name: it-dep-init
+      registry: nexus3.o-ran-sc.org:10002/o-ran-sc
+      tag: 0.0.1
+common:
+  releasePrefix: r4
+dbaas:
+  enableHighAvailability: false
+  enablePodAntiAffinity: false
+  image:
+    name: ric-plt-dbaas
+    registry: nexus3.o-ran-sc.org:10002/o-ran-sc
+    tag: 0.5.5
+e2mgr:
+  globalRicId:
+    mcc: "310"
+    mnc: "411"
+    ricId: AACCE
+  image:
+    name: ric-plt-e2mgr
+    registry: nexus3.o-ran-sc.org:10002/o-ran-sc
+    tag: 5.4.19
+  privilegedmode: false
+  rnibWriter:
+    ranManipulationMessageChannel: RAN_MANIPULATION
+
+--- r4-rtmgr ---
+COMPUTED VALUES:
+a1mediator:
+  image:
+    name: ric-plt-a1
+    registry: nexus3.o-ran-sc.org:10002/o-ran-sc
+    tag: 2.5.1
+  rmr_timeout_config:
+    a1_rcv_retry_times: 20
+    ins_del_no_resp_ttl: 5
+    ins_del_resp_ttl: 10
+alarmmanager:
+  image:
+    name: ric-plt-alarmmanager
+    registry: nexus3.o-ran-sc.org:10002/o-ran-sc
+    tag: 0.5.11
+appmgr:
+  image:
+    appmgr:
+      name: ric-plt-appmgr
+      registry: nexus3.o-ran-sc.org:10002/o-ran-sc
+      tag: 0.5.4
+    chartmuseum:
+      name: chartmuseum/chartmuseum
+      registry: docker.io
+      tag: v0.8.2
+    init:
+      name: it-dep-init
+      registry: nexus3.o-ran-sc.org:10002/o-ran-sc
+      tag: 0.0.1
+common:
+  releasePrefix: r4
+dbaas:
+  enableHighAvailability: false
+  enablePodAntiAffinity: false
+  image:
+    name: ric-plt-dbaas
+    registry: nexus3.o-ran-sc.org:10002/o-ran-sc
+    tag: 0.5.5
+e2mgr:
+  globalRicId:
+    mcc: "310"
+    mnc: "411"
+    ricId: AACCE
+  image:
+    name: ric-plt-e2mgr
+    registry: nexus3.o-ran-sc.org:10002/o-ran-sc
+    tag: 5.4.19
+  privilegedmode: false
+  rnibWriter:
+    ranManipulationMessageChannel: RAN_MANIPULATION
+
+--- r4-submgr ---
+COMPUTED VALUES:
+a1mediator:
+  image:
+    name: ric-plt-a1
+    registry: nexus3.o-ran-sc.org:10002/o-ran-sc
+    tag: 2.5.1
+  rmr_timeout_config:
+    a1_rcv_retry_times: 20
+    ins_del_no_resp_ttl: 5
+    ins_del_resp_ttl: 10
+alarmmanager:
+  image:
+    name: ric-plt-alarmmanager
+    registry: nexus3.o-ran-sc.org:10002/o-ran-sc
+    tag: 0.5.11
+appmgr:
+  image:
+    appmgr:
+      name: ric-plt-appmgr
+      registry: nexus3.o-ran-sc.org:10002/o-ran-sc
+      tag: 0.5.4
+    chartmuseum:
+      name: chartmuseum/chartmuseum
+      registry: docker.io
+      tag: v0.8.2
+    init:
+      name: it-dep-init
+      registry: nexus3.o-ran-sc.org:10002/o-ran-sc
+      tag: 0.0.1
+common:
+  releasePrefix: r4
+dbaas:
+  enableHighAvailability: false
+  enablePodAntiAffinity: false
+  image:
+    name: ric-plt-dbaas
+    registry: nexus3.o-ran-sc.org:10002/o-ran-sc
+    tag: 0.5.5
+e2mgr:
+  globalRicId:
+    mcc: "310"
+    mnc: "411"
+    ricId: AACCE
+  image:
+    name: ric-plt-e2mgr
+    registry: nexus3.o-ran-sc.org:10002/o-ran-sc
+    tag: 5.4.19
+  privilegedmode: false
+  rnibWriter:
+    ranManipulationMessageChannel: RAN_MANIPULATION
+
+--- r4-vespamgr ---
+COMPUTED VALUES:
+a1mediator:
+  image:
+    name: ric-plt-a1
+    registry: nexus3.o-ran-sc.org:10002/o-ran-sc
+    tag: 2.5.1
+  rmr_timeout_config:
+    a1_rcv_retry_times: 20
+    ins_del_no_resp_ttl: 5
+    ins_del_resp_ttl: 10
+alarmmanager:
+  image:
+    name: ric-plt-alarmmanager
+    registry: nexus3.o-ran-sc.org:10002/o-ran-sc
+    tag: 0.5.11
+appmgr:
+  image:
+    appmgr:
+      name: ric-plt-appmgr
+      registry: nexus3.o-ran-sc.org:10002/o-ran-sc
+      tag: 0.5.4
+    chartmuseum:
+      name: chartmuseum/chartmuseum
+      registry: docker.io
+      tag: v0.8.2
+    init:
+      name: it-dep-init
+      registry: nexus3.o-ran-sc.org:10002/o-ran-sc
+      tag: 0.0.1
+common:
+  releasePrefix: r4
+dbaas:
+  enableHighAvailability: false
+  enablePodAntiAffinity: false
+  image:
+    name: ric-plt-dbaas
+    registry: nexus3.o-ran-sc.org:10002/o-ran-sc
+    tag: 0.5.5
+e2mgr:
+  globalRicId:
+    mcc: "310"
+    mnc: "411"
+    ricId: AACCE
+  image:
+    name: ric-plt-e2mgr
+    registry: nexus3.o-ran-sc.org:10002/o-ran-sc
+    tag: 5.4.19
+  privilegedmode: false
+  rnibWriter:
+    ranManipulationMessageChannel: RAN_MANIPULATION
+

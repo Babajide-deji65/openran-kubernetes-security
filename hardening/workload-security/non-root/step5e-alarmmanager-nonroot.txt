@@ -1,0 +1,17 @@
+=== STEP 5E: ALARMMANAGER NON-ROOT HARDENING ===
+Date: Wed Sep  2 12:52:21 BST 2026
+
+--- Security Context ---
+{"allowPrivilegeEscalation":false,"capabilities":{"drop":["NET_RAW"]},"runAsGroup":1000,"runAsNonRoot":true,"runAsUser":1000,"seccompProfile":{"type":"RuntimeDefault"}}
+
+--- Runtime User ---
+uid=1000 gid=1000 groups=1000
+
+--- Runtime File ---
+-rw-r--r-- 1 1000 1000 33 Sep  2 11:43 /tmp/alarm.rt
+newrt|start
+rte|13111|
+newrt|end
+
+--- Pod Status ---
+deployment-ricplt-alarmmanager-574cb69856-btfrb   1/1     Running   0              8m31s

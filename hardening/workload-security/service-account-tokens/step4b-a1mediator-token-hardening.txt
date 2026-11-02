@@ -1,0 +1,21 @@
+=== STEP 4B: A1MEDIATOR TOKEN HARDENING ===
+Date: Sun Aug 23 23:08:35 BST 2026
+
+--- Deployment Setting ---
+false
+
+--- Token Presence ---
+Token: NOT PRESENT
+
+--- Pod Health ---
+deployment-ricplt-a1mediator-79f866d8bf-75ktp     1/1     Running   0                27m
+
+--- Application Health ---
+::ffff:10.244.2.1 - - [2026-08-23 22:08:07] "GET /a1-p/healthcheck HTTP/1.1" 200 110 0.003853
+::ffff:10.244.2.1 - - [2026-08-23 22:08:17] "GET /a1-p/healthcheck HTTP/1.1" 200 110 0.001325
+::ffff:10.244.2.1 - - [2026-08-23 22:08:17] "GET /a1-p/healthcheck HTTP/1.1" 200 110 0.001152
+::ffff:10.244.2.1 - - [2026-08-23 22:08:27] "GET /a1-p/healthcheck HTTP/1.1" 200 110 0.001388
+::ffff:10.244.2.1 - - [2026-08-23 22:08:27] "GET /a1-p/healthcheck HTTP/1.1" 200 110 0.001308
+
+--- Connectivity from e2term ---
+404

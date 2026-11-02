@@ -1,0 +1,11 @@
+=== STEP 5B: RTMGR allowPrivilegeEscalation HARDENING ===
+Date: Sun Aug 30 14:42:20 BST 2026
+
+--- Deployment Security Context ---
+{"allowPrivilegeEscalation":false}
+
+--- Pod Status ---
+deployment-ricplt-rtmgr-85f568dcf5-4xr9k          1/1     Running   0               5m12s
+
+--- Runtime User ---
+uid=0(root) gid=0(root) groups=0(root)

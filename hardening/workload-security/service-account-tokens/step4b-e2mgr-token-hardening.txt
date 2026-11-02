@@ -1,0 +1,14 @@
+=== STEP 4B: E2MGR TOKEN HARDENING ===
+Date: Sun Aug 23 23:17:22 BST 2026
+
+--- Deployment Setting ---
+false
+
+--- Token Presence ---
+Token: NOT PRESENT
+
+--- Pod Health ---
+deployment-ricplt-e2mgr-7449646d7f-9xjhn          1/1     Running   0                5m2s
+
+--- Connectivity from e2term ---
+404

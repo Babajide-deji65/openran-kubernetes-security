@@ -1,0 +1,15 @@
+=== STEP 5B: APPMGR allowPrivilegeEscalation HARDENING ===
+Date: Sun Aug 30 15:48:18 BST 2026
+
+--- Main and Init Container Security Contexts ---
+Main: {"allowPrivilegeEscalation":false}
+Init: {"allowPrivilegeEscalation":false}
+
+--- Pod Status ---
+deployment-ricplt-appmgr-774c6b5bff-dbmbx         1/1     Running   0             6m13s
+
+--- Init Container Status ---
+{"terminated":{"containerID":"docker://9844803aee78389cc47f839eb64cccbc0f70ab72f7823c934320c15054fcbea0","exitCode":0,"finishedAt":"2026-08-30T14:42:08Z","reason":"Completed","startedAt":"2026-08-30T14:42:07Z"}}
+
+--- Main Container Runtime User ---
+uid=0(root) gid=0(root) groups=0(root)

@@ -1,0 +1,32 @@
+=== STEP 5B: CONSOLIDATED allowPrivilegeEscalation VERIFICATION ===
+Date: Sun Aug 30 15:50:10 BST 2026
+
+--- Deployments ---
+deployment-ricplt-a1mediator -> false
+deployment-ricplt-alarmmanager -> false
+deployment-ricplt-appmgr -> false
+deployment-ricplt-e2mgr -> false
+deployment-ricplt-e2term-alpha -> false
+deployment-ricplt-o1mediator -> false
+deployment-ricplt-rtmgr -> false
+deployment-ricplt-submgr -> false
+deployment-ricplt-vespamgr -> false
+
+--- DBAAS StatefulSet ---
+statefulset-ricplt-dbaas-server -> false
+
+--- APPMGR Init Container ---
+container-ricplt-appmgr-copy-tiller-secret -> false
+
+--- Current RIC Pod Health ---
+NAME                                              READY   STATUS    RESTARTS      AGE
+deployment-ricplt-a1mediator-7794b784c9-vw9lj     1/1     Running   1 (90m ago)   153m
+deployment-ricplt-alarmmanager-6b65df6cf9-2qfsp   1/1     Running   0             26m
+deployment-ricplt-appmgr-774c6b5bff-dbmbx         1/1     Running   0             8m6s
+deployment-ricplt-e2mgr-866df89c9-tzf5f           1/1     Running   1 (90m ago)   143m
+deployment-ricplt-e2term-alpha-5fc968b7f5-5kff4   1/1     Running   0             137m
+deployment-ricplt-o1mediator-7d4459bdd9-d9zmc     1/1     Running   0             22m
+deployment-ricplt-rtmgr-85f568dcf5-4xr9k          1/1     Running   0             73m
+deployment-ricplt-submgr-7cf4f79cdb-khnzc         1/1     Running   0             63m
+deployment-ricplt-vespamgr-5c8fcdd88d-nb22z       1/1     Running   0             31m
+statefulset-ricplt-dbaas-server-0                 1/1     Running   0             91m

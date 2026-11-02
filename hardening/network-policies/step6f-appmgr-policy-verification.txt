@@ -1,0 +1,32 @@
+=== STEP 6F: APPMGR NETWORKPOLICY VERIFICATION ===
+Date: Wed Sep  9 23:17:46 BST 2026
+
+--- Applied Policy ---
+NAME                      POD-SELECTOR        AGE
+restrict-appmgr-ingress   app=ricplt-appmgr   6m41s
+
+--- Positive: O1Mediator -> AppMgr TCP 8080 ---
+PASS: O1Mediator reached AppMgr TCP 8080
+
+--- Positive: RTMgr -> AppMgr TCP 8080 ---
+PASS: RTMgr reached AppMgr TCP 8080
+
+--- Positive: VESPA -> AppMgr TCP 8080 ---
+PASS: VESPA reached AppMgr TCP 8080
+
+--- Negative: A1Mediator -> AppMgr TCP 8080 ---
+PASS: A1Mediator blocked from AppMgr TCP 8080
+
+--- Negative: E2Term -> AppMgr TCP 8080 ---
+PASS: E2Term blocked from AppMgr TCP 8080
+
+--- AppMgr Pod Health ---
+NAME                                        READY   STATUS    RESTARTS      AGE   IP           NODE           NOMINATED NODE   READINESS GATES
+deployment-ricplt-appmgr-86bdfb6848-rsxsb   1/1     Running   1 (24h ago)   25h   10.244.2.7   minikube-m03   <none>           <none>
+
+--- All NetworkPolicies ---
+NAME                             POD-SELECTOR              AGE
+allow-dbaas-approved-consumers   app=ricplt-dbaas          3h37m
+restrict-appmgr-ingress          app=ricplt-appmgr         11m
+restrict-e2term-ingress          app=ricplt-e2term-alpha   173m
+restrict-o1mediator-ingress      app=ricplt-o1mediator     72m

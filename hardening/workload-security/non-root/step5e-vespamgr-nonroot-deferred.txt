@@ -1,0 +1,26 @@
+=== STEP 5E: VESPAMGR NON-ROOT ASSESSMENT ===
+Date: Wed Sep  2 14:26:14 BST 2026
+
+Decision: Non-root NOT applied
+Reason 1: Application writes to /cfg/uta_rtg.rt.stash.inc (root:root 640)
+          Both vespamgr and ves-agent hold write handles to this file
+Reason 2: ves-agent binary is located at /root/go/bin/ves-agent
+          This creates an additional compatibility concern for non-root execution
+
+--- Runtime User ---
+uid=0(root) gid=0(root) groups=0(root)
+
+--- File Permissions ---
+-rw-r----- 1 root root 0 Sep  2 11:18 /cfg/uta_rtg.rt.stash.inc
+drwxr-xr-x 1 root root 4096 Sep  2 11:18 /cfg
+drwx------ 1 root root 4096 Dec  3  2021 /root
+drwxr-xr-x 3 root root 4096 Dec  3  2021 /root/go
+drwxr-xr-x 2 root root 4096 Dec  3  2021 /root/go/bin
+-rwxr-xr-x 1 root root 14334457 Dec  3  2021 /root/go/bin/ves-agent
+
+--- Write Handle Evidence ---
+l-wx------ 1 root root 64 Sep  2 13:06 /proc/1/fd/16 -> /cfg/uta_rtg.rt.stash.inc
+l-wx------ 1 root root 64 Sep  2 13:09 /proc/26/fd/16 -> /cfg/uta_rtg.rt.stash.inc
+
+--- Current Security Context (unchanged) ---
+{"allowPrivilegeEscalation":false,"capabilities":{"drop":["NET_RAW"]},"seccompProfile":{"type":"RuntimeDefault"}}

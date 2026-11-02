@@ -1,0 +1,44 @@
+=== STEP 5C: PRE-CAP_NET_RAW STATE ===
+Date: Mon Aug 31 08:09:47 BST 2026
+
+--- Current Capabilities Configuration ---
+=== deployment-ricplt-a1mediator-7794b784c9-vw9lj ===
+capabilities.drop: 
+capabilities.add: 
+
+=== deployment-ricplt-alarmmanager-6b65df6cf9-2qfsp ===
+capabilities.drop: 
+capabilities.add: 
+
+=== deployment-ricplt-appmgr-774c6b5bff-dbmbx ===
+capabilities.drop: 
+capabilities.add: 
+
+=== deployment-ricplt-e2mgr-866df89c9-tzf5f ===
+capabilities.drop: 
+capabilities.add: 
+
+=== deployment-ricplt-e2term-alpha-5fc968b7f5-5kff4 ===
+capabilities.drop: 
+capabilities.add: 
+
+=== deployment-ricplt-o1mediator-7d4459bdd9-d9zmc ===
+capabilities.drop: 
+capabilities.add: 
+
+=== deployment-ricplt-rtmgr-85f568dcf5-4xr9k ===
+capabilities.drop: 
+capabilities.add: 
+
+=== deployment-ricplt-submgr-7cf4f79cdb-khnzc ===
+capabilities.drop: 
+capabilities.add: 
+
+=== deployment-ricplt-vespamgr-5c8fcdd88d-nb22z ===
+capabilities.drop: 
+capabilities.add: 
+
+=== statefulset-ricplt-dbaas-server-0 ===
+capabilities.drop: 
+capabilities.add: 
+
